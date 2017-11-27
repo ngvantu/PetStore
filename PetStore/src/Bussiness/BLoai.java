@@ -1,0 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Bussiness;
+
+import Data.Data;
+
+/**
+ *
+ * @author voanh
+ */
+public class BLoai extends Bussiness{
+    public BLoai() {
+        DB = new Data();
+        Table = "LOAI";
+        ID = "MALOAI";
+    }
+    public boolean updateByProperties(String MALOAI, String TENLOAI){
+        SQL="UPDATE "+Table+" SET "
+                +" TENLOAI = N'"+TENLOAI+"'"
+                +" WHERE MALOAI = '"+MALOAI+"'";
+        return super.updateBySQLString(SQL);
+    }
+    public boolean insertByProperties(String MALOAI, String TENLOAI){
+        SQL="INSERT INTO "+Table+" values('"+MALOAI+"',N'"+TENLOAI+"')";
+        return super.insertBySQLString(SQL);
+    }
+}
