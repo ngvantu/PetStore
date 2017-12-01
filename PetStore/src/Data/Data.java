@@ -107,7 +107,7 @@ public class Data {
                 stmDB.executeUpdate(_query);
             }
 
-        } catch (Exception ex) {
+        } catch (SQLException ex) {
             res = false;
             System.out.println("Lỗi khi update DB classData: "+ex.getMessage());
         } finally {
