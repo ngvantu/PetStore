@@ -16,7 +16,7 @@ public class BTaiKhoan extends Bussiness{
     public BTaiKhoan() {
         DB = new Data();
         Table = "TAIKHOAN";
-        ID = "MANV";
+        ID = "TENTK";
     }
     
     public boolean updateByProperties(String MANV, String TENTK, String MATKHAU){
