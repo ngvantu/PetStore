@@ -4,8 +4,13 @@
  * and open the template in the editor.
  */
 package JFrameMain;
+import Bussiness.*;
 import Data.Data;
 import java.awt.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +22,7 @@ public class jFMain extends javax.swing.JFrame {
     static String maChucVu;
     static String mk="";
     static jFTableManager fTableManager;
+    static String errorText = "Tên đăng nhập hoặc mật khẩu không hợp lệ !";
     /**
      * Creates new form jFMain
      */
@@ -54,11 +60,11 @@ public class jFMain extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txbUserName = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        btnEraseId = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txbPassWord = new javax.swing.JPasswordField();
-        jButton3 = new javax.swing.JButton();
+        btnErasePassword = new javax.swing.JButton();
         btnLogin = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         jlbLoginStatus = new javax.swing.JLabel();
@@ -82,10 +88,10 @@ public class jFMain extends javax.swing.JFrame {
         txbUserName.setAutoscrolls(false);
         txbUserName.setName("txbUserName"); // NOI18N
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-delete-16.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEraseId.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-delete-16.png"))); // NOI18N
+        btnEraseId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEraseIdActionPerformed(evt);
             }
         });
 
@@ -99,7 +105,7 @@ public class jFMain extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txbUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEraseId, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -107,7 +113,7 @@ public class jFMain extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(txbUserName, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEraseId, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
@@ -123,10 +129,10 @@ public class jFMain extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-delete-16.png"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnErasePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-delete-16.png"))); // NOI18N
+        btnErasePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnErasePasswordActionPerformed(evt);
             }
         });
 
@@ -140,14 +146,14 @@ public class jFMain extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txbPassWord, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnErasePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
+                    .addComponent(btnErasePassword)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txbPassWord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)))
@@ -170,7 +176,6 @@ public class jFMain extends javax.swing.JFrame {
 
         jlbLoginStatus.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jlbLoginStatus.setForeground(new java.awt.Color(255, 0, 0));
-        jlbLoginStatus.setText("Tên đăng nhập hoặc mật khẩu không hợp lệ !");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -240,17 +245,46 @@ public class jFMain extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        fTableManager.setVisible(true);
-        this.setVisible(false);
+        boolean isOk = false;
+        if(txbPassWord.getText().equals("") || txbUserName.getText().equals("")){
+            jlbLoginStatus.setText("Tên đăng nhập hoặc mật khẩu không được rỗng");
+        }
+        else{
+            String Id = txbUserName.getText();
+            String Pass = txbPassWord.getText();
+            BTaiKhoan tk = new BTaiKhoan();
+            ResultSet rs=tk.getByID(Id);
+            try {
+                if(rs.next()){
+                    mk=rs.getString("MATKHAU").toString();
+                    if(mk.equals(Pass)){
+                        isOk = true;
+                    }
+                    else{
+                        jlbLoginStatus.setText("Mật khẩu không hợp lệ!");
+                    }
+                }
+                else{
+                    jlbLoginStatus.setText("Tài khoản không tồn tại!");
+            }
+            } catch (SQLException ex) {
+                Logger.getLogger(jFMain.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Đăng nhập ngoại lệ: "+ex.getMessage());
+            }  
+        }
+        if(isOk){
+            fTableManager.setVisible(true);
+            this.setVisible(false);
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnEraseIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEraseIdActionPerformed
+       txbUserName.setText("");
+    }//GEN-LAST:event_btnEraseIdActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnErasePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnErasePasswordActionPerformed
+       txbPassWord.setText("");
+    }//GEN-LAST:event_btnErasePasswordActionPerformed
     
     void ExitProgram(){
         int output = JOptionPane.showConfirmDialog(this,"Bạn có thật sự muốn thoát không ?","Thông báo",JOptionPane.YES_NO_OPTION);
@@ -299,10 +333,10 @@ public class jFMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEraseId;
+    private javax.swing.JButton btnErasePassword;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogin;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
