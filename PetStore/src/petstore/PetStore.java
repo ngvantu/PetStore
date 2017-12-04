@@ -27,8 +27,9 @@ public class PetStore {
      */
     public static void main(String[] args) {
         
-        jFMain f  = new jFMain();
-        
+        //jFMain f  = new jFMain();
+        JNhanVienBanHang a = new JNhanVienBanHang();
+        a.setVisible(true);
         
         /*
         try {

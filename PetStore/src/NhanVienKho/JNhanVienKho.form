@@ -3,9 +3,6 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1500, 1000]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -34,7 +31,7 @@
               <Component id="JNhanVienKho_btn_XoaSP" min="-2" pref="100" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="JNhanVienKho_btn_XemSP" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
               <Component id="JNhanVienKho_logo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="JNhanVienKho_btn_XemThongTinCaNhan" min="-2" pref="100" max="-2" attributes="0"/>
@@ -53,18 +50,19 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="JNhanVienKho_btn_ThemSP" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="JNhanVienKho_btn_SuaSP" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="JNhanVienKho_btn_XoaSP" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="JNhanVienKho_btn_XemSP" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="JNhanVienKho_btn_DongTab" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="JNhanVienKho_btn_XemThongTinCaNhan" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="JNhanVienKho_btn_SuaThongTinCaNhan" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="JNhanVienKho_btn_ThoatChuongTrinh" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+                      <Component id="JNhanVienKho_logo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="JNhanVienKho_btn_XoaSP" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="JNhanVienKho_btn_XemSP" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
-              <Component id="JNhanVienKho_logo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
