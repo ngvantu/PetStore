@@ -38,66 +38,45 @@ public class JNhanVienKho extends javax.swing.JFrame {
         JNhanVienKho_logo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1415, 768));
+        getContentPane().setLayout(null);
 
         JNhanVienKho_btn_ThemSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Add-item-icon copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_ThemSP);
+        JNhanVienKho_btn_ThemSP.setBounds(0, 0, 100, 100);
 
         JNhanVienKho_btn_SuaSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Shopping-bag-blue-icon copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_SuaSP);
+        JNhanVienKho_btn_SuaSP.setBounds(100, 0, 100, 100);
 
         JNhanVienKho_btn_XoaSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Remove-item-icon copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_XoaSP);
+        JNhanVienKho_btn_XoaSP.setBounds(200, 0, 100, 100);
 
         JNhanVienKho_btn_XemSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/view_item copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_XemSP);
+        JNhanVienKho_btn_XemSP.setBounds(300, 0, 100, 100);
 
         JNhanVienKho_btn_XemThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/customer-service-icon copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_XemThongTinCaNhan);
+        JNhanVienKho_btn_XemThongTinCaNhan.setBounds(1000, 0, 100, 100);
 
         JNhanVienKho_btn_SuaThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/security_agent_edit copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_SuaThongTinCaNhan);
+        JNhanVienKho_btn_SuaThongTinCaNhan.setBounds(1100, 0, 100, 100);
 
         JNhanVienKho_btn_DongTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/navigate_cross copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_DongTab);
+        JNhanVienKho_btn_DongTab.setBounds(1200, 0, 100, 100);
 
         JNhanVienKho_btn_ThoatChuongTrinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit copy.png"))); // NOI18N
+        getContentPane().add(JNhanVienKho_btn_ThoatChuongTrinh);
+        JNhanVienKho_btn_ThoatChuongTrinh.setBounds(1300, 0, 100, 100);
 
         JNhanVienKho_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/husky-clipart-akita-18.png"))); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(JNhanVienKho_btn_ThemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(JNhanVienKho_btn_SuaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(JNhanVienKho_btn_XoaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(JNhanVienKho_btn_XemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141)
-                .addComponent(JNhanVienKho_logo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(JNhanVienKho_btn_XemThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(JNhanVienKho_btn_SuaThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(JNhanVienKho_btn_DongTab, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(JNhanVienKho_btn_ThoatChuongTrinh, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JNhanVienKho_btn_ThemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JNhanVienKho_btn_SuaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JNhanVienKho_btn_DongTab, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JNhanVienKho_btn_XemThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JNhanVienKho_btn_SuaThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JNhanVienKho_btn_ThoatChuongTrinh, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(JNhanVienKho_logo))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(JNhanVienKho_btn_XoaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(JNhanVienKho_btn_XemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        JNhanVienKho_logo.setPreferredSize(new java.awt.Dimension(400, 400));
+        getContentPane().add(JNhanVienKho_logo);
+        JNhanVienKho_logo.setBounds(480, 200, 400, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
