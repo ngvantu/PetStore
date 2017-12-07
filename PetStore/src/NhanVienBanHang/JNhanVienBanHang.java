@@ -74,14 +74,19 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_lb_XemHoaDon.setBounds(0, 0, 390, 50);
 
         JNhanVienBanHang_XemHoaDon_time_Time.setDateFormatString("d MMMM, yyyy");
-        JNhanVienBanHang_XemHoaDon_time_Time.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_time_Time.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         JNhanVienBanHang_XemHoaDon_panel.add(JNhanVienBanHang_XemHoaDon_time_Time);
-        JNhanVienBanHang_XemHoaDon_time_Time.setBounds(0, 80, 380, 40);
+        JNhanVienBanHang_XemHoaDon_time_Time.setBounds(0, 80, 250, 30);
 
         JNhanVienBanHang_XemHoaDon_btn_TimKiem.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         JNhanVienBanHang_XemHoaDon_btn_TimKiem.setText("Tìm kiếm");
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(evt);
+            }
+        });
         JNhanVienBanHang_XemHoaDon_panel.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem);
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem.setBounds(400, 80, 120, 40);
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem.setBounds(260, 80, 120, 30);
 
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setText("Bảng Hóa Đơn");
@@ -360,6 +365,10 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     private void JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabActionPerformed
+
+    private void JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
 
     /**
      * @param args the command line arguments
