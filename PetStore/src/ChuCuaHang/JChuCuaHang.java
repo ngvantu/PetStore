@@ -44,64 +44,64 @@ public class JChuCuaHang extends javax.swing.JFrame {
         JChuCuaHang_logo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1415, 768));
+        setPreferredSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(null);
 
         JChuCuaHang_btn_ThemNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/user_add.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_ThemNhanVien);
-        JChuCuaHang_btn_ThemNhanVien.setBounds(0, 0, 100, 100);
+        JChuCuaHang_btn_ThemNhanVien.setBounds(0, 0, 90, 90);
 
         JChuCuaHang_btn_SuaNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/user_edit copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_SuaNhanVien);
-        JChuCuaHang_btn_SuaNhanVien.setBounds(100, 0, 100, 100);
+        JChuCuaHang_btn_SuaNhanVien.setBounds(90, 0, 90, 90);
 
         JChuCuaHang_btn_XoaNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/user_delete copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_XoaNhanVien);
-        JChuCuaHang_btn_XoaNhanVien.setBounds(200, 0, 100, 100);
+        JChuCuaHang_btn_XoaNhanVien.setBounds(180, 0, 90, 90);
 
         JChuCuaHang_btn_ThemLoaiSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/add_pack copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_ThemLoaiSP);
-        JChuCuaHang_btn_ThemLoaiSP.setBounds(300, 0, 100, 100);
+        JChuCuaHang_btn_ThemLoaiSP.setBounds(270, 0, 90, 90);
 
         JChuCuaHang_btn_SuaLoaiSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/fix_pack copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_SuaLoaiSP);
-        JChuCuaHang_btn_SuaLoaiSP.setBounds(400, 0, 100, 100);
+        JChuCuaHang_btn_SuaLoaiSP.setBounds(360, 0, 90, 90);
 
         JChuCuaHang_btn_XoaLoaiSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/delete_pack copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_XoaLoaiSP);
-        JChuCuaHang_btn_XoaLoaiSP.setBounds(500, 0, 100, 100);
+        JChuCuaHang_btn_XoaLoaiSP.setBounds(450, 0, 90, 90);
 
         JChuCuaHang_btn_XemThuChi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/KeToan copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_XemThuChi);
-        JChuCuaHang_btn_XemThuChi.setBounds(600, 0, 100, 100);
+        JChuCuaHang_btn_XemThuChi.setBounds(540, 0, 90, 90);
 
         JChuCuaHang_btn_SuaThuChi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/fix_KeToan copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_SuaThuChi);
-        JChuCuaHang_btn_SuaThuChi.setBounds(700, 0, 100, 100);
+        JChuCuaHang_btn_SuaThuChi.setBounds(630, 0, 90, 90);
 
         JChuCuaHang_btn_XemNhapXuatKho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Kho copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_XemNhapXuatKho);
-        JChuCuaHang_btn_XemNhapXuatKho.setBounds(800, 0, 100, 100);
+        JChuCuaHang_btn_XemNhapXuatKho.setBounds(720, 0, 90, 90);
 
         JChuCuaHang_btn_DongTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/navigate_cross copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_DongTab);
-        JChuCuaHang_btn_DongTab.setBounds(1200, 0, 100, 100);
+        JChuCuaHang_btn_DongTab.setBounds(1170, 0, 90, 90);
 
         JChuCuaHang_btn_SuaNhapXuatKho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/warehouse copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_SuaNhapXuatKho);
-        JChuCuaHang_btn_SuaNhapXuatKho.setBounds(900, 0, 100, 100);
+        JChuCuaHang_btn_SuaNhapXuatKho.setBounds(810, 0, 90, 90);
 
         JChuCuaHang_btn_XemThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/customer-service-icon copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_XemThongTinCaNhan);
-        JChuCuaHang_btn_XemThongTinCaNhan.setBounds(1000, 0, 100, 100);
+        JChuCuaHang_btn_XemThongTinCaNhan.setBounds(990, 0, 90, 90);
 
         JChuCuaHang_btn_SuaThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/security_agent_edit copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_SuaThongTinCaNhan);
-        JChuCuaHang_btn_SuaThongTinCaNhan.setBounds(1100, 0, 100, 100);
+        JChuCuaHang_btn_SuaThongTinCaNhan.setBounds(1080, 0, 90, 90);
 
         JChuCuaHang_btn_ThoatChuongTrinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit copy.png"))); // NOI18N
         getContentPane().add(JChuCuaHang_btn_ThoatChuongTrinh);
-        JChuCuaHang_btn_ThoatChuongTrinh.setBounds(1300, 0, 100, 100);
+        JChuCuaHang_btn_ThoatChuongTrinh.setBounds(1260, 0, 90, 90);
 
         JChuCuaHang_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/husky-clipart-akita-18.png"))); // NOI18N
         JChuCuaHang_logo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

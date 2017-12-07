@@ -38,48 +38,56 @@ public class JNhanVienKho extends javax.swing.JFrame {
         JNhanVienKho_logo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1415, 768));
+        setPreferredSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(null);
 
         JNhanVienKho_btn_ThemSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Add-item-icon copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_ThemSP);
-        JNhanVienKho_btn_ThemSP.setBounds(0, 0, 100, 100);
+        JNhanVienKho_btn_ThemSP.setBounds(0, 0, 90, 90);
 
         JNhanVienKho_btn_SuaSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Shopping-bag-blue-icon copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_SuaSP);
-        JNhanVienKho_btn_SuaSP.setBounds(100, 0, 100, 100);
+        JNhanVienKho_btn_SuaSP.setBounds(90, 0, 90, 90);
 
         JNhanVienKho_btn_XoaSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Remove-item-icon copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_XoaSP);
-        JNhanVienKho_btn_XoaSP.setBounds(200, 0, 100, 100);
+        JNhanVienKho_btn_XoaSP.setBounds(180, 0, 90, 90);
 
         JNhanVienKho_btn_XemSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/view_item copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_XemSP);
-        JNhanVienKho_btn_XemSP.setBounds(300, 0, 100, 100);
+        JNhanVienKho_btn_XemSP.setBounds(270, 0, 90, 90);
 
         JNhanVienKho_btn_XemThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/customer-service-icon copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_XemThongTinCaNhan);
-        JNhanVienKho_btn_XemThongTinCaNhan.setBounds(1000, 0, 100, 100);
+        JNhanVienKho_btn_XemThongTinCaNhan.setBounds(990, 0, 90, 90);
 
         JNhanVienKho_btn_SuaThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/security_agent_edit copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_SuaThongTinCaNhan);
-        JNhanVienKho_btn_SuaThongTinCaNhan.setBounds(1100, 0, 100, 100);
+        JNhanVienKho_btn_SuaThongTinCaNhan.setBounds(1080, 0, 90, 90);
 
         JNhanVienKho_btn_DongTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/navigate_cross copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_DongTab);
-        JNhanVienKho_btn_DongTab.setBounds(1200, 0, 100, 100);
+        JNhanVienKho_btn_DongTab.setBounds(1170, 0, 90, 90);
 
         JNhanVienKho_btn_ThoatChuongTrinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit copy.png"))); // NOI18N
+        JNhanVienKho_btn_ThoatChuongTrinh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienKho_btn_ThoatChuongTrinhActionPerformed(evt);
+            }
+        });
         getContentPane().add(JNhanVienKho_btn_ThoatChuongTrinh);
-        JNhanVienKho_btn_ThoatChuongTrinh.setBounds(1300, 0, 100, 100);
+        JNhanVienKho_btn_ThoatChuongTrinh.setBounds(1260, 0, 90, 90);
 
         JNhanVienKho_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/husky-clipart-akita-18.png"))); // NOI18N
-        JNhanVienKho_logo.setPreferredSize(new java.awt.Dimension(400, 400));
         getContentPane().add(JNhanVienKho_logo);
         JNhanVienKho_logo.setBounds(480, 200, 400, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JNhanVienKho_btn_ThoatChuongTrinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienKho_btn_ThoatChuongTrinhActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienKho_btn_ThoatChuongTrinhActionPerformed
 
     /**
      * @param args the command line arguments
