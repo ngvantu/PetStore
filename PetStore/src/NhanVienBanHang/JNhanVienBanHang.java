@@ -229,7 +229,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemHoaDon_panel.add(jTextField1);
-        jTextField1.setBounds(1070, 560, 180, 31);
+        jTextField1.setBounds(1070, 560, 180, 33);
 
         getContentPane().add(JNhanVienBanHang_XemHoaDon_panel);
         JNhanVienBanHang_XemHoaDon_panel.setBounds(50, 110, 1260, 610);

@@ -279,7 +279,7 @@ public class XemSanPham extends javax.swing.JFrame {
                                 .addComponent(JNhanVienBanHang_XemSanPham_lb_MaSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jNhanVienBanHang_XemSanPham_tbx_MaSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(43, Short.MAX_VALUE))
+                        .addContainerGap(41, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

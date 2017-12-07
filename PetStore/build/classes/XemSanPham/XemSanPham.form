@@ -240,7 +240,7 @@
                                   <Component id="jNhanVienBanHang_XemSanPham_tbx_MaSanPham" min="-2" pref="208" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="43" max="32767" attributes="0"/>
+                          <EmptySpace pref="41" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
