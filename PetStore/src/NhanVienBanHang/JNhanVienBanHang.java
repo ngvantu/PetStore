@@ -29,22 +29,6 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        JNhanVienBanHang_XemHoaDon_panel = new javax.swing.JPanel();
-        JNhanVienBanHang_XemHoaDon_lb_XemHoaDon = new javax.swing.JLabel();
-        JNhanVienBanHang_XemHoaDon_time_Time = new com.toedter.calendar.JDateChooser();
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem = new javax.swing.JButton();
-        JNhanVienBanHang_XemHoaDon_lb_BangHoaDon = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon = new javax.swing.JTable();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon = new javax.swing.JTable();
-        JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien = new javax.swing.JLabel();
-        JNhanVienBanHang_XemHoaDon_lb_TenNhanVien = new javax.swing.JLabel();
-        JNhanVienBanHang_XemHoaDon_lb_TenKhachHang = new javax.swing.JLabel();
-        JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang = new javax.swing.JLabel();
-        JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon = new javax.swing.JLabel();
-        JNhanVienBanHang_XemHoaDon_lb_Tong = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         JNhanVienBanHang_XemSanPham_panel = new javax.swing.JPanel();
         JNhanVienBanHang_XemSanPham_lb_TimKiem = new javax.swing.JLabel();
         jNhanVienBanHang_XemSanPham_tbx_TimKiem = new javax.swing.JTextField();
@@ -64,6 +48,22 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         jNhanVienBanHang_XemSanPham_tbx_DonGia = new javax.swing.JTextField();
         jNhanVienBanHang_XemSanPham_tbx_SoLuong = new javax.swing.JTextField();
         jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang = new javax.swing.JButton();
+        JNhanVienBanHang_XemHoaDon_panel = new javax.swing.JPanel();
+        JNhanVienBanHang_XemHoaDon_lb_XemHoaDon = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_time_Time = new com.toedter.calendar.JDateChooser();
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem = new javax.swing.JButton();
+        JNhanVienBanHang_XemHoaDon_lb_BangHoaDon = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon = new javax.swing.JTable();
+        JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_TenNhanVien = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_TenKhachHang = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_Tong = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         JNhanVienBanHang_logo = new javax.swing.JLabel();
         JNhanVienBanHang_btn_ThemKhachHang = new javax.swing.JButton();
         JNhanVienBanHang_btn_SuaKhachHang = new javax.swing.JButton();
@@ -84,6 +84,174 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(null);
+
+        JNhanVienBanHang_XemSanPham_panel.setPreferredSize(new java.awt.Dimension(1366, 600));
+        JNhanVienBanHang_XemSanPham_panel.setLayout(null);
+
+        JNhanVienBanHang_XemSanPham_lb_TimKiem.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_TimKiem.setText("TÌM KIẾM SẢN PHẨM");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_TimKiem);
+        JNhanVienBanHang_XemSanPham_lb_TimKiem.setBounds(20, 0, 390, 50);
+
+        jNhanVienBanHang_XemSanPham_tbx_TimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_TimKiemActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_TimKiem);
+        jNhanVienBanHang_XemSanPham_tbx_TimKiem.setBounds(20, 90, 351, 40);
+
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.setText("Tìm kiếm");
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_XemSanPham_btn_TimKiemActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_btn_TimKiem);
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.setBounds(400, 90, 120, 40);
+
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã sản phẩm", "Loại sản phẩm", "Tên sản phẩm", "Đơn giá"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setRowHeight(20);
+        jNhanVienBanHang_XemSanPham_sp_TimKiem.setViewportView(JNhanVienBanHang_XemSanPham_tb_BangSanPham);
+
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_sp_TimKiem);
+        jNhanVienBanHang_XemSanPham_sp_TimKiem.setBounds(18, 166, 529, 406);
+
+        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setText("Thông tin sản phẩm");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham);
+        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setBounds(856, 61, 250, 29);
+
+        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setText("    Ảnh sản phẩm");
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_lb_AnhSanPham);
+        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setBounds(577, 130, 170, 198);
+
+        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setText("Mã sản phẩm:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_MaSanPham);
+        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setBounds(779, 138, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setText("Loại sản phẩm:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_LoaiSanPham);
+        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setBounds(779, 193, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setText("Tên sản phẩm:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_TenSanPham);
+        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setBounds(779, 250, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_DonGia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_DonGia.setText("Đơn giá:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_DonGia);
+        JNhanVienBanHang_XemSanPham_lb_DonGia.setBounds(779, 300, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_SoLuong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_SoLuong.setText("Số lượng:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_SoLuong);
+        JNhanVienBanHang_XemSanPham_lb_SoLuong.setBounds(779, 353, 170, 25);
+
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_MaSanPhamActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_MaSanPham);
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.setBounds(954, 135, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_LoaiSanPhamActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham);
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setBounds(954, 190, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_TenSanPham);
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setBounds(954, 247, 370, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_DonGia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_DonGia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_DonGia);
+        jNhanVienBanHang_XemSanPham_tbx_DonGia.setBounds(954, 297, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_SoLuongActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_SoLuong);
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong.setBounds(954, 350, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setText("Thêm vào giỏ hàng");
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHangActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang);
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setBounds(835, 436, 288, 54);
+
+        getContentPane().add(JNhanVienBanHang_XemSanPham_panel);
+        JNhanVienBanHang_XemSanPham_panel.setBounds(0, 110, 1366, 600);
+        JNhanVienBanHang_XemSanPham_panel.setVisible(false);
 
         JNhanVienBanHang_XemHoaDon_panel.setLayout(null);
 
@@ -241,7 +409,6 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_lb_Tong.setBounds(980, 560, 60, 30);
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jTextField1.setText("10,000,000");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -251,243 +418,8 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         jTextField1.setBounds(1070, 560, 180, 31);
 
         getContentPane().add(JNhanVienBanHang_XemHoaDon_panel);
-        JNhanVienBanHang_XemHoaDon_panel.setBounds(50, 110, 1260, 610);
+        JNhanVienBanHang_XemHoaDon_panel.setBounds(50, 110, 1310, 610);
         JNhanVienBanHang_XemHoaDon_panel.setVisible(false);
-
-        JNhanVienBanHang_XemSanPham_panel.setPreferredSize(new java.awt.Dimension(1366, 600));
-
-        JNhanVienBanHang_XemSanPham_lb_TimKiem.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        JNhanVienBanHang_XemSanPham_lb_TimKiem.setText("TÌM KIẾM SẢN PHẨM");
-
-        jNhanVienBanHang_XemSanPham_tbx_TimKiem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNhanVienBanHang_XemSanPham_tbx_TimKiemActionPerformed(evt);
-            }
-        });
-
-        JNhanVienBanHang_XemSanPham_btn_TimKiem.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemSanPham_btn_TimKiem.setText("Tìm kiếm");
-        JNhanVienBanHang_XemSanPham_btn_TimKiem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JNhanVienBanHang_XemSanPham_btn_TimKiemActionPerformed(evt);
-            }
-        });
-
-        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Mã sản phẩm", "Loại sản phẩm", "Tên sản phẩm", "Đơn giá"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setRowHeight(20);
-        jNhanVienBanHang_XemSanPham_sp_TimKiem.setViewportView(JNhanVienBanHang_XemSanPham_tb_BangSanPham);
-
-        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setText("Thông tin sản phẩm");
-
-        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setText("    Ảnh sản phẩm");
-
-        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setText("Mã sản phẩm:");
-
-        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setText("Loại sản phẩm:");
-
-        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setText("Tên sản phẩm:");
-
-        JNhanVienBanHang_XemSanPham_lb_DonGia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemSanPham_lb_DonGia.setText("Đơn giá:");
-
-        JNhanVienBanHang_XemSanPham_lb_SoLuong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemSanPham_lb_SoLuong.setText("Số lượng:");
-
-        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNhanVienBanHang_XemSanPham_tbx_MaSanPhamActionPerformed(evt);
-            }
-        });
-
-        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNhanVienBanHang_XemSanPham_tbx_LoaiSanPhamActionPerformed(evt);
-            }
-        });
-
-        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed(evt);
-            }
-        });
-
-        jNhanVienBanHang_XemSanPham_tbx_DonGia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jNhanVienBanHang_XemSanPham_tbx_DonGia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed(evt);
-            }
-        });
-
-        jNhanVienBanHang_XemSanPham_tbx_SoLuong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jNhanVienBanHang_XemSanPham_tbx_SoLuong.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNhanVienBanHang_XemSanPham_tbx_SoLuongActionPerformed(evt);
-            }
-        });
-
-        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setText("Thêm vào giỏ hàng");
-        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHangActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout JNhanVienBanHang_XemSanPham_panelLayout = new javax.swing.GroupLayout(JNhanVienBanHang_XemSanPham_panel);
-        JNhanVienBanHang_XemSanPham_panel.setLayout(JNhanVienBanHang_XemSanPham_panelLayout);
-        JNhanVienBanHang_XemSanPham_panelLayout.setHorizontalGroup(
-            JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                        .addComponent(jNhanVienBanHang_XemSanPham_tbx_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(JNhanVienBanHang_XemSanPham_btn_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15))
-                    .addComponent(jNhanVienBanHang_XemSanPham_sp_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jNhanVienBanHang_XemSanPham_lb_AnhSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addComponent(JNhanVienBanHang_XemSanPham_lb_SoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jNhanVienBanHang_XemSanPham_tbx_SoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addComponent(JNhanVienBanHang_XemSanPham_lb_TenSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jNhanVienBanHang_XemSanPham_tbx_TenSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addComponent(JNhanVienBanHang_XemSanPham_lb_DonGia, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jNhanVienBanHang_XemSanPham_tbx_DonGia, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addComponent(JNhanVienBanHang_XemSanPham_lb_LoaiSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addComponent(JNhanVienBanHang_XemSanPham_lb_MaSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jNhanVienBanHang_XemSanPham_tbx_MaSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(43, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addComponent(JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(260, 260, 260))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addComponent(jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(243, 243, 243))))))
-            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(JNhanVienBanHang_XemSanPham_lb_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        JNhanVienBanHang_XemSanPham_panelLayout.setVerticalGroup(
-            JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham))
-                    .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                        .addComponent(JNhanVienBanHang_XemSanPham_lb_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jNhanVienBanHang_XemSanPham_tbx_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JNhanVienBanHang_XemSanPham_btn_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                        .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addGap(220, 220, 220)
-                                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(JNhanVienBanHang_XemSanPham_lb_SoLuong)
-                                    .addComponent(jNhanVienBanHang_XemSanPham_tbx_SoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(JNhanVienBanHang_XemSanPham_lb_MaSanPham)
-                                    .addComponent(jNhanVienBanHang_XemSanPham_tbx_MaSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(24, 24, 24)
-                                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(JNhanVienBanHang_XemSanPham_lb_LoaiSanPham)
-                                    .addComponent(jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(26, 26, 26)
-                                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(JNhanVienBanHang_XemSanPham_lb_TenSanPham)
-                                    .addComponent(jNhanVienBanHang_XemSanPham_tbx_TenSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(19, 19, 19)
-                                .addGroup(JNhanVienBanHang_XemSanPham_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(JNhanVienBanHang_XemSanPham_lb_DonGia)
-                                    .addComponent(jNhanVienBanHang_XemSanPham_tbx_DonGia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jNhanVienBanHang_XemSanPham_lb_AnhSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                        .addComponent(jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(110, 110, 110))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JNhanVienBanHang_XemSanPham_panelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jNhanVienBanHang_XemSanPham_sp_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28))))
-        );
-
-        getContentPane().add(JNhanVienBanHang_XemSanPham_panel);
-        JNhanVienBanHang_XemSanPham_panel.setBounds(0, 110, 1366, 600);
-        JNhanVienBanHang_XemSanPham_panel.setVisible(false);
 
         JNhanVienBanHang_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/husky-clipart-akita-18.png"))); // NOI18N
         JNhanVienBanHang_logo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -561,13 +493,18 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_btn_XemKho.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_XemThongTinSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/search-good copy.png"))); // NOI18N
+        JNhanVienBanHang_btn_XemThongTinSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JNhanVienBanHang_btn_XemThongTinSPMouseClicked(evt);
+            }
+        });
         getContentPane().add(JNhanVienBanHang_btn_XemThongTinSP);
         JNhanVienBanHang_btn_XemThongTinSP.setBounds(810, 0, 90, 90);
         JNhanVienBanHang_btn_XemThongTinSP.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_XemThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/customer-service-icon copy.png"))); // NOI18N
         getContentPane().add(JNhanVienBanHang_btn_XemThongTinCaNhan);
-        JNhanVienBanHang_btn_XemThongTinCaNhan.setBounds(940, 0, 90, 90);
+        JNhanVienBanHang_btn_XemThongTinCaNhan.setBounds(990, 0, 90, 90);
         JNhanVienBanHang_btn_XemThongTinCaNhan.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/navigate_cross copy.png"))); // NOI18N
@@ -582,7 +519,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTab);
-        JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTab.setBounds(1120, 0, 90, 90);
+        JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTab.setBounds(1170, 0, 90, 90);
         JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTab.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_ThoatChuongTrinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit copy.png"))); // NOI18N
@@ -592,12 +529,12 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JNhanVienBanHang_btn_ThoatChuongTrinh);
-        JNhanVienBanHang_btn_ThoatChuongTrinh.setBounds(1210, 0, 90, 90);
+        JNhanVienBanHang_btn_ThoatChuongTrinh.setBounds(1260, 0, 90, 90);
         JNhanVienBanHang_btn_ThoatChuongTrinh.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_SuaThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/security_agent_edit copy.png"))); // NOI18N
         getContentPane().add(JNhanVienBanHang_btn_SuaThongTinCaNhan);
-        JNhanVienBanHang_btn_SuaThongTinCaNhan.setBounds(1030, 0, 90, 90);
+        JNhanVienBanHang_btn_SuaThongTinCaNhan.setBounds(1080, 0, 90, 90);
         JNhanVienBanHang_btn_SuaThongTinCaNhan.getAccessibleContext().setAccessibleParent(this);
 
         pack();
@@ -612,15 +549,13 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void JNhanVienBanHang_btn_XemHoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_XemHoaDonMouseClicked
-        JNhanVienBanHang_logo.setVisible(false);
-        JNhanVienBanHang_XemHoaDon_panel.setVisible(true);
         JNhanVienBanHang_XemSanPham_panel.setVisible(false);
+        JNhanVienBanHang_XemHoaDon_panel.setVisible(true);
     }//GEN-LAST:event_JNhanVienBanHang_btn_XemHoaDonMouseClicked
 
     
     private void JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabMouseClicked
         JNhanVienBanHang_XemHoaDon_panel.setVisible(false);
-        JNhanVienBanHang_logo.setVisible(true);
         JNhanVienBanHang_XemSanPham_panel.setVisible(false);
     }//GEN-LAST:event_JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabMouseClicked
     
@@ -652,10 +587,6 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_LoaiSanPhamActionPerformed
 
-    private void jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed
-
     private void jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed
@@ -673,10 +604,17 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     }//GEN-LAST:event_JNhanVienBanHang_btn_ThanhToanActionPerformed
 
     private void JNhanVienBanHang_btn_ThanhToanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_ThanhToanMouseClicked
-        JNhanVienBanHang_logo.setVisible(false);
+        
+    }//GEN-LAST:event_JNhanVienBanHang_btn_ThanhToanMouseClicked
+
+    private void jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed
+
+    private void JNhanVienBanHang_btn_XemThongTinSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_XemThongTinSPMouseClicked
         JNhanVienBanHang_XemHoaDon_panel.setVisible(false);
         JNhanVienBanHang_XemSanPham_panel.setVisible(true);
-    }//GEN-LAST:event_JNhanVienBanHang_btn_ThanhToanMouseClicked
+    }//GEN-LAST:event_JNhanVienBanHang_btn_XemThongTinSPMouseClicked
 
     /**
      * @param args the command line arguments
