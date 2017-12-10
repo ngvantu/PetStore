@@ -107,6 +107,7 @@ public class jFLogin extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         jLabel7.setText("Forgotten password?");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
