@@ -84,6 +84,11 @@ public class JChuCuaHang extends javax.swing.JFrame {
         JChuCuaHang_btn_XemNhapXuatKho.setBounds(720, 0, 90, 90);
 
         JChuCuaHang_btn_DongTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/navigate_cross copy.png"))); // NOI18N
+        JChuCuaHang_btn_DongTab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JChuCuaHang_btn_DongTabActionPerformed(evt);
+            }
+        });
         getContentPane().add(JChuCuaHang_btn_DongTab);
         JChuCuaHang_btn_DongTab.setBounds(1170, 0, 90, 90);
 
@@ -112,6 +117,10 @@ public class JChuCuaHang extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JChuCuaHang_btn_DongTabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JChuCuaHang_btn_DongTabActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JChuCuaHang_btn_DongTabActionPerformed
 
     /**
      * @param args the command line arguments

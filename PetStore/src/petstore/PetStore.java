@@ -28,8 +28,15 @@ public class PetStore {
     public static void main(String[] args) {
         
         //jFMain f  = new jFMain();
+        //JNhanVienKho f = new JNhanVienKho();
+        //f.setVisible(true);
+        
+        jFMain f = new jFMain();
+        f.setVisible(true);
+        /*
         JNhanVienBanHang a = new JNhanVienBanHang();
         a.setVisible(true);
+        */
         
         /*
         try {
