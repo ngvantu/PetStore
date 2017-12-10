@@ -30,12 +30,12 @@ public class JNhanVienKho extends javax.swing.JFrame {
         JNhanVienKho_btn_ThemSP = new javax.swing.JButton();
         JNhanVienKho_btn_SuaSP = new javax.swing.JButton();
         JNhanVienKho_btn_XoaSP = new javax.swing.JButton();
-        JNhanVienKho_btn_XemSP = new javax.swing.JButton();
         JNhanVienKho_btn_XemThongTinCaNhan = new javax.swing.JButton();
         JNhanVienKho_btn_SuaThongTinCaNhan = new javax.swing.JButton();
         JNhanVienKho_btn_DongTab = new javax.swing.JButton();
         JNhanVienKho_btn_ThoatChuongTrinh = new javax.swing.JButton();
         JNhanVienKho_logo = new javax.swing.JLabel();
+        JNhanVienKho_btn_LuongTonKho = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1366, 768));
@@ -52,10 +52,6 @@ public class JNhanVienKho extends javax.swing.JFrame {
         JNhanVienKho_btn_XoaSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Remove-item-icon copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_XoaSP);
         JNhanVienKho_btn_XoaSP.setBounds(180, 0, 90, 90);
-
-        JNhanVienKho_btn_XemSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/view_item copy.png"))); // NOI18N
-        getContentPane().add(JNhanVienKho_btn_XemSP);
-        JNhanVienKho_btn_XemSP.setBounds(270, 0, 90, 90);
 
         JNhanVienKho_btn_XemThongTinCaNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/customer-service-icon copy.png"))); // NOI18N
         getContentPane().add(JNhanVienKho_btn_XemThongTinCaNhan);
@@ -82,12 +78,25 @@ public class JNhanVienKho extends javax.swing.JFrame {
         getContentPane().add(JNhanVienKho_logo);
         JNhanVienKho_logo.setBounds(480, 200, 400, 400);
 
+        JNhanVienKho_btn_LuongTonKho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Kho copy.png"))); // NOI18N
+        JNhanVienKho_btn_LuongTonKho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienKho_btn_LuongTonKhoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JNhanVienKho_btn_LuongTonKho);
+        JNhanVienKho_btn_LuongTonKho.setBounds(270, 0, 90, 90);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void JNhanVienKho_btn_ThoatChuongTrinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienKho_btn_ThoatChuongTrinhActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JNhanVienKho_btn_ThoatChuongTrinhActionPerformed
+
+    private void JNhanVienKho_btn_LuongTonKhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienKho_btn_LuongTonKhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienKho_btn_LuongTonKhoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,11 +135,11 @@ public class JNhanVienKho extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JNhanVienKho_btn_DongTab;
+    private javax.swing.JButton JNhanVienKho_btn_LuongTonKho;
     private javax.swing.JButton JNhanVienKho_btn_SuaSP;
     private javax.swing.JButton JNhanVienKho_btn_SuaThongTinCaNhan;
     private javax.swing.JButton JNhanVienKho_btn_ThemSP;
     private javax.swing.JButton JNhanVienKho_btn_ThoatChuongTrinh;
-    private javax.swing.JButton JNhanVienKho_btn_XemSP;
     private javax.swing.JButton JNhanVienKho_btn_XemThongTinCaNhan;
     private javax.swing.JButton JNhanVienKho_btn_XoaSP;
     private javax.swing.JLabel JNhanVienKho_logo;

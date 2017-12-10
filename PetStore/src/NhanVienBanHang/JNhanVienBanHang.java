@@ -29,6 +29,25 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JNhanVienBanHang_XemSanPham_panel = new javax.swing.JPanel();
+        JNhanVienBanHang_XemSanPham_lb_TimKiem = new javax.swing.JLabel();
+        jNhanVienBanHang_XemSanPham_tbx_TimKiem = new javax.swing.JTextField();
+        JNhanVienBanHang_XemSanPham_btn_TimKiem = new javax.swing.JButton();
+        jNhanVienBanHang_XemSanPham_sp_TimKiem = new javax.swing.JScrollPane();
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham = new javax.swing.JTable();
+        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham = new javax.swing.JLabel();
+        jNhanVienBanHang_XemSanPham_lb_AnhSanPham = new javax.swing.JLabel();
+        JNhanVienBanHang_XemSanPham_lb_MaSanPham = new javax.swing.JLabel();
+        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham = new javax.swing.JLabel();
+        JNhanVienBanHang_XemSanPham_lb_TenSanPham = new javax.swing.JLabel();
+        JNhanVienBanHang_XemSanPham_lb_DonGia = new javax.swing.JLabel();
+        JNhanVienBanHang_XemSanPham_lb_SoLuong = new javax.swing.JLabel();
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham = new javax.swing.JTextField();
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham = new javax.swing.JTextField();
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham = new javax.swing.JTextField();
+        jNhanVienBanHang_XemSanPham_tbx_DonGia = new javax.swing.JTextField();
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong = new javax.swing.JTextField();
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang = new javax.swing.JButton();
         JNhanVienBanHang_XemHoaDon_panel = new javax.swing.JPanel();
         JNhanVienBanHang_XemHoaDon_lb_XemHoaDon = new javax.swing.JLabel();
         JNhanVienBanHang_XemHoaDon_time_Time = new com.toedter.calendar.JDateChooser();
@@ -65,6 +84,174 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(null);
+
+        JNhanVienBanHang_XemSanPham_panel.setPreferredSize(new java.awt.Dimension(1366, 600));
+        JNhanVienBanHang_XemSanPham_panel.setLayout(null);
+
+        JNhanVienBanHang_XemSanPham_lb_TimKiem.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_TimKiem.setText("TÌM KIẾM SẢN PHẨM");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_TimKiem);
+        JNhanVienBanHang_XemSanPham_lb_TimKiem.setBounds(20, 0, 390, 50);
+
+        jNhanVienBanHang_XemSanPham_tbx_TimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_TimKiemActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_TimKiem);
+        jNhanVienBanHang_XemSanPham_tbx_TimKiem.setBounds(20, 90, 351, 40);
+
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.setText("Tìm kiếm");
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_XemSanPham_btn_TimKiemActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_btn_TimKiem);
+        JNhanVienBanHang_XemSanPham_btn_TimKiem.setBounds(400, 90, 120, 40);
+
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã sản phẩm", "Loại sản phẩm", "Tên sản phẩm", "Đơn giá"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JNhanVienBanHang_XemSanPham_tb_BangSanPham.setRowHeight(20);
+        jNhanVienBanHang_XemSanPham_sp_TimKiem.setViewportView(JNhanVienBanHang_XemSanPham_tb_BangSanPham);
+
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_sp_TimKiem);
+        jNhanVienBanHang_XemSanPham_sp_TimKiem.setBounds(18, 166, 529, 406);
+
+        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setText("Thông tin sản phẩm");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham);
+        JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham.setBounds(856, 61, 250, 29);
+
+        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setText("    Ảnh sản phẩm");
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_lb_AnhSanPham);
+        jNhanVienBanHang_XemSanPham_lb_AnhSanPham.setBounds(577, 130, 170, 198);
+
+        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setText("Mã sản phẩm:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_MaSanPham);
+        JNhanVienBanHang_XemSanPham_lb_MaSanPham.setBounds(779, 138, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setText("Loại sản phẩm:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_LoaiSanPham);
+        JNhanVienBanHang_XemSanPham_lb_LoaiSanPham.setBounds(779, 193, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setText("Tên sản phẩm:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_TenSanPham);
+        JNhanVienBanHang_XemSanPham_lb_TenSanPham.setBounds(779, 250, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_DonGia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_DonGia.setText("Đơn giá:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_DonGia);
+        JNhanVienBanHang_XemSanPham_lb_DonGia.setBounds(779, 300, 170, 25);
+
+        JNhanVienBanHang_XemSanPham_lb_SoLuong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemSanPham_lb_SoLuong.setText("Số lượng:");
+        JNhanVienBanHang_XemSanPham_panel.add(JNhanVienBanHang_XemSanPham_lb_SoLuong);
+        JNhanVienBanHang_XemSanPham_lb_SoLuong.setBounds(779, 353, 170, 25);
+
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_MaSanPhamActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_MaSanPham);
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.setBounds(954, 135, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_LoaiSanPhamActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham);
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setBounds(954, 190, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_TenSanPham);
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setBounds(954, 247, 370, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_DonGia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_DonGia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_DonGia);
+        jNhanVienBanHang_XemSanPham_tbx_DonGia.setBounds(954, 297, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_tbx_SoLuongActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_SoLuong);
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong.setBounds(954, 350, 208, 31);
+
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setText("Thêm vào giỏ hàng");
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHangActionPerformed(evt);
+            }
+        });
+        JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang);
+        jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setBounds(835, 436, 288, 54);
+
+        getContentPane().add(JNhanVienBanHang_XemSanPham_panel);
+        JNhanVienBanHang_XemSanPham_panel.setBounds(0, 110, 1366, 600);
+        JNhanVienBanHang_XemSanPham_panel.setVisible(false);
 
         JNhanVienBanHang_XemHoaDon_panel.setLayout(null);
 
@@ -122,11 +309,11 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Số thứ tự", "Mã hóa đơn", "Người lập hóa đơn", "Khách hàng"
+                "Mã hóa đơn", "Người lập hóa đơn", "Ngày lập hóa đơn", "Khách hàng"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -222,17 +409,16 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_lb_Tong.setBounds(980, 560, 60, 30);
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jTextField1.setText("10,000,000");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
         JNhanVienBanHang_XemHoaDon_panel.add(jTextField1);
-        jTextField1.setBounds(1070, 560, 180, 33);
+        jTextField1.setBounds(1070, 560, 180, 31);
 
         getContentPane().add(JNhanVienBanHang_XemHoaDon_panel);
-        JNhanVienBanHang_XemHoaDon_panel.setBounds(50, 110, 1260, 610);
+        JNhanVienBanHang_XemHoaDon_panel.setBounds(50, 110, 1310, 610);
         JNhanVienBanHang_XemHoaDon_panel.setVisible(false);
 
         JNhanVienBanHang_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/husky-clipart-akita-18.png"))); // NOI18N
@@ -283,9 +469,18 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_btn_InHoaDon.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_ThanhToan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Payments_payment_card_credit copy.png"))); // NOI18N
+        JNhanVienBanHang_btn_ThanhToan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JNhanVienBanHang_btn_ThanhToanMouseClicked(evt);
+            }
+        });
+        JNhanVienBanHang_btn_ThanhToan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_btn_ThanhToanActionPerformed(evt);
+            }
+        });
         getContentPane().add(JNhanVienBanHang_btn_ThanhToan);
         JNhanVienBanHang_btn_ThanhToan.setBounds(540, 0, 90, 90);
-        JNhanVienBanHang_btn_ThanhToan.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_TinhTien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/scan copy.png"))); // NOI18N
         getContentPane().add(JNhanVienBanHang_btn_TinhTien);
@@ -298,6 +493,11 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_btn_XemKho.getAccessibleContext().setAccessibleParent(this);
 
         JNhanVienBanHang_btn_XemThongTinSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/search-good copy.png"))); // NOI18N
+        JNhanVienBanHang_btn_XemThongTinSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JNhanVienBanHang_btn_XemThongTinSPMouseClicked(evt);
+            }
+        });
         getContentPane().add(JNhanVienBanHang_btn_XemThongTinSP);
         JNhanVienBanHang_btn_XemThongTinSP.setBounds(810, 0, 90, 90);
         JNhanVienBanHang_btn_XemThongTinSP.getAccessibleContext().setAccessibleParent(this);
@@ -349,15 +549,16 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void JNhanVienBanHang_btn_XemHoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_XemHoaDonMouseClicked
-        JNhanVienBanHang_logo.setVisible(false);
+        JNhanVienBanHang_XemSanPham_panel.setVisible(false);
         JNhanVienBanHang_XemHoaDon_panel.setVisible(true);
     }//GEN-LAST:event_JNhanVienBanHang_btn_XemHoaDonMouseClicked
 
+    
     private void JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabMouseClicked
         JNhanVienBanHang_XemHoaDon_panel.setVisible(false);
-        JNhanVienBanHang_logo.setVisible(true);
+        JNhanVienBanHang_XemSanPham_panel.setVisible(false);
     }//GEN-LAST:event_JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTabMouseClicked
-
+    
     private void JNhanVienBanHang_btn_ThoatChuongTrinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_ThoatChuongTrinhActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JNhanVienBanHang_btn_ThoatChuongTrinhActionPerformed
@@ -369,6 +570,51 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     private void JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
+
+    private void jNhanVienBanHang_XemSanPham_tbx_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_TimKiemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_TimKiemActionPerformed
+
+    private void JNhanVienBanHang_XemSanPham_btn_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemSanPham_btn_TimKiemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienBanHang_XemSanPham_btn_TimKiemActionPerformed
+
+    private void jNhanVienBanHang_XemSanPham_tbx_MaSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_MaSanPhamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_MaSanPhamActionPerformed
+
+    private void jNhanVienBanHang_XemSanPham_tbx_LoaiSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_LoaiSanPhamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_LoaiSanPhamActionPerformed
+
+    private void jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_DonGiaActionPerformed
+
+    private void jNhanVienBanHang_XemSanPham_tbx_SoLuongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_SoLuongActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_SoLuongActionPerformed
+
+    private void jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHangActionPerformed
+
+    private void JNhanVienBanHang_btn_ThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_ThanhToanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienBanHang_btn_ThanhToanActionPerformed
+
+    private void JNhanVienBanHang_btn_ThanhToanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_ThanhToanMouseClicked
+        
+    }//GEN-LAST:event_JNhanVienBanHang_btn_ThanhToanMouseClicked
+
+    private void jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNhanVienBanHang_XemSanPham_tbx_TenSanPhamActionPerformed
+
+    private void JNhanVienBanHang_btn_XemThongTinSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_btn_XemThongTinSPMouseClicked
+        JNhanVienBanHang_XemHoaDon_panel.setVisible(false);
+        JNhanVienBanHang_XemSanPham_panel.setVisible(true);
+    }//GEN-LAST:event_JNhanVienBanHang_btn_XemThongTinSPMouseClicked
 
     /**
      * @param args the command line arguments
@@ -420,6 +666,16 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JTable JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon;
     private javax.swing.JTable JNhanVienBanHang_XemHoaDon_tb_BangHoaDon;
     private com.toedter.calendar.JDateChooser JNhanVienBanHang_XemHoaDon_time_Time;
+    private javax.swing.JButton JNhanVienBanHang_XemSanPham_btn_TimKiem;
+    private javax.swing.JLabel JNhanVienBanHang_XemSanPham_lb_DonGia;
+    private javax.swing.JLabel JNhanVienBanHang_XemSanPham_lb_LoaiSanPham;
+    private javax.swing.JLabel JNhanVienBanHang_XemSanPham_lb_MaSanPham;
+    private javax.swing.JLabel JNhanVienBanHang_XemSanPham_lb_SoLuong;
+    private javax.swing.JLabel JNhanVienBanHang_XemSanPham_lb_TenSanPham;
+    private javax.swing.JLabel JNhanVienBanHang_XemSanPham_lb_ThongTinSanPham;
+    private javax.swing.JLabel JNhanVienBanHang_XemSanPham_lb_TimKiem;
+    private javax.swing.JPanel JNhanVienBanHang_XemSanPham_panel;
+    private javax.swing.JTable JNhanVienBanHang_XemSanPham_tb_BangSanPham;
     private javax.swing.JButton JNhanVienBanHang_btn_InHoaDon;
     private javax.swing.JButton JNhanVienBanHang_btn_JNhanVienBanHang_btn_DongTab;
     private javax.swing.JButton JNhanVienBanHang_btn_SuaKhachHang;
@@ -435,6 +691,15 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JButton JNhanVienBanHang_btn_XemThongTinSP;
     private javax.swing.JButton JNhanVienBanHang_btn_XoaKhachHang;
     private javax.swing.JLabel JNhanVienBanHang_logo;
+    private javax.swing.JButton jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang;
+    private javax.swing.JLabel jNhanVienBanHang_XemSanPham_lb_AnhSanPham;
+    private javax.swing.JScrollPane jNhanVienBanHang_XemSanPham_sp_TimKiem;
+    private javax.swing.JTextField jNhanVienBanHang_XemSanPham_tbx_DonGia;
+    private javax.swing.JTextField jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham;
+    private javax.swing.JTextField jNhanVienBanHang_XemSanPham_tbx_MaSanPham;
+    private javax.swing.JTextField jNhanVienBanHang_XemSanPham_tbx_SoLuong;
+    private javax.swing.JTextField jNhanVienBanHang_XemSanPham_tbx_TenSanPham;
+    private javax.swing.JTextField jNhanVienBanHang_XemSanPham_tbx_TimKiem;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
