@@ -4,14 +4,8 @@
  * and open the template in the editor.
  */
 package JFrameMain;
-import Bussiness.*;
 import Data.Data;
 import com.sun.glass.events.KeyEvent;
-import java.awt.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultButtonModel;
 
@@ -55,6 +49,16 @@ public class jFMain extends javax.swing.JFrame {
         btn_QuanLyThuChi.setModel(new FixedStateButtonModel());
         btn_Thoat.setModel(new FixedStateButtonModel());
         btn_QuanLyKho.setModel(new FixedStateButtonModel());
+        
+        
+        //
+        SetColorAllButton(new java.awt.Color (0,120,215));
+        btn_ThongTinCaNhan.setBackground(new java.awt.Color (0,120,120));
+        SetFalseAllButton();
+        bThongTinCaNhan = true;
+        SetAllPanelDissapear();
+        jpn_ThongTinCaNhan.setVisible(true);
+        //
     }
     
 
@@ -77,12 +81,6 @@ public class jFMain extends javax.swing.JFrame {
         btn_QuanLyThuChi = new javax.swing.JButton();
         btn_QuanLyKho = new javax.swing.JButton();
         btn_ThongTinCaNhan = new javax.swing.JButton();
-        jpn_QuanLyNhanVien = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jpn_QuanLyKho = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jpn_QuanLySanPham = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
         jpn_ThongTinCaNhan = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -96,6 +94,22 @@ public class jFMain extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jpn_QuanLyNhanVien = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jpn_QuanLyKho = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jpn_QuanLySanPham = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jpn_QuanLyThuChi = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -104,9 +118,8 @@ public class jFMain extends javax.swing.JFrame {
         setIconImages(null);
         setLocationByPlatform(true);
         setName("fLogin"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
-        setSize(new java.awt.Dimension(1280, 720));
+        setSize(new java.awt.Dimension(1280, 670));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -145,7 +158,7 @@ public class jFMain extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 120, 215));
 
         btn_Thoat.setBackground(new java.awt.Color(0, 120, 215));
-        btn_Thoat.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btn_Thoat.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         btn_Thoat.setForeground(new java.awt.Color(255, 255, 255));
         btn_Thoat.setText("Thoát");
         btn_Thoat.setBorder(null);
@@ -162,7 +175,7 @@ public class jFMain extends javax.swing.JFrame {
         });
 
         btn_QuanLyNhanVien.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLyNhanVien.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btn_QuanLyNhanVien.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         btn_QuanLyNhanVien.setForeground(new java.awt.Color(255, 255, 255));
         btn_QuanLyNhanVien.setText("Quản Lý Nhân Viên");
         btn_QuanLyNhanVien.setBorder(null);
@@ -182,7 +195,7 @@ public class jFMain extends javax.swing.JFrame {
         });
 
         btn_QuanLySanPham.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLySanPham.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btn_QuanLySanPham.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         btn_QuanLySanPham.setForeground(new java.awt.Color(255, 255, 255));
         btn_QuanLySanPham.setText("Quản Lý Sản Phẩm");
         btn_QuanLySanPham.setBorder(null);
@@ -202,7 +215,7 @@ public class jFMain extends javax.swing.JFrame {
         });
 
         btn_QuanLyThuChi.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLyThuChi.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btn_QuanLyThuChi.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         btn_QuanLyThuChi.setForeground(new java.awt.Color(255, 255, 255));
         btn_QuanLyThuChi.setText("Quản Lý Thu Chi");
         btn_QuanLyThuChi.setBorder(null);
@@ -222,7 +235,7 @@ public class jFMain extends javax.swing.JFrame {
         });
 
         btn_QuanLyKho.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLyKho.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btn_QuanLyKho.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         btn_QuanLyKho.setForeground(new java.awt.Color(255, 255, 255));
         btn_QuanLyKho.setText("Quản Lý Kho");
         btn_QuanLyKho.setBorder(null);
@@ -242,7 +255,7 @@ public class jFMain extends javax.swing.JFrame {
         });
 
         btn_ThongTinCaNhan.setBackground(new java.awt.Color(0, 120, 215));
-        btn_ThongTinCaNhan.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btn_ThongTinCaNhan.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         btn_ThongTinCaNhan.setForeground(new java.awt.Color(255, 255, 255));
         btn_ThongTinCaNhan.setText("Thông Tin Cá Nhân");
         btn_ThongTinCaNhan.setBorder(null);
@@ -289,13 +302,138 @@ public class jFMain extends javax.swing.JFrame {
                 .addComponent(btn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(170, 170, 170)
+                .addGap(150, 150, 150)
                 .addComponent(btn_Thoat, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jpn_QuanLyNhanVien.setBackground(new java.awt.Color(0, 96, 100));
+        jpn_ThongTinCaNhan.setBackground(new java.awt.Color(0, 120, 120));
+        jpn_ThongTinCaNhan.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_ThongTinCaNhan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Địa Chỉ");
+        jpn_ThongTinCaNhan.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 100, 30));
+
+        jLabel4.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Họ Tên ");
+        jpn_ThongTinCaNhan.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 100, 30));
+
+        jLabel5.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel5.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Giới Tính");
+        jpn_ThongTinCaNhan.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 100, 30));
+
+        jLabel6.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel6.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Ngày Sinh");
+        jpn_ThongTinCaNhan.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 100, 30));
+
+        jLabel7.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel7.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Số Điện Thoại");
+        jpn_ThongTinCaNhan.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 100, 38));
+
+        jTextField1.setBackground(new java.awt.Color(0, 120, 120));
+        jTextField1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("Củ Chi, Việt Nam");
+        jTextField1.setBorder(null);
+        jpn_ThongTinCaNhan.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 374, 30));
+
+        jComboBox1.setBackground(new java.awt.Color(0, 120, 120));
+        jComboBox1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
+        jComboBox1.setBorder(null);
+        jpn_ThongTinCaNhan.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 200, 30));
+
+        jDateChooser1.setBackground(new java.awt.Color(0, 0, 0));
+        jDateChooser1.setDateFormatString("dd/MM/yyyy");
+        jpn_ThongTinCaNhan.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 200, 30));
+
+        jTextField2.setBackground(new java.awt.Color(0, 120, 120));
+        jTextField2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField2.setText("Võ Anh Tuấn");
+        jTextField2.setBorder(null);
+        jpn_ThongTinCaNhan.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 200, 30));
+
+        jTextField3.setBackground(new java.awt.Color(0, 120, 120));
+        jTextField3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField3.setText("001672038391");
+        jTextField3.setBorder(null);
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField3KeyTyped(evt);
+            }
+        });
+        jpn_ThongTinCaNhan.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 200, 30));
+
+        jButton1.setBackground(new java.awt.Color(0, 120, 215));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Xác Nhận");
+        jButton1.setBorder(null);
+        jpn_ThongTinCaNhan.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 560, 125, 47));
+
+        jButton2.setBackground(new java.awt.Color(0, 120, 215));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Chỉnh Sửa");
+        jButton2.setBorder(null);
+        jpn_ThongTinCaNhan.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, 125, 47));
+        jpn_ThongTinCaNhan.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 200, -1));
+        jpn_ThongTinCaNhan.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 200, -1));
+        jpn_ThongTinCaNhan.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 374, -1));
+
+        jLabel12.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel12.setText("THÔNG TIN CÁ NHÂN");
+        jLabel12.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jpn_ThongTinCaNhan.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1040, 100));
+
+        jLabel13.setForeground(new java.awt.Color(255, 153, 102));
+        jLabel13.setText("*Số điện thoại không hợp lệ");
+        jpn_ThongTinCaNhan.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 200, 30));
+
+        jLabel14.setForeground(new java.awt.Color(255, 153, 102));
+        jLabel14.setText("*Tên đăng nhập không chứa ký tự đặt biệt");
+        jpn_ThongTinCaNhan.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 250, 30));
+
+        jLabel15.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel15.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Số CMND");
+        jpn_ThongTinCaNhan.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, 100, 38));
+
+        jTextField4.setBackground(new java.awt.Color(0, 120, 120));
+        jTextField4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField4.setText("001672038391");
+        jTextField4.setBorder(null);
+        jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField4KeyTyped(evt);
+            }
+        });
+        jpn_ThongTinCaNhan.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 200, 30));
+
+        jLabel16.setForeground(new java.awt.Color(255, 153, 102));
+        jLabel16.setText("*Số CMND không hợp lệ");
+        jpn_ThongTinCaNhan.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
+        jpn_ThongTinCaNhan.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, -1));
+
+        jpn_QuanLyNhanVien.setBackground(new java.awt.Color(0, 120, 120));
         jpn_QuanLyNhanVien.setPreferredSize(new java.awt.Dimension(1070, 720));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Quản Lý Nhân Viên");
 
         javax.swing.GroupLayout jpn_QuanLyNhanVienLayout = new javax.swing.GroupLayout(jpn_QuanLyNhanVien);
@@ -312,10 +450,10 @@ public class jFMain extends javax.swing.JFrame {
             .addGroup(jpn_QuanLyNhanVienLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
-        jpn_QuanLyKho.setBackground(new java.awt.Color(0, 96, 100));
+        jpn_QuanLyKho.setBackground(new java.awt.Color(0, 120, 120));
         jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
 
         jLabel10.setText("Quản Lý Kho");
@@ -334,10 +472,10 @@ public class jFMain extends javax.swing.JFrame {
             .addGroup(jpn_QuanLyKhoLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
-        jpn_QuanLySanPham.setBackground(new java.awt.Color(0, 96, 100));
+        jpn_QuanLySanPham.setBackground(new java.awt.Color(0, 120, 120));
         jpn_QuanLySanPham.setPreferredSize(new java.awt.Dimension(1070, 720));
 
         jLabel9.setText("Quản Lý Sản Phẩm");
@@ -356,135 +494,10 @@ public class jFMain extends javax.swing.JFrame {
             .addGroup(jpn_QuanLySanPhamLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
-        jpn_ThongTinCaNhan.setBackground(new java.awt.Color(0, 96, 100));
-        jpn_ThongTinCaNhan.setPreferredSize(new java.awt.Dimension(1070, 720));
-
-        jLabel3.setBackground(new java.awt.Color(0, 96, 100));
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Địa Chỉ");
-
-        jLabel4.setBackground(new java.awt.Color(0, 96, 100));
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Họ Tên ");
-
-        jLabel5.setBackground(new java.awt.Color(0, 96, 100));
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Giới Tính");
-
-        jLabel6.setBackground(new java.awt.Color(0, 96, 100));
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Ngày Sinh");
-
-        jLabel7.setBackground(new java.awt.Color(0, 96, 100));
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Số Điện Thoại");
-
-        jTextField1.setBackground(new java.awt.Color(0, 96, 100));
-        jTextField1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("Củ Chi, Việt Nam");
-        jTextField1.setBorder(null);
-
-        jComboBox1.setBackground(new java.awt.Color(0, 96, 100));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
-        jComboBox1.setBorder(null);
-
-        jDateChooser1.setBackground(new java.awt.Color(0, 0, 0));
-        jDateChooser1.setDateFormatString("dd/MM/yyyy");
-
-        jTextField2.setBackground(new java.awt.Color(0, 96, 100));
-        jTextField2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("Võ Anh Tuấn");
-        jTextField2.setBorder(null);
-
-        jTextField3.setBackground(new java.awt.Color(0, 96, 100));
-        jTextField3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setText("001672038391");
-        jTextField3.setBorder(null);
-        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField3KeyTyped(evt);
-            }
-        });
-
-        jButton1.setBackground(new java.awt.Color(0, 120, 215));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Xác Nhận");
-        jButton1.setBorder(null);
-
-        jButton2.setBackground(new java.awt.Color(0, 120, 215));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Chỉnh Sửa");
-        jButton2.setBorder(null);
-
-        javax.swing.GroupLayout jpn_ThongTinCaNhanLayout = new javax.swing.GroupLayout(jpn_ThongTinCaNhan);
-        jpn_ThongTinCaNhan.setLayout(jpn_ThongTinCaNhanLayout);
-        jpn_ThongTinCaNhanLayout.setHorizontalGroup(
-            jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_ThongTinCaNhanLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpn_ThongTinCaNhanLayout.createSequentialGroup()
-                        .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 484, Short.MAX_VALUE))
-                    .addGroup(jpn_ThongTinCaNhanLayout.createSequentialGroup()
-                        .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jpn_ThongTinCaNhanLayout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpn_ThongTinCaNhanLayout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        jpn_ThongTinCaNhanLayout.setVerticalGroup(
-            jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_ThongTinCaNhanLayout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addGroup(jpn_ThongTinCaNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jpn_QuanLyThuChi.setBackground(new java.awt.Color(0, 96, 100));
+        jpn_QuanLyThuChi.setBackground(new java.awt.Color(0, 120, 120));
         jpn_QuanLyThuChi.setPreferredSize(new java.awt.Dimension(1070, 720));
 
         jLabel11.setText("Quản Lý Thu Chi");
@@ -503,7 +516,7 @@ public class jFMain extends javax.swing.JFrame {
             .addGroup(jpn_QuanLyThuChiLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -515,11 +528,11 @@ public class jFMain extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpn_QuanLySanPham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jpn_QuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpn_QuanLySanPham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jpn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -527,11 +540,11 @@ public class jFMain extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jpn_QuanLySanPham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jpn_QuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jpn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jpn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLySanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -601,7 +614,7 @@ public class jFMain extends javax.swing.JFrame {
 
     private void btn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThongTinCaNhanMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_ThongTinCaNhan.setBackground(new java.awt.Color (0,96,100));
+        btn_ThongTinCaNhan.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
         bThongTinCaNhan = true;
         SetAllPanelDissapear();
@@ -610,7 +623,7 @@ public class jFMain extends javax.swing.JFrame {
 
     private void btn_QuanLyNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyNhanVienMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLyNhanVien.setBackground(new java.awt.Color (0,96,100));
+        btn_QuanLyNhanVien.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
         bQuanLyNhanVien = true;
         SetAllPanelDissapear();
@@ -619,7 +632,7 @@ public class jFMain extends javax.swing.JFrame {
 
     private void btn_QuanLySanPhamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLySanPhamMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLySanPham.setBackground(new java.awt.Color (0,96,100));
+        btn_QuanLySanPham.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
         bQuanLySanPham = true;
         SetAllPanelDissapear();
@@ -628,7 +641,7 @@ public class jFMain extends javax.swing.JFrame {
 
     private void btn_QuanLyKhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhoMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLyKho.setBackground(new java.awt.Color (0,96,100));
+        btn_QuanLyKho.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
         bQuanLyKho = true;
         SetAllPanelDissapear();
@@ -637,7 +650,7 @@ public class jFMain extends javax.swing.JFrame {
 
     private void btn_QuanLyThuChiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThuChiMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLyThuChi.setBackground(new java.awt.Color (0,96,100));
+        btn_QuanLyThuChi.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
         bQuanLyThuChi = true;
         SetAllPanelDissapear();
@@ -654,6 +667,10 @@ public class jFMain extends javax.swing.JFrame {
            evt.consume();
        }
     }//GEN-LAST:event_jTextField3KeyTyped
+
+    private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4KeyTyped
     
     
     void SetColorAllButton(java.awt.Color jColor ){
@@ -757,6 +774,11 @@ public class jFMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -767,9 +789,14 @@ public class jFMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JPanel jpn_QuanLyKho;
     private javax.swing.JPanel jpn_QuanLyNhanVien;
     private javax.swing.JPanel jpn_QuanLySanPham;
