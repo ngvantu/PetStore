@@ -42,11 +42,11 @@
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jpn_QuanLyKho" min="-2" max="-2" attributes="0"/>
-                  <Component id="jpn_QuanLyNhanVien" min="-2" max="-2" attributes="0"/>
-                  <Component id="jpn_QuanLyLoaiSanPham" min="-2" max="-2" attributes="0"/>
+                  <Component id="jpn_QuanLySanPhamKho" min="-2" max="-2" attributes="0"/>
+                  <Component id="jpn_QuanLyKhachHang" min="-2" max="-2" attributes="0"/>
+                  <Component id="jpn_QuanLyHoaDon" min="-2" max="-2" attributes="0"/>
                   <Component id="jpn_ThongTinCaNhan" min="-2" max="-2" attributes="0"/>
-                  <Component id="jpn_QuanLyThuChi" min="-2" max="-2" attributes="0"/>
+                  <Component id="jpn_QuanLyThanhToan" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -58,11 +58,11 @@
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
           </Group>
-          <Component id="jpn_QuanLyKho" min="-2" pref="670" max="-2" attributes="0"/>
-          <Component id="jpn_QuanLyNhanVien" min="-2" pref="670" max="-2" attributes="0"/>
-          <Component id="jpn_QuanLyLoaiSanPham" min="-2" pref="670" max="-2" attributes="0"/>
+          <Component id="jpn_QuanLySanPhamKho" min="-2" pref="670" max="-2" attributes="0"/>
+          <Component id="jpn_QuanLyKhachHang" min="-2" pref="670" max="-2" attributes="0"/>
+          <Component id="jpn_QuanLyHoaDon" min="-2" pref="670" max="-2" attributes="0"/>
           <Component id="jpn_ThongTinCaNhan" alignment="0" min="-2" pref="670" max="-2" attributes="0"/>
-          <Component id="jpn_QuanLyThuChi" min="-2" pref="670" max="-2" attributes="0"/>
+          <Component id="jpn_QuanLyThanhToan" min="-2" pref="670" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -135,10 +135,10 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="btn_ThongTinCaNhan" min="-2" pref="210" max="-2" attributes="0"/>
-              <Component id="btn_QuanLyNhanVien" min="-2" pref="210" max="-2" attributes="0"/>
-              <Component id="btn_QuanLyLoaiSanPham" min="-2" pref="210" max="-2" attributes="0"/>
-              <Component id="btn_QuanLyKho" min="-2" pref="210" max="-2" attributes="0"/>
-              <Component id="btn_QuanLyThuChi" min="-2" pref="210" max="-2" attributes="0"/>
+              <Component id="btn_QuanLyKhachHang" min="-2" pref="210" max="-2" attributes="0"/>
+              <Component id="btn_QuanLyHoaDon" min="-2" pref="210" max="-2" attributes="0"/>
+              <Component id="btn_QuanLyThanhToan" min="-2" pref="210" max="-2" attributes="0"/>
+              <Component id="btn_QuanLySanPhamKho" min="-2" pref="210" max="-2" attributes="0"/>
               <Component id="btn_Thoat" min="-2" pref="210" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
@@ -147,13 +147,13 @@
               <Group type="102" attributes="0">
                   <Component id="btn_ThongTinCaNhan" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="btn_QuanLyNhanVien" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="btn_QuanLyKhachHang" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="btn_QuanLyLoaiSanPham" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="btn_QuanLyHoaDon" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="btn_QuanLyKho" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="btn_QuanLyThanhToan" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="btn_QuanLyThuChi" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="btn_QuanLySanPhamKho" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="150" pref="150" max="-2" attributes="0"/>
                   <Component id="btn_Thoat" min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
@@ -187,7 +187,7 @@
             <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_ThoatMouseExited"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_QuanLyNhanVien">
+        <Component class="javax.swing.JButton" name="btn_QuanLyKhachHang">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d7" green="78" red="0" type="rgb"/>
@@ -198,7 +198,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Nh&#xe2;n Vi&#xea;n"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Kh&#xe1;ch H&#xe0;ng"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -209,12 +209,12 @@
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyNhanVienMouseClicked"/>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyNhanVienMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyNhanVienMouseExited"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyKhachHangMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyKhachHangMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyKhachHangMouseExited"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_QuanLyLoaiSanPham">
+        <Component class="javax.swing.JButton" name="btn_QuanLyHoaDon">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d7" green="78" red="0" type="rgb"/>
@@ -225,7 +225,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Lo&#x1ea1;i S&#x1ea3;n Ph&#x1ea9;m"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; H&#xf3;a &#x110;&#x1a1;n"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -236,12 +236,12 @@
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyLoaiSanPhamMouseClicked"/>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyLoaiSanPhamMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyLoaiSanPhamMouseExited"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyHoaDonMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyHoaDonMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyHoaDonMouseExited"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_QuanLyThuChi">
+        <Component class="javax.swing.JButton" name="btn_QuanLySanPhamKho">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d7" green="78" red="0" type="rgb"/>
@@ -252,7 +252,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Thu Chi"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; S&#x1ea3;n Ph&#x1ea9;m/Kho"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -263,12 +263,12 @@
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyThuChiMouseClicked"/>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyThuChiMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyThuChiMouseExited"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLySanPhamKhoMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLySanPhamKhoMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLySanPhamKhoMouseExited"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_QuanLyKho">
+        <Component class="javax.swing.JButton" name="btn_QuanLyThanhToan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d7" green="78" red="0" type="rgb"/>
@@ -279,7 +279,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Kho"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Thanh To&#xe1;n"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -290,9 +290,9 @@
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyKhoMouseClicked"/>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyKhoMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyKhoMouseExited"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyThanhToanMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyThanhToanMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyThanhToanMouseExited"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_ThongTinCaNhan">
@@ -715,7 +715,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jpn_QuanLyNhanVien">
+    <Container class="javax.swing.JPanel" name="jpn_QuanLyKhachHang">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="78" green="78" red="0" type="rgb"/>
@@ -751,12 +751,13 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Nh&#xe2;n Vi&#xea;n"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd;  Kh&#xe1;ch H&#xe0;ng"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jpn_QuanLyKho">
+    <Container class="javax.swing.JPanel" name="jpn_QuanLySanPhamKho">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="78" green="78" red="0" type="rgb"/>
@@ -789,12 +790,12 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Kho"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; S&#x1ea3;n Ph&#x1ea9;m / Kho"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jpn_QuanLyLoaiSanPham">
+    <Container class="javax.swing.JPanel" name="jpn_QuanLyHoaDon">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="78" green="78" red="0" type="rgb"/>
@@ -827,12 +828,12 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Lo&#x1ea1;i S&#x1ea3;n Ph&#x1ea9;m"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; H&#xf3;a &#x110;&#x1a1;n"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jpn_QuanLyThuChi">
+    <Container class="javax.swing.JPanel" name="jpn_QuanLyThanhToan">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="78" green="78" red="0" type="rgb"/>
@@ -865,7 +866,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Thu Chi"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Thanh To&#xe1;n"/>
           </Properties>
         </Component>
       </SubComponents>

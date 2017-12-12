@@ -44,7 +44,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jpn_QuanLyKho" min="-2" max="-2" attributes="0"/>
                   <Component id="jpn_QuanLyNhanVien" min="-2" max="-2" attributes="0"/>
-                  <Component id="jpn_QuanLySanPham" min="-2" max="-2" attributes="0"/>
+                  <Component id="jpn_QuanLyLoaiSanPham" min="-2" max="-2" attributes="0"/>
                   <Component id="jpn_ThongTinCaNhan" min="-2" max="-2" attributes="0"/>
                   <Component id="jpn_QuanLyThuChi" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -60,7 +60,7 @@
           </Group>
           <Component id="jpn_QuanLyKho" min="-2" pref="670" max="-2" attributes="0"/>
           <Component id="jpn_QuanLyNhanVien" min="-2" pref="670" max="-2" attributes="0"/>
-          <Component id="jpn_QuanLySanPham" min="-2" pref="670" max="-2" attributes="0"/>
+          <Component id="jpn_QuanLyLoaiSanPham" min="-2" pref="670" max="-2" attributes="0"/>
           <Component id="jpn_ThongTinCaNhan" alignment="0" min="-2" pref="670" max="-2" attributes="0"/>
           <Component id="jpn_QuanLyThuChi" min="-2" pref="670" max="-2" attributes="0"/>
       </Group>
@@ -136,7 +136,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="btn_ThongTinCaNhan" min="-2" pref="210" max="-2" attributes="0"/>
               <Component id="btn_QuanLyNhanVien" min="-2" pref="210" max="-2" attributes="0"/>
-              <Component id="btn_QuanLySanPham" min="-2" pref="210" max="-2" attributes="0"/>
+              <Component id="btn_QuanLyLoaiSanPham" min="-2" pref="210" max="-2" attributes="0"/>
               <Component id="btn_QuanLyKho" min="-2" pref="210" max="-2" attributes="0"/>
               <Component id="btn_QuanLyThuChi" min="-2" pref="210" max="-2" attributes="0"/>
               <Component id="btn_Thoat" min="-2" pref="210" max="-2" attributes="0"/>
@@ -149,7 +149,7 @@
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="btn_QuanLyNhanVien" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="btn_QuanLySanPham" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="btn_QuanLyLoaiSanPham" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="btn_QuanLyKho" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -177,7 +177,7 @@
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="&#x30c7;&#x30d5;&#x30a9;&#x30eb;&#x30c8;&#x306e;&#x30ab;&#x30fc;&#x30bd;&#x30eb;"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
@@ -203,7 +203,7 @@
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="&#x30c7;&#x30d5;&#x30a9;&#x30eb;&#x30c8;&#x306e;&#x30ab;&#x30fc;&#x30bd;&#x30eb;"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
@@ -214,7 +214,7 @@
             <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyNhanVienMouseExited"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_QuanLySanPham">
+        <Component class="javax.swing.JButton" name="btn_QuanLyLoaiSanPham">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d7" green="78" red="0" type="rgb"/>
@@ -225,20 +225,20 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; S&#x1ea3;n Ph&#x1ea9;m"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Lo&#x1ea1;i S&#x1ea3;n Ph&#x1ea9;m"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="&#x30c7;&#x30d5;&#x30a9;&#x30eb;&#x30c8;&#x306e;&#x30ab;&#x30fc;&#x30bd;&#x30eb;"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLySanPhamMouseClicked"/>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLySanPhamMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLySanPhamMouseExited"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyLoaiSanPhamMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyLoaiSanPhamMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyLoaiSanPhamMouseExited"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_QuanLyThuChi">
@@ -257,7 +257,7 @@
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="&#x30c7;&#x30d5;&#x30a9;&#x30eb;&#x30c8;&#x306e;&#x30ab;&#x30fc;&#x30bd;&#x30eb;"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
@@ -284,7 +284,7 @@
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="&#x30c7;&#x30d5;&#x30a9;&#x30eb;&#x30c8;&#x306e;&#x30ab;&#x30fc;&#x30bd;&#x30eb;"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
@@ -311,7 +311,7 @@
               <Border info="null"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="&#x30c7;&#x30d5;&#x30a9;&#x30eb;&#x30c8;&#x306e;&#x30ab;&#x30fc;&#x30bd;&#x30eb;"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
@@ -794,7 +794,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jpn_QuanLySanPham">
+    <Container class="javax.swing.JPanel" name="jpn_QuanLyLoaiSanPham">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="78" green="78" red="0" type="rgb"/>
@@ -827,7 +827,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; S&#x1ea3;n Ph&#x1ea9;m"/>
+            <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n L&#xfd; Lo&#x1ea1;i S&#x1ea3;n Ph&#x1ea9;m"/>
           </Properties>
         </Component>
       </SubComponents>

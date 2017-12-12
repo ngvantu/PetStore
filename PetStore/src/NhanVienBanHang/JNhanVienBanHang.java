@@ -201,7 +201,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_MaSanPham);
-        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.setBounds(954, 135, 208, 33);
+        jNhanVienBanHang_XemSanPham_tbx_MaSanPham.setBounds(954, 135, 208, 31);
 
         jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +210,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham);
-        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setBounds(954, 190, 208, 33);
+        jNhanVienBanHang_XemSanPham_tbx_LoaiSanPham.setBounds(954, 190, 208, 31);
 
         jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jNhanVienBanHang_XemSanPham_tbx_TenSanPham.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +219,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_TenSanPham);
-        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setBounds(954, 247, 370, 33);
+        jNhanVienBanHang_XemSanPham_tbx_TenSanPham.setBounds(954, 247, 370, 31);
 
         jNhanVienBanHang_XemSanPham_tbx_DonGia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jNhanVienBanHang_XemSanPham_tbx_DonGia.addActionListener(new java.awt.event.ActionListener() {
@@ -228,7 +228,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_DonGia);
-        jNhanVienBanHang_XemSanPham_tbx_DonGia.setBounds(954, 297, 208, 33);
+        jNhanVienBanHang_XemSanPham_tbx_DonGia.setBounds(954, 297, 208, 31);
 
         jNhanVienBanHang_XemSanPham_tbx_SoLuong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jNhanVienBanHang_XemSanPham_tbx_SoLuong.addActionListener(new java.awt.event.ActionListener() {
@@ -237,7 +237,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemSanPham_panel.add(jNhanVienBanHang_XemSanPham_tbx_SoLuong);
-        jNhanVienBanHang_XemSanPham_tbx_SoLuong.setBounds(954, 350, 208, 33);
+        jNhanVienBanHang_XemSanPham_tbx_SoLuong.setBounds(954, 350, 208, 31);
 
         jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jNhanVienBanHang_XemSanPham_btn_ThemVaoGioHang.setText("Thêm vào giỏ hàng");
@@ -415,7 +415,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemHoaDon_panel.add(jTextField1);
-        jTextField1.setBounds(1070, 560, 180, 33);
+        jTextField1.setBounds(1070, 560, 180, 31);
 
         getContentPane().add(JNhanVienBanHang_XemHoaDon_panel);
         JNhanVienBanHang_XemHoaDon_panel.setBounds(50, 110, 1310, 610);

@@ -13,7 +13,7 @@ import javax.swing.DefaultButtonModel;
  *
  * @author voanh
  */
-public class jFMain extends javax.swing.JFrame {
+public class jFNhanVienBanHang extends javax.swing.JFrame {
     static String id="";
     static String maChucVu;
     static String mk="";
@@ -22,16 +22,16 @@ public class jFMain extends javax.swing.JFrame {
     
     
     boolean bThongTinCaNhan = false;
-    boolean bQuanLyNhanVien = false;
-    boolean bQuanLyLoaiSanPham = false;
-    boolean bQuanLyKho = false;
-    boolean bQuanLyThuChi = false;
+    boolean bQuanLyKhachHang = false;
+    boolean bQuanLyHoaDon = false;
+    boolean bQuanLyThanhToan = false;
+    boolean bQuanLySanPhamKho = false;
 
     
     /**
      * Creates new form jFMain
      */
-    public jFMain() {
+    public jFNhanVienBanHang() {
         
          Data d = new Data();
         
@@ -44,11 +44,11 @@ public class jFMain extends javax.swing.JFrame {
         fTableManager.setVisible(false);
         
         btn_ThongTinCaNhan.setModel(new FixedStateButtonModel());
-        btn_QuanLyNhanVien.setModel(new FixedStateButtonModel());
-        btn_QuanLyLoaiSanPham.setModel(new FixedStateButtonModel());
-        btn_QuanLyThuChi.setModel(new FixedStateButtonModel());
+        btn_QuanLyKhachHang.setModel(new FixedStateButtonModel());
+        btn_QuanLyHoaDon.setModel(new FixedStateButtonModel());
+        btn_QuanLySanPhamKho.setModel(new FixedStateButtonModel());
         btn_Thoat.setModel(new FixedStateButtonModel());
-        btn_QuanLyKho.setModel(new FixedStateButtonModel());
+        btn_QuanLyThanhToan.setModel(new FixedStateButtonModel());
         
         
         //
@@ -76,10 +76,10 @@ public class jFMain extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btn_Thoat = new javax.swing.JButton();
-        btn_QuanLyNhanVien = new javax.swing.JButton();
-        btn_QuanLyLoaiSanPham = new javax.swing.JButton();
-        btn_QuanLyThuChi = new javax.swing.JButton();
-        btn_QuanLyKho = new javax.swing.JButton();
+        btn_QuanLyKhachHang = new javax.swing.JButton();
+        btn_QuanLyHoaDon = new javax.swing.JButton();
+        btn_QuanLySanPhamKho = new javax.swing.JButton();
+        btn_QuanLyThanhToan = new javax.swing.JButton();
         btn_ThongTinCaNhan = new javax.swing.JButton();
         jpn_ThongTinCaNhan = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -104,13 +104,13 @@ public class jFMain extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jpn_QuanLyNhanVien = new javax.swing.JPanel();
+        jpn_QuanLyKhachHang = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jpn_QuanLyKho = new javax.swing.JPanel();
+        jpn_QuanLySanPhamKho = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jpn_QuanLyLoaiSanPham = new javax.swing.JPanel();
+        jpn_QuanLyHoaDon = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jpn_QuanLyThuChi = new javax.swing.JPanel();
+        jpn_QuanLyThanhToan = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -174,83 +174,83 @@ public class jFMain extends javax.swing.JFrame {
             }
         });
 
-        btn_QuanLyNhanVien.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLyNhanVien.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        btn_QuanLyNhanVien.setForeground(new java.awt.Color(255, 255, 255));
-        btn_QuanLyNhanVien.setText("Quản Lý Nhân Viên");
-        btn_QuanLyNhanVien.setBorder(null);
-        btn_QuanLyNhanVien.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btn_QuanLyNhanVien.setFocusable(false);
-        btn_QuanLyNhanVien.setName(""); // NOI18N
-        btn_QuanLyNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_QuanLyKhachHang.setBackground(new java.awt.Color(0, 120, 215));
+        btn_QuanLyKhachHang.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        btn_QuanLyKhachHang.setForeground(new java.awt.Color(255, 255, 255));
+        btn_QuanLyKhachHang.setText("Quản Lý Khách Hàng");
+        btn_QuanLyKhachHang.setBorder(null);
+        btn_QuanLyKhachHang.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_QuanLyKhachHang.setFocusable(false);
+        btn_QuanLyKhachHang.setName(""); // NOI18N
+        btn_QuanLyKhachHang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_QuanLyNhanVienMouseClicked(evt);
+                btn_QuanLyKhachHangMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_QuanLyNhanVienMouseEntered(evt);
+                btn_QuanLyKhachHangMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_QuanLyNhanVienMouseExited(evt);
+                btn_QuanLyKhachHangMouseExited(evt);
             }
         });
 
-        btn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLyLoaiSanPham.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        btn_QuanLyLoaiSanPham.setForeground(new java.awt.Color(255, 255, 255));
-        btn_QuanLyLoaiSanPham.setText("Quản Lý Loại Sản Phẩm");
-        btn_QuanLyLoaiSanPham.setBorder(null);
-        btn_QuanLyLoaiSanPham.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btn_QuanLyLoaiSanPham.setFocusable(false);
-        btn_QuanLyLoaiSanPham.setName(""); // NOI18N
-        btn_QuanLyLoaiSanPham.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_QuanLyHoaDon.setBackground(new java.awt.Color(0, 120, 215));
+        btn_QuanLyHoaDon.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        btn_QuanLyHoaDon.setForeground(new java.awt.Color(255, 255, 255));
+        btn_QuanLyHoaDon.setText("Quản Lý Hóa Đơn");
+        btn_QuanLyHoaDon.setBorder(null);
+        btn_QuanLyHoaDon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_QuanLyHoaDon.setFocusable(false);
+        btn_QuanLyHoaDon.setName(""); // NOI18N
+        btn_QuanLyHoaDon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_QuanLyLoaiSanPhamMouseClicked(evt);
+                btn_QuanLyHoaDonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_QuanLyLoaiSanPhamMouseEntered(evt);
+                btn_QuanLyHoaDonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_QuanLyLoaiSanPhamMouseExited(evt);
+                btn_QuanLyHoaDonMouseExited(evt);
             }
         });
 
-        btn_QuanLyThuChi.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLyThuChi.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        btn_QuanLyThuChi.setForeground(new java.awt.Color(255, 255, 255));
-        btn_QuanLyThuChi.setText("Quản Lý Thu Chi");
-        btn_QuanLyThuChi.setBorder(null);
-        btn_QuanLyThuChi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btn_QuanLyThuChi.setFocusable(false);
-        btn_QuanLyThuChi.setName(""); // NOI18N
-        btn_QuanLyThuChi.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_QuanLySanPhamKho.setBackground(new java.awt.Color(0, 120, 215));
+        btn_QuanLySanPhamKho.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        btn_QuanLySanPhamKho.setForeground(new java.awt.Color(255, 255, 255));
+        btn_QuanLySanPhamKho.setText("Quản Lý Sản Phẩm/Kho");
+        btn_QuanLySanPhamKho.setBorder(null);
+        btn_QuanLySanPhamKho.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_QuanLySanPhamKho.setFocusable(false);
+        btn_QuanLySanPhamKho.setName(""); // NOI18N
+        btn_QuanLySanPhamKho.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_QuanLyThuChiMouseClicked(evt);
+                btn_QuanLySanPhamKhoMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_QuanLyThuChiMouseEntered(evt);
+                btn_QuanLySanPhamKhoMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_QuanLyThuChiMouseExited(evt);
+                btn_QuanLySanPhamKhoMouseExited(evt);
             }
         });
 
-        btn_QuanLyKho.setBackground(new java.awt.Color(0, 120, 215));
-        btn_QuanLyKho.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        btn_QuanLyKho.setForeground(new java.awt.Color(255, 255, 255));
-        btn_QuanLyKho.setText("Quản Lý Kho");
-        btn_QuanLyKho.setBorder(null);
-        btn_QuanLyKho.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btn_QuanLyKho.setFocusable(false);
-        btn_QuanLyKho.setName(""); // NOI18N
-        btn_QuanLyKho.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_QuanLyThanhToan.setBackground(new java.awt.Color(0, 120, 215));
+        btn_QuanLyThanhToan.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        btn_QuanLyThanhToan.setForeground(new java.awt.Color(255, 255, 255));
+        btn_QuanLyThanhToan.setText("Quản Lý Thanh Toán");
+        btn_QuanLyThanhToan.setBorder(null);
+        btn_QuanLyThanhToan.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_QuanLyThanhToan.setFocusable(false);
+        btn_QuanLyThanhToan.setName(""); // NOI18N
+        btn_QuanLyThanhToan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_QuanLyKhoMouseClicked(evt);
+                btn_QuanLyThanhToanMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_QuanLyKhoMouseEntered(evt);
+                btn_QuanLyThanhToanMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_QuanLyKhoMouseExited(evt);
+                btn_QuanLyThanhToanMouseExited(evt);
             }
         });
 
@@ -284,10 +284,10 @@ public class jFMain extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btn_QuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btn_QuanLyLoaiSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btn_QuanLyKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btn_QuanLyHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btn_QuanLyThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btn_QuanLySanPhamKho, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(btn_Thoat, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel3Layout.setVerticalGroup(
@@ -295,13 +295,13 @@ public class jFMain extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(btn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(btn_QuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_QuanLyKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(btn_QuanLyLoaiSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_QuanLyHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(btn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_QuanLyThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(btn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_QuanLySanPhamKho, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(150, 150, 150)
                 .addComponent(btn_Thoat, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -430,90 +430,91 @@ public class jFMain extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
         jpn_ThongTinCaNhan.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, -1));
 
-        jpn_QuanLyNhanVien.setBackground(new java.awt.Color(0, 120, 120));
-        jpn_QuanLyNhanVien.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_QuanLyKhachHang.setBackground(new java.awt.Color(0, 120, 120));
+        jpn_QuanLyKhachHang.setPreferredSize(new java.awt.Dimension(1070, 720));
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Quản Lý Nhân Viên");
+        jLabel8.setText("Quản Lý  Khách Hàng");
+        jLabel8.setToolTipText("");
 
-        javax.swing.GroupLayout jpn_QuanLyNhanVienLayout = new javax.swing.GroupLayout(jpn_QuanLyNhanVien);
-        jpn_QuanLyNhanVien.setLayout(jpn_QuanLyNhanVienLayout);
-        jpn_QuanLyNhanVienLayout.setHorizontalGroup(
-            jpn_QuanLyNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyNhanVienLayout.createSequentialGroup()
+        javax.swing.GroupLayout jpn_QuanLyKhachHangLayout = new javax.swing.GroupLayout(jpn_QuanLyKhachHang);
+        jpn_QuanLyKhachHang.setLayout(jpn_QuanLyKhachHangLayout);
+        jpn_QuanLyKhachHangLayout.setHorizontalGroup(
+            jpn_QuanLyKhachHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLyKhachHangLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(554, Short.MAX_VALUE))
         );
-        jpn_QuanLyNhanVienLayout.setVerticalGroup(
-            jpn_QuanLyNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyNhanVienLayout.createSequentialGroup()
+        jpn_QuanLyKhachHangLayout.setVerticalGroup(
+            jpn_QuanLyKhachHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLyKhachHangLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(373, Short.MAX_VALUE))
         );
 
-        jpn_QuanLyKho.setBackground(new java.awt.Color(0, 120, 120));
-        jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_QuanLySanPhamKho.setBackground(new java.awt.Color(0, 120, 120));
+        jpn_QuanLySanPhamKho.setPreferredSize(new java.awt.Dimension(1070, 720));
 
-        jLabel10.setText("Quản Lý Kho");
+        jLabel10.setText("Quản Lý Sản Phẩm / Kho");
 
-        javax.swing.GroupLayout jpn_QuanLyKhoLayout = new javax.swing.GroupLayout(jpn_QuanLyKho);
-        jpn_QuanLyKho.setLayout(jpn_QuanLyKhoLayout);
-        jpn_QuanLyKhoLayout.setHorizontalGroup(
-            jpn_QuanLyKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyKhoLayout.createSequentialGroup()
+        javax.swing.GroupLayout jpn_QuanLySanPhamKhoLayout = new javax.swing.GroupLayout(jpn_QuanLySanPhamKho);
+        jpn_QuanLySanPhamKho.setLayout(jpn_QuanLySanPhamKhoLayout);
+        jpn_QuanLySanPhamKhoLayout.setHorizontalGroup(
+            jpn_QuanLySanPhamKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLySanPhamKhoLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(554, Short.MAX_VALUE))
         );
-        jpn_QuanLyKhoLayout.setVerticalGroup(
-            jpn_QuanLyKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyKhoLayout.createSequentialGroup()
+        jpn_QuanLySanPhamKhoLayout.setVerticalGroup(
+            jpn_QuanLySanPhamKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLySanPhamKhoLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(373, Short.MAX_VALUE))
         );
 
-        jpn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 120, 120));
-        jpn_QuanLyLoaiSanPham.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_QuanLyHoaDon.setBackground(new java.awt.Color(0, 120, 120));
+        jpn_QuanLyHoaDon.setPreferredSize(new java.awt.Dimension(1070, 720));
 
-        jLabel9.setText("Quản Lý Loại Sản Phẩm");
+        jLabel9.setText("Quản Lý Hóa Đơn");
 
-        javax.swing.GroupLayout jpn_QuanLyLoaiSanPhamLayout = new javax.swing.GroupLayout(jpn_QuanLyLoaiSanPham);
-        jpn_QuanLyLoaiSanPham.setLayout(jpn_QuanLyLoaiSanPhamLayout);
-        jpn_QuanLyLoaiSanPhamLayout.setHorizontalGroup(
-            jpn_QuanLyLoaiSanPhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyLoaiSanPhamLayout.createSequentialGroup()
+        javax.swing.GroupLayout jpn_QuanLyHoaDonLayout = new javax.swing.GroupLayout(jpn_QuanLyHoaDon);
+        jpn_QuanLyHoaDon.setLayout(jpn_QuanLyHoaDonLayout);
+        jpn_QuanLyHoaDonLayout.setHorizontalGroup(
+            jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(554, Short.MAX_VALUE))
         );
-        jpn_QuanLyLoaiSanPhamLayout.setVerticalGroup(
-            jpn_QuanLyLoaiSanPhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyLoaiSanPhamLayout.createSequentialGroup()
+        jpn_QuanLyHoaDonLayout.setVerticalGroup(
+            jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(373, Short.MAX_VALUE))
         );
 
-        jpn_QuanLyThuChi.setBackground(new java.awt.Color(0, 120, 120));
-        jpn_QuanLyThuChi.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_QuanLyThanhToan.setBackground(new java.awt.Color(0, 120, 120));
+        jpn_QuanLyThanhToan.setPreferredSize(new java.awt.Dimension(1070, 720));
 
-        jLabel11.setText("Quản Lý Thu Chi");
+        jLabel11.setText("Quản Lý Thanh Toán");
 
-        javax.swing.GroupLayout jpn_QuanLyThuChiLayout = new javax.swing.GroupLayout(jpn_QuanLyThuChi);
-        jpn_QuanLyThuChi.setLayout(jpn_QuanLyThuChiLayout);
-        jpn_QuanLyThuChiLayout.setHorizontalGroup(
-            jpn_QuanLyThuChiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyThuChiLayout.createSequentialGroup()
+        javax.swing.GroupLayout jpn_QuanLyThanhToanLayout = new javax.swing.GroupLayout(jpn_QuanLyThanhToan);
+        jpn_QuanLyThanhToan.setLayout(jpn_QuanLyThanhToanLayout);
+        jpn_QuanLyThanhToanLayout.setHorizontalGroup(
+            jpn_QuanLyThanhToanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLyThanhToanLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(554, Short.MAX_VALUE))
         );
-        jpn_QuanLyThuChiLayout.setVerticalGroup(
-            jpn_QuanLyThuChiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyThuChiLayout.createSequentialGroup()
+        jpn_QuanLyThanhToanLayout.setVerticalGroup(
+            jpn_QuanLyThanhToanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_QuanLyThanhToanLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(373, Short.MAX_VALUE))
@@ -528,11 +529,11 @@ public class jFMain extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpn_QuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpn_QuanLyLoaiSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpn_QuanLySanPhamKho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpn_QuanLyKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpn_QuanLyHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jpn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jpn_QuanLyThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -540,11 +541,11 @@ public class jFMain extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jpn_QuanLyKho, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jpn_QuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jpn_QuanLyLoaiSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLySanPhamKho, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLyKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLyHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jpn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpn_QuanLyThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -554,49 +555,49 @@ public class jFMain extends javax.swing.JFrame {
         ExitProgram();
     }//GEN-LAST:event_formWindowClosing
 
-    private void btn_QuanLyNhanVienMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyNhanVienMouseEntered
-        if(bQuanLyNhanVien == false)
-            btn_QuanLyNhanVien.setBackground(new java.awt.Color(0, 100, 215));
-    }//GEN-LAST:event_btn_QuanLyNhanVienMouseEntered
+    private void btn_QuanLyKhachHangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhachHangMouseEntered
+        if(bQuanLyKhachHang == false)
+            btn_QuanLyKhachHang.setBackground(new java.awt.Color(0, 100, 215));
+    }//GEN-LAST:event_btn_QuanLyKhachHangMouseEntered
 
-    private void btn_QuanLyLoaiSanPhamMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyLoaiSanPhamMouseEntered
-        if(bQuanLyLoaiSanPham == false)
-            btn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 100, 215));
-    }//GEN-LAST:event_btn_QuanLyLoaiSanPhamMouseEntered
+    private void btn_QuanLyHoaDonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyHoaDonMouseEntered
+        if(bQuanLyHoaDon == false)
+            btn_QuanLyHoaDon.setBackground(new java.awt.Color(0, 100, 215));
+    }//GEN-LAST:event_btn_QuanLyHoaDonMouseEntered
 
-    private void btn_QuanLyKhoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhoMouseEntered
-        if(bQuanLyKho == false)
-            btn_QuanLyKho.setBackground(new java.awt.Color(0, 100, 215));
-    }//GEN-LAST:event_btn_QuanLyKhoMouseEntered
+    private void btn_QuanLyThanhToanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThanhToanMouseEntered
+        if(bQuanLyThanhToan == false)
+            btn_QuanLyThanhToan.setBackground(new java.awt.Color(0, 100, 215));
+    }//GEN-LAST:event_btn_QuanLyThanhToanMouseEntered
 
-    private void btn_QuanLyThuChiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThuChiMouseEntered
-        if(bQuanLyThuChi==false)
-            btn_QuanLyThuChi.setBackground(new java.awt.Color(0, 100, 215));
-    }//GEN-LAST:event_btn_QuanLyThuChiMouseEntered
+    private void btn_QuanLySanPhamKhoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLySanPhamKhoMouseEntered
+        if(bQuanLySanPhamKho==false)
+            btn_QuanLySanPhamKho.setBackground(new java.awt.Color(0, 100, 215));
+    }//GEN-LAST:event_btn_QuanLySanPhamKhoMouseEntered
 
     private void btn_ThoatMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThoatMouseEntered
         btn_Thoat.setBackground(new java.awt.Color(0, 100, 215));
     }//GEN-LAST:event_btn_ThoatMouseEntered
 
-    private void btn_QuanLyNhanVienMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyNhanVienMouseExited
-        if(bQuanLyNhanVien==false)
-            btn_QuanLyNhanVien.setBackground(new java.awt.Color(0, 120, 215));
-    }//GEN-LAST:event_btn_QuanLyNhanVienMouseExited
+    private void btn_QuanLyKhachHangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhachHangMouseExited
+        if(bQuanLyKhachHang==false)
+            btn_QuanLyKhachHang.setBackground(new java.awt.Color(0, 120, 215));
+    }//GEN-LAST:event_btn_QuanLyKhachHangMouseExited
 
-    private void btn_QuanLyLoaiSanPhamMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyLoaiSanPhamMouseExited
-        if(bQuanLyLoaiSanPham==false)
-            btn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 120, 215));
-    }//GEN-LAST:event_btn_QuanLyLoaiSanPhamMouseExited
+    private void btn_QuanLyHoaDonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyHoaDonMouseExited
+        if(bQuanLyHoaDon==false)
+            btn_QuanLyHoaDon.setBackground(new java.awt.Color(0, 120, 215));
+    }//GEN-LAST:event_btn_QuanLyHoaDonMouseExited
 
-    private void btn_QuanLyKhoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhoMouseExited
-        if(bQuanLyKho==false)
-            btn_QuanLyKho.setBackground(new java.awt.Color(0, 120, 215));
-    }//GEN-LAST:event_btn_QuanLyKhoMouseExited
+    private void btn_QuanLyThanhToanMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThanhToanMouseExited
+        if(bQuanLyThanhToan==false)
+            btn_QuanLyThanhToan.setBackground(new java.awt.Color(0, 120, 215));
+    }//GEN-LAST:event_btn_QuanLyThanhToanMouseExited
 
-    private void btn_QuanLyThuChiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThuChiMouseExited
-        if(bQuanLyThuChi==false)
-            btn_QuanLyThuChi.setBackground(new java.awt.Color(0, 120, 215));
-    }//GEN-LAST:event_btn_QuanLyThuChiMouseExited
+    private void btn_QuanLySanPhamKhoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLySanPhamKhoMouseExited
+        if(bQuanLySanPhamKho==false)
+            btn_QuanLySanPhamKho.setBackground(new java.awt.Color(0, 120, 215));
+    }//GEN-LAST:event_btn_QuanLySanPhamKhoMouseExited
 
     private void btn_ThoatMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThoatMouseExited
         btn_Thoat.setBackground(new java.awt.Color(0, 120, 215));
@@ -621,41 +622,41 @@ public class jFMain extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.setVisible(true);
     }//GEN-LAST:event_btn_ThongTinCaNhanMouseClicked
 
-    private void btn_QuanLyNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyNhanVienMouseClicked
+    private void btn_QuanLyKhachHangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhachHangMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLyNhanVien.setBackground(new java.awt.Color (0,120,120));
+        btn_QuanLyKhachHang.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
-        bQuanLyNhanVien = true;
+        bQuanLyKhachHang = true;
         SetAllPanelDissapear();
-        jpn_QuanLyNhanVien.setVisible(true);
-    }//GEN-LAST:event_btn_QuanLyNhanVienMouseClicked
+        jpn_QuanLyKhachHang.setVisible(true);
+    }//GEN-LAST:event_btn_QuanLyKhachHangMouseClicked
 
-    private void btn_QuanLyLoaiSanPhamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyLoaiSanPhamMouseClicked
+    private void btn_QuanLyHoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyHoaDonMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLyLoaiSanPham.setBackground(new java.awt.Color (0,120,120));
+        btn_QuanLyHoaDon.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
-        bQuanLyLoaiSanPham = true;
+        bQuanLyHoaDon = true;
         SetAllPanelDissapear();
-        jpn_QuanLyLoaiSanPham.setVisible(true);
-    }//GEN-LAST:event_btn_QuanLyLoaiSanPhamMouseClicked
+        jpn_QuanLyHoaDon.setVisible(true);
+    }//GEN-LAST:event_btn_QuanLyHoaDonMouseClicked
 
-    private void btn_QuanLyKhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhoMouseClicked
+    private void btn_QuanLyThanhToanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThanhToanMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLyKho.setBackground(new java.awt.Color (0,120,120));
+        btn_QuanLyThanhToan.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
-        bQuanLyKho = true;
+        bQuanLyThanhToan = true;
         SetAllPanelDissapear();
-        jpn_QuanLyThuChi.setVisible(true);
-    }//GEN-LAST:event_btn_QuanLyKhoMouseClicked
+        jpn_QuanLyThanhToan.setVisible(true);
+    }//GEN-LAST:event_btn_QuanLyThanhToanMouseClicked
 
-    private void btn_QuanLyThuChiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThuChiMouseClicked
+    private void btn_QuanLySanPhamKhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLySanPhamKhoMouseClicked
         SetColorAllButton(new java.awt.Color (0,120,215));
-        btn_QuanLyThuChi.setBackground(new java.awt.Color (0,120,120));
+        btn_QuanLySanPhamKho.setBackground(new java.awt.Color (0,120,120));
         SetFalseAllButton();
-        bQuanLyThuChi = true;
+        bQuanLySanPhamKho = true;
         SetAllPanelDissapear();
-        jpn_QuanLyKho.setVisible(true);
-    }//GEN-LAST:event_btn_QuanLyThuChiMouseClicked
+        jpn_QuanLySanPhamKho.setVisible(true);
+    }//GEN-LAST:event_btn_QuanLySanPhamKhoMouseClicked
 
     private void btn_ThongTinCaNhanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ThongTinCaNhanActionPerformed
         // TODO add your handling code here:
@@ -675,25 +676,25 @@ public class jFMain extends javax.swing.JFrame {
     
     void SetColorAllButton(java.awt.Color jColor ){
         btn_ThongTinCaNhan.setBackground(jColor);
-        btn_QuanLyLoaiSanPham.setBackground(jColor);
-        btn_QuanLyNhanVien.setBackground(jColor);
-        btn_QuanLyThuChi.setBackground(jColor);
+        btn_QuanLyHoaDon.setBackground(jColor);
+        btn_QuanLyKhachHang.setBackground(jColor);
+        btn_QuanLySanPhamKho.setBackground(jColor);
         btn_Thoat.setBackground(jColor);
-        btn_QuanLyKho.setBackground(jColor);
+        btn_QuanLyThanhToan.setBackground(jColor);
     }
     
     void SetFalseAllButton(){
         bThongTinCaNhan = false;
-        bQuanLyNhanVien = false;
-        bQuanLyLoaiSanPham = false;
-        bQuanLyKho = false;
-        bQuanLyThuChi = false;
+        bQuanLyKhachHang = false;
+        bQuanLyHoaDon = false;
+        bQuanLyThanhToan = false;
+        bQuanLySanPhamKho = false;
     }
     void SetAllPanelDissapear(){
-        jpn_QuanLyKho.setVisible(false);
-        jpn_QuanLyNhanVien.setVisible(false);
-        jpn_QuanLyLoaiSanPham.setVisible(false);
-        jpn_QuanLyThuChi.setVisible(false);
+        jpn_QuanLySanPhamKho.setVisible(false);
+        jpn_QuanLyKhachHang.setVisible(false);
+        jpn_QuanLyHoaDon.setVisible(false);
+        jpn_QuanLyThanhToan.setVisible(false);
         jpn_ThongTinCaNhan.setVisible(false);
     }
     void ExitProgram(){
@@ -742,29 +743,36 @@ public class jFMain extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jFMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jFMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jFMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jFMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
          
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jFMain().setVisible(true);
+                new jFNhanVienBanHang().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_QuanLyKho;
-    private javax.swing.JButton btn_QuanLyLoaiSanPham;
-    private javax.swing.JButton btn_QuanLyNhanVien;
-    private javax.swing.JButton btn_QuanLyThuChi;
+    private javax.swing.JButton btn_QuanLyHoaDon;
+    private javax.swing.JButton btn_QuanLyKhachHang;
+    private javax.swing.JButton btn_QuanLySanPhamKho;
+    private javax.swing.JButton btn_QuanLyThanhToan;
     private javax.swing.JButton btn_Thoat;
     private javax.swing.JButton btn_ThongTinCaNhan;
     private javax.swing.JButton jButton1;
@@ -797,10 +805,10 @@ public class jFMain extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JPanel jpn_QuanLyKho;
-    private javax.swing.JPanel jpn_QuanLyLoaiSanPham;
-    private javax.swing.JPanel jpn_QuanLyNhanVien;
-    private javax.swing.JPanel jpn_QuanLyThuChi;
+    private javax.swing.JPanel jpn_QuanLyHoaDon;
+    private javax.swing.JPanel jpn_QuanLyKhachHang;
+    private javax.swing.JPanel jpn_QuanLySanPhamKho;
+    private javax.swing.JPanel jpn_QuanLyThanhToan;
     private javax.swing.JPanel jpn_ThongTinCaNhan;
     // End of variables declaration//GEN-END:variables
 }
