@@ -107,7 +107,21 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jpn_QuanLySanPhamKho = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jpn_QuanLyHoaDon = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_XemHoaDon = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_time_Time = new com.toedter.calendar.JDateChooser();
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem = new javax.swing.JButton();
+        JNhanVienBanHang_XemHoaDon_lb_BangHoaDon = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon = new javax.swing.JTable();
+        JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_TenNhanVien = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_TenKhachHang = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon = new javax.swing.JLabel();
+        JNhanVienBanHang_XemHoaDon_lb_Tong = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
         jpn_QuanLyThanhToan = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -477,23 +491,222 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jpn_QuanLyHoaDon.setBackground(new java.awt.Color(0, 120, 120));
         jpn_QuanLyHoaDon.setPreferredSize(new java.awt.Dimension(1070, 720));
 
-        jLabel9.setText("Quản Lý Hóa Đơn");
+        JNhanVienBanHang_XemHoaDon_lb_XemHoaDon.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_XemHoaDon.setText("TRA CỨU HÓA ĐƠN");
+
+        JNhanVienBanHang_XemHoaDon_time_Time.setDateFormatString("d MMMM, yyyy");
+        JNhanVienBanHang_XemHoaDon_time_Time.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem.setText("Tìm kiếm");
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(evt);
+            }
+        });
+
+        JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setText("Bảng Hóa Đơn");
+
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"001", "NV001", "01/01/2017", "KH002"},
+                {"002", "NV003", "01/02/2017", "KH110"},
+                {"003", "NV001", "04/02/2017", "KH103"},
+                {"004", "NV003", "07/03/2017", "KH106"},
+                {"007", "NV004", "08/03/2017", "KH204"},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã hóa đơn", "Người lập hóa đơn", "Ngày lập hóa đơn", "Khách hàng"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setGridColor(new java.awt.Color(255, 255, 255));
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setRowHeight(20);
+        jScrollPane3.setViewportView(JNhanVienBanHang_XemHoaDon_tb_BangHoaDon);
+
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Số thứ tự", "Loại sản phẩm", "Tên sản phẩm", "Giá", "Số lượng"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setGridColor(new java.awt.Color(255, 255, 255));
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setMinimumSize(new java.awt.Dimension(60, 480));
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setPreferredSize(new java.awt.Dimension(300, 480));
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setRowHeight(20);
+        jScrollPane1.setViewportView(JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon);
+
+        JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien.setText("...................................");
+
+        JNhanVienBanHang_XemHoaDon_lb_TenNhanVien.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_TenNhanVien.setText("Tên nhân viên:");
+
+        JNhanVienBanHang_XemHoaDon_lb_TenKhachHang.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_TenKhachHang.setText("Tên khách hàng:");
+
+        JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang.setText("...................................");
+
+        JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon.setText("Bảng Chi Tiết Hóa Đơn");
+
+        JNhanVienBanHang_XemHoaDon_lb_Tong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_lb_Tong.setText("Tổng:");
+
+        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpn_QuanLyHoaDonLayout = new javax.swing.GroupLayout(jpn_QuanLyHoaDon);
         jpn_QuanLyHoaDon.setLayout(jpn_QuanLyHoaDonLayout);
         jpn_QuanLyHoaDonLayout.setHorizontalGroup(
             jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(554, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                                .addGap(180, 180, 180)
+                                .addComponent(JNhanVienBanHang_XemHoaDon_lb_BangHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(103, 103, 103))
+                            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                                                .addComponent(JNhanVienBanHang_XemHoaDon_lb_TenKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                                                .addComponent(JNhanVienBanHang_XemHoaDon_lb_TenNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(0, 13, Short.MAX_VALUE))
+                                    .addComponent(jScrollPane1))
+                                .addContainerGap())))
+                    .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_lb_XemHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                                .addComponent(JNhanVienBanHang_XemHoaDon_time_Time, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(JNhanVienBanHang_XemHoaDon_btn_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JNhanVienBanHang_XemHoaDon_lb_Tong, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jpn_QuanLyHoaDonLayout.setVerticalGroup(
             jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(373, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(JNhanVienBanHang_XemHoaDon_lb_XemHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_btn_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_time_Time, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_lb_BangHoaDon)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon))
+                        .addGap(21, 21, 21)
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(jpn_QuanLyHoaDonLayout.createSequentialGroup()
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_lb_TenNhanVien)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_lb_TenKhachHang)
+                            .addComponent(JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang))))
+                .addGap(18, 18, 18)
+                .addGroup(jpn_QuanLyHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JNhanVienBanHang_XemHoaDon_lb_Tong, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         jpn_QuanLyThanhToan.setBackground(new java.awt.Color(0, 120, 120));
@@ -670,6 +883,14 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4KeyTyped
+
+    private void JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
     
     
     void SetColorAllButton(java.awt.Color jColor ){
@@ -735,7 +956,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -767,6 +988,18 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_BangHoaDon;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_TenKhachHang;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_TenNhanVien;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_Tong;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_XemHoaDon;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang;
+    private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien;
+    private javax.swing.JTable JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon;
+    private javax.swing.JTable JNhanVienBanHang_XemHoaDon_tb_BangHoaDon;
+    private com.toedter.calendar.JDateChooser JNhanVienBanHang_XemHoaDon_time_Time;
     private javax.swing.JButton btn_QuanLyHoaDon;
     private javax.swing.JButton btn_QuanLyKhachHang;
     private javax.swing.JButton btn_QuanLySanPhamKho;
@@ -792,9 +1025,10 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -803,6 +1037,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JPanel jpn_QuanLyHoaDon;
     private javax.swing.JPanel jpn_QuanLyKhachHang;
     private javax.swing.JPanel jpn_QuanLySanPhamKho;

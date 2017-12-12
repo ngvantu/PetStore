@@ -375,7 +375,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         jScrollPane1.setViewportView(JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon);
 
         JNhanVienBanHang_XemHoaDon_panel.add(jScrollPane1);
-        jScrollPane1.setBounds(600, 210, 650, 330);
+        jScrollPane1.setBounds(600, 210, 370, 160);
         jScrollPane1.getAccessibleContext().setAccessibleName("");
 
         JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
@@ -401,7 +401,7 @@ public class JNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon.setText("Bảng Chi Tiết Hóa Đơn");
         JNhanVienBanHang_XemHoaDon_panel.add(JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon);
-        JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon.setBounds(790, 160, 250, 29);
+        JNhanVienBanHang_XemHoaDon_lb_BangChiTietHoaDon.setBounds(690, 170, 130, 29);
 
         JNhanVienBanHang_XemHoaDon_lb_Tong.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         JNhanVienBanHang_XemHoaDon_lb_Tong.setText("Tổng:");
