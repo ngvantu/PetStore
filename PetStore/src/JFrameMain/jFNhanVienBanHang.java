@@ -17,7 +17,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     static String id="";
     static String maChucVu;
     static String mk="";
-    static jFTableManager fTableManager;
+
     static String errorText = "Tên đăng nhập hoặc mật khẩu không hợp lệ !";
     
     
@@ -40,8 +40,6 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         this.setVisible(true);
         
         
-        fTableManager = new jFTableManager(this);
-        fTableManager.setVisible(false);
         
         btn_ThongTinCaNhan.setModel(new FixedStateButtonModel());
         btn_QuanLyKhachHang.setModel(new FixedStateButtonModel());
