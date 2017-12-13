@@ -31,7 +31,7 @@ public class PetStore {
         //JNhanVienKho f = new JNhanVienKho();
         //f.setVisible(true);
         
-        jFNhanVienBanHang f = new jFNhanVienBanHang();
+        jFMain  f = new jFMain();
         f.setVisible(true);
         /*
         JNhanVienBanHang a = new JNhanVienBanHang();
