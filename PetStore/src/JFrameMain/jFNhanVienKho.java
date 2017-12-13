@@ -121,17 +121,17 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jComboBox12 = new javax.swing.JComboBox<>();
         jComboBox13 = new javax.swing.JComboBox<>();
         JNhanVienBanHang_XemHoaDon_btn_TimKiem3 = new javax.swing.JButton();
-        jSeparator6 = new javax.swing.JSeparator();
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
+        jSeparator8 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
         jComboBox6 = new javax.swing.JComboBox<>();
         jComboBox8 = new javax.swing.JComboBox<>();
         JNhanVienBanHang_XemHoaDon_btn_TimKiem1 = new javax.swing.JButton();
         jComboBox14 = new javax.swing.JComboBox<>();
-        jSeparator5 = new javax.swing.JSeparator();
         jTextField12 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
+        jSeparator9 = new javax.swing.JSeparator();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -427,6 +427,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jLabel17.setBounds(30, 0, 1040, 100);
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.setToolTipText("");
         jTabbedPane1.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(0, 90, 90));
@@ -434,25 +435,37 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jPanel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jPanel1.setLayout(null);
 
-        jComboBox3.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox3.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
         jPanel1.add(jComboBox3);
         jComboBox3.setBounds(270, 30, 190, 30);
 
-        jComboBox4.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox4.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox4.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
         jPanel1.add(jComboBox4);
         jComboBox4.setBounds(30, 80, 190, 30);
 
-        jComboBox5.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox5.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox5.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
         jPanel1.add(jComboBox5);
         jComboBox5.setBounds(30, 30, 190, 30);
 
+        jTextField5.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
         jTextField5.setText("Đơn giá");
         jPanel1.add(jTextField5);
         jTextField5.setBounds(780, 30, 190, 30);
 
+        jTextField6.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
         jTextField6.setText("Đơn giá");
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -462,14 +475,23 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jPanel1.add(jTextField6);
         jTextField6.setBounds(780, 80, 190, 30);
 
+        jTextField7.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
         jTextField7.setText("Mã vật nuôi");
         jPanel1.add(jTextField7);
         jTextField7.setBounds(520, 30, 190, 30);
 
+        jTextField8.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField8.setForeground(new java.awt.Color(255, 255, 255));
         jTextField8.setText("Mã sản phẩm");
         jPanel1.add(jTextField8);
         jTextField8.setBounds(270, 80, 190, 30);
 
+        jTextField9.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField9.setForeground(new java.awt.Color(255, 255, 255));
         jTextField9.setText("Tên sản phẩm");
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -501,11 +523,16 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 90, 90));
         jPanel4.setLayout(null);
 
-        jComboBox9.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox9.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox9.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
         jPanel4.add(jComboBox9);
         jComboBox9.setBounds(30, 30, 190, 30);
 
+        jTextField14.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField14.setForeground(new java.awt.Color(255, 255, 255));
         jTextField14.setText("Tên sản phẩm");
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -515,10 +542,16 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jPanel4.add(jTextField14);
         jTextField14.setBounds(520, 80, 190, 30);
 
+        jTextField16.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField16.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField16.setForeground(new java.awt.Color(255, 255, 255));
         jTextField16.setText("Đơn giá");
         jPanel4.add(jTextField16);
         jTextField16.setBounds(780, 30, 190, 30);
 
+        jTextField15.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField15.setForeground(new java.awt.Color(255, 255, 255));
         jTextField15.setText("Đơn giá");
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -528,12 +561,16 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jPanel4.add(jTextField15);
         jTextField15.setBounds(780, 80, 190, 30);
 
-        jComboBox12.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox12.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox12.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
         jPanel4.add(jComboBox12);
         jComboBox12.setBounds(30, 80, 190, 30);
 
-        jComboBox13.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox13.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox13.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
         jPanel4.add(jComboBox13);
         jComboBox13.setBounds(270, 30, 190, 30);
@@ -550,29 +587,43 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         });
         jPanel4.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem3);
         JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setBounds(430, 150, 130, 33);
-        jPanel4.add(jSeparator6);
-        jSeparator6.setBounds(30, 130, 940, 10);
 
+        jTextField10.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField10.setForeground(new java.awt.Color(255, 255, 255));
         jTextField10.setText("Mã sản phẩm");
         jPanel4.add(jTextField10);
         jTextField10.setBounds(270, 80, 190, 30);
 
+        jTextField11.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField11.setForeground(new java.awt.Color(255, 255, 255));
         jTextField11.setText("Mã vật nuôi");
         jPanel4.add(jTextField11);
         jTextField11.setBounds(520, 30, 190, 30);
+
+        jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.add(jSeparator8);
+        jSeparator8.setBounds(30, 130, 940, 10);
 
         jTabbedPane1.addTab("Sửa sản phẩm", jPanel4);
 
         jPanel5.setBackground(new java.awt.Color(0, 90, 90));
         jPanel5.setLayout(null);
 
-        jComboBox6.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox6.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox6.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        jComboBox6.setToolTipText("");
         jPanel5.add(jComboBox6);
         jComboBox6.setBounds(30, 30, 190, 30);
 
-        jComboBox8.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox8.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox8.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        jComboBox8.setToolTipText("");
         jPanel5.add(jComboBox8);
         jComboBox8.setBounds(270, 30, 190, 30);
 
@@ -589,33 +640,48 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jPanel5.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem1);
         JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setBounds(430, 150, 130, 33);
 
-        jComboBox14.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox14.setBackground(new java.awt.Color(0, 60, 60));
+        jComboBox14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jComboBox14.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        jComboBox14.setToolTipText("");
         jPanel5.add(jComboBox14);
         jComboBox14.setBounds(30, 80, 190, 30);
-        jPanel5.add(jSeparator5);
-        jSeparator5.setBounds(30, 130, 940, 10);
 
+        jTextField12.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField12.setForeground(new java.awt.Color(255, 255, 255));
         jTextField12.setText("Mã sản phẩm");
+        jTextField12.setToolTipText("");
         jPanel5.add(jTextField12);
         jTextField12.setBounds(270, 80, 190, 30);
 
+        jTextField13.setBackground(new java.awt.Color(0, 60, 60));
+        jTextField13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextField13.setForeground(new java.awt.Color(255, 255, 255));
         jTextField13.setText("Mã vật nuôi");
+        jTextField13.setToolTipText("");
         jPanel5.add(jTextField13);
         jTextField13.setBounds(520, 30, 190, 30);
+
+        jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel5.add(jSeparator9);
+        jSeparator9.setBounds(30, 130, 940, 10);
 
         jTabbedPane1.addTab("Xóa sản phẩm", jPanel5);
 
         jpn_QuanLySanPham.add(jTabbedPane1);
         jTabbedPane1.setBounds(30, 120, 1010, 240);
 
+        jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
 
         jPanel6.setBackground(new java.awt.Color(0, 120, 120));
         jPanel6.setLayout(null);
 
         jTable1.setBackground(new java.awt.Color(0, 90, 90));
-        jTable1.setFont(new java.awt.Font("Roboto Lt", 0, 16)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -633,8 +699,12 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         ));
         jTable1.setToolTipText("");
+        jTable1.setGridColor(new java.awt.Color(255, 255, 255));
         jTable1.setRowHeight(20);
         jScrollPane1.setViewportView(jTable1);
+        jTable1.getTableHeader().setBackground(new java.awt.Color(0, 60, 60));
+        jTable1.getTableHeader().setForeground(new java.awt.Color(255, 255, 255));
+        jTable1.getTableHeader().setFont(new java.awt.Font("Roboto", 1, 16));
 
         jPanel6.add(jScrollPane1);
         jScrollPane1.setBounds(0, 0, 1005, 210);
@@ -662,8 +732,12 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 "Mã loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá"
             }
         ));
+        jTable2.setGridColor(new java.awt.Color(255, 255, 255));
         jTable2.setRowHeight(20);
         jScrollPane2.setViewportView(jTable2);
+        jTable2.getTableHeader().setBackground(new java.awt.Color(0, 60, 60));
+        jTable2.getTableHeader().setForeground(new java.awt.Color(255, 255, 255));
+        jTable2.getTableHeader().setFont(new java.awt.Font("Roboto", 1, 16));
 
         jPanel7.add(jScrollPane2);
         jScrollPane2.setBounds(0, 0, 1005, 210);
@@ -966,9 +1040,9 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTable1;
