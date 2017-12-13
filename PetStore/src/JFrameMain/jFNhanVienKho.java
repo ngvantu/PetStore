@@ -8,6 +8,8 @@ import Data.Data;
 import com.sun.glass.events.KeyEvent;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultButtonModel;
+import javax.swing.SwingUtilities;
+import static javax.swing.SwingUtilities.updateComponentTreeUI;
 
 /**
  *
@@ -98,7 +100,45 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jpn_QuanLySanPham = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4 = new javax.swing.JButton();
+        jSeparator7 = new javax.swing.JSeparator();
+        jPanel4 = new javax.swing.JPanel();
+        jComboBox9 = new javax.swing.JComboBox<>();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jComboBox12 = new javax.swing.JComboBox<>();
+        jComboBox13 = new javax.swing.JComboBox<>();
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3 = new javax.swing.JButton();
+        jSeparator6 = new javax.swing.JSeparator();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1 = new javax.swing.JButton();
+        jComboBox14 = new javax.swing.JComboBox<>();
+        jSeparator5 = new javax.swing.JSeparator();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jpn_QuanLyKho = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
 
@@ -374,50 +414,273 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, -1));
 
         jpn_QuanLySanPham.setBackground(new java.awt.Color(0, 120, 120));
+        jpn_QuanLySanPham.setFont(new java.awt.Font("Roboto Bk", 0, 14)); // NOI18N
         jpn_QuanLySanPham.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_QuanLySanPham.setLayout(null);
 
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Quản Lý  Sản Phẩm");
-        jLabel8.setToolTipText("");
+        jLabel17.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel17.setText("QUẢN LÝ SẢN PHẨM");
+        jLabel17.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jpn_QuanLySanPham.add(jLabel17);
+        jLabel17.setBounds(30, 0, 1040, 100);
 
-        javax.swing.GroupLayout jpn_QuanLySanPhamLayout = new javax.swing.GroupLayout(jpn_QuanLySanPham);
-        jpn_QuanLySanPham.setLayout(jpn_QuanLySanPhamLayout);
-        jpn_QuanLySanPhamLayout.setHorizontalGroup(
-            jpn_QuanLySanPhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLySanPhamLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(554, Short.MAX_VALUE))
-        );
-        jpn_QuanLySanPhamLayout.setVerticalGroup(
-            jpn_QuanLySanPhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLySanPhamLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(373, Short.MAX_VALUE))
-        );
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
+
+        jPanel1.setBackground(new java.awt.Color(0, 90, 90));
+        jPanel1.setForeground(new java.awt.Color(0, 90, 90));
+        jPanel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jPanel1.setLayout(null);
+
+        jComboBox3.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        jPanel1.add(jComboBox3);
+        jComboBox3.setBounds(270, 30, 190, 30);
+
+        jComboBox4.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        jPanel1.add(jComboBox4);
+        jComboBox4.setBounds(30, 80, 190, 30);
+
+        jComboBox5.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        jPanel1.add(jComboBox5);
+        jComboBox5.setBounds(30, 30, 190, 30);
+
+        jTextField5.setText("Đơn giá");
+        jPanel1.add(jTextField5);
+        jTextField5.setBounds(780, 30, 190, 30);
+
+        jTextField6.setText("Đơn giá");
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField6);
+        jTextField6.setBounds(780, 80, 190, 30);
+
+        jTextField7.setText("Mã vật nuôi");
+        jPanel1.add(jTextField7);
+        jTextField7.setBounds(520, 30, 190, 30);
+
+        jTextField8.setText("Mã sản phẩm");
+        jPanel1.add(jTextField8);
+        jTextField8.setBounds(270, 80, 190, 30);
+
+        jTextField9.setText("Tên sản phẩm");
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField9);
+        jTextField9.setBounds(520, 80, 190, 30);
+
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setBackground(new java.awt.Color(0, 120, 215));
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setForeground(new java.awt.Color(255, 255, 255));
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setText("Xác nhận");
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setFocusable(false);
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem4);
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setBounds(430, 150, 130, 33);
+
+        jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator7);
+        jSeparator7.setBounds(30, 130, 940, 10);
+
+        jTabbedPane1.addTab("Thêm sản phẩm", jPanel1);
+
+        jPanel4.setBackground(new java.awt.Color(0, 90, 90));
+        jPanel4.setLayout(null);
+
+        jComboBox9.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        jPanel4.add(jComboBox9);
+        jComboBox9.setBounds(30, 30, 190, 30);
+
+        jTextField14.setText("Tên sản phẩm");
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jTextField14);
+        jTextField14.setBounds(520, 80, 190, 30);
+
+        jTextField16.setText("Đơn giá");
+        jPanel4.add(jTextField16);
+        jTextField16.setBounds(780, 30, 190, 30);
+
+        jTextField15.setText("Đơn giá");
+        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField15ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jTextField15);
+        jTextField15.setBounds(780, 80, 190, 30);
+
+        jComboBox12.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        jPanel4.add(jComboBox12);
+        jComboBox12.setBounds(30, 80, 190, 30);
+
+        jComboBox13.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        jPanel4.add(jComboBox13);
+        jComboBox13.setBounds(270, 30, 190, 30);
+
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setBackground(new java.awt.Color(0, 120, 215));
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setForeground(new java.awt.Color(255, 255, 255));
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setText("Xác nhận");
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setFocusable(false);
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem3);
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setBounds(430, 150, 130, 33);
+        jPanel4.add(jSeparator6);
+        jSeparator6.setBounds(30, 130, 940, 10);
+
+        jTextField10.setText("Mã sản phẩm");
+        jPanel4.add(jTextField10);
+        jTextField10.setBounds(270, 80, 190, 30);
+
+        jTextField11.setText("Mã vật nuôi");
+        jPanel4.add(jTextField11);
+        jTextField11.setBounds(520, 30, 190, 30);
+
+        jTabbedPane1.addTab("Sửa sản phẩm", jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(0, 90, 90));
+        jPanel5.setLayout(null);
+
+        jComboBox6.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        jPanel5.add(jComboBox6);
+        jComboBox6.setBounds(30, 30, 190, 30);
+
+        jComboBox8.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        jPanel5.add(jComboBox8);
+        jComboBox8.setBounds(270, 30, 190, 30);
+
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setBackground(new java.awt.Color(0, 120, 215));
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setForeground(new java.awt.Color(255, 255, 255));
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setText("Xác nhận");
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setFocusable(false);
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem1);
+        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setBounds(430, 150, 130, 33);
+
+        jComboBox14.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        jPanel5.add(jComboBox14);
+        jComboBox14.setBounds(30, 80, 190, 30);
+        jPanel5.add(jSeparator5);
+        jSeparator5.setBounds(30, 130, 940, 10);
+
+        jTextField12.setText("Mã sản phẩm");
+        jPanel5.add(jTextField12);
+        jTextField12.setBounds(270, 80, 190, 30);
+
+        jTextField13.setText("Mã vật nuôi");
+        jPanel5.add(jTextField13);
+        jTextField13.setBounds(520, 30, 190, 30);
+
+        jTabbedPane1.addTab("Xóa sản phẩm", jPanel5);
+
+        jpn_QuanLySanPham.add(jTabbedPane1);
+        jTabbedPane1.setBounds(30, 120, 1010, 240);
+
+        jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
+
+        jPanel6.setBackground(new java.awt.Color(0, 120, 120));
+        jPanel6.setLayout(null);
+
+        jTable1.setBackground(new java.awt.Color(0, 90, 90));
+        jTable1.setFont(new java.awt.Font("Roboto Lt", 0, 16)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã loài vật nuôi", "Mã giống vật nuôi", "Mã vật nuôi", "Đơn giá"
+            }
+        ));
+        jTable1.setToolTipText("");
+        jTable1.setRowHeight(20);
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel6.add(jScrollPane1);
+        jScrollPane1.setBounds(0, 0, 1005, 210);
+
+        jTabbedPane2.addTab("Bảng vật nuôi", jPanel6);
+
+        jPanel7.setBackground(new java.awt.Color(0, 120, 120));
+        jPanel7.setLayout(null);
+
+        jTable2.setBackground(new java.awt.Color(0, 90, 90));
+        jTable2.setFont(new java.awt.Font("Roboto Lt", 0, 16)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá"
+            }
+        ));
+        jTable2.setRowHeight(20);
+        jScrollPane2.setViewportView(jTable2);
+
+        jPanel7.add(jScrollPane2);
+        jScrollPane2.setBounds(0, 0, 1005, 210);
+
+        jTabbedPane2.addTab("Bảng sản phẩm", jPanel7);
+
+        jpn_QuanLySanPham.add(jTabbedPane2);
+        jTabbedPane2.setBounds(30, 400, 1010, 240);
+        jTabbedPane2.getAccessibleContext().setAccessibleName("");
 
         jpn_QuanLyKho.setBackground(new java.awt.Color(0, 120, 120));
         jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_QuanLyKho.setLayout(null);
 
         jLabel10.setText("Quản Lý Kho");
-
-        javax.swing.GroupLayout jpn_QuanLyKhoLayout = new javax.swing.GroupLayout(jpn_QuanLyKho);
-        jpn_QuanLyKho.setLayout(jpn_QuanLyKhoLayout);
-        jpn_QuanLyKhoLayout.setHorizontalGroup(
-            jpn_QuanLyKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyKhoLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(554, Short.MAX_VALUE))
-        );
-        jpn_QuanLyKhoLayout.setVerticalGroup(
-            jpn_QuanLyKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpn_QuanLyKhoLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(373, Short.MAX_VALUE))
-        );
+        jpn_QuanLyKho.add(jLabel10);
+        jLabel10.setBounds(130, 130, 456, 107);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -529,6 +792,34 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4KeyTyped
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed
+
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14ActionPerformed
+
+    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField15ActionPerformed
+
+    private void JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed
+
+    private void JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed
     
     
     void SetColorAllButton(java.awt.Color jColor ){
@@ -628,6 +919,9 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem1;
+    private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem3;
+    private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem4;
     private javax.swing.JButton btn_QuanLyKho;
     private javax.swing.JButton btn_QuanLySanPham;
     private javax.swing.JButton btn_Thoat;
@@ -635,6 +929,15 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox12;
+    private javax.swing.JComboBox<String> jComboBox13;
+    private javax.swing.JComboBox<String> jComboBox14;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JComboBox<String> jComboBox9;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -643,23 +946,49 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JPanel jpn_QuanLyKho;
     private javax.swing.JPanel jpn_QuanLySanPham;
     private javax.swing.JPanel jpn_ThongTinCaNhan;
