@@ -6,6 +6,7 @@
 package Bussiness;
 import Data.*;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -64,4 +65,26 @@ public class BNhanVien extends Bussiness{
         }
         return false;
     }
+    
+    public int getChucVu(String id) throws SQLException{
+        String res = "";
+        int ans = 0;
+        SQL = "tim_nhan_vien_theo_manv "+id;
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+            String ma_nv;
+            ma_nv = rs.getString("MANV");
+            if(ma_nv.equals(id)){
+                res = rs.getString("CHUCVU");
+                if(res.equals("CHCH"))
+                    ans = 1; 
+                else if(res.equals("NVBH"))
+                    ans = 2;
+                else if(res.equals("NVKH"))
+                    ans = 3;
+                break;
+            }
+        }
+        return ans;
+    } 
 }
