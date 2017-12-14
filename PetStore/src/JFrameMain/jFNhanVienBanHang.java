@@ -34,8 +34,25 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     public jFNhanVienBanHang() {
         
          Data d = new Data();
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Windows".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(jFNhanVienBanHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
         
         initComponents();
+         
         setLocationRelativeTo(null);
         this.setVisible(true);
         
@@ -508,8 +525,9 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setText("Bảng Hóa Đơn");
 
-        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setBackground(new java.awt.Color(0, 90, 90));
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setForeground(new java.awt.Color(255, 255, 255));
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"001", "NV001", "01/01/2017", "KH002"},
@@ -550,11 +568,14 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setGridColor(new java.awt.Color(255, 255, 255));
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setGridColor(new java.awt.Color(0, 102, 102));
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setInheritsPopupMenu(true);
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setRowHeight(20);
         jScrollPane3.setViewportView(JNhanVienBanHang_XemHoaDon_tb_BangHoaDon);
 
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setBackground(new java.awt.Color(0, 90, 90));
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setForeground(new java.awt.Color(255, 255, 255));
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -595,7 +616,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setGridColor(new java.awt.Color(255, 255, 255));
+        JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setGridColor(new java.awt.Color(0, 102, 102));
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setMinimumSize(new java.awt.Dimension(60, 480));
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setPreferredSize(new java.awt.Dimension(300, 480));
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setRowHeight(20);

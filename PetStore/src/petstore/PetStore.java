@@ -31,12 +31,12 @@ public class PetStore {
         //JNhanVienKho f = new JNhanVienKho();
         //f.setVisible(true);
         
-        jFNhanVienKho  f = new jFNhanVienKho();
-        f.setVisible(true);
-        /*
-        JNhanVienBanHang a = new JNhanVienBanHang();
+       //jFNhanVienKho  f = new jFNhanVienKho();
+        //f.setVisible(true);
+        
+        jFNhanVienBanHang a = new jFNhanVienBanHang();
         a.setVisible(true);
-        */
+        
         
         /*
         try {
