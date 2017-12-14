@@ -485,7 +485,6 @@
                         <Property name="name" type="java.lang.String" value="" noResource="true"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_QuanLyKho3MouseClicked"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_QuanLyKho3ActionPerformed"/>
                       </Events>
                       <Constraints>
@@ -1846,7 +1845,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
                   <Component id="jLabel10" min="-2" pref="107" max="-2" attributes="0"/>
-                  <EmptySpace pref="423" max="32767" attributes="0"/>
+                  <EmptySpace pref="373" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

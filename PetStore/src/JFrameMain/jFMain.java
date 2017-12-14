@@ -321,11 +321,6 @@ public class jFMain extends javax.swing.JFrame {
         btn_QuanLyKho3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_QuanLyKho3.setFocusable(false);
         btn_QuanLyKho3.setName(""); // NOI18N
-        btn_QuanLyKho3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_QuanLyKho3MouseClicked(evt);
-            }
-        });
         btn_QuanLyKho3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_QuanLyKho3ActionPerformed(evt);
@@ -940,7 +935,7 @@ public class jFMain extends javax.swing.JFrame {
             .addGroup(jpn_QuanLyKhoLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
         jpn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 120, 120));
@@ -1189,10 +1184,6 @@ public class jFMain extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_btn_QuanLyKho3ActionPerformed
-
-    private void btn_QuanLyKho3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKho3MouseClicked
-        SetAllTextFieldEnable();
-    }//GEN-LAST:event_btn_QuanLyKho3MouseClicked
 
     private void btn_QuanLyKho2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_QuanLyKho2ActionPerformed
         // TODO add your handling code here:

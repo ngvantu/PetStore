@@ -32,7 +32,7 @@ public class PetStore {
         //f.setVisible(true);
         
        //jFNhanVienKho  f = new jFNhanVienKho();
-        //f.setVisible(true);
+       //f.setVisible(true);
         
         jFNhanVienBanHang a = new jFNhanVienBanHang();
         a.setVisible(true);
