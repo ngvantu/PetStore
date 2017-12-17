@@ -221,7 +221,7 @@ public class jFLogin extends javax.swing.JFrame {
                     BNhanVien nv = new BNhanVien();
                     type = nv.getChucVu(manv);
                     if(type == chuCH){
-                        jFMain f = new jFMain();
+                        jF_ChuCuaHang f = new jF_ChuCuaHang();
                         f.setVisible(true);
                     }
                     else if(type == nhanVienBH){
