@@ -102,46 +102,60 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jpn_QuanLySanPham = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4 = new javax.swing.JButton();
-        jSeparator7 = new javax.swing.JSeparator();
-        jPanel4 = new javax.swing.JPanel();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jComboBox12 = new javax.swing.JComboBox<>();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3 = new javax.swing.JButton();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jSeparator8 = new javax.swing.JSeparator();
-        jPanel5 = new javax.swing.JPanel();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1 = new javax.swing.JButton();
-        jComboBox14 = new javax.swing.JComboBox<>();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jSeparator9 = new javax.swing.JSeparator();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        table_BangSP_pn_BangSP_pn_QLSP = new javax.swing.JTable();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP = new javax.swing.JComboBox<>();
+        cmbx_LoaiSP_pn_ThemSP_pn_QLSP = new javax.swing.JComboBox<>();
+        cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP = new javax.swing.JComboBox<>();
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP = new javax.swing.JTextField();
+        tf_GiaSP_pn_ThemSP_pn_QLSP = new javax.swing.JTextField();
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP = new javax.swing.JTextField();
+        tf_MaSP_pn_ThemSP_pn_QLSP = new javax.swing.JTextField();
+        tf_TenSP_pn_ThemSP_pn_QLSP = new javax.swing.JTextField();
+        btn_XacNhan_pn_ThemSP_pn_QLSP = new javax.swing.JButton();
+        jSeparator9 = new javax.swing.JSeparator();
+        jPanel10 = new javax.swing.JPanel();
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP = new javax.swing.JComboBox<>();
+        tf_TenSP_pn_SuaSP_pn_QLSP = new javax.swing.JTextField();
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP = new javax.swing.JTextField();
+        tf_GiaSP_pn_SuaSP_pn_QLSP = new javax.swing.JTextField();
+        cmbx_LoaiSP_pn_SuaSP_pn_QLSP = new javax.swing.JComboBox<>();
+        cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP = new javax.swing.JComboBox<>();
+        btn_XacNhan_pn_SuaSP_pn_QLSP = new javax.swing.JButton();
+        tf_MaSP_pn_SuaSP_pn_QLSP = new javax.swing.JTextField();
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP = new javax.swing.JTextField();
+        jSeparator10 = new javax.swing.JSeparator();
+        jPanel11 = new javax.swing.JPanel();
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP = new javax.swing.JComboBox<>();
+        cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP = new javax.swing.JComboBox<>();
+        btn_XacNhan_pn_XoaSP_pn_QLSP = new javax.swing.JButton();
+        cmbx_LoaiSP_pn_XoaSP_pn_QLSP = new javax.swing.JComboBox<>();
+        tf_MaSP_pn_XoaSP_pn_QLSP = new javax.swing.JTextField();
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP = new javax.swing.JTextField();
+        jSeparator11 = new javax.swing.JSeparator();
         jpn_QuanLyKho = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel8 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho = new javax.swing.JTable();
+        tf_SoLuong_pn_BangVatNuoi_pn_QLKho = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        table_BangSP_pn_BangSP_pn_QLKho = new javax.swing.JTable();
+        jLabel9 = new javax.swing.JLabel();
+        tf_SoLuong_pn_BangSP_pn_QLKho = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        cmbx_LoaiSP_pn_QLKho = new javax.swing.JComboBox<>();
+        cmbx_LoaiVatNuoi_pn_QLKho = new javax.swing.JComboBox<>();
+        cmbx_GiongVatNuoi_pn_QLKho = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -443,263 +457,16 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jpn_QuanLySanPham.add(jLabel17);
         jLabel17.setBounds(30, 0, 1040, 100);
 
-        jTabbedPane1.setBackground(new java.awt.Color(0, 64, 80));
-        jTabbedPane1.setToolTipText("");
-        jTabbedPane1.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
-
-        jPanel1.setBackground(new java.awt.Color(0, 64, 80));
-        jPanel1.setForeground(new java.awt.Color(0, 90, 90));
-        jPanel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jPanel1.setLayout(null);
-
-        jComboBox3.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
-        jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(270, 30, 190, 30);
-
-        jComboBox4.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox4.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
-        jPanel1.add(jComboBox4);
-        jComboBox4.setBounds(30, 80, 190, 30);
-
-        jComboBox5.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox5.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
-        jPanel1.add(jComboBox5);
-        jComboBox5.setBounds(30, 30, 190, 30);
-
-        jTextField5.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField5.setText("Đơn giá");
-        jPanel1.add(jTextField5);
-        jTextField5.setBounds(780, 30, 190, 30);
-
-        jTextField6.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setText("Đơn giá");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(780, 80, 190, 30);
-
-        jTextField7.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setText("Mã vật nuôi");
-        jPanel1.add(jTextField7);
-        jTextField7.setBounds(520, 30, 190, 30);
-
-        jTextField8.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField8.setText("Mã sản phẩm");
-        jPanel1.add(jTextField8);
-        jTextField8.setBounds(270, 80, 190, 30);
-
-        jTextField9.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField9.setText("Tên sản phẩm");
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField9);
-        jTextField9.setBounds(520, 80, 190, 30);
-
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setBackground(new java.awt.Color(0, 120, 215));
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setForeground(new java.awt.Color(255, 255, 255));
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setText("Xác nhận");
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setFocusable(false);
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem4);
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem4.setBounds(430, 150, 130, 41);
-
-        jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(jSeparator7);
-        jSeparator7.setBounds(30, 130, 940, 10);
-
-        jTabbedPane1.addTab("Thêm sản phẩm", jPanel1);
-
-        jPanel4.setBackground(new java.awt.Color(0, 64, 80));
-        jPanel4.setLayout(null);
-
-        jComboBox9.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox9.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
-        jPanel4.add(jComboBox9);
-        jComboBox9.setBounds(30, 30, 190, 30);
-
-        jTextField14.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField14.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField14.setText("Tên sản phẩm");
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jTextField14);
-        jTextField14.setBounds(520, 80, 190, 30);
-
-        jTextField16.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField16.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField16.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField16.setText("Đơn giá");
-        jPanel4.add(jTextField16);
-        jTextField16.setBounds(780, 30, 190, 30);
-
-        jTextField15.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField15.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField15.setText("Đơn giá");
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jTextField15);
-        jTextField15.setBounds(780, 80, 190, 30);
-
-        jComboBox12.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox12.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
-        jPanel4.add(jComboBox12);
-        jComboBox12.setBounds(30, 80, 190, 30);
-
-        jComboBox13.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox13.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
-        jPanel4.add(jComboBox13);
-        jComboBox13.setBounds(270, 30, 190, 30);
-
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setBackground(new java.awt.Color(0, 120, 215));
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setForeground(new java.awt.Color(255, 255, 255));
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setText("Xác nhận");
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setFocusable(false);
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem3);
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem3.setBounds(430, 150, 130, 41);
-
-        jTextField10.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField10.setText("Mã sản phẩm");
-        jPanel4.add(jTextField10);
-        jTextField10.setBounds(270, 80, 190, 30);
-
-        jTextField11.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField11.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField11.setText("Mã vật nuôi");
-        jPanel4.add(jTextField11);
-        jTextField11.setBounds(520, 30, 190, 30);
-
-        jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel4.add(jSeparator8);
-        jSeparator8.setBounds(30, 130, 940, 10);
-
-        jTabbedPane1.addTab("Sửa sản phẩm", jPanel4);
-
-        jPanel5.setBackground(new java.awt.Color(0, 64, 80));
-        jPanel5.setLayout(null);
-
-        jComboBox6.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox6.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
-        jComboBox6.setToolTipText("");
-        jPanel5.add(jComboBox6);
-        jComboBox6.setBounds(30, 30, 190, 30);
-
-        jComboBox8.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox8.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
-        jComboBox8.setToolTipText("");
-        jPanel5.add(jComboBox8);
-        jComboBox8.setBounds(270, 30, 190, 30);
-
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setBackground(new java.awt.Color(0, 120, 215));
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setForeground(new java.awt.Color(255, 255, 255));
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setText("Xác nhận");
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setFocusable(false);
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(JNhanVienBanHang_XemHoaDon_btn_TimKiem1);
-        JNhanVienBanHang_XemHoaDon_btn_TimKiem1.setBounds(430, 150, 130, 41);
-
-        jComboBox14.setBackground(new java.awt.Color(0, 60, 60));
-        jComboBox14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox14.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
-        jComboBox14.setToolTipText("");
-        jPanel5.add(jComboBox14);
-        jComboBox14.setBounds(30, 80, 190, 30);
-
-        jTextField12.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField12.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField12.setText("Mã sản phẩm");
-        jTextField12.setToolTipText("");
-        jPanel5.add(jTextField12);
-        jTextField12.setBounds(270, 80, 190, 30);
-
-        jTextField13.setBackground(new java.awt.Color(0, 60, 60));
-        jTextField13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextField13.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField13.setText("Mã vật nuôi");
-        jTextField13.setToolTipText("");
-        jPanel5.add(jTextField13);
-        jTextField13.setBounds(520, 30, 190, 30);
-
-        jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel5.add(jSeparator9);
-        jSeparator9.setBounds(30, 130, 940, 10);
-
-        jTabbedPane1.addTab("Xóa sản phẩm", jPanel5);
-
-        jpn_QuanLySanPham.add(jTabbedPane1);
-        jTabbedPane1.setBounds(30, 120, 1010, 240);
-
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
 
         jPanel6.setBackground(new java.awt.Color(0, 120, 120));
         jPanel6.setLayout(null);
 
-        jTable1.setBackground(new java.awt.Color(0, 90, 90));
-        jTable1.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(255, 255, 255));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setBackground(new java.awt.Color(0, 90, 90));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -715,13 +482,13 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 "Mã loài vật nuôi", "Mã giống vật nuôi", "Mã vật nuôi", "Đơn giá"
             }
         ));
-        jTable1.setToolTipText("");
-        jTable1.setGridColor(new java.awt.Color(255, 255, 255));
-        jTable1.setRowHeight(20);
-        jScrollPane1.setViewportView(jTable1);
-        jTable1.getTableHeader().setBackground(new java.awt.Color(0, 60, 60));
-        jTable1.getTableHeader().setForeground(new java.awt.Color(255, 255, 255));
-        jTable1.getTableHeader().setFont(new java.awt.Font("Roboto", 1, 16));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setToolTipText("");
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setGridColor(new java.awt.Color(255, 255, 255));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setRowHeight(20);
+        jScrollPane1.setViewportView(table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP);
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getTableHeader().setBackground(new java.awt.Color(0, 60, 60));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getTableHeader().setForeground(new java.awt.Color(255, 255, 255));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getTableHeader().setFont(new java.awt.Font("Roboto", 1, 16));
 
         jPanel6.add(jScrollPane1);
         jScrollPane1.setBounds(0, 0, 1005, 210);
@@ -731,9 +498,9 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(0, 120, 120));
         jPanel7.setLayout(null);
 
-        jTable2.setBackground(new java.awt.Color(0, 90, 90));
-        jTable2.setFont(new java.awt.Font("Roboto Lt", 0, 16)); // NOI18N
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        table_BangSP_pn_BangSP_pn_QLSP.setBackground(new java.awt.Color(0, 90, 90));
+        table_BangSP_pn_BangSP_pn_QLSP.setFont(new java.awt.Font("Roboto Lt", 0, 16)); // NOI18N
+        table_BangSP_pn_BangSP_pn_QLSP.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -749,12 +516,12 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 "Mã loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá"
             }
         ));
-        jTable2.setGridColor(new java.awt.Color(255, 255, 255));
-        jTable2.setRowHeight(20);
-        jScrollPane2.setViewportView(jTable2);
-        jTable2.getTableHeader().setBackground(new java.awt.Color(0, 60, 60));
-        jTable2.getTableHeader().setForeground(new java.awt.Color(255, 255, 255));
-        jTable2.getTableHeader().setFont(new java.awt.Font("Roboto", 1, 16));
+        table_BangSP_pn_BangSP_pn_QLSP.setGridColor(new java.awt.Color(255, 255, 255));
+        table_BangSP_pn_BangSP_pn_QLSP.setRowHeight(20);
+        jScrollPane2.setViewportView(table_BangSP_pn_BangSP_pn_QLSP);
+        table_BangSP_pn_BangSP_pn_QLSP.getTableHeader().setBackground(new java.awt.Color(0, 60, 60));
+        table_BangSP_pn_BangSP_pn_QLSP.getTableHeader().setForeground(new java.awt.Color(255, 255, 255));
+        table_BangSP_pn_BangSP_pn_QLSP.getTableHeader().setFont(new java.awt.Font("Roboto", 1, 16));
 
         jPanel7.add(jScrollPane2);
         jScrollPane2.setBounds(0, 0, 1005, 210);
@@ -765,13 +532,385 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jTabbedPane2.setBounds(30, 400, 1010, 240);
         jTabbedPane2.getAccessibleContext().setAccessibleName("");
 
+        jTabbedPane4.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane4.setToolTipText("");
+        jTabbedPane4.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
+
+        jPanel1.setBackground(new java.awt.Color(0, 64, 80));
+        jPanel1.setForeground(new java.awt.Color(0, 90, 90));
+        jPanel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jPanel1.setLayout(null);
+
+        cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        jPanel1.add(cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP);
+        cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP.setBounds(270, 30, 190, 30);
+
+        cmbx_LoaiSP_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiSP_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiSP_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiSP_pn_ThemSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        jPanel1.add(cmbx_LoaiSP_pn_ThemSP_pn_QLSP);
+        cmbx_LoaiSP_pn_ThemSP_pn_QLSP.setBounds(30, 80, 190, 30);
+
+        cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        jPanel1.add(cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP);
+        cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP.setBounds(30, 30, 190, 30);
+
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setText("Đơn giá");
+        jPanel1.add(tf_GiaVatNuoi_pn_ThemSP_pn_QLSP);
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setBounds(780, 30, 190, 30);
+
+        tf_GiaSP_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_GiaSP_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_GiaSP_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_GiaSP_pn_ThemSP_pn_QLSP.setText("Đơn giá");
+        tf_GiaSP_pn_ThemSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_GiaSP_pn_ThemSP_pn_QLSPActionPerformed(evt);
+            }
+        });
+        jPanel1.add(tf_GiaSP_pn_ThemSP_pn_QLSP);
+        tf_GiaSP_pn_ThemSP_pn_QLSP.setBounds(780, 80, 190, 30);
+
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setText("Mã vật nuôi");
+        jPanel1.add(tf_MaVatNuoi_pn_ThemSP_pn_QLSP);
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setBounds(520, 30, 190, 30);
+
+        tf_MaSP_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_MaSP_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_MaSP_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_MaSP_pn_ThemSP_pn_QLSP.setText("Mã sản phẩm");
+        jPanel1.add(tf_MaSP_pn_ThemSP_pn_QLSP);
+        tf_MaSP_pn_ThemSP_pn_QLSP.setBounds(270, 80, 190, 30);
+
+        tf_TenSP_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_TenSP_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_TenSP_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_TenSP_pn_ThemSP_pn_QLSP.setText("Tên sản phẩm");
+        tf_TenSP_pn_ThemSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_TenSP_pn_ThemSP_pn_QLSPActionPerformed(evt);
+            }
+        });
+        jPanel1.add(tf_TenSP_pn_ThemSP_pn_QLSP);
+        tf_TenSP_pn_ThemSP_pn_QLSP.setBounds(520, 80, 190, 30);
+
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setBackground(new java.awt.Color(0, 120, 215));
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setText("Xác nhận");
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setFocusable(false);
+        btn_XacNhan_pn_ThemSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_XacNhan_pn_ThemSP_pn_QLSPActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_XacNhan_pn_ThemSP_pn_QLSP);
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(430, 150, 130, 33);
+
+        jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator9);
+        jSeparator9.setBounds(30, 130, 940, 10);
+
+        jTabbedPane4.addTab("Thêm sản phẩm", jPanel1);
+
+        jPanel10.setBackground(new java.awt.Color(0, 64, 80));
+        jPanel10.setLayout(null);
+
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        jPanel10.add(cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP);
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.setBounds(30, 30, 190, 30);
+
+        tf_TenSP_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_TenSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_TenSP_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_TenSP_pn_SuaSP_pn_QLSP.setText("Tên sản phẩm");
+        tf_TenSP_pn_SuaSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_TenSP_pn_SuaSP_pn_QLSPActionPerformed(evt);
+            }
+        });
+        jPanel10.add(tf_TenSP_pn_SuaSP_pn_QLSP);
+        tf_TenSP_pn_SuaSP_pn_QLSP.setBounds(520, 80, 190, 30);
+
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setText("Đơn giá");
+        jPanel10.add(tf_GiaVatNuoi_pn_SuaSP_pn_QLSP);
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setBounds(780, 30, 190, 30);
+
+        tf_GiaSP_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_GiaSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_GiaSP_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_GiaSP_pn_SuaSP_pn_QLSP.setText("Đơn giá");
+        tf_GiaSP_pn_SuaSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_GiaSP_pn_SuaSP_pn_QLSPActionPerformed(evt);
+            }
+        });
+        jPanel10.add(tf_GiaSP_pn_SuaSP_pn_QLSP);
+        tf_GiaSP_pn_SuaSP_pn_QLSP.setBounds(780, 80, 190, 30);
+
+        cmbx_LoaiSP_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiSP_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiSP_pn_SuaSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        jPanel10.add(cmbx_LoaiSP_pn_SuaSP_pn_QLSP);
+        cmbx_LoaiSP_pn_SuaSP_pn_QLSP.setBounds(30, 80, 190, 30);
+
+        cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        jPanel10.add(cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP);
+        cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP.setBounds(270, 30, 190, 30);
+
+        btn_XacNhan_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 120, 215));
+        btn_XacNhan_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        btn_XacNhan_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        btn_XacNhan_pn_SuaSP_pn_QLSP.setText("Xác nhận");
+        btn_XacNhan_pn_SuaSP_pn_QLSP.setFocusable(false);
+        btn_XacNhan_pn_SuaSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_XacNhan_pn_SuaSP_pn_QLSPActionPerformed(evt);
+            }
+        });
+        jPanel10.add(btn_XacNhan_pn_SuaSP_pn_QLSP);
+        btn_XacNhan_pn_SuaSP_pn_QLSP.setBounds(430, 150, 130, 33);
+
+        tf_MaSP_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_MaSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_MaSP_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_MaSP_pn_SuaSP_pn_QLSP.setText("Mã sản phẩm");
+        jPanel10.add(tf_MaSP_pn_SuaSP_pn_QLSP);
+        tf_MaSP_pn_SuaSP_pn_QLSP.setBounds(270, 80, 190, 30);
+
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setText("Mã vật nuôi");
+        jPanel10.add(tf_MaVatNuoi_pn_SuaSP_pn_QLSP);
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setBounds(520, 30, 190, 30);
+
+        jSeparator10.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel10.add(jSeparator10);
+        jSeparator10.setBounds(30, 130, 940, 10);
+
+        jTabbedPane4.addTab("Sửa sản phẩm", jPanel10);
+
+        jPanel11.setBackground(new java.awt.Color(0, 64, 80));
+        jPanel11.setLayout(null);
+
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.setToolTipText("");
+        jPanel11.add(cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP);
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.setBounds(30, 30, 190, 30);
+
+        cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP.setToolTipText("");
+        jPanel11.add(cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP);
+        cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP.setBounds(270, 30, 190, 30);
+
+        btn_XacNhan_pn_XoaSP_pn_QLSP.setBackground(new java.awt.Color(0, 120, 215));
+        btn_XacNhan_pn_XoaSP_pn_QLSP.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        btn_XacNhan_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        btn_XacNhan_pn_XoaSP_pn_QLSP.setText("Xác nhận");
+        btn_XacNhan_pn_XoaSP_pn_QLSP.setFocusable(false);
+        btn_XacNhan_pn_XoaSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_XacNhan_pn_XoaSP_pn_QLSPActionPerformed(evt);
+            }
+        });
+        jPanel11.add(btn_XacNhan_pn_XoaSP_pn_QLSP);
+        btn_XacNhan_pn_XoaSP_pn_QLSP.setBounds(430, 150, 130, 33);
+
+        cmbx_LoaiSP_pn_XoaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiSP_pn_XoaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiSP_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiSP_pn_XoaSP_pn_QLSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        cmbx_LoaiSP_pn_XoaSP_pn_QLSP.setToolTipText("");
+        jPanel11.add(cmbx_LoaiSP_pn_XoaSP_pn_QLSP);
+        cmbx_LoaiSP_pn_XoaSP_pn_QLSP.setBounds(30, 80, 190, 30);
+
+        tf_MaSP_pn_XoaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_MaSP_pn_XoaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_MaSP_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_MaSP_pn_XoaSP_pn_QLSP.setText("Mã sản phẩm");
+        tf_MaSP_pn_XoaSP_pn_QLSP.setToolTipText("");
+        jPanel11.add(tf_MaSP_pn_XoaSP_pn_QLSP);
+        tf_MaSP_pn_XoaSP_pn_QLSP.setBounds(270, 80, 190, 30);
+
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setText("Mã vật nuôi");
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setToolTipText("");
+        jPanel11.add(tf_MaVatNuoi_pn_XoaSP_pn_QLSP);
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setBounds(520, 30, 190, 30);
+
+        jSeparator11.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel11.add(jSeparator11);
+        jSeparator11.setBounds(30, 130, 940, 10);
+
+        jTabbedPane4.addTab("Xóa sản phẩm", jPanel11);
+
+        jpn_QuanLySanPham.add(jTabbedPane4);
+        jTabbedPane4.setBounds(30, 120, 1010, 240);
+
         jpn_QuanLyKho.setBackground(new java.awt.Color(0, 64, 80));
         jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
         jpn_QuanLyKho.setLayout(null);
 
-        jLabel10.setText("Quản Lý Kho");
-        jpn_QuanLyKho.add(jLabel10);
-        jLabel10.setBounds(130, 130, 456, 107);
+        jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane3.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
+
+        jPanel8.setBackground(new java.awt.Color(0, 90, 90));
+        jPanel8.setLayout(null);
+
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setBackground(new java.awt.Color(0, 90, 90));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setForeground(new java.awt.Color(255, 255, 255));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã loài vật nuôi", "Mã giống vật nuôi", "Mã vật nuôi", "Đơn giá"
+            }
+        ));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setToolTipText("");
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setGridColor(new java.awt.Color(255, 255, 255));
+        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setRowHeight(20);
+        jScrollPane3.setViewportView(table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho);
+
+        jPanel8.add(jScrollPane3);
+        jScrollPane3.setBounds(0, 0, 1005, 310);
+
+        tf_SoLuong_pn_BangVatNuoi_pn_QLKho.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        jPanel8.add(tf_SoLuong_pn_BangVatNuoi_pn_QLKho);
+        tf_SoLuong_pn_BangVatNuoi_pn_QLKho.setBounds(740, 320, 270, 30);
+
+        jLabel8.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Số lượng:");
+        jPanel8.add(jLabel8);
+        jLabel8.setBounds(640, 320, 100, 30);
+
+        jTabbedPane3.addTab("Bảng vật nuôi", jPanel8);
+
+        jPanel9.setBackground(new java.awt.Color(0, 90, 90));
+        jPanel9.setLayout(null);
+
+        table_BangSP_pn_BangSP_pn_QLKho.setBackground(new java.awt.Color(0, 90, 90));
+        table_BangSP_pn_BangSP_pn_QLKho.setFont(new java.awt.Font("Roboto Lt", 0, 16)); // NOI18N
+        table_BangSP_pn_BangSP_pn_QLKho.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá"
+            }
+        ));
+        table_BangSP_pn_BangSP_pn_QLKho.setGridColor(new java.awt.Color(255, 255, 255));
+        table_BangSP_pn_BangSP_pn_QLKho.setRowHeight(20);
+        jScrollPane4.setViewportView(table_BangSP_pn_BangSP_pn_QLKho);
+
+        jPanel9.add(jScrollPane4);
+        jScrollPane4.setBounds(0, 0, 1005, 310);
+
+        jLabel9.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Số lượng:");
+        jPanel9.add(jLabel9);
+        jLabel9.setBounds(640, 320, 100, 30);
+
+        tf_SoLuong_pn_BangSP_pn_QLKho.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        jPanel9.add(tf_SoLuong_pn_BangSP_pn_QLKho);
+        tf_SoLuong_pn_BangSP_pn_QLKho.setBounds(740, 320, 270, 30);
+
+        jTabbedPane3.addTab("Bảng sản phẩm", jPanel9);
+
+        jpn_QuanLyKho.add(jTabbedPane3);
+        jTabbedPane3.setBounds(30, 250, 1010, 400);
+
+        jLabel18.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel18.setText("QUẢN LÝ KHO");
+        jLabel18.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jpn_QuanLyKho.add(jLabel18);
+        jLabel18.setBounds(30, 0, 1040, 100);
+
+        cmbx_LoaiSP_pn_QLKho.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiSP_pn_QLKho.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiSP_pn_QLKho.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiSP_pn_QLKho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại sản phẩm" }));
+        jpn_QuanLyKho.add(cmbx_LoaiSP_pn_QLKho);
+        cmbx_LoaiSP_pn_QLKho.setBounds(30, 190, 190, 30);
+
+        cmbx_LoaiVatNuoi_pn_QLKho.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_LoaiVatNuoi_pn_QLKho.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_LoaiVatNuoi_pn_QLKho.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_LoaiVatNuoi_pn_QLKho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loài vật nuôi" }));
+        jpn_QuanLyKho.add(cmbx_LoaiVatNuoi_pn_QLKho);
+        cmbx_LoaiVatNuoi_pn_QLKho.setBounds(30, 140, 190, 30);
+
+        cmbx_GiongVatNuoi_pn_QLKho.setBackground(new java.awt.Color(0, 60, 60));
+        cmbx_GiongVatNuoi_pn_QLKho.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        cmbx_GiongVatNuoi_pn_QLKho.setForeground(new java.awt.Color(255, 255, 255));
+        cmbx_GiongVatNuoi_pn_QLKho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giống vật nuôi" }));
+        jpn_QuanLyKho.add(cmbx_GiongVatNuoi_pn_QLKho);
+        cmbx_GiongVatNuoi_pn_QLKho.setBounds(270, 140, 190, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -882,34 +1021,6 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_ThongTinCaNhanActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem1ActionPerformed
-
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
-
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
-
-    private void JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem3ActionPerformed
-
-    private void JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiem4ActionPerformed
-
     private void jTF_DienThoai_pn_ThongTinCaNhanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF_DienThoai_pn_ThongTinCaNhanKeyTyped
         char vchar = evt.getKeyChar();
         if(!(Character.isDigit(vchar))|| vchar == KeyEvent.VK_BACKSPACE || vchar == KeyEvent.VK_DELETE){
@@ -935,6 +1046,34 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private void jTF_SoCMND_pn_ThongTinCaNhanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF_SoCMND_pn_ThongTinCaNhanKeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_jTF_SoCMND_pn_ThongTinCaNhanKeyTyped
+
+    private void tf_GiaSP_pn_ThemSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_GiaSP_pn_ThemSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_GiaSP_pn_ThemSP_pn_QLSPActionPerformed
+
+    private void tf_TenSP_pn_ThemSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_TenSP_pn_ThemSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_TenSP_pn_ThemSP_pn_QLSPActionPerformed
+
+    private void btn_XacNhan_pn_ThemSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XacNhan_pn_ThemSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_XacNhan_pn_ThemSP_pn_QLSPActionPerformed
+
+    private void tf_TenSP_pn_SuaSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_TenSP_pn_SuaSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_TenSP_pn_SuaSP_pn_QLSPActionPerformed
+
+    private void tf_GiaSP_pn_SuaSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_GiaSP_pn_SuaSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_GiaSP_pn_SuaSP_pn_QLSPActionPerformed
+
+    private void btn_XacNhan_pn_SuaSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XacNhan_pn_SuaSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_XacNhan_pn_SuaSP_pn_QLSPActionPerformed
+
+    private void btn_XacNhan_pn_XoaSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XacNhan_pn_XoaSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_XacNhan_pn_XoaSP_pn_QLSPActionPerformed
     
     void ThongTinCaNhan_SetAllTextFieldDisable(){
         ThongTinCaNhan_SetAllTextField(false);
@@ -1065,78 +1204,92 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem1;
-    private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem3;
-    private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem4;
     private javax.swing.JButton btn_QuanLyKho;
     private javax.swing.JButton btn_QuanLySanPham;
     private javax.swing.JButton btn_Thoat;
     private javax.swing.JButton btn_ThongTinCaNhan;
+    private javax.swing.JButton btn_XacNhan_pn_SuaSP_pn_QLSP;
+    private javax.swing.JButton btn_XacNhan_pn_ThemSP_pn_QLSP;
+    private javax.swing.JButton btn_XacNhan_pn_XoaSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_GiongVatNuoi_pn_QLKho;
+    private javax.swing.JComboBox<String> cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_LoaiSP_pn_QLKho;
+    private javax.swing.JComboBox<String> cmbx_LoaiSP_pn_SuaSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_LoaiSP_pn_ThemSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_LoaiSP_pn_XoaSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_LoaiVatNuoi_pn_QLKho;
+    private javax.swing.JComboBox<String> cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP;
+    private javax.swing.JComboBox<String> cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP;
     private javax.swing.JButton jBtn_ChinhSua_pn_ThongTinCaNhan;
     private javax.swing.JButton jBtn_XacNhan_pn_ThongTinCaNhan;
     private javax.swing.JComboBox<String> jCB_GioiTinh_pn_ThongTinCaNhan;
-    private javax.swing.JComboBox<String> jComboBox12;
-    private javax.swing.JComboBox<String> jComboBox13;
-    private javax.swing.JComboBox<String> jComboBox14;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_pn_ThongTinCaNhan;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLb_Error_HoTen;
     private javax.swing.JLabel jLb_Error_SDT;
     private javax.swing.JLabel jLb_Error_SoCMND;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTextField jTF_DiaChi_pn_ThongTinCaNhan;
     private javax.swing.JTextField jTF_DienThoai_pn_ThongTinCaNhan;
     private javax.swing.JTextField jTF_Hoten_pn_ThongTinCaNhan;
     private javax.swing.JTextField jTF_SoCMND_pn_ThongTinCaNhan;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JPanel jpn_QuanLyKho;
     private javax.swing.JPanel jpn_QuanLySanPham;
     private javax.swing.JPanel jpn_ThongTinCaNhan;
+    private javax.swing.JTable table_BangSP_pn_BangSP_pn_QLKho;
+    private javax.swing.JTable table_BangSP_pn_BangSP_pn_QLSP;
+    private javax.swing.JTable table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho;
+    private javax.swing.JTable table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP;
+    private javax.swing.JTextField tf_GiaSP_pn_SuaSP_pn_QLSP;
+    private javax.swing.JTextField tf_GiaSP_pn_ThemSP_pn_QLSP;
+    private javax.swing.JTextField tf_GiaVatNuoi_pn_SuaSP_pn_QLSP;
+    private javax.swing.JTextField tf_GiaVatNuoi_pn_ThemSP_pn_QLSP;
+    private javax.swing.JTextField tf_MaSP_pn_SuaSP_pn_QLSP;
+    private javax.swing.JTextField tf_MaSP_pn_ThemSP_pn_QLSP;
+    private javax.swing.JTextField tf_MaSP_pn_XoaSP_pn_QLSP;
+    private javax.swing.JTextField tf_MaVatNuoi_pn_SuaSP_pn_QLSP;
+    private javax.swing.JTextField tf_MaVatNuoi_pn_ThemSP_pn_QLSP;
+    private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP;
+    private javax.swing.JTextField tf_SoLuong_pn_BangSP_pn_QLKho;
+    private javax.swing.JTextField tf_SoLuong_pn_BangVatNuoi_pn_QLKho;
+    private javax.swing.JTextField tf_TenSP_pn_SuaSP_pn_QLSP;
+    private javax.swing.JTextField tf_TenSP_pn_ThemSP_pn_QLSP;
     // End of variables declaration//GEN-END:variables
 }
