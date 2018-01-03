@@ -5,13 +5,16 @@
  */
 package JFrameMain;
 
+import Bussiness.*;
 import Data.Data;
 import com.sun.glass.events.KeyEvent;
 import java.awt.Color;
 import java.awt.Component;
 import java.sql.Date;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultButtonModel;
@@ -23,12 +26,14 @@ import javax.imageio.ImageIO;
  * @author voanh
  */
 import javax.swing.ImageIcon;
+import javax.swing.table.DefaultTableModel;
 public class jF_ChuCuaHang extends javax.swing.JFrame {
+    static String name;
     static String id="";
     static String maChucVu;
     static String mk="";
     static Class_Color Color = new Class_Color();
-    
+    static CNhanVien myacc;
     static String errorText = "Tên đăng nhập hoặc mật khẩu không hợp lệ !";
     
     
@@ -43,6 +48,15 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     /**
      * Creates new form jFMain
      */
+    
+    public jF_ChuCuaHang(CNhanVien c){
+        this();
+        myacc = c;
+        name = myacc.getHoTen();
+        jlb_Name.setText("Chào "+name);
+        UpdatePnThongTinCaNhan();
+    }
+    
     public jF_ChuCuaHang() {
         
         Data d = new Data();
@@ -64,10 +78,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         SetAllPanelDissapear();
         jpn_ThongTinCaNhan.setVisible(true);
 
-
+        
         ThongTinCaNhan_SetAllTextFieldColor(Color.tf_Disable_Edited);
         ThongTinCaNhan_SetAllTextFieldDisable();
-        
+        jBtn_XacNhan_pn_ThongTinCaNhan.setEnabled(false);
     }
     
 
@@ -79,7 +93,13 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
+        entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("localhost:1433;databaseName=QuanLyCuaHangThuCungPU").createEntityManager();
+        nhanvienQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT n FROM Nhanvien n");
+        nhanvienList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : nhanvienQuery.getResultList();
+        nhanvienQuery1 = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT n FROM Nhanvien n");
+        nhanvienList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : nhanvienQuery1.getResultList();
         jpn_QuanLyNhanVien = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jpn_Table = new javax.swing.JPanel();
@@ -112,7 +132,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         btn_Xoa_ThongTinNhanVien = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jPF_MatKhau_ThongTinNhanVien = new javax.swing.JPasswordField();
+        jTF_MatKhau_ThongTinNhanVien = new javax.swing.JPasswordField();
         jTF_TenTk_ThongTinNhanVien = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
@@ -149,7 +169,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlb_Name = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btn_Thoat = new javax.swing.JButton();
         btn_QuanLyNhanVien = new javax.swing.JButton();
@@ -261,12 +281,21 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
 
         jTF_MANV_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jTF_MANV_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
-        jTF_MANV_ThongTinNhanVien.setText("ádasdasdasd");
+        jTF_MANV_ThongTinNhanVien.setText("đâsdasdasd");
         jTF_MANV_ThongTinNhanVien.setToolTipText("Sundep trai");
         jTF_MANV_ThongTinNhanVien.setBorder(null);
         jTF_MANV_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jTF_MANV_ThongTinNhanVien.setName(""); // NOI18N
         jTF_MANV_ThongTinNhanVien.setSelectionColor(new java.awt.Color(255, 51, 153));
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
+        jTF_MANV_ThongTinNhanVien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF_MANV_ThongTinNhanVienActionPerformed(evt);
+            }
+        });
         jpn_ThongTinNhanVien.add(jTF_MANV_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 100, 30));
 
         jTF_HoTen_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -287,7 +316,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_SDT_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_SDT_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 190, 30));
 
-        jCB_ChucVu_ThongTinNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chủ CH", "NVBH", "NVKH" }));
+        jCB_ChucVu_ThongTinNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CHCH", "NVBH", "NVKH" }));
         jpn_ThongTinNhanVien.add(jCB_ChucVu_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 160, 130, 30));
 
         jDC_NgaySinh_QuanLyNhanVien.setDateFormatString("dd/MM/yyyy");
@@ -365,21 +394,16 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel25.setText("Mật Khẩu");
         jpn_ThongTinNhanVien.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 60, 30));
 
-        jPF_MatKhau_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
-        jPF_MatKhau_ThongTinNhanVien.setText("jPasswordField1");
-        jPF_MatKhau_ThongTinNhanVien.setBorder(null);
-        jPF_MatKhau_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jpn_ThongTinNhanVien.add(jPF_MatKhau_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 130, 30));
+        jTF_MatKhau_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
+        jTF_MatKhau_ThongTinNhanVien.setText("jPasswordField1");
+        jTF_MatKhau_ThongTinNhanVien.setBorder(null);
+        jTF_MatKhau_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jpn_ThongTinNhanVien.add(jTF_MatKhau_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 130, 30));
 
         jTF_TenTk_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jTF_TenTk_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_TenTk_ThongTinNhanVien.setBorder(null);
         jTF_TenTk_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTF_TenTk_ThongTinNhanVien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF_TenTk_ThongTinNhanVienActionPerformed(evt);
-            }
-        });
         jpn_ThongTinNhanVien.add(jTF_TenTk_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, 130, 30));
 
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -396,43 +420,67 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTB_ThongTin.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jTB_ThongTin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"NV0011", "Võ Anh Tuấn"},
-                {"1", " Võ Văn B"},
-                {"11", null},
-                {"11", null},
-                {"11", null},
-                {"11", null},
-                {"11", null},
-                {"11", null}
+
             },
             new String [] {
-                "MÃ NV", "Họ Tên"
+                "MANV", "HoTen", "GioiTinh", "NgaySinh ", "DiaChi", "SDT", "ChucVu", "Luong", "CMND", "TENTK", "MATKHAU"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jTB_ThongTin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTB_ThongTinMouseClicked(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jTB_ThongTinMousePressed(evt);
-            }
         });
         jScrollPane1.setViewportView(jTB_ThongTin);
         if (jTB_ThongTin.getColumnModel().getColumnCount() > 0) {
-            jTB_ThongTin.getColumnModel().getColumn(0).setPreferredWidth(10);
-            jTB_ThongTin.getColumnModel().getColumn(1).setPreferredWidth(30);
+            jTB_ThongTin.getColumnModel().getColumn(0).setPreferredWidth(50);
+            jTB_ThongTin.getColumnModel().getColumn(1).setPreferredWidth(150);
+            jTB_ThongTin.getColumnModel().getColumn(2).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(2).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(2).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(3).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(3).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(3).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(4).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(4).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(4).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(5).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(5).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(5).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(6).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(6).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(6).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(7).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(7).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(7).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(8).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(8).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(8).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(9).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(9).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(9).setMaxWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(10).setMinWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(10).setPreferredWidth(0);
+            jTB_ThongTin.getColumnModel().getColumn(10).setMaxWidth(0);
         }
 
         jPanel6.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 240, 210, 200);
+        jScrollPane1.setBounds(10, 120, 210, 320);
 
         jTabbedPane1.addTab("Thông Tin Nhân Viên", new javax.swing.ImageIcon(getClass().getResource("/Image/Cat Profile_25px.png")), jPanel6); // NOI18N
 
@@ -591,23 +639,23 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8-cat-profile-75.png"))); // NOI18N
         jLabel2.setText("PETS STORE");
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Chào  TUANKYOU");
+        jlb_Name.setForeground(new java.awt.Color(255, 255, 255));
+        jlb_Name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlb_Name.setText("Chào  TUANKYOU");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jlb_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jlb_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel3.setBackground(new java.awt.Color(32, 78, 80));
@@ -880,11 +928,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1040, 100));
 
         jLb_Error_SDT.setForeground(new java.awt.Color(255, 153, 102));
-        jLb_Error_SDT.setText("*Số điện thoại không hợp lệ");
         jpn_ThongTinCaNhan.add(jLb_Error_SDT, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 200, 30));
 
         jLb_Error_HoTen.setForeground(new java.awt.Color(255, 153, 102));
-        jLb_Error_HoTen.setText("*Tên đăng nhập không chứa ký tự đặt biệt");
         jpn_ThongTinCaNhan.add(jLb_Error_HoTen, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 250, 30));
 
         jLabel15.setBackground(new java.awt.Color(0, 96, 100));
@@ -907,7 +953,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.add(jTF_SoCMND_pn_ThongTinCaNhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 200, 30));
 
         jLb_Error_SoCMND.setForeground(new java.awt.Color(255, 153, 102));
-        jLb_Error_SoCMND.setText("*Số CMND không hợp lệ");
         jpn_ThongTinCaNhan.add(jLb_Error_SoCMND, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
         jpn_ThongTinCaNhan.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, -1));
 
@@ -1005,6 +1050,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1084,6 +1131,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ThongTinCaNhanMouseExited
 
     private void btn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThongTinCaNhanMouseClicked
+        UpdatePnThongTinCaNhan();
         SetColorAllButton(Color.btn_Default);
         btn_ThongTinCaNhan.setBackground(Color.btn_When_Click);
         ThongTinCaNhan_SetAllThingDefault();
@@ -1091,6 +1139,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         bThongTinCaNhan = true;
         SetAllPanelDissapear();
         jpn_ThongTinCaNhan.setVisible(true);
+        jBtn_XacNhan_pn_ThongTinCaNhan.setEnabled(false);
     }//GEN-LAST:event_btn_ThongTinCaNhanMouseClicked
 
     private void btn_QuanLyNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyNhanVienMouseClicked
@@ -1102,6 +1151,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_QuanLyNhanVien.setVisible(true);
         ThongTinNhanVien_SetAllTextFieldDisable();
         btn_XacNhan_ThongTinNhanVien.setEnabled(false);
+        UpdateTableThongTinNhanVien();
     }//GEN-LAST:event_btn_QuanLyNhanVienMouseClicked
 
     private void btn_QuanLySanPhamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLySanPhamMouseClicked
@@ -1137,9 +1187,12 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
            evt.consume();
        }
     }//GEN-LAST:event_jTF_DienThoai_pn_ThongTinCaNhanKeyTyped
-
+    
     private void jTF_SoCMND_pn_ThongTinCaNhanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF_SoCMND_pn_ThongTinCaNhanKeyTyped
-        // TODO add your handling code here:
+       char vchar = evt.getKeyChar();
+       if(!(Character.isDigit(vchar))|| vchar == KeyEvent.VK_BACKSPACE || vchar == KeyEvent.VK_DELETE){
+           evt.consume();
+       }
     }//GEN-LAST:event_jTF_SoCMND_pn_ThongTinCaNhanKeyTyped
 
     private void btn_QuanLyKhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_QuanLyKhoActionPerformed
@@ -1147,7 +1200,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_QuanLyKhoActionPerformed
 
     private void jTB_ThongTinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTB_ThongTinMouseClicked
-        
+        ThongTinNhanVien_SetAllTextFieldDisable();
         try{
             int row = jTB_ThongTin.getSelectedRow();
             String manv = jTB_ThongTin.getModel().getValueAt(row,0).toString();
@@ -1159,16 +1212,19 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             String ChucVu = jTB_ThongTin.getModel().getValueAt(row,6).toString();
             String luong = jTB_ThongTin.getModel().getValueAt(row,7).toString();
             String soCMND= jTB_ThongTin.getModel().getValueAt(row,8).toString();
+            String tenTk = jTB_ThongTin.getModel().getValueAt(row,9).toString();
+            String matKhau = jTB_ThongTin.getModel().getValueAt(row,10).toString();
             jTF_SOCMND_QuanLyNhanVien.setText(soCMND);
-            jTF_MANV_ThongTinNhanVien.setText(jTB_ThongTin.getModel().getValueAt(row,0).toString());
-            jTF_HoTen_ThongTinNhanVien.setText(jTB_ThongTin.getModel().getValueAt(row,1).toString());
-            jCB_ChucVu_ThongTinNhanVien.setSelectedItem(jTB_ThongTin.getModel().getValueAt(row,2).toString());
-            java.util.Date date = new SimpleDateFormat("dd/MM/yyyy").parse(ngaySinh);
-            jTF_DiaChi_ThongTinNhanVien.setText(jTB_ThongTin.getModel().getValueAt(row,4).toString());
+            jTF_MANV_ThongTinNhanVien.setText(manv);
+            jTF_HoTen_ThongTinNhanVien.setText(hoten);
+            jCB_ChucVu_ThongTinNhanVien.setSelectedItem(ChucVu);
+            java.util.Date date = new SimpleDateFormat("yyyy-MM-dd").parse(ngaySinh);
+            jTF_DiaChi_ThongTinNhanVien.setText(diaChi);
             jDC_NgaySinh_QuanLyNhanVien.setDate(date);
-            jTF_SDT_ThongTinNhanVien.setText(jTB_ThongTin.getModel().getValueAt(row,5).toString());
-            jTF_TenTk_ThongTinNhanVien.setText(jTB_ThongTin.getModel().getValueAt(row,6).toString());
-            jTF_Luong_ThongTinNhanVien.setText(jTB_ThongTin.getModel().getValueAt(row,7).toString());
+            jTF_SDT_ThongTinNhanVien.setText(sdt);
+            jTF_TenTk_ThongTinNhanVien.setText(tenTk);
+            jTF_Luong_ThongTinNhanVien.setText(luong);
+            jTF_MatKhau_ThongTinNhanVien.setText(matKhau);
             
         }catch (Exception e){
             jTF_SOCMND_QuanLyNhanVien.setText("");
@@ -1183,10 +1239,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTB_ThongTinMouseClicked
 
-    private void jTF_TenTk_ThongTinNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_TenTk_ThongTinNhanVienActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF_TenTk_ThongTinNhanVienActionPerformed
-
     private void btn_XacNhan_ThemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XacNhan_ThemNhanVienActionPerformed
         // TODO add your handling code here:
          JOptionPane.showMessageDialog(this, "Đã thêm thành công.");
@@ -1196,16 +1248,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTF_TenTk_ThemNhanVienActionPerformed
 
-    private void btn_QuanLyNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_QuanLyNhanVienActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_QuanLyNhanVienActionPerformed
-
-    private void jTB_ThongTinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTB_ThongTinMousePressed
-        // TODO add your handling code here:
-        //Lấy ra MSNV -> Search trong database -> And thông tin sau khi search vào 
-        
-    }//GEN-LAST:event_jTB_ThongTinMousePressed
-
     private void jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked
         is_ChinhSua_ThongTinCaNhan = true;
         jBtn_ChinhSua_pn_ThongTinCaNhan.setEnabled(false);
@@ -1214,10 +1256,25 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked
 
     private void jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked
+        boolean flag = true;
+        if(CRule.checkHoTen(jTF_Hoten_pn_ThongTinCaNhan.getText())==false){
+            flag = false;
+            jLb_Error_HoTen.setText("*Tên đăng nhập không chứa ký tự đặc biệt");
+        }
+        if(CRule.checkSDT(jTF_DienThoai_pn_ThongTinCaNhan.getText())==false){
+            flag = false;
+            jLb_Error_SDT.setText("*Số điện thoại không hợp lệ");
+        }
         // Nếu Xác Nhận Thông Tin Thành Công
-        jBtn_XacNhan_pn_ThongTinCaNhan.setEnabled(false);
-        ThongTinCaNhan_SetAllTextFieldDisable();
-        jBtn_ChinhSua_pn_ThongTinCaNhan.setEnabled(true);
+        if(flag){
+            UpdateMyAcc();
+            jBtn_XacNhan_pn_ThongTinCaNhan.setEnabled(false);
+            ThongTinCaNhan_SetAllTextFieldDisable();
+            jBtn_ChinhSua_pn_ThongTinCaNhan.setEnabled(true);
+            myacc.Update();
+            jlb_Name.setText(myacc.getHoTen());
+        }
+        
         // Cập nhật lại class và gửi thông tin thay đổi về database
     }//GEN-LAST:event_jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked
 
@@ -1241,7 +1298,36 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private void btn_ThongTinCaNhanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ThongTinCaNhanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_ThongTinCaNhanActionPerformed
+
+    private void btn_QuanLyNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_QuanLyNhanVienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_QuanLyNhanVienActionPerformed
+
+    private void jTF_MANV_ThongTinNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_MANV_ThongTinNhanVienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF_MANV_ThongTinNhanVienActionPerformed
     
+    
+    
+    void UpdateMyAcc(){
+        myacc.setHoTen(jTF_Hoten_pn_ThongTinCaNhan.getText());
+        myacc.setGioiTinh(jCB_GioiTinh_pn_ThongTinCaNhan.getSelectedItem().toString());
+        java.util.Date utilDate = jDC_NgaySinh_pn_ThongTinCaNhan.getDate();
+        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+        myacc.setNgaySinh(sqlDate);
+        myacc.setDiaChi(jTF_DiaChi_pn_ThongTinCaNhan.getText());
+        myacc.setSdt(jTF_DienThoai_pn_ThongTinCaNhan.getText());
+        myacc.setCmnd(jTF_DienThoai_pn_ThongTinCaNhan.getText());
+    }
+    
+    void UpdatePnThongTinCaNhan(){
+        jTF_Hoten_pn_ThongTinCaNhan.setText(myacc.getHoTen());
+        jCB_GioiTinh_pn_ThongTinCaNhan.setSelectedItem(myacc.getGioiTinh());
+        jDC_NgaySinh_pn_ThongTinCaNhan.setDate(myacc.getNgaySinh());
+        jTF_DiaChi_pn_ThongTinCaNhan.setText(myacc.getDiaChi());
+        jTF_DienThoai_pn_ThongTinCaNhan.setText(myacc.getSdt());
+        jTF_SoCMND_pn_ThongTinCaNhan.setText(myacc.getCmnd());                
+    }
     
     void ThongTinNhanVien_SetAllTextField(boolean x){
         jCB_GioiTinh_ThongTinNhanVien.setEnabled(x);
@@ -1254,7 +1340,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_SDT_ThongTinNhanVien.setEnabled(x);
         jTF_TenTk_ThongTinNhanVien.setEnabled(x);
         jTF_Luong_ThongTinNhanVien.setEnabled(x);
-        jPF_MatKhau_ThongTinNhanVien.setEnabled(x);
+        jTF_MatKhau_ThongTinNhanVien.setEnabled(x);
         //jpn_Account.setVisible(false);
     }
     
@@ -1337,7 +1423,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         btn_QuanLyKho.setBackground(jColor);
     }
 
-    
     void SetFalseAllButton(){
         bThongTinCaNhan = false;
         bQuanLyNhanVien = false;
@@ -1352,6 +1437,32 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_QuanLyThuChi.setVisible(false);
         jpn_ThongTinCaNhan.setVisible(false);
     }
+    
+    void UpdateTableThongTinNhanVien(){
+        jTB_ThongTin.clearSelection();
+        DefaultTableModel tableModel = (DefaultTableModel) jTB_ThongTin.getModel();
+        tableModel.getDataVector().removeAllElements();
+        BNhanVien nv = new BNhanVien();
+        ArrayList<CNhanVienMoRong> cnv = nv.getAllNhanVienMoRong();
+        
+        for(int i  =  0 ; i < cnv.size() ; i++){
+            Object[] rowData = new Object[11];
+            rowData[0] = cnv.get(i).getMaNV();
+            rowData[1] = cnv.get(i).getHoTen();
+            rowData[2] = cnv.get(i).getGioiTinh();
+            rowData[3] = cnv.get(i).getNgaySinh();
+            rowData[4] = cnv.get(i).getDiaChi();
+            rowData[5] = cnv.get(i).getSdt();
+            rowData[6] = cnv.get(i).getChucVu();
+            rowData[7] = cnv.get(i).getLuong();
+            rowData[8] = cnv.get(i).getCmnd();
+            rowData[9] = cnv.get(i).getTenTK();
+            rowData[10] = cnv.get(i).getMatKhau();
+            tableModel.addRow(rowData);
+        }
+        jTB_ThongTin.setModel(tableModel);
+    }
+    
     void ExitProgram(){
         int output = JOptionPane.showConfirmDialog(this,"Bạn có thật sự muốn thoát không ?","Thông báo",JOptionPane.YES_NO_OPTION);
         if(output==JOptionPane.YES_OPTION){
@@ -1428,6 +1539,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JButton btn_XacNhan_ThemNhanVien;
     private javax.swing.JButton btn_XacNhan_ThongTinNhanVien;
     private javax.swing.JButton btn_Xoa_ThongTinNhanVien;
+    private javax.persistence.EntityManager entityManager;
     private javax.swing.JButton jBtn_ChinhSua_pn_ThongTinCaNhan;
     private javax.swing.JButton jBtn_XacNhan_pn_ThongTinCaNhan;
     private javax.swing.JButton jButton3;
@@ -1440,7 +1552,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_QuanLyNhanVien;
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_ThemNhanVien;
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_pn_ThongTinCaNhan;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1479,7 +1590,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JLabel jLb_Error_HoTen;
     private javax.swing.JLabel jLb_Error_SDT;
     private javax.swing.JLabel jLb_Error_SoCMND;
-    private javax.swing.JPasswordField jPF_MatKhau_ThongTinNhanVien;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1508,6 +1618,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JTextField jTF_Luong_ThongTinNhanVien;
     private javax.swing.JTextField jTF_MANV_ThemNhanVien;
     private javax.swing.JTextField jTF_MANV_ThongTinNhanVien;
+    private javax.swing.JPasswordField jTF_MatKhau_ThongTinNhanVien;
     private javax.swing.JTextField jTF_SDT_ThemNhanVien;
     private javax.swing.JTextField jTF_SDT_ThongTinNhanVien;
     private javax.swing.JTextField jTF_SOCMND_QuanLyNhanVien;
@@ -1517,6 +1628,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JTextField jTF_TenTk_ThongTinNhanVien;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JLabel jlb_Name;
     private javax.swing.JPanel jpn_QuanLyKho;
     private javax.swing.JPanel jpn_QuanLyLoaiSanPham;
     private javax.swing.JPanel jpn_QuanLyNhanVien;
@@ -1524,5 +1636,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JPanel jpn_Table;
     private javax.swing.JPanel jpn_ThongTinCaNhan;
     private javax.swing.JPanel jpn_ThongTinNhanVien;
+    private java.util.List<JFrameMain.Nhanvien> nhanvienList;
+    private java.util.List<JFrameMain.Nhanvien> nhanvienList1;
+    private javax.persistence.Query nhanvienQuery;
+    private javax.persistence.Query nhanvienQuery1;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

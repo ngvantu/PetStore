@@ -6,6 +6,7 @@
 package JFrameMain;
 import Data.Data;
 import static JFrameMain.jF_ChuCuaHang.Color;
+import static JFrameMain.jF_ChuCuaHang.name;
 import com.sun.glass.events.KeyEvent;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultButtonModel;
@@ -17,6 +18,9 @@ import static javax.swing.SwingUtilities.updateComponentTreeUI;
  * @author voanh
  */
 public class jFNhanVienKho extends javax.swing.JFrame {
+    
+    static String name = "";
+    
     static String id="";
     static String maChucVu;
     static String mk="";
@@ -32,6 +36,13 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     /**
      * Creates new form jFMain
      */
+    
+    public jFNhanVienKho(String Name){
+        this();
+        name = Name;
+        jlb_Name.setText("Chào "+name);
+    }
+    
     public jFNhanVienKho() {
         
         Data d = new Data();
@@ -71,7 +82,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlb_Name = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btn_Thoat = new javax.swing.JButton();
         btn_QuanLySanPham = new javax.swing.JButton();
@@ -166,23 +177,23 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8-cat-profile-75.png"))); // NOI18N
         jLabel2.setText("PETS STORE");
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Chào  TUANKYOU");
+        jlb_Name.setForeground(new java.awt.Color(255, 255, 255));
+        jlb_Name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlb_Name.setText("Chào  TUANKYOU");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jlb_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jlb_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel3.setBackground(new java.awt.Color(32, 78, 80));
@@ -1085,7 +1096,6 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_pn_ThongTinCaNhan;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
@@ -1135,6 +1145,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel jlb_Name;
     private javax.swing.JPanel jpn_QuanLyKho;
     private javax.swing.JPanel jpn_QuanLySanPham;
     private javax.swing.JPanel jpn_ThongTinCaNhan;

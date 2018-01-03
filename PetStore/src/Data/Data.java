@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Data;
 
 import java.sql.CallableStatement;
@@ -11,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -18,26 +14,33 @@ import java.sql.Statement;
  */
 public class Data {
 
-    private Connection conDB = null;
+    private Connection conDB = null; // Tạo kết nối đến CSDL
     private Statement stmDB = null;
-    private ResultSet rsDB = null;
-    private CallableStatement cstmDB = null;
+    private PreparedStatement pre_stmDB = null; 
     
+    private ResultSet rsDB = null; // Result Set trả về kết quả truy vấn
+    private CallableStatement cstmDB = null;// Tạo một Callable statement kết 
+    // nối đến csdl
+    
+    // Tên sever name
     private String serverName = "localhost"; //127.0.0.1
+    // Số hiệu port
     private String port ="1433";
+    // Tên instance
     private String instanceName = "";
+    // Tên CSDL
     private String databaseName = "QuanLyCuaHangThuCung";
+    // Tên đăng nhập
     private String username = "sa";
+    // Mật khẩu
     private String password = "sa";
+    // Đường link
     private String url = "";
-    private int sourceType = 0;
+
     public Data() {
     }
     
-    public Data(int _sourceType) {
-        sourceType = _sourceType;
-    }
-    
+    // Trả về true nếu tạo kết nối thành công
     public boolean connectDB() {
         boolean res = true;
 
@@ -46,19 +49,18 @@ public class Data {
                 conDB.close();
             }            
             System.out.println("Connecting to database...");
-            //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-               
-            //instanceName = "MSSQLServer";
+            //String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=QuanLyDeAn;user=sa;password=sa";
             url = "jdbc:sqlserver://" + serverName
                         + ":"+port
                         + ";databaseName=" + databaseName +";user="+username+";password="+password;
-            //String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=QuanLyDeAn;user=sa;password=sa";
+            
+            // thử tạo kết nối
             conDB = DriverManager.getConnection(url);
             if (conDB == null) {
                 res = false;
             }
             else{
-                System.out.println("Thanh Cong");
+                System.out.println("Kết Nối Thanh Cong");
             }
         } catch (SQLException ex) {
             System.out.println("Ngoại lệ tại classData.connectDB: !" +ex.getMessage());
@@ -68,7 +70,20 @@ public class Data {
         }
         return res;
     }
-    
+    // Đóng kết nối đến CSDL
+    public boolean closeDB() {
+        boolean res = true;
+        try {
+            if (!conDB.isClosed()) {
+                conDB.close();
+            }
+        } catch (Exception ex) {
+            res = false;
+        }
+        System.out.println("Closed database ");
+        return res;
+    }
+    // Thực hiện truy vấn trả về 1 result set
     public ResultSet getData(String _query) {
         ResultSet res = null;
         try {
@@ -86,18 +101,8 @@ public class Data {
         return res;
     }
     
-    public boolean closeDB() {
-        boolean res = true;
-        try {
-            if (!conDB.isClosed()) {
-                conDB.close();
-            }
-        } catch (Exception ex) {
-            res = false;
-        }
-        System.out.println("Closed database");
-        return res;
-    }
+    
+    // Update dữ liệu lên data
     public boolean updateData(String _query) throws SQLException{
         boolean res = true;
 

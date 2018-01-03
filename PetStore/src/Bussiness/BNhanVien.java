@@ -6,7 +6,12 @@
 package Bussiness;
 import Data.*;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,6 +23,72 @@ public class BNhanVien extends Bussiness{
         Table="NHANVIEN";
         ID="MANV";
     }
+    
+    public ArrayList<CNhanVien> getAllNhanVien(){
+        ArrayList<CNhanVien> arr = new ArrayList();
+        ResultSet rs = super.getAll();
+        try {
+            //ResultSetMetaData metaData = rs.getMetaData();
+            //int columns = metaData.getColumnCount();
+            while(rs.next()){
+                CNhanVien temp = new CNhanVien();
+                temp.setHoTen(rs.getString("HOTEN"));
+                temp.setMaNV(rs.getString("MANV"));
+                temp.setGioiTinh(rs.getString("GIOITINH"));
+                temp.setNgaySinh(rs.getDate("NGAYSINH"));
+                temp.setDiaChi(rs.getString("DIACHI"));
+                temp.setSdt(rs.getString("SDT"));
+                temp.setChucVu(rs.getString("CHUCVU"));
+                temp.setLuong(rs.getInt("LUONG"));
+                temp.setCmnd(rs.getString("CMND"));
+                arr.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BNhanVien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+    }
+    
+    
+    public ArrayList<CNhanVienMoRong> getAllNhanVienMoRong(){
+        ArrayList<CNhanVienMoRong> arr = new ArrayList();
+        SQL = "getExtendedNhanVien";
+        ResultSet rs = DB.getData(SQL);
+        try {
+            //ResultSetMetaData metaData = rs.getMetaData();
+            //int columns = metaData.getColumnCount();
+            while(rs.next()){
+                CNhanVienMoRong temp = new CNhanVienMoRong();
+                temp.setHoTen(rs.getNString("HOTEN"));
+                temp.setMaNV(rs.getString("MANV"));
+                temp.setGioiTinh(rs.getNString("GIOITINH"));
+                temp.setNgaySinh(rs.getDate("NGAYSINH"));
+                temp.setDiaChi(rs.getNString("DIACHI"));
+                temp.setSdt(rs.getString("SDT"));
+                temp.setChucVu(rs.getString("CHUCVU"));
+                temp.setLuong(rs.getInt("LUONG"));
+                temp.setCmnd(rs.getString("CMND"));
+                temp.setTenTK(rs.getString("TENTK"));
+                temp.setMatKhau(rs.getString("MATKHAU"));
+                arr.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BNhanVien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+    }
+    
+    
+    public boolean updateByProperties(CNhanVien c){
+        String dateString;
+        SimpleDateFormat sdfr = new SimpleDateFormat("MM/dd/yyyy");
+        dateString = sdfr.format( c.getNgaySinh() );
+        SQL = String.format("updateUserInfo '%s', N'%s', N'%s', '%s', N'%s', '%s', '%s'",c.getMaNV(),
+                c.getHoTen(), c.getGioiTinh(), dateString,c.getDiaChi(),c.getSdt(), c.getCmnd());
+        return super.updateBySQLString(SQL);
+    }
+    
+    
     public boolean updateByProperties(String MANV, String HOTEN, String GIOITINH,
             String NGAYSINH,String DIACHI, String SDT,String CHUCVU, String LUONG, String CMND){
         SQL="UPDATE ThanhVien SET "
@@ -87,4 +158,19 @@ public class BNhanVien extends Bussiness{
         }
         return ans;
     } 
+    
+    public CNhanVien getNhanVien(String manv) throws SQLException{
+        SQL = "findNhanVienByMANV '"+manv+"'";
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+            String ma_nv;
+            ma_nv = rs.getString("MANV");
+            if(ma_nv.equals(manv)){
+                return new CNhanVien(ma_nv, rs.getString("HOTEN"), rs.getString("GIOITINH"),
+                        rs.getDate("NGAYSINH"), rs.getString("DIACHI"), rs.getString("SDT"), rs.getString("CHUCVU"),
+                        rs.getInt("LUONG"), rs.getString("CMND"));
+            }
+        }
+        return null;
+    }
 }

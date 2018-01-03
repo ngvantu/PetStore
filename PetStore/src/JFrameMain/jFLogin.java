@@ -5,8 +5,8 @@
  */
 package JFrameMain;
 
-import Bussiness.BNhanVien;
-import Bussiness.BTaiKhoan;
+import Bussiness.*;
+import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,11 +16,11 @@ import java.util.logging.Logger;
  * @author voanh
  */
 public class jFLogin extends javax.swing.JFrame {
-    final static int  chuCH = 1;
-    final static int  nhanVienBH = 2;
-    final static int  nhanVienKho = 3;
+    final static String  chuCH = "CHCH";
+    final static String  nhanVienBH = "NVBH";
+    final static String  nhanVienKho = "NVKH";
     
-    int type;
+    String type;
     
     /**
      * Creates new form jFLogin
@@ -46,7 +46,7 @@ public class jFLogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jTF_TenDangNhap = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jBtn_Login = new javax.swing.JButton();
         jPF_MatKhau = new javax.swing.JPasswordField();
         jLB_Info = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -79,9 +79,9 @@ public class jFLogin extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("USER NAME");
 
-        jTF_TenDangNhap.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF_TenDangNhapActionPerformed(evt);
+        jTF_TenDangNhap.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF_TenDangNhapKeyTyped(evt);
             }
         });
 
@@ -89,26 +89,28 @@ public class jFLogin extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("PASSWORD");
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("LOGIN");
-        jButton2.setBorder(null);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton2.setName(""); // NOI18N
-        jButton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton2MouseMoved(evt);
-            }
-        });
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jBtn_Login.setBackground(new java.awt.Color(102, 102, 102));
+        jBtn_Login.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jBtn_Login.setForeground(new java.awt.Color(255, 255, 255));
+        jBtn_Login.setText("LOGIN");
+        jBtn_Login.setBorder(null);
+        jBtn_Login.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jBtn_Login.setFocusable(false);
+        jBtn_Login.setName(""); // NOI18N
+        jBtn_Login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                jBtn_LoginMouseClicked(evt);
             }
         });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        jBtn_Login.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jBtn_LoginKeyTyped(evt);
+            }
+        });
+
+        jPF_MatKhau.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jPF_MatKhauKeyTyped(evt);
             }
         });
 
@@ -140,7 +142,7 @@ public class jFLogin extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel7)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jBtn_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel4)
                                     .addGap(18, 18, 18)
@@ -170,7 +172,7 @@ public class jFLogin extends javax.swing.JFrame {
                 .addComponent(jLB_Info, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtn_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(89, 89, 89))
         );
@@ -193,19 +195,55 @@ public class jFLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTF_TenDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_TenDangNhapActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF_TenDangNhapActionPerformed
+    private void jBtn_LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_LoginMouseClicked
+        new Thread(new Runnable() {
+                public void run() {
+                    Login();
+                }
+            }
+            ).start();
+    }//GEN-LAST:event_jBtn_LoginMouseClicked
 
-    private void jButton2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2MouseMoved
+    private void jTF_TenDangNhapKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF_TenDangNhapKeyTyped
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2MouseClicked
+        char c = evt.getKeyChar();
+        if(c==KeyEvent.VK_ENTER){
+            new Thread(new Runnable() {
+                public void run() {
+                    Login();
+                }
+            }
+            ).start();
+        }
+    }//GEN-LAST:event_jTF_TenDangNhapKeyTyped
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jPF_MatKhauKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPF_MatKhauKeyTyped
+
+        char c = evt.getKeyChar();
+        if(c==KeyEvent.VK_ENTER){
+            new Thread(new Runnable() {
+                public void run() {
+                    Login();
+                }
+            }
+            ).start();
+        }
+    }//GEN-LAST:event_jPF_MatKhauKeyTyped
+
+    private void jBtn_LoginKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBtn_LoginKeyTyped
+
+        char c = evt.getKeyChar();
+        if(c==KeyEvent.VK_ENTER){
+            new Thread(new Runnable() {
+                public void run() {
+                    Login();
+                }
+            }
+            ).start();
+        }
+    }//GEN-LAST:event_jBtn_LoginKeyTyped
+    
+    void Login(){
         String x = jTF_TenDangNhap.getText();
         String y = jPF_MatKhau.getText();
         
@@ -215,21 +253,25 @@ public class jFLogin extends javax.swing.JFrame {
         else{
             BTaiKhoan tk = new BTaiKhoan();
             try {
-                if(tk.findAccount(x, y)==true){
+                CTaiKhoan ctk = tk.findAccountObject(x, y);
+                if(ctk!=null){
                     jLB_Info.setText("OK");
-                    String manv = tk.getMANV(x, y);
+                    jLB_Info.setText("Login.....please wait a moment...");
+                    String manv = ctk.getMaNV();
                     BNhanVien nv = new BNhanVien();
-                    type = nv.getChucVu(manv);
-                    if(type == chuCH){
-                        jF_ChuCuaHang f = new jF_ChuCuaHang();
+                    CNhanVien cnv = nv.getNhanVien(manv);
+                    String tennv = cnv.getHoTen();
+                    type = cnv.getChucVu();
+                    if(type.equals(chuCH)){
+                        jF_ChuCuaHang f = new jF_ChuCuaHang(cnv);
                         f.setVisible(true);
                     }
-                    else if(type == nhanVienBH){
-                        jFNhanVienBanHang f= new jFNhanVienBanHang();
+                    else if(type.equals(nhanVienBH)){
+                        jFNhanVienBanHang f= new jFNhanVienBanHang(tennv);
                         f.setVisible(true);
                     }
-                    else if(type == nhanVienKho){
-                        jFNhanVienKho f = new jFNhanVienKho();
+                    else if(type.equals(nhanVienKho)){
+                        jFNhanVienKho f = new jFNhanVienKho(tennv);
                         f.setVisible(true);
                     }
                 }
@@ -241,8 +283,8 @@ public class jFLogin extends javax.swing.JFrame {
                 Logger.getLogger(jFLogin.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -279,7 +321,7 @@ public class jFLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jBtn_Login;
     private javax.swing.JLabel jLB_Info;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

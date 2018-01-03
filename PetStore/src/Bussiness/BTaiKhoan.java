@@ -8,6 +8,7 @@ package Bussiness;
 import Data.Data;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -46,6 +47,26 @@ public class BTaiKhoan extends Bussiness{
         }
         return false;
     }
+    
+    public CTaiKhoan findAccountObject(String tenTK, String matKhau ) throws SQLException{
+        ArrayList<CTaiKhoan> list = new ArrayList<CTaiKhoan>();     
+        SQL = "tim_tai_khoan "+"'"+tenTK+"','"+matKhau+"'";
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+            String ten_TK,mat_Khau, ma_nv;
+            ten_TK = rs.getString("TENTK");
+            mat_Khau = rs.getString("MATKHAU");
+            ma_nv = rs.getString("MANV");
+            if(ten_TK.equals(tenTK) && mat_Khau.equals(matKhau)){
+                list.add(new CTaiKhoan(ma_nv, ten_TK, mat_Khau));
+            }
+        }
+        if(list.size()==0){
+            return null;
+        }
+        return list.get(0);
+    }
+    
     
     public String getMANV(String tenTK, String matKhau) throws SQLException{
         SQL = "tim_tai_khoan "+"'"+tenTK+"','"+matKhau+"'";
