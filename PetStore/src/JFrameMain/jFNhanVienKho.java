@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 package JFrameMain;
-import Bussiness.BGiong;
-import Bussiness.BLoai;
-import Bussiness.BSanPham;
-import Bussiness.BThuCung;
+import Bussiness.*;
 import Data.Data;
 import static JFrameMain.jF_ChuCuaHang.Color;
 import com.sun.glass.events.KeyEvent;
@@ -31,11 +28,15 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     static String mk="";
     static String errorText = "Tên đăng nhập hoặc mật khẩu không hợp lệ !";
     static String name = "";
+    static CNhanVien myacc;
     
-    public jFNhanVienKho(String _name){
+    
+    public jFNhanVienKho(CNhanVien c){
         this();
-        name = _name;
+        myacc = c;
+        name = myacc.getHoTen();
         jlb_Name.setText("Chào "+name);
+        UpdatePnThongTinCaNhan();
     }
     
     
@@ -115,6 +116,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jTF_SoCMND_pn_ThongTinCaNhan = new javax.swing.JTextField();
         jLb_Error_SoCMND = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
+        jLb_Status = new javax.swing.JLabel();
         jpn_QuanLySanPham = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -455,6 +457,9 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jLb_Error_SoCMND.setText("*Số CMND không hợp lệ");
         jpn_ThongTinCaNhan.add(jLb_Error_SoCMND, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
         jpn_ThongTinCaNhan.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, -1));
+
+        jLb_Status.setForeground(new java.awt.Color(255, 153, 102));
+        jpn_ThongTinCaNhan.add(jLb_Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 200, 30));
 
         jpn_QuanLySanPham.setBackground(new java.awt.Color(0, 64, 80));
         jpn_QuanLySanPham.setFont(new java.awt.Font("Roboto Bk", 0, 14)); // NOI18N
@@ -1241,11 +1246,30 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF_DienThoai_pn_ThongTinCaNhanKeyTyped
 
     private void jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked
+        boolean flag = true;
+        if(CRule.checkHoTen(jTF_Hoten_pn_ThongTinCaNhan.getText())==false){
+            flag = false;
+            jLb_Error_HoTen.setText("*Tên đăng nhập không chứa ký tự đặc biệt");
+        }
+        if(CRule.checkSDT(jTF_DienThoai_pn_ThongTinCaNhan.getText())==false){
+            flag = false;
+            jLb_Error_SDT.setText("*Số điện thoại không hợp lệ");
+        }
         // Nếu Xác Nhận Thông Tin Thành Công
-        jBtn_XacNhan_pn_ThongTinCaNhan.setEnabled(false);
-        ThongTinCaNhan_SetAllTextFieldDisable();
-        jBtn_ChinhSua_pn_ThongTinCaNhan.setEnabled(true);
-        // Cập nhật lại class và gửi thông tin thay đổi về database
+        if(flag){
+            jLb_Error_HoTen.setText("");
+            jLb_Status.setText("");
+            jLb_Error_SDT.setText("");
+            UpdateMyAcc();
+            jBtn_XacNhan_pn_ThongTinCaNhan.setEnabled(false);
+            ThongTinCaNhan_SetAllTextFieldDisable();
+            jBtn_ChinhSua_pn_ThongTinCaNhan.setEnabled(true);
+            myacc.Update();
+            jlb_Name.setText("Chào "+ myacc.getHoTen());
+            jLb_Status.setText("Cập nhật thành công");
+        }
+        
+        // Cập nhật lại class và gửi thông tin thay 
     }//GEN-LAST:event_jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked
 
     private void jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked
@@ -1906,6 +1930,30 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Sửa dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_SuaSP_pn_QLSPMouseClicked
     
+    void UpdatePnThongTinCaNhan(){
+        jTF_Hoten_pn_ThongTinCaNhan.setText(myacc.getHoTen());
+        jCB_GioiTinh_pn_ThongTinCaNhan.setSelectedItem(myacc.getGioiTinh());
+        jDC_NgaySinh_pn_ThongTinCaNhan.setDate(myacc.getNgaySinh());
+        jTF_DiaChi_pn_ThongTinCaNhan.setText(myacc.getDiaChi());
+        jTF_DienThoai_pn_ThongTinCaNhan.setText(myacc.getSdt());
+        jTF_SoCMND_pn_ThongTinCaNhan.setText(myacc.getCmnd());  
+        jLb_Error_HoTen.setText("");
+        jLb_Status.setText("");
+        jLb_Error_SDT.setText("");
+        jLb_Status.setText("");
+    }
+    
+    void UpdateMyAcc(){
+        myacc.setHoTen(jTF_Hoten_pn_ThongTinCaNhan.getText());
+        myacc.setGioiTinh(jCB_GioiTinh_pn_ThongTinCaNhan.getSelectedItem().toString());
+        java.util.Date utilDate = jDC_NgaySinh_pn_ThongTinCaNhan.getDate();
+        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+        myacc.setNgaySinh(sqlDate);
+        myacc.setDiaChi(jTF_DiaChi_pn_ThongTinCaNhan.getText());
+        myacc.setSdt(jTF_DienThoai_pn_ThongTinCaNhan.getText());
+        myacc.setCmnd(jTF_SoCMND_pn_ThongTinCaNhan.getText());
+    }
+    
     void ThongTinCaNhan_SetAllTextFieldDisable(){
         ThongTinCaNhan_SetAllTextField(false);
         ThongTinCaNhan_SetAllTextFieldColor(Color.tf_Disable_Edited);
@@ -2071,6 +2119,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private javax.swing.JLabel jLb_Error_HoTen;
     private javax.swing.JLabel jLb_Error_SDT;
     private javax.swing.JLabel jLb_Error_SoCMND;
+    private javax.swing.JLabel jLb_Status;
     private javax.swing.JPanel jP_XoaSanPham_QLSP;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
