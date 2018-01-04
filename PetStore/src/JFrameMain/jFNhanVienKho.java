@@ -1173,6 +1173,18 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1.removeAllItems();
         cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1.addItem((String)"Loài vật nuôi");
         cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1.setSelectedIndex(0);
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.removeAllItems();
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.addItem((String)"Loài vật nuôi");
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP.setSelectedIndex(0);
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP1.removeAllItems();
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP1.addItem((String)"Loài vật nuôi");
+        cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP1.setSelectedIndex(0);
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.removeAllItems();
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.addItem((String)"Loài vật nuôi");
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP.setSelectedIndex(0);
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP1.removeAllItems();
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP1.addItem((String)"Loài vật nuôi");
+        cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP1.setSelectedIndex(0);
         BLoai dsLoai = new BLoai();
         ArrayList<BLoai> arrList = null;
         try {
@@ -1871,7 +1883,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 flag[0] = 1;
         }
         Object loaivatnuoi = cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP1.getSelectedItem();
-        String tensanpham = tf_MaSP_pn_SuaSP_pn_QLSP.getText();
+        String tensanpham = tf_TenSP_pn_SuaSP_pn_QLSP.getText();
         String masanpham = tf_MaSP_pn_SuaSP_pn_QLSP.getText();
         String dongiasanpham = tf_GiaSP_pn_SuaSP_pn_QLSP.getText();
         String them = jSpinner1.getValue().toString();

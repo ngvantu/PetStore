@@ -93,7 +93,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("localhost:1433;databaseName=QuanLyCuaHangThuCungPU").createEntityManager();
         nhanvienQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT n FROM Nhanvien n");
@@ -198,8 +197,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLb_Error_HoTen = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jTF_SoCMND_pn_ThongTinCaNhan = new javax.swing.JTextField();
-        jLb_Error_SoCMND = new javax.swing.JLabel();
+        jLb_Status = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
+        jLb_Error_SoCMND1 = new javax.swing.JLabel();
         jpn_QuanLyKho = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jpn_QuanLyLoaiSanPham = new javax.swing.JPanel();
@@ -280,16 +280,11 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinNhanVien.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 119, 30));
 
         jTF_MANV_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_MANV_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
-        jTF_MANV_ThongTinNhanVien.setText("đâsdasdasd");
         jTF_MANV_ThongTinNhanVien.setToolTipText("Sundep trai");
         jTF_MANV_ThongTinNhanVien.setBorder(null);
         jTF_MANV_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jTF_MANV_ThongTinNhanVien.setName(""); // NOI18N
         jTF_MANV_ThongTinNhanVien.setSelectionColor(new java.awt.Color(255, 51, 153));
-
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
 
         jTF_MANV_ThongTinNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,19 +294,16 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinNhanVien.add(jTF_MANV_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 100, 30));
 
         jTF_HoTen_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_HoTen_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_HoTen_ThongTinNhanVien.setBorder(null);
         jTF_HoTen_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_HoTen_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 190, 30));
 
         jTF_DiaChi_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_DiaChi_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_DiaChi_ThongTinNhanVien.setBorder(null);
         jTF_DiaChi_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_DiaChi_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 190, 30));
 
         jTF_SDT_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_SDT_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_SDT_ThongTinNhanVien.setBorder(null);
         jTF_SDT_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_SDT_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 190, 30));
@@ -323,7 +315,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinNhanVien.add(jDC_NgaySinh_QuanLyNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 190, 30));
 
         jTF_SOCMND_QuanLyNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_SOCMND_QuanLyNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_SOCMND_QuanLyNhanVien.setBorder(null);
         jTF_SOCMND_QuanLyNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_SOCMND_QuanLyNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 130, 30));
@@ -356,7 +347,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinNhanVien.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 60, 30));
 
         jTF_Luong_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_Luong_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_Luong_ThongTinNhanVien.setBorder(null);
         jTF_Luong_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_Luong_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 220, 130, 30));
@@ -394,14 +384,12 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel25.setText("Mật Khẩu");
         jpn_ThongTinNhanVien.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 60, 30));
 
-        jTF_MatKhau_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_MatKhau_ThongTinNhanVien.setText("jPasswordField1");
         jTF_MatKhau_ThongTinNhanVien.setBorder(null);
         jTF_MatKhau_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_MatKhau_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 130, 30));
 
         jTF_TenTk_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_TenTk_ThongTinNhanVien.setForeground(new java.awt.Color(0, 0, 0));
         jTF_TenTk_ThongTinNhanVien.setBorder(null);
         jTF_TenTk_ThongTinNhanVien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jpn_ThongTinNhanVien.add(jTF_TenTk_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, 130, 30));
@@ -952,9 +940,12 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         });
         jpn_ThongTinCaNhan.add(jTF_SoCMND_pn_ThongTinCaNhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 200, 30));
 
-        jLb_Error_SoCMND.setForeground(new java.awt.Color(255, 153, 102));
-        jpn_ThongTinCaNhan.add(jLb_Error_SoCMND, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
+        jLb_Status.setForeground(new java.awt.Color(255, 153, 102));
+        jpn_ThongTinCaNhan.add(jLb_Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 200, 30));
         jpn_ThongTinCaNhan.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, -1));
+
+        jLb_Error_SoCMND1.setForeground(new java.awt.Color(255, 153, 102));
+        jpn_ThongTinCaNhan.add(jLb_Error_SoCMND1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
 
         jpn_QuanLyKho.setBackground(new java.awt.Color(0, 64, 80));
         jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
@@ -1049,8 +1040,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             .addComponent(jpn_ThongTinCaNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1272,7 +1261,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             ThongTinCaNhan_SetAllTextFieldDisable();
             jBtn_ChinhSua_pn_ThongTinCaNhan.setEnabled(true);
             myacc.Update();
-            jlb_Name.setText(myacc.getHoTen());
+            jlb_Name.setText("Chào "+ myacc.getHoTen());
+            jLb_Status.setText("Cập nhật thành công");
         }
         
         // Cập nhật lại class và gửi thông tin thay đổi về database
@@ -1317,7 +1307,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         myacc.setNgaySinh(sqlDate);
         myacc.setDiaChi(jTF_DiaChi_pn_ThongTinCaNhan.getText());
         myacc.setSdt(jTF_DienThoai_pn_ThongTinCaNhan.getText());
-        myacc.setCmnd(jTF_DienThoai_pn_ThongTinCaNhan.getText());
+        myacc.setCmnd(jTF_SoCMND_pn_ThongTinCaNhan.getText());
     }
     
     void UpdatePnThongTinCaNhan(){
@@ -1326,7 +1316,11 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jDC_NgaySinh_pn_ThongTinCaNhan.setDate(myacc.getNgaySinh());
         jTF_DiaChi_pn_ThongTinCaNhan.setText(myacc.getDiaChi());
         jTF_DienThoai_pn_ThongTinCaNhan.setText(myacc.getSdt());
-        jTF_SoCMND_pn_ThongTinCaNhan.setText(myacc.getCmnd());                
+        jTF_SoCMND_pn_ThongTinCaNhan.setText(myacc.getCmnd());  
+        jLb_Error_HoTen.setText("");
+        jLb_Status.setText("");
+        jLb_Error_SDT.setText("");
+        jLb_Status.setText("");
     }
     
     void ThongTinNhanVien_SetAllTextField(boolean x){
@@ -1589,7 +1583,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLb_Error_HoTen;
     private javax.swing.JLabel jLb_Error_SDT;
-    private javax.swing.JLabel jLb_Error_SoCMND;
+    private javax.swing.JLabel jLb_Error_SoCMND1;
+    private javax.swing.JLabel jLb_Status;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1640,6 +1635,5 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private java.util.List<JFrameMain.Nhanvien> nhanvienList1;
     private javax.persistence.Query nhanvienQuery;
     private javax.persistence.Query nhanvienQuery1;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
