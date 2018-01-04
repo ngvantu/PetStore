@@ -267,7 +267,7 @@ public class jFLogin extends javax.swing.JFrame {
                         f.setVisible(true);
                     }
                     else if(type.equals(nhanVienBH)){
-                        jFNhanVienBanHang f= new jFNhanVienBanHang(tennv);
+                        jFNhanVienBanHang f= new jFNhanVienBanHang(cnv);
                         f.setVisible(true);
                     }
                     else if(type.equals(nhanVienKho)){

@@ -7,6 +7,11 @@ package Bussiness;
 
 import Data.Data;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,6 +23,29 @@ public class BKhachHang extends Bussiness {
         Table="KHACHHANG";
         ID="MAKH";
     }
+    public ArrayList<CKhachHang> getAllKhachHang(){
+        ArrayList<CKhachHang> arr = new ArrayList();
+        ResultSet rs = super.getAll();
+        try {
+            //ResultSetMetaData metaData = rs.getMetaData();
+            //int columns = metaData.getColumnCount();
+            while(rs.next()){
+                CKhachHang temp = new CKhachHang();
+                temp.setHoTen(rs.getString("HOTEN"));
+                temp.setMaKH(rs.getString("MAKH"));
+                temp.setGioiTinh(rs.getString("GIOITINH"));
+                temp.setNgaySinh(rs.getDate("NGAYSINH"));
+                temp.setDiaChi(rs.getString("DIACHI"));
+                temp.setSdt(rs.getString("SDT"));
+                temp.setCmnd(rs.getString("CMND"));
+                arr.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BKhachHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+    }
+
     public boolean updateByProperties(String MAKH, String TENKH, String DIACHI, String SDT, String CMND){
         SQL="UPDATE KHACHHANG SET "
                 +" TENKH = N'"+TENKH+"',"

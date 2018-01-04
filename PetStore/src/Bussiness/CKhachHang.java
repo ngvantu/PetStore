@@ -5,18 +5,33 @@
  */
 package Bussiness;
 
+import java.sql.Date;
+
 /**
  *
  * @author voanh
  */
 public class CKhachHang {
 
+    static BKhachHang b = new BKhachHang();
     public void setMaKH(String maKH) {
         this.maKH = maKH;
     }
 
-    public void setTenKH(String tenKH) {
-        this.tenKH = tenKH;
+    
+    public void Update(){
+        //b.updateByProperties(this);
+    }
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
+    }
+
+    public void setNgaySinh(Date ngaySinh) {
+        this.ngaySinh = ngaySinh;
     }
 
     public void setDiaChi(String diaChi) {
@@ -31,12 +46,33 @@ public class CKhachHang {
         this.cmnd = cmnd;
     }
 
+    public CKhachHang(String maKH, String hoTen, String gioiTinh, Date ngaySinh, String diaChi, String sdt, String cmnd) {
+        this.maKH = maKH;
+        this.hoTen = hoTen;
+        this.gioiTinh = gioiTinh;
+        this.ngaySinh = ngaySinh;
+        this.diaChi = diaChi;
+        this.sdt = sdt;
+        this.cmnd = cmnd;
+    }
+
+    public CKhachHang() {
+    }
+
     public String getMaKH() {
         return maKH;
     }
 
-    public String getTenKH() {
-        return tenKH;
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public String getGioiTinh() {
+        return gioiTinh;
+    }
+
+    public Date getNgaySinh() {
+        return ngaySinh;
     }
 
     public String getDiaChi() {
@@ -51,16 +87,14 @@ public class CKhachHang {
         return cmnd;
     }
 
-    public CKhachHang(String maKH, String tenKH, String diaChi, String sdt, String cmnd) {
-        this.maKH = maKH;
-        this.tenKH = tenKH;
-        this.diaChi = diaChi;
-        this.sdt = sdt;
-        this.cmnd = cmnd;
-    }
-    String maKH;
-    String tenKH;
-    String diaChi;
-    String sdt;
-    String cmnd;
+
+
+    private String maKH;
+    private String hoTen;   
+    private String gioiTinh;
+    private Date ngaySinh;
+    private String diaChi;
+    private String sdt;
+    private String cmnd;
+    
 }
