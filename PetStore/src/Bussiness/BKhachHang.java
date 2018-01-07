@@ -23,6 +23,7 @@ public class BKhachHang extends Bussiness {
         Table="KHACHHANG";
         ID="MAKH";
     }
+
     public ArrayList<CKhachHang> getAllKhachHang(){
         ArrayList<CKhachHang> arr = new ArrayList();
         ResultSet rs = super.getAll();
@@ -45,7 +46,47 @@ public class BKhachHang extends Bussiness {
         }
         return arr;
     }
-
+    public boolean updateByProperties(CKhachHang c){
+        String dateString;
+        SimpleDateFormat sdfr = new SimpleDateFormat("MM/dd/yyyy");
+        dateString = sdfr.format( c.getNgaySinh() );
+        SQL = String.format("updateKhachHangInfo '%s', N'%s', N'%s', '%s', N'%s', '%s', '%s'" ,c.getMaKH(),
+                c.getHoTen(), c.getGioiTinh(), dateString,c.getDiaChi(),c.getSdt(), c.getCmnd());
+        return super.updateBySQLString(SQL);
+    }
+    
+    public boolean insertKhachHang(CKhachHang c){
+        String dateString;
+        SimpleDateFormat sdfr = new SimpleDateFormat("MM/dd/yyyy");
+        dateString = sdfr.format( c.getNgaySinh() );
+        SQL = String.format("insertKhachHang '%s', N'%s', N'%s', '%s', N'%s', '%s', '%s'" ,c.getMaKH(),
+                c.getHoTen(), c.getGioiTinh(), dateString,c.getDiaChi(),c.getSdt(), c.getCmnd());
+        return super.updateBySQLString(SQL);
+    }
+    
+    public boolean Check(String S){
+        SQL = String.format("checkKhachHangExist '%s'",S);
+        ResultSet rs = DB.getData(SQL);
+        try {
+            while(rs.next()){
+                int temp = rs.getInt("Result");
+                if(temp==1){
+                    return true;
+                }
+                else
+                    return false;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BKhachHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
+    public boolean Delete(String s){
+        SQL = String.format("deleteKhachHang '%s'", s);
+        return super.updateBySQLString(SQL);
+    }
+    
     public boolean updateByProperties(String MAKH, String TENKH, String DIACHI, String SDT, String CMND){
         SQL="UPDATE KHACHHANG SET "
                 +" TENKH = N'"+TENKH+"',"

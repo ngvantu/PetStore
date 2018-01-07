@@ -93,6 +93,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("localhost:1433;databaseName=QuanLyCuaHangThuCungPU").createEntityManager();
         nhanvienQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT n FROM Nhanvien n");
@@ -286,12 +287,16 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_MANV_ThongTinNhanVien.setName(""); // NOI18N
         jTF_MANV_ThongTinNhanVien.setSelectionColor(new java.awt.Color(255, 51, 153));
 
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
         jTF_MANV_ThongTinNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTF_MANV_ThongTinNhanVienActionPerformed(evt);
             }
         });
         jpn_ThongTinNhanVien.add(jTF_MANV_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 100, 30));
+        jTF_MANV_ThongTinNhanVien.getAccessibleContext().setAccessibleDescription("");
 
         jTF_HoTen_ThongTinNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jTF_HoTen_ThongTinNhanVien.setBorder(null);
@@ -1041,6 +1046,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1214,8 +1221,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             jTF_TenTk_ThongTinNhanVien.setText(tenTk);
             jTF_Luong_ThongTinNhanVien.setText(luong);
             jTF_MatKhau_ThongTinNhanVien.setText(matKhau);
+            jCB_GioiTinh_ThongTinNhanVien.setSelectedItem(gioiTinh);
             
         }catch (Exception e){
+            System.out.printf("Sai");
             jTF_SOCMND_QuanLyNhanVien.setText("");
             jTF_MANV_ThongTinNhanVien.setText("");
             jTF_HoTen_ThongTinNhanVien.setText("");
@@ -1635,5 +1644,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private java.util.List<JFrameMain.Nhanvien> nhanvienList1;
     private javax.persistence.Query nhanvienQuery;
     private javax.persistence.Query nhanvienQuery1;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

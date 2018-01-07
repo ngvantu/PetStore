@@ -20,8 +20,20 @@ public class CKhachHang {
 
     
     public void Update(){
-        //b.updateByProperties(this);
+        b.updateByProperties(this);
     }
+    
+    static public boolean CheckExist(String s){
+        return b.Check(s);
+    }
+    
+    public void Insert(){
+        b.insertKhachHang(this);
+    }
+    public static void DeleteRecord(String S){
+        b.Delete(S);
+    }
+    
     public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
     }

@@ -361,6 +361,9 @@
                           <Color blue="99" green="33" red="ff" type="rgb"/>
                         </Property>
                       </Properties>
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+                      </AccessibilityProperties>
                       <BindingProperties>
                         <BindingProperty name="text" source="jTB_ThongTin" sourcePath="${selectedElement.MANV}" target="jTF_MANV_ThongTinNhanVien" targetPath="text" updateStrategy="0" immediately="false">
                           <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
