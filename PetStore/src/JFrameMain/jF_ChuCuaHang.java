@@ -93,7 +93,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("localhost:1433;databaseName=QuanLyCuaHangThuCungPU").createEntityManager();
         nhanvienQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT n FROM Nhanvien n");
@@ -202,6 +201,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jLb_Error_SoCMND1 = new javax.swing.JLabel();
         jpn_QuanLyKho = new javax.swing.JPanel();
+        jpn_QuanLyLoaiSanPham = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jpn_ThemSanPham_QLSP = new javax.swing.JPanel();
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP = new javax.swing.JTextField();
@@ -238,11 +238,13 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP4 = new javax.swing.JComboBox<>();
         btn_XacNhan_pn_ThemSP_pn_QLSP5 = new javax.swing.JButton();
         jLabel40 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP = new javax.swing.JTable();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel8 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         table_BangLoai_pn_BangVatNuoi_pn_QLSP = new javax.swing.JTable();
-        jpn_QuanLyLoaiSanPham = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP = new javax.swing.JTable();
         jpn_QuanLyThuChi = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
 
@@ -325,8 +327,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_MANV_ThongTinNhanVien.setName(""); // NOI18N
         jTF_MANV_ThongTinNhanVien.setSelectionColor(new java.awt.Color(255, 51, 153));
 
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+        
 
         jTF_MANV_ThongTinNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -994,6 +995,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
         jpn_QuanLyKho.setLayout(null);
 
+        jpn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 64, 80));
+        jpn_QuanLyLoaiSanPham.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_QuanLyLoaiSanPham.setLayout(null);
+
         jTabbedPane4.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane4.setToolTipText("");
         jTabbedPane4.setFocusable(false);
@@ -1377,62 +1382,22 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
 
         jTabbedPane4.addTab("Xóa giống vật nuôi", jPanel11);
 
-        jpn_QuanLyKho.add(jTabbedPane4);
+        jpn_QuanLyLoaiSanPham.add(jTabbedPane4);
         jTabbedPane4.setBounds(30, 120, 1010, 210);
 
         jLabel40.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel40.setText("QUẢN LÝ KHO");
+        jLabel40.setText("QUẢN LÝ LOẠI SẢN PHẨM");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jpn_QuanLyKho.add(jLabel40);
-        jLabel40.setBounds(30, 20, 466, 60);
+        jpn_QuanLyLoaiSanPham.add(jLabel40);
+        jLabel40.setBounds(30, 20, 630, 60);
 
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setBackground(new java.awt.Color(0, 90, 90));
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Mã loài vật nuôi", "Mã giống vật nuôi", "Tên giống vật nuôi", "Mô tả"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
+        jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setToolTipText("");
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setGridColor(new java.awt.Color(255, 255, 255));
-        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setRowHeight(20);
-        jScrollPane4.setViewportView(table_BangGiong_pn_BangVatNuoi_pn_QLSP);
-
-        jpn_QuanLyKho.add(jScrollPane4);
-        jScrollPane4.setBounds(30, 360, 1010, 280);
+        jPanel8.setBackground(new java.awt.Color(0, 120, 120));
+        jPanel8.setLayout(null);
 
         table_BangLoai_pn_BangVatNuoi_pn_QLSP.setBackground(new java.awt.Color(0, 90, 90));
         table_BangLoai_pn_BangVatNuoi_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
@@ -1477,12 +1442,64 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         table_BangLoai_pn_BangVatNuoi_pn_QLSP.setRowHeight(20);
         jScrollPane5.setViewportView(table_BangLoai_pn_BangVatNuoi_pn_QLSP);
 
-        jpn_QuanLyKho.add(jScrollPane5);
-        jScrollPane5.setBounds(30, 360, 1010, 280);
+        jPanel8.add(jScrollPane5);
+        jScrollPane5.setBounds(0, 0, 1010, 280);
 
-        jpn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 64, 80));
-        jpn_QuanLyLoaiSanPham.setPreferredSize(new java.awt.Dimension(1070, 720));
-        jpn_QuanLyLoaiSanPham.setLayout(null);
+        jTabbedPane2.addTab("Bảng vật nuôi", jPanel8);
+
+        jPanel9.setBackground(new java.awt.Color(0, 120, 120));
+        jPanel9.setLayout(null);
+
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setBackground(new java.awt.Color(0, 90, 90));
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Mã loài vật nuôi", "Mã giống vật nuôi", "Tên giống vật nuôi", "Mô tả"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setToolTipText("");
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setGridColor(new java.awt.Color(255, 255, 255));
+        table_BangGiong_pn_BangVatNuoi_pn_QLSP.setRowHeight(20);
+        jScrollPane4.setViewportView(table_BangGiong_pn_BangVatNuoi_pn_QLSP);
+
+        jPanel9.add(jScrollPane4);
+        jScrollPane4.setBounds(0, 0, 1010, 270);
+
+        jTabbedPane2.addTab("Bảng sản phẩm", jPanel9);
+
+        jpn_QuanLyLoaiSanPham.add(jTabbedPane2);
+        jTabbedPane2.setBounds(30, 380, 1010, 310);
 
         jpn_QuanLyThuChi.setBackground(new java.awt.Color(0, 64, 80));
         jpn_QuanLyThuChi.setPreferredSize(new java.awt.Dimension(1070, 720));
@@ -1524,7 +1541,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1873,40 +1889,28 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_XacNhan_pn_ThemSP_pn_QLSP5ActionPerformed
 
     private void jTabbedPane4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane4MouseClicked
-        jScrollPane5.setVisible(false);
-        jScrollPane4.setVisible(true);
-        jScrollPane4.setBackground(new java.awt.Color(0, 90, 90));
+
     }//GEN-LAST:event_jTabbedPane4MouseClicked
 
     private void jpn_ThemSanPham_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpn_ThemSanPham_QLSPMouseClicked
-        jScrollPane4.setVisible(false);
-        jScrollPane5.setVisible(true);
-        jScrollPane5.setBackground(new java.awt.Color(0, 90, 90));
+
     }//GEN-LAST:event_jpn_ThemSanPham_QLSPMouseClicked
 
     private void jpn_SuaSanPham_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpn_SuaSanPham_QLSPMouseClicked
-        jScrollPane4.setVisible(false);
-        jScrollPane5.setVisible(true);
-        jScrollPane5.setBackground(new java.awt.Color(0, 90, 90));
+
         
     }//GEN-LAST:event_jpn_SuaSanPham_QLSPMouseClicked
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
-        jScrollPane4.setVisible(false);
-        jScrollPane5.setVisible(true);
-        jScrollPane5.setBackground(new java.awt.Color(0, 90, 90));
+
     }//GEN-LAST:event_jPanel1MouseClicked
 
     private void jP_XoaSanPham_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jP_XoaSanPham_QLSPMouseClicked
-        jScrollPane5.setVisible(false);
-        jScrollPane4.setVisible(true);
-        jScrollPane4.setBackground(new java.awt.Color(0, 90, 90));
+
     }//GEN-LAST:event_jP_XoaSanPham_QLSPMouseClicked
 
     private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseClicked
-        jScrollPane5.setVisible(false);
-        jScrollPane4.setVisible(true);
-        jScrollPane4.setBackground(new java.awt.Color(0, 90, 90));
+
     }//GEN-LAST:event_jPanel11MouseClicked
 
     private void cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1ItemStateChanged
@@ -2232,6 +2236,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2271,6 +2277,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JTextField jTF_TenTk_ThemNhanVien;
     private javax.swing.JTextField jTF_TenTk_ThongTinNhanVien;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel jlb_Name;
@@ -2297,6 +2304,5 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP3;
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP4;
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP5;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
