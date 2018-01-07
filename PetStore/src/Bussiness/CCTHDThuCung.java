@@ -11,6 +11,7 @@ package Bussiness;
  */
 public class CCTHDThuCung {
 
+
     public void setMaHD(String maHD) {
         this.maHD = maHD;
     }
@@ -42,7 +43,10 @@ public class CCTHDThuCung {
     public int getDonGia() {
         return donGia;
     }
-
+    
+    public CCTHDThuCung(){
+        
+    }
     public CCTHDThuCung(String maHD, String STT, int soLuong, int donGia) {
         this.maHD = maHD;
         this.STT = STT;
@@ -51,6 +55,7 @@ public class CCTHDThuCung {
     }
     String maHD;
     String STT;
+    String maTC;
     int soLuong;
     int donGia;
 }

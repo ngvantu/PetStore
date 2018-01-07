@@ -448,8 +448,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinNhanVien.add(btn_Xoa_ThongTinNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, 90, 30));
 
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("Tên TK");
-        jpn_ThongTinNhanVien.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 60, 30));
+        jLabel24.setText("Tên Tài Khoản");
+        jpn_ThongTinNhanVien.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 70, 30));
 
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Mật Khẩu");
@@ -482,7 +482,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
 
             },
             new String [] {
-                "MANV", "HoTen", "GioiTinh", "NgaySinh ", "DiaChi", "SDT", "ChucVu", "Luong", "CMND", "TENTK", "MATKHAU"
+                "Mã NV", "Họ Tên", "GioiTinh", "NgaySinh ", "DiaChi", "SDT", "ChucVu", "Luong", "CMND", "TENTK", "MATKHAU"
             }
         ) {
             Class[] types = new Class [] {
@@ -1582,7 +1582,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel40.setText("QUẢN LÝ LOẠI SẢN PHẨM");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jpn_QuanLyLoaiSanPham.add(jLabel40);
-        jLabel40.setBounds(30, 20, 630, 60);
+        jLabel40.setBounds(30, 20, 630, 72);
 
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
@@ -1780,7 +1780,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_QuanLyThuChi.add(JNhanVienBanHang_XemHoaDon_lb_BangHoaDon);
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setBounds(40, 160, 50, 29);
 
-        JNhanVienBanHang_XemHoaDon_time_Time.setDateFormatString("d MMMM, yyyy");
+        JNhanVienBanHang_XemHoaDon_time_Time.setDateFormatString("dd/MM/yyyy");
         JNhanVienBanHang_XemHoaDon_time_Time.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jpn_QuanLyThuChi.add(JNhanVienBanHang_XemHoaDon_time_Time);
         JNhanVienBanHang_XemHoaDon_time_Time.setBounds(110, 160, 250, 30);
@@ -1808,7 +1808,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_QuanLyThuChi.add(jComboBox2);
         jComboBox2.setBounds(670, 110, 200, 30);
 
-        JNhanVienBanHang_XemHoaDon_time_Time1.setDateFormatString("d MMMM, yyyy");
+        JNhanVienBanHang_XemHoaDon_time_Time1.setDateFormatString("dd/MM/yyyy");
         JNhanVienBanHang_XemHoaDon_time_Time1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jpn_QuanLyThuChi.add(JNhanVienBanHang_XemHoaDon_time_Time1);
         JNhanVienBanHang_XemHoaDon_time_Time1.setBounds(110, 110, 250, 30);

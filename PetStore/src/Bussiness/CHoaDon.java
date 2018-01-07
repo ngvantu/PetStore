@@ -52,7 +52,10 @@ public class CHoaDon {
     public String getMaKM() {
         return maKM;
     }
-
+    
+    public CHoaDon(){
+        
+    }
     public CHoaDon(String maHD, Date ngayLap, String nguoiLapHD, String maKH, String maKM) {
         this.maHD = maHD;
         this.ngayLap = ngayLap;

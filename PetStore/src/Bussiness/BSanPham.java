@@ -33,7 +33,7 @@ public class BSanPham extends Bussiness {
                 +" WHERE MASP = '"+MASP+"'";
         return super.updateBySQLString(SQL);
     }
-    // đăng nhập rồi thì ẩn nó đi?? cái màn hình đăng nhập, nó cứ hiện kìa hoi idol á t s bết
+    
     public boolean insertByProperties(String MASP,String LOAI, String TENSP, String DONGIA){
         SQL="INSERT INTO "+Table+" values('"+MASP+"','"+LOAI+"',N'"+TENSP+"','"+DONGIA+"', 0)"; 
         return super.insertBySQLString(SQL);

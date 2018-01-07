@@ -43,6 +43,17 @@ public class CCTHDSanPham {
         return donGia;
     }
 
+    public String getMaSP() {
+        return maSP;
+    }
+
+    public void setMaSP(String maSP) {
+        this.maSP = maSP;
+    }
+    
+    public CCTHDSanPham(){
+        
+    }
     public CCTHDSanPham(String maHD, String STT, int soLuong, int donGia) {
         this.maHD = maHD;
         this.STT = STT;
@@ -51,6 +62,7 @@ public class CCTHDSanPham {
     }
     String maHD;
     String STT;
+    String maSP;
     int soLuong;
     int donGia;
 }

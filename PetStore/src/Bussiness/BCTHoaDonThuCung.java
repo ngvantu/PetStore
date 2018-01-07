@@ -6,6 +6,9 @@
 package Bussiness;
 
 import Data.Data;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -29,5 +32,21 @@ public class BCTHoaDonThuCung extends Bussiness {
     public boolean insertByProperties(String MAHD,String STT, String MATC, String SOLUONG, String DONGIA){
         SQL="INSERT INTO "+Table+" values('"+MAHD+"','"+STT+"','"+MATC+"','"+SOLUONG+"','"+DONGIA+"')";
         return super.insertBySQLString(SQL);
+    }
+    
+    public ArrayList<CCTHDThuCung> getCTHDTC(String maHD) throws SQLException{
+        ArrayList<CCTHDThuCung> arrList = new ArrayList<CCTHDThuCung>();
+        SQL = "getCTHDTC " + maHD;
+        ResultSet rs = DB.getData(SQL);
+        while (rs.next()){
+            CCTHDThuCung temp = new CCTHDThuCung();
+            temp.maHD = rs.getString("MAHD");
+            temp.STT = rs.getString("STT");
+            temp.maTC = rs.getString("MATC");
+            temp.soLuong = rs.getInt("SOLUONG");
+            temp.donGia = rs.getInt("DONGIA");
+            arrList.add(temp);
+        }
+        return arrList;
     }
 }

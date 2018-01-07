@@ -224,11 +224,19 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         btn_Thoat.setFocusable(false);
         btn_Thoat.setName(""); // NOI18N
         btn_Thoat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ThoatMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btn_ThoatMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btn_ThoatMouseExited(evt);
+            }
+        });
+        btn_Thoat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ThoatActionPerformed(evt);
             }
         });
 
@@ -319,7 +327,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         );
 
         jpn_ThongTinCaNhan.setBackground(new java.awt.Color(0, 64, 80));
-        jpn_ThongTinCaNhan.setPreferredSize(new java.awt.Dimension(1070, 720));
+        jpn_ThongTinCaNhan.setPreferredSize(new java.awt.Dimension(1070, 670));
         jpn_ThongTinCaNhan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
@@ -620,6 +628,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPMouseClicked(evt);
             }
         });
+        cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed(evt);
+            }
+        });
         jpn_ThemSanPham_QLSP.add(cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP);
         cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP.setBounds(30, 30, 190, 30);
 
@@ -684,7 +697,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         });
         jpn_ThemSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP);
-        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(430, 150, 130, 41);
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(430, 150, 130, 33);
 
         jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
         jpn_ThemSanPham_QLSP.add(jSeparator9);
@@ -783,7 +796,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         });
         jpn_SuaSanPham_QLSP.add(btn_XacNhan_pn_SuaSP_pn_QLSP);
-        btn_XacNhan_pn_SuaSP_pn_QLSP.setBounds(430, 150, 130, 41);
+        btn_XacNhan_pn_SuaSP_pn_QLSP.setBounds(430, 150, 130, 33);
 
         tf_MaSP_pn_SuaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
         tf_MaSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -866,7 +879,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         });
         jP_XoaSanPham_QLSP.add(btn_XacNhan_pn_XoaSP_pn_QLSP);
-        btn_XacNhan_pn_XoaSP_pn_QLSP.setBounds(430, 150, 130, 41);
+        btn_XacNhan_pn_XoaSP_pn_QLSP.setBounds(430, 150, 130, 33);
 
         tf_MaSP_pn_XoaSP_pn_QLSP.setBackground(new java.awt.Color(0, 60, 60));
         tf_MaSP_pn_XoaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1929,6 +1942,18 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         else
             JOptionPane.showMessageDialog(null, "Sửa dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_SuaSP_pn_QLSPMouseClicked
+
+    private void btn_ThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ThoatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ThoatActionPerformed
+
+    private void btn_ThoatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThoatMouseClicked
+ 
+    }//GEN-LAST:event_btn_ThoatMouseClicked
+
+    private void cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed
     
     void UpdatePnThongTinCaNhan(){
         jTF_Hoten_pn_ThongTinCaNhan.setText(myacc.getHoTen());

@@ -6,6 +6,9 @@
 package Bussiness;
 
 import Data.Data;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
@@ -29,5 +32,54 @@ public class BHoaDon extends Bussiness {
     public boolean insertByProperties(String MAHD,String NGAYLAP, String NGUOILAPHD, String MAKH, String MAKM){
         SQL="INSERT INTO "+Table+" values('"+MAHD+"','"+NGAYLAP+"','"+NGUOILAPHD+"','"+MAKH+"','"+MAKM+"')";
         return super.insertBySQLString(SQL);
+    }
+    
+    public ArrayList<CHoaDon> getAllHoaDon() throws SQLException{
+        ArrayList<CHoaDon> arrList = new ArrayList<CHoaDon>();
+        SQL = "getAllHoaDon";
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+            CHoaDon temp = new CHoaDon();
+            temp.setMaHD(rs.getString("MAHD"));
+            temp.setNgayLap(rs.getDate("NGAYLAP"));
+            temp.setNguoiLapHD(rs.getString("NGUOILAPHD"));
+            temp.setMaKH(rs.getString("MAKH"));
+            temp.setMaKM(rs.getString("MAKM"));
+            arrList.add(temp);
+        }
+        return arrList;
+    }
+    
+    public ArrayList<CHoaDon> getHoaDon(String NgayBD, String NgayKT) throws SQLException{
+        ArrayList<CHoaDon> arrList = new ArrayList<CHoaDon>();
+        SQL = "getHoaDon " + NgayBD + " " + NgayKT;
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+            CHoaDon temp = new CHoaDon();
+            temp.setMaHD(rs.getString("MAHD"));
+            temp.setNgayLap(rs.getDate("NGAYLAP"));
+            temp.setNguoiLapHD(rs.getString("NGUOILAPHD"));
+            temp.setMaKH(rs.getString("MAKH"));
+            temp.setMaKM(rs.getString("MAKM"));
+            arrList.add(temp);
+        }
+        return arrList;
+    }
+    
+    public int getTongTienHDSP(String maHD) throws SQLException{
+        SQL = "getTongTienHDSP " + maHD;
+        ResultSet rs = DB.getData(SQL);
+        int temp = 0;
+        if (rs.next())
+            temp = rs.getInt("TONG");
+        return temp;
+    }   
+    public int getTongTienHDTC(String maHD) throws SQLException{
+        SQL = "getTongTienHDTC " + maHD;
+        ResultSet rs = DB.getData(SQL);
+        int temp = 0;
+        if (rs.next())
+            temp = rs.getInt("TONG");
+        return temp;
     }
 }
