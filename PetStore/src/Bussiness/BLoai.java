@@ -34,7 +34,7 @@ public class BLoai extends Bussiness{
         return super.insertBySQLString(SQL);
     }
     
-    public ArrayList GetDanhSachLoaiVatNuoi() throws SQLException{
+    public ArrayList<BLoai> GetDanhSachLoaiVatNuoi() throws SQLException{
         ArrayList<BLoai> arrList = new ArrayList<BLoai>();
         SQL = "lay_danh_sach_vat_nuoi";
         ResultSet rs = DB.getData(SQL);
