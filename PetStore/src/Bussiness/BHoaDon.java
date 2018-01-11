@@ -15,6 +15,11 @@ import java.util.ArrayList;
  * @author voanh
  */
 public class BHoaDon extends Bussiness {
+    public String MAHD;
+    public String NguoiLapHD;
+    public String NgayLap;
+    public String MaKH;
+    public String Tong;
     public BHoaDon() {
         DB = new Data();
         Table = "HOADON";
@@ -81,5 +86,20 @@ public class BHoaDon extends Bussiness {
         if (rs.next())
             temp = rs.getInt("TONG");
         return temp;
+    }
+     public ArrayList<BHoaDon> XuatHoaDonTheoNgayThangNam(String NgayBD, String NgayKT) throws SQLException{
+        ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+         SQL = "XuatHoaDon " + "'" + NgayBD + "', '" + NgayKT + "'";
+        ResultSet rs = DB.getData(SQL);
+        while (rs.next()){
+            BHoaDon temp = new BHoaDon();
+            temp.MAHD=(rs.getString("MAHD"));
+            temp.NgayLap=Integer.toString((rs.getDate("NGAYLAP")).getYear()+1900)+"-"+Integer.toString((rs.getDate("NGAYLAP")).getMonth()+1)+"-"+Integer.toString((rs.getDate("NGAYLAP")).getDay());
+      
+            temp.NguoiLapHD=(rs.getString("NGUOILAPHD"));
+            temp.Tong = (rs.getString("TONG"));
+            arrList.add(temp);
+        }
+        return arrList;
     }
 }

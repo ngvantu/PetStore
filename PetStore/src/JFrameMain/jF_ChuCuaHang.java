@@ -1711,11 +1711,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setForeground(new java.awt.Color(255, 255, 255));
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"001", "NV001", "01/01/2017", "KH002", "TET2018", null},
-                {"002", "NV003", "01/02/2017", "KH110", "NOEL2017", null},
-                {"003", "NV001", "04/02/2017", "KH103", null, null},
-                {"004", "NV003", "07/03/2017", "KH106", null, null},
-                {"007", "NV004", "08/03/2017", "KH204", null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -2873,7 +2868,88 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jNhanVienBanHang_XemHoaDon_TongActionPerformed
 
     private void JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
-        // TODO add your handling code here:
+        int Loai = jComboBox2.getSelectedIndex();
+        int Tien = 0;
+        if(Loai==1){
+            String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getMonth()+1)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getDate());
+            String NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getDate());
+            BHoaDon hoadon = new BHoaDon();
+            ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+            try {
+                arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i = 0; i<arrList.size();i++){
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).Tong, i, 5);
+                Tien = Tien + Integer.parseInt(arrList.get(i).Tong);
+            }
+            for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
+            }
+        }
+        else if(Loai==2){
+            String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getMonth()+1)+"-01";
+            String NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1)+"-"+Integer.toString(this.MaxDay(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1, JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900));
+            BHoaDon hoadon = new BHoaDon();
+            ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+            try {
+                arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i = 0; i<arrList.size();i++){
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).Tong, i, 5);
+            }
+            for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
+            }
+        }
+        else if(Loai == 3){
+            String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-01-01";
+            String NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-12-31";
+            BHoaDon hoadon = new BHoaDon();
+            ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+            try {
+                arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i = 0; i<arrList.size();i++){
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).Tong, i, 5);
+            }
+            for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
+            }
+        }
+        jNhanVienBanHang_XemHoaDon_Tong.setText(Integer.toString(Tien));
     }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
 
     private void cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSPMouseClicked
@@ -2884,7 +2960,28 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_XacNhan_pn_ThemSP_pn_QLSP2ItemStateChanged
     
-    
+    private int MaxDay(int Month, int Year){
+        switch (Month){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return 31;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return 30;
+            case 2:
+                if((Year % 4==0&&Year%100!=0)||(Year%400==0))
+                    return 29;
+                return 28;
+        }
+        return 1;
+    }
     
     void UpdateMyAcc(){
         myacc.setHoTen(jTF_Hoten_pn_ThongTinCaNhan.getText());
