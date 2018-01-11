@@ -54,6 +54,21 @@ public class BSanPham extends Bussiness {
         return arrList;
     }
     
+    public ArrayList GetDanhSachSanPhamDK(String MaLoai, String name) throws SQLException{
+        ArrayList<BSanPham> arrList = new ArrayList<BSanPham>();
+        SQL = "lay_danh_sach_san_pham_theo_loai_DK '" +MaLoai + "', " + "N'%"+name+"%'";
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+           BSanPham SanPham = new BSanPham();
+           SanPham.MaSP = rs.getString("MASP");
+           SanPham.TenSP = rs.getString("TENSP");
+           SanPham.DonGia = rs.getInt("DONGIA");
+           SanPham.SL = rs.getInt("SL");
+           arrList.add(SanPham);
+        }
+        return arrList;
+    }
+    
     public boolean editSanPham(String MASP, String TENSP, String DONGIA){
         SQL = "sua_san_pham " + MASP + ", " + TENSP + ", " + DONGIA;
         return super.updateBySQLString(SQL);
