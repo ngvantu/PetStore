@@ -660,7 +660,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jPanel5.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 20, 310));
         jPanel5.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, 250, 10));
 
-        jCB_ChucVu_ThemNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chủ CH", "NVBH", "NVKH" }));
+        jCB_ChucVu_ThemNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CHCH", "NVBH", "NVKH" }));
         jPanel5.add(jCB_ChucVu_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 170, 130, 30));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -2097,8 +2097,37 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jTB_ThongTinMouseClicked
 
     private void btn_XacNhan_ThemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XacNhan_ThemNhanVienActionPerformed
-        // TODO add your handling code here:
-         JOptionPane.showMessageDialog(this, "Đã thêm thành công.");
+        String MaNV = jTF_MANV_ThemNhanVien.getText();
+        String HoTen = jTF_HoTen_ThemNhanVien.getText();
+        String GioiTinh = jCB_GioiTinh_ThemNhanVien.getItemAt(jCB_GioiTinh_ThemNhanVien.getSelectedIndex()).toString();
+        String NgaySinh = Integer.toString(jDC_NgaySinh_ThemNhanVien.getDate().getYear()+1900)+"-"+Integer.toString(jDC_NgaySinh_ThemNhanVien.getDate().getMonth()+1)+"-"+Integer.toString(jDC_NgaySinh_ThemNhanVien.getDate().getDate());
+        String DiaChi = jTF_DiaChi_ThemNhanVien.getText();
+        String SDT = jTF_SDT_ThemNhanVien.getText();
+        String TenTK = jTF_TenTk_ThemNhanVien.getText();
+        String MatKhau = jPasswordField2.getText();
+        String ChucVu = jCB_ChucVu_ThemNhanVien.getItemAt(jCB_ChucVu_ThemNhanVien.getSelectedIndex()).toString();
+        String Luong = jTF_Luong_ThemNhanVien.getText();
+        String CMND = jTF_SOCMND_ThemNhanVien.getText();
+        if("".equals(MaNV)||"".equals(HoTen)||"".equals(GioiTinh)||"".equals(NgaySinh)||"".equals(DiaChi)||"".equals(SDT)||"".equals(TenTK)||"".equals(MatKhau)||"".equals(ChucVu)||"".equals(Luong)||"".equals(CMND)){
+            JOptionPane.showMessageDialog(this, "Nhập đủ thông tin trước khi thêm nhân viên mới.");
+            return;
+        }
+        int flag1 = 0;
+        int flag2 = 0;
+        BNhanVien nhanvien = new BNhanVien();
+        if(nhanvien.insertByProperties(MaNV, HoTen, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, Luong, CMND))
+            flag1 = 1;
+        BTaiKhoan taikhoan = new BTaiKhoan();
+        if(taikhoan.insertByProperties(MaNV, TenTK, MatKhau))
+            flag2 = 1;
+        if(flag1==1&&flag2==1)
+            JOptionPane.showMessageDialog(this, "Đã thêm thành công thông tin nhân viên và tài khoản");
+        else if(flag1==1)
+            JOptionPane.showMessageDialog(this, "Đã thêm thành công thông tin nhân viên nhưng tạo tài khoan thất bại");
+        else if(flag2==1)
+            JOptionPane.showMessageDialog(this, "Đã thêm thành công tài khoản nhưng tạo thông tin nhân viên thất bại");
+        else
+            JOptionPane.showMessageDialog(this, "Không thể tạo thông tin nhân viên và tài khoản");
     }//GEN-LAST:event_btn_XacNhan_ThemNhanVienActionPerformed
 
     private void jTF_TenTk_ThemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_TenTk_ThemNhanVienActionPerformed
