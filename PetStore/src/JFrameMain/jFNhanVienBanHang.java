@@ -201,22 +201,25 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jpn_QuanLyKho_BangSanPham = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         table_BangSP_pn_BangSP_pn_QLKho = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        jButton1 = new javax.swing.JButton();
         jpn_QuanLyThanhToan = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jTF_SDT = new javax.swing.JTextField();
-        jLabel27 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTP_ThongTinHoaDon = new javax.swing.JTable();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        jTF_MaKhuyenMai = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
         jTF_TongTien = new javax.swing.JTextField();
         jBTN_XacNhanThanhToan = new javax.swing.JButton();
-        jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTP_ThongTinHoaDon1 = new javax.swing.JTable();
         jpn_QuanLyHoaDon = new javax.swing.JPanel();
         JNhanVienBanHang_XemHoaDon_time_Time = new com.toedter.calendar.JDateChooser();
         JNhanVienBanHang_XemHoaDon_btn_TimKiem = new javax.swing.JButton();
@@ -365,7 +368,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
                 btn_QuanLyThanhToanMouseExited(evt);
             }
         });
-        jPanel3.add(btn_QuanLyThanhToan, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 210, 70));
+        jPanel3.add(btn_QuanLyThanhToan, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 210, 70));
 
         btn_QuanLyHoaDon.setBackground(new java.awt.Color(32, 78, 80));
         btn_QuanLyHoaDon.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -386,7 +389,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
                 btn_QuanLyHoaDonMouseExited(evt);
             }
         });
-        jPanel3.add(btn_QuanLyHoaDon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 210, 70));
+        jPanel3.add(btn_QuanLyHoaDon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 210, 70));
 
         btn_Thoat.setBackground(new java.awt.Color(32, 78, 80));
         btn_Thoat.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -736,7 +739,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         );
 
         jpn_QuanLyKhachHang_ThongTinKhachHang.add(jpn_QuanLyKhachHang_TimKiemKhachHang);
-        jpn_QuanLyKhachHang_TimKiemKhachHang.setBounds(10, 10, 210, 107);
+        jpn_QuanLyKhachHang_TimKiemKhachHang.setBounds(10, 10, 210, 103);
 
         jTB_ThongTinKhachHang.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jTB_ThongTinKhachHang.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -1062,7 +1065,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Mã loài vật nuôi", "Mã giống vật nuôi", "Mã vật nuôi", "Đơn giá"
+                "Loài vật nuôi", "Giống vật nuôi", "Mã vật nuôi", "Đơn giá"
             }
         ) {
             Class[] types = new Class [] {
@@ -1084,9 +1087,12 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setGridColor(new java.awt.Color(255, 255, 255));
         table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setRowHeight(20);
         jScrollPane6.setViewportView(table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho);
+        if (table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.getColumnModel().getColumnCount() > 0) {
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.getColumnModel().getColumn(1).setPreferredWidth(200);
+        }
 
         jpn_QuanLyKho_BangVatNuoi.add(jScrollPane6);
-        jScrollPane6.setBounds(0, 0, 1005, 360);
+        jScrollPane6.setBounds(0, 0, 660, 360);
 
         jTabbedPane3.addTab("Bảng vật nuôi", jpn_QuanLyKho_BangVatNuoi);
 
@@ -1117,7 +1123,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Mã loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng"
+                "Mã loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng tồn"
             }
         ) {
             Class[] types = new Class [] {
@@ -1138,14 +1144,33 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         table_BangSP_pn_BangSP_pn_QLKho.setGridColor(new java.awt.Color(255, 255, 255));
         table_BangSP_pn_BangSP_pn_QLKho.setRowHeight(20);
         jScrollPane4.setViewportView(table_BangSP_pn_BangSP_pn_QLKho);
+        if (table_BangSP_pn_BangSP_pn_QLKho.getColumnModel().getColumnCount() > 0) {
+            table_BangSP_pn_BangSP_pn_QLKho.getColumnModel().getColumn(2).setPreferredWidth(200);
+        }
 
         jpn_QuanLyKho_BangSanPham.add(jScrollPane4);
-        jScrollPane4.setBounds(0, 0, 1005, 360);
+        jScrollPane4.setBounds(0, 0, 660, 360);
 
         jTabbedPane3.addTab("Bảng sản phẩm", jpn_QuanLyKho_BangSanPham);
 
         jpn_TimKiemSanPham.add(jTabbedPane3);
-        jTabbedPane3.setBounds(30, 250, 1010, 400);
+        jTabbedPane3.setBounds(30, 250, 660, 400);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Số lượng mua");
+        jpn_TimKiemSanPham.add(jLabel1);
+        jLabel1.setBounds(770, 320, 100, 50);
+
+        jSpinner1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jpn_TimKiemSanPham.add(jSpinner1);
+        jSpinner1.setBounds(910, 330, 90, 30);
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("THÊM VÀO GIỎ HÀNG");
+        jpn_TimKiemSanPham.add(jButton1);
+        jButton1.setBounds(770, 410, 230, 30);
 
         getContentPane().add(jpn_TimKiemSanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, -1, 670));
 
@@ -1166,7 +1191,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Số điện thoại khách hàng");
         jpn_QuanLyThanhToan.add(jLabel11);
-        jLabel11.setBounds(30, 130, 180, 17);
+        jLabel11.setBounds(680, 250, 180, 21);
 
         jTF_SDT.setBackground(new java.awt.Color(0, 120, 120));
         jTF_SDT.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -1179,20 +1204,127 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         jpn_QuanLyThanhToan.add(jTF_SDT);
-        jTF_SDT.setBounds(230, 120, 150, 30);
-
-        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel27.setText("*Trong siêu thị thường đọc SĐT để truy ra khách hàng sẽ tiện hơn, dễ nhớ hơn nữa");
-        jpn_QuanLyThanhToan.add(jLabel27);
-        jLabel27.setBounds(50, 90, 590, 30);
+        jTF_SDT.setBounds(880, 240, 150, 30);
         jpn_QuanLyThanhToan.add(jSeparator6);
-        jSeparator6.setBounds(230, 150, 150, 2);
+        jSeparator6.setBounds(880, 270, 150, 2);
 
         jTP_ThongTinHoaDon.setBackground(new java.awt.Color(0, 90, 90));
         jTP_ThongTinHoaDon.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTP_ThongTinHoaDon.setForeground(new java.awt.Color(255, 255, 255));
         jTP_ThongTinHoaDon.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "STT", "Giống vật nuôi", "Mã vật nuôi", "Giá"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTP_ThongTinHoaDon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTP_ThongTinHoaDon.setGridColor(new java.awt.Color(0, 102, 102));
+        jTP_ThongTinHoaDon.setMinimumSize(new java.awt.Dimension(60, 480));
+        jTP_ThongTinHoaDon.setPreferredSize(new java.awt.Dimension(300, 480));
+        jTP_ThongTinHoaDon.setRowHeight(20);
+        jScrollPane2.setViewportView(jTP_ThongTinHoaDon);
+        if (jTP_ThongTinHoaDon.getColumnModel().getColumnCount() > 0) {
+            jTP_ThongTinHoaDon.getColumnModel().getColumn(0).setMinWidth(40);
+            jTP_ThongTinHoaDon.getColumnModel().getColumn(0).setMaxWidth(40);
+            jTP_ThongTinHoaDon.getColumnModel().getColumn(1).setMinWidth(100);
+            jTP_ThongTinHoaDon.getColumnModel().getColumn(1).setMaxWidth(100);
+            jTP_ThongTinHoaDon.getColumnModel().getColumn(3).setMinWidth(100);
+            jTP_ThongTinHoaDon.getColumnModel().getColumn(3).setMaxWidth(100);
+        }
+
+        jpn_QuanLyThanhToan.add(jScrollPane2);
+        jScrollPane2.setBounds(40, 440, 600, 170);
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setText("Thông tin giỏ hàng");
+        jpn_QuanLyThanhToan.add(jLabel35);
+        jLabel35.setBounds(200, 150, 240, 30);
+
+        jLabel36.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel36.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText("Mã khuyến mãi");
+        jpn_QuanLyThanhToan.add(jLabel36);
+        jLabel36.setBounds(680, 310, 110, 21);
+
+        jLabel37.setBackground(new java.awt.Color(0, 96, 100));
+        jLabel37.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setText("Tổng tiền");
+        jpn_QuanLyThanhToan.add(jLabel37);
+        jLabel37.setBounds(680, 360, 110, 21);
+
+        jTF_TongTien.setBackground(new java.awt.Color(0, 120, 120));
+        jTF_TongTien.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jTF_TongTien.setForeground(new java.awt.Color(255, 255, 255));
+        jTF_TongTien.setBorder(null);
+        jTF_TongTien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTF_TongTien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF_TongTienActionPerformed(evt);
+            }
+        });
+        jpn_QuanLyThanhToan.add(jTF_TongTien);
+        jTF_TongTien.setBounds(880, 350, 150, 30);
+
+        jBTN_XacNhanThanhToan.setBackground(new java.awt.Color(0, 120, 120));
+        jBTN_XacNhanThanhToan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBTN_XacNhanThanhToan.setForeground(new java.awt.Color(255, 255, 255));
+        jBTN_XacNhanThanhToan.setText("Xác nhận thanh toán");
+        jBTN_XacNhanThanhToan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBTN_XacNhanThanhToanActionPerformed(evt);
+            }
+        });
+        jpn_QuanLyThanhToan.add(jBTN_XacNhanThanhToan);
+        jBTN_XacNhanThanhToan.setBounds(780, 430, 180, 40);
+        jpn_QuanLyThanhToan.add(jSeparator10);
+        jSeparator10.setBounds(880, 380, 150, 10);
+
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Không" }));
+        jpn_QuanLyThanhToan.add(jComboBox1);
+        jComboBox1.setBounds(880, 300, 150, 30);
+
+        jTP_ThongTinHoaDon1.setBackground(new java.awt.Color(0, 90, 90));
+        jTP_ThongTinHoaDon1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTP_ThongTinHoaDon1.setForeground(new java.awt.Color(255, 255, 255));
+        jTP_ThongTinHoaDon1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -1220,7 +1352,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "STT", "Loại sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng"
+                "STT", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng"
             }
         ) {
             Class[] types = new Class [] {
@@ -1231,87 +1363,25 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTP_ThongTinHoaDon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTP_ThongTinHoaDon.setGridColor(new java.awt.Color(0, 102, 102));
-        jTP_ThongTinHoaDon.setMinimumSize(new java.awt.Dimension(60, 480));
-        jTP_ThongTinHoaDon.setPreferredSize(new java.awt.Dimension(300, 480));
-        jTP_ThongTinHoaDon.setRowHeight(20);
-        jScrollPane2.setViewportView(jTP_ThongTinHoaDon);
-        if (jTP_ThongTinHoaDon.getColumnModel().getColumnCount() > 0) {
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(0).setMinWidth(40);
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(0).setMaxWidth(40);
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(1).setMinWidth(80);
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(1).setMaxWidth(80);
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(3).setMinWidth(80);
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(3).setMaxWidth(80);
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(4).setMinWidth(70);
-            jTP_ThongTinHoaDon.getColumnModel().getColumn(4).setMaxWidth(70);
+        jTP_ThongTinHoaDon1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTP_ThongTinHoaDon1.setGridColor(new java.awt.Color(0, 102, 102));
+        jTP_ThongTinHoaDon1.setMinimumSize(new java.awt.Dimension(60, 480));
+        jTP_ThongTinHoaDon1.setPreferredSize(new java.awt.Dimension(300, 480));
+        jTP_ThongTinHoaDon1.setRowHeight(20);
+        jScrollPane5.setViewportView(jTP_ThongTinHoaDon1);
+        if (jTP_ThongTinHoaDon1.getColumnModel().getColumnCount() > 0) {
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(0).setMinWidth(40);
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(0).setMaxWidth(40);
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(1).setMinWidth(100);
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(1).setMaxWidth(100);
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(3).setMinWidth(100);
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(3).setMaxWidth(100);
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(4).setMinWidth(100);
+            jTP_ThongTinHoaDon1.getColumnModel().getColumn(4).setMaxWidth(100);
         }
 
-        jpn_QuanLyThanhToan.add(jScrollPane2);
-        jScrollPane2.setBounds(30, 230, 640, 290);
-
-        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel35.setText("Thông tin giỏ hàng");
-        jpn_QuanLyThanhToan.add(jLabel35);
-        jLabel35.setBounds(240, 180, 240, 30);
-
-        jLabel36.setBackground(new java.awt.Color(0, 96, 100));
-        jLabel36.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setText("Mã khuyến mãi");
-        jpn_QuanLyThanhToan.add(jLabel36);
-        jLabel36.setBounds(30, 540, 110, 17);
-
-        jTF_MaKhuyenMai.setBackground(new java.awt.Color(0, 120, 120));
-        jTF_MaKhuyenMai.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jTF_MaKhuyenMai.setForeground(new java.awt.Color(255, 255, 255));
-        jTF_MaKhuyenMai.setBorder(null);
-        jTF_MaKhuyenMai.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTF_MaKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF_MaKhuyenMaiActionPerformed(evt);
-            }
-        });
-        jpn_QuanLyThanhToan.add(jTF_MaKhuyenMai);
-        jTF_MaKhuyenMai.setBounds(220, 530, 150, 30);
-
-        jLabel37.setBackground(new java.awt.Color(0, 96, 100));
-        jLabel37.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setText("Tổng tiền");
-        jpn_QuanLyThanhToan.add(jLabel37);
-        jLabel37.setBounds(30, 590, 110, 17);
-
-        jTF_TongTien.setBackground(new java.awt.Color(0, 120, 120));
-        jTF_TongTien.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jTF_TongTien.setForeground(new java.awt.Color(255, 255, 255));
-        jTF_TongTien.setBorder(null);
-        jTF_TongTien.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTF_TongTien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF_TongTienActionPerformed(evt);
-            }
-        });
-        jpn_QuanLyThanhToan.add(jTF_TongTien);
-        jTF_TongTien.setBounds(220, 580, 150, 30);
-
-        jBTN_XacNhanThanhToan.setBackground(new java.awt.Color(0, 120, 120));
-        jBTN_XacNhanThanhToan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jBTN_XacNhanThanhToan.setForeground(new java.awt.Color(255, 255, 255));
-        jBTN_XacNhanThanhToan.setText("Xác nhận thanh toán");
-        jBTN_XacNhanThanhToan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTN_XacNhanThanhToanActionPerformed(evt);
-            }
-        });
-        jpn_QuanLyThanhToan.add(jBTN_XacNhanThanhToan);
-        jBTN_XacNhanThanhToan.setBounds(240, 630, 180, 40);
-        jpn_QuanLyThanhToan.add(jSeparator9);
-        jSeparator9.setBounds(220, 560, 150, 2);
-        jpn_QuanLyThanhToan.add(jSeparator10);
-        jSeparator10.setBounds(220, 610, 150, 10);
+        jpn_QuanLyThanhToan.add(jScrollPane5);
+        jScrollPane5.setBounds(40, 220, 600, 170);
 
         getContentPane().add(jpn_QuanLyThanhToan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, -1, 670));
 
@@ -1874,10 +1944,6 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTF_SDTActionPerformed
 
-    private void jTF_MaKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_MaKhuyenMaiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTF_MaKhuyenMaiActionPerformed
-
     private void jTF_TongTienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_TongTienActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTF_TongTienActionPerformed
@@ -2421,12 +2487,15 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JButton jBtn_QuanLyKhachHang_ThongTinKhachHang_XacNhan;
     private javax.swing.JButton jBtn_QuanLyKhachHang_ThongTinKhachHang_Xoa;
     private javax.swing.JButton jBtn_XacNhan_pn_ThongTinCaNhan;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jCB_GioiTinh_pn_ThongTinCaNhan;
     private javax.swing.JComboBox<String> jCB_QuanLyKhachHang_ThemKhachHang_GioiTinh;
     private javax.swing.JComboBox<String> jCB_QuanLyKhachHang_ThongTinKhachHang_GioiTinh;
+    private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_pn_ThongTinCaNhan;
     private com.toedter.calendar.JDateChooser jDC_QuanLyKhachHang_ThemKhachHang_NgaySinh;
     private com.toedter.calendar.JDateChooser jDC_QuanLyKhachHang_ThongTinKhachHang_jDC_NgaySinh;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -2441,7 +2510,6 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -2483,6 +2551,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
@@ -2493,12 +2562,11 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable jTB_ThongTinKhachHang;
     private javax.swing.JTextField jTF_DiaChi_pn_ThongTinCaNhan;
     private javax.swing.JTextField jTF_DienThoai_pn_ThongTinCaNhan;
     private javax.swing.JTextField jTF_Hoten_pn_ThongTinCaNhan;
-    private javax.swing.JTextField jTF_MaKhuyenMai;
     private javax.swing.JTextField jTF_QuanLyKhachHang_ThemKhachHang_DiaChi;
     private javax.swing.JTextField jTF_QuanLyKhachHang_ThemKhachHang_HoTen;
     private javax.swing.JTextField jTF_QuanLyKhachHang_ThemKhachHang_MAKH;
@@ -2514,6 +2582,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     private javax.swing.JTextField jTF_TimKiemSanPham;
     private javax.swing.JTextField jTF_TongTien;
     private javax.swing.JTable jTP_ThongTinHoaDon;
+    private javax.swing.JTable jTP_ThongTinHoaDon1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane_KhachHang;
     private javax.swing.JTextField jTextField6;
