@@ -29,10 +29,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     static String errorText = "Tên đăng nhập hoặc mật khẩu không hợp lệ !";
     static String name = "";
     static CNhanVien myacc;
+    static jFLogin f;
     
-    
-    public jFNhanVienKho(CNhanVien c){
+    public jFNhanVienKho(CNhanVien c,jFLogin login){
         this();
+        f = login;
         myacc = c;
         name = myacc.getHoTen();
         jlb_Name.setText("Chào "+name);
@@ -2219,7 +2220,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ThoatActionPerformed
 
     private void btn_ThoatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThoatMouseClicked
- 
+        ExitProgram();
     }//GEN-LAST:event_btn_ThoatMouseClicked
 
     private void cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed
@@ -2500,12 +2501,13 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.setVisible(false);
     }
     void ExitProgram(){
-        int output = JOptionPane.showConfirmDialog(this,"Bạn có thật sự muốn thoát không ?","Thông báo",JOptionPane.YES_NO_OPTION);
-        if(output==JOptionPane.YES_OPTION){
-            System.exit(0);
+        String ObjButtons[] = {"Yes","No"};
+        int PromptResult = JOptionPane.showOptionDialog(null,"Bạn có muốn thoát không ?","Thoát ?",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE,null,ObjButtons,ObjButtons[1]);
+        if(PromptResult==JOptionPane.YES_OPTION)
+        {
+            f.setVisible(true);
+            this.dispose();
         }
-        else
-            return;
     }
     /**
      * @param args the command line arguments

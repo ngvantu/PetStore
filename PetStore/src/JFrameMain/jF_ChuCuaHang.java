@@ -38,7 +38,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     static Class_Color Color = new Class_Color();
     static CNhanVien myacc;
     static String errorText = "Tên đăng nhập hoặc mật khẩu không hợp lệ !";
-    
+    static jFLogin f;
     
     boolean bThongTinCaNhan = false;
     boolean bQuanLyNhanVien = false;
@@ -52,8 +52,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
      * Creates new form jFMain
      */
     
-    public jF_ChuCuaHang(CNhanVien c){
+    public jF_ChuCuaHang(CNhanVien c, jFLogin login){
         this();
+        f = login;
         myacc = c;
         name = myacc.getHoTen();
         jlb_Name.setText("Chào "+name);
@@ -880,6 +881,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         btn_Thoat.setFocusable(false);
         btn_Thoat.setName(""); // NOI18N
         btn_Thoat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ThoatMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btn_ThoatMouseEntered(evt);
             }
@@ -1417,7 +1421,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_ThemSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP);
-        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(410, 120, 130, 41);
 
         jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
         jpn_ThemSanPham_QLSP.add(jSeparator9);
@@ -1453,7 +1457,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_SuaSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP1);
-        btn_XacNhan_pn_ThemSP_pn_QLSP1.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP1.setBounds(410, 120, 130, 41);
 
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP1.setBackground(new java.awt.Color(0, 60, 60));
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1531,7 +1535,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_XacNhan_pn_ThemSP_pn_QLSP3);
-        btn_XacNhan_pn_ThemSP_pn_QLSP3.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP3.setBounds(410, 120, 130, 41);
 
         jTabbedPane4.addTab("Xóa loài vật nuôi", jPanel1);
         jPanel1.getAccessibleContext().setAccessibleName("Sửa giống vật nuôi");
@@ -1627,7 +1631,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jP_XoaSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP2);
-        btn_XacNhan_pn_ThemSP_pn_QLSP2.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP2.setBounds(410, 120, 130, 41);
 
         jTabbedPane4.addTab("Thêm giống vật nuôi", jP_XoaSanPham_QLSP);
 
@@ -1693,7 +1697,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel10.add(btn_XacNhan_pn_ThemSP_pn_QLSP4);
-        btn_XacNhan_pn_ThemSP_pn_QLSP4.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP4.setBounds(410, 120, 130, 41);
 
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP2.setBackground(new java.awt.Color(0, 60, 60));
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1764,7 +1768,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel11.add(btn_XacNhan_pn_ThemSP_pn_QLSP5);
-        btn_XacNhan_pn_ThemSP_pn_QLSP5.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP5.setBounds(410, 120, 130, 41);
 
         jTabbedPane4.addTab("Xóa giống vật nuôi", jPanel11);
 
@@ -1777,7 +1781,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel40.setText("QUẢN LÝ LOẠI SẢN PHẨM");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jpn_QuanLyLoaiSanPham.add(jLabel40);
-        jLabel40.setBounds(30, 20, 630, 60);
+        jLabel40.setBounds(30, 20, 630, 67);
 
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
@@ -1912,7 +1916,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_QuanLyThuChi.add(jNhanVienBanHang_XemHoaDon_Tong);
-        jNhanVienBanHang_XemHoaDon_Tong.setBounds(850, 560, 180, 31);
+        jNhanVienBanHang_XemHoaDon_Tong.setBounds(850, 560, 180, 33);
 
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setForeground(new java.awt.Color(255, 255, 255));
@@ -3506,6 +3510,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private void jTF_SOCMND_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_SOCMND_ThemNhanVienMouseClicked
         jTF_SOCMND_ThemNhanVien.selectAll();
     }//GEN-LAST:event_jTF_SOCMND_ThemNhanVienMouseClicked
+
+    private void btn_ThoatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThoatMouseClicked
+        ExitProgram();
+    }//GEN-LAST:event_btn_ThoatMouseClicked
     void ResetPnThemNhanVien(){
         jPF_MatKhau_ThemNhanVien.setText("");
         jDC_NgaySinh_ThemNhanVien.setDate(new Date(-1));
@@ -3760,12 +3768,13 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     
     
     void ExitProgram(){
-        int output = JOptionPane.showConfirmDialog(this,"Bạn có thật sự muốn thoát không ?","Thông báo",JOptionPane.YES_NO_OPTION);
-        if(output==JOptionPane.YES_OPTION){
-            System.exit(0);
+        String ObjButtons[] = {"Yes","No"};
+        int PromptResult = JOptionPane.showOptionDialog(null,"Bạn có muốn thoát không ?","Thoát ?",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE,null,ObjButtons,ObjButtons[1]);
+        if(PromptResult==JOptionPane.YES_OPTION)
+        {
+            f.setVisible(true);
+            this.dispose();
         }
-        else
-            return;
     }
     /**
      * @param args the command line arguments

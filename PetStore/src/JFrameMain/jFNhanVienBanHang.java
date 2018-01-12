@@ -32,6 +32,8 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
 
     static String errorText = "Tên đăng nhập hoặc mật khẩu không hợp lệ !";
     static Class_Color Color = new Class_Color();
+    static jFLogin f;
+    
     
     boolean bThongTinCaNhan = false;
     boolean bQuanLyKhachHang = false;
@@ -51,8 +53,9 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
      */
     
         
-    public jFNhanVienBanHang(CNhanVien c){
+    public jFNhanVienBanHang(CNhanVien c, jFLogin login){
         this();
+        f = login;
         myacc = c;
         name = myacc.getHoTen();
         jlb_Name.setText("Chào "+name);
@@ -427,6 +430,9 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         btn_Thoat.setFocusable(false);
         btn_Thoat.setName(""); // NOI18N
         btn_Thoat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ThoatMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btn_ThoatMouseEntered(evt);
             }
@@ -1325,14 +1331,14 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("Mã khuyến mãi");
         jpn_QuanLyThanhToan.add(jLabel36);
-        jLabel36.setBounds(680, 310, 110, 17);
+        jLabel36.setBounds(680, 310, 110, 19);
 
         jLabel37.setBackground(new java.awt.Color(0, 96, 100));
         jLabel37.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("Tổng tiền");
         jpn_QuanLyThanhToan.add(jLabel37);
-        jLabel37.setBounds(680, 360, 110, 17);
+        jLabel37.setBounds(680, 360, 110, 19);
 
         jTF_TongTien.setBackground(new java.awt.Color(0, 120, 120));
         jTF_TongTien.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -1445,7 +1451,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Mã khách hàng");
         jpn_QuanLyThanhToan1.add(jLabel16);
-        jLabel16.setBounds(680, 250, 180, 17);
+        jLabel16.setBounds(680, 250, 180, 19);
 
         jTF_SDT2.setBackground(new java.awt.Color(0, 120, 120));
         jTF_SDT2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -1533,14 +1539,14 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setText("Mã khuyến mãi");
         jpn_QuanLyThanhToan1.add(jLabel40);
-        jLabel40.setBounds(680, 310, 110, 17);
+        jLabel40.setBounds(680, 310, 110, 19);
 
         jLabel41.setBackground(new java.awt.Color(0, 96, 100));
         jLabel41.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setText("Tổng tiền");
         jpn_QuanLyThanhToan1.add(jLabel41);
-        jLabel41.setBounds(680, 360, 110, 17);
+        jLabel41.setBounds(680, 360, 110, 19);
 
         jTF_TongTien1.setBackground(new java.awt.Color(0, 120, 120));
         jTF_TongTien1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -1667,7 +1673,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Mã nhân viên");
         jpn_QuanLyThanhToan1.add(jLabel11);
-        jLabel11.setBounds(680, 200, 180, 17);
+        jLabel11.setBounds(680, 200, 180, 19);
 
         jpn_QuanLyThanhToan.add(jpn_QuanLyThanhToan1);
         jpn_QuanLyThanhToan1.setBounds(0, 0, 1070, 720);
@@ -1864,7 +1870,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
             }
         });
         jpn_QuanLyHoaDon.add(jNhanVienBanHang_XemHoaDon_Tong);
-        jNhanVienBanHang_XemHoaDon_Tong.setBounds(870, 560, 180, 31);
+        jNhanVienBanHang_XemHoaDon_Tong.setBounds(870, 560, 180, 33);
 
         jLabel28.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
@@ -2698,6 +2704,10 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTF_SDT3ActionPerformed
 
+    private void btn_ThoatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ThoatMouseClicked
+        ExitProgram();
+    }//GEN-LAST:event_btn_ThoatMouseClicked
+
     void ResetPanelThemKhachHang(){
         jTF_QuanLyKhachHang_ThemKhachHang_HoTen.setText("");
         jTF_QuanLyKhachHang_ThemKhachHang_DiaChi.setText("");
@@ -2782,12 +2792,13 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.setVisible(false);
     }
     void ExitProgram(){
-        int output = JOptionPane.showConfirmDialog(this,"Bạn có thật sự muốn thoát không ?","Thông báo",JOptionPane.YES_NO_OPTION);
-        if(output==JOptionPane.YES_OPTION){
-            System.exit(0);
+        String ObjButtons[] = {"Yes","No"};
+        int PromptResult = JOptionPane.showOptionDialog(null,"Bạn có muốn thoát không ?","Thoát ?",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE,null,ObjButtons,ObjButtons[1]);
+        if(PromptResult==JOptionPane.YES_OPTION)
+        {
+            f.setVisible(true);
+            this.dispose();
         }
-        else
-            return;
     }
     /**
      * @param args the command line arguments

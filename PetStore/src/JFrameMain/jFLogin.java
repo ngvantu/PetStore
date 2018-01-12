@@ -10,6 +10,7 @@ import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 
 /**
  *
@@ -263,16 +264,34 @@ public class jFLogin extends javax.swing.JFrame {
                     String tennv = cnv.getHoTen();
                     type = cnv.getChucVu();
                     if(type.equals(chuCH)){
-                        jF_ChuCuaHang f = new jF_ChuCuaHang(cnv);
+                        
+                        jF_ChuCuaHang f = new jF_ChuCuaHang(cnv,this);
+                        f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                         f.setVisible(true);
+                        this.setVisible(false);
+                        jTF_TenDangNhap.setText("");
+                        jPF_MatKhau.setText("");
+                        jLB_Info.setText("");
                     }
                     else if(type.equals(nhanVienBH)){
-                        jFNhanVienBanHang f= new jFNhanVienBanHang(cnv);
+                        
+                        jFNhanVienBanHang f= new jFNhanVienBanHang(cnv,this);
+                        f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                         f.setVisible(true);
+                        this.setVisible(false);
+                        jTF_TenDangNhap.setText("");
+                        jPF_MatKhau.setText("");
+                        jLB_Info.setText("");
                     }
                     else if(type.equals(nhanVienKho)){
-                        jFNhanVienKho f = new jFNhanVienKho(cnv);
+                        
+                        jFNhanVienKho f = new jFNhanVienKho(cnv,this);
+                        f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                         f.setVisible(true);
+                        this.setVisible(false);
+                        jTF_TenDangNhap.setText("");
+                        jPF_MatKhau.setText("");
+                        jLB_Info.setText("");
                     }
                 }
                 else{
