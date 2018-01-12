@@ -15,9 +15,10 @@ import java.util.ArrayList;
  * @author voanh
  */
 public class BThuCung extends Bussiness {
+    public String MaGiong;
     public String MaThuCung;
     public int DonGia;
-
+    
     public BThuCung() {
         DB = new Data();
         Table = "THUCUNG";
@@ -45,6 +46,19 @@ public class BThuCung extends Bussiness {
             arrList.add(ThuCung);
         }
         return arrList;
+    }
+    public ArrayList GetDanhSachThuCungTheoLoai(String maLoai) throws SQLException{
+        ArrayList<BThuCung> arrList = new ArrayList<BThuCung>();
+        SQL = "lay_danh_sach_vat_nuoi_theo_loai " + maLoai;
+        ResultSet rs = DB.getData(SQL);
+        while (rs.next()){
+            BThuCung ThuCung = new BThuCung();
+            ThuCung.MaGiong = rs.getString("MAGIONG");
+            ThuCung.MaThuCung = rs.getString("MATC");
+            ThuCung.DonGia = rs.getInt("DONGIA");
+            arrList.add(ThuCung);
+        }
+        return arrList; 
     }
     public boolean editThuCung(String MATC, String DONGIA){
         SQL = "sua_thu_cung " + MATC + ", " + DONGIA;

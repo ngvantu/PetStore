@@ -1174,6 +1174,11 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                 cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged(evt);
             }
         });
+        cmbx_LoaiVatNuoi_pn_QLKho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbx_LoaiVatNuoi_pn_QLKhoActionPerformed(evt);
+            }
+        });
         jpn_QuanLyKho.add(cmbx_LoaiVatNuoi_pn_QLKho);
         cmbx_LoaiVatNuoi_pn_QLKho.setBounds(30, 140, 190, 30);
 
@@ -1253,7 +1258,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_ThemSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP);
-        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(410, 120, 130, 41);
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(410, 120, 130, 33);
 
         jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
         jpn_ThemSanPham_QLSP.add(jSeparator9);
@@ -1289,7 +1294,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_SuaSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP1);
-        btn_XacNhan_pn_ThemSP_pn_QLSP1.setBounds(410, 120, 130, 41);
+        btn_XacNhan_pn_ThemSP_pn_QLSP1.setBounds(410, 120, 130, 33);
 
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP1.setBackground(new java.awt.Color(0, 60, 60));
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1362,7 +1367,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_XacNhan_pn_ThemSP_pn_QLSP3);
-        btn_XacNhan_pn_ThemSP_pn_QLSP3.setBounds(410, 120, 130, 41);
+        btn_XacNhan_pn_ThemSP_pn_QLSP3.setBounds(410, 120, 130, 33);
 
         jTabbedPane4.addTab("Xóa loài vật nuôi", jPanel1);
         jPanel1.getAccessibleContext().setAccessibleName("Sửa giống vật nuôi");
@@ -1443,7 +1448,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jP_XoaSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP2);
-        btn_XacNhan_pn_ThemSP_pn_QLSP2.setBounds(410, 120, 130, 41);
+        btn_XacNhan_pn_ThemSP_pn_QLSP2.setBounds(410, 120, 130, 33);
 
         jTabbedPane4.addTab("Thêm giống vật nuôi", jP_XoaSanPham_QLSP);
 
@@ -1499,7 +1504,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel10.add(btn_XacNhan_pn_ThemSP_pn_QLSP4);
-        btn_XacNhan_pn_ThemSP_pn_QLSP4.setBounds(410, 120, 130, 41);
+        btn_XacNhan_pn_ThemSP_pn_QLSP4.setBounds(410, 120, 130, 33);
 
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP2.setBackground(new java.awt.Color(0, 60, 60));
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1570,7 +1575,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel11.add(btn_XacNhan_pn_ThemSP_pn_QLSP5);
-        btn_XacNhan_pn_ThemSP_pn_QLSP5.setBounds(410, 120, 130, 41);
+        btn_XacNhan_pn_ThemSP_pn_QLSP5.setBounds(410, 120, 130, 33);
 
         jTabbedPane4.addTab("Xóa giống vật nuôi", jPanel11);
 
@@ -1583,7 +1588,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel40.setText("QUẢN LÝ LOẠI SẢN PHẨM");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jpn_QuanLyLoaiSanPham.add(jLabel40);
-        jLabel40.setBounds(30, 20, 630, 67);
+        jLabel40.setBounds(30, 20, 630, 72);
 
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
@@ -1718,7 +1723,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_QuanLyThuChi.add(jNhanVienBanHang_XemHoaDon_Tong);
-        jNhanVienBanHang_XemHoaDon_Tong.setBounds(850, 560, 180, 33);
+        jNhanVienBanHang_XemHoaDon_Tong.setBounds(850, 560, 180, 31);
 
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setForeground(new java.awt.Color(255, 255, 255));
@@ -3053,13 +3058,14 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         cmbx_GiongVatNuoi_pn_QLKho.setSelectedIndex(0);
         Object loai = cmbx_LoaiVatNuoi_pn_QLKho.getSelectedItem();
         if(loai == null)
-        return;
+            return;
         String MaLoai = loai.toString();
         if(MaLoai == "Loài vật nuôi")
-        return;
+            return;
         int begin = MaLoai.indexOf("(");
         int end = MaLoai.indexOf(")");
         MaLoai = MaLoai.substring(begin+1, end);
+        
         BGiong dsGiong = new BGiong();
         ArrayList<BGiong> arrlist = new ArrayList<BGiong>();
         try {
@@ -3069,6 +3075,27 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         }
         for(int i = 0; i < arrlist.size(); i++)
         cmbx_GiongVatNuoi_pn_QLKho.addItem((String)arrlist.get(i).TenGiong + " (" + arrlist.get(i).MaGiong + ")");
+        
+        BThuCung dsThuCung = new BThuCung();
+        ArrayList<BThuCung> arrListTC = new ArrayList<BThuCung>();
+        try {
+            arrListTC = dsThuCung.GetDanhSachThuCungTheoLoai(MaLoai);
+        } catch (SQLException ex) {
+            Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int i;
+        for(i=0;i<arrListTC.size();i++){
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(MaLoai, i, 0);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrListTC.get(i).MaGiong, i, 1);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrListTC.get(i).MaThuCung, i, 2);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrListTC.get(i).DonGia, i, 3);
+        }
+        for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.getRowCount();i++){
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 0);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 1);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 2);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 3);
+        }
     }//GEN-LAST:event_cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged
 
     private void cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged
@@ -3079,11 +3106,11 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         Object loai = cmbx_LoaiVatNuoi_pn_QLKho.getSelectedItem();
 
         if(giong == null || loai == null || dsThuCung == null)
-        return;
+            return;
         String MaGiong = giong.toString();
         String MaLoai = loai.toString();
         if(MaGiong == "Giống vật nuôi" || MaLoai == "Loài vật nuôi" || dsThuCung == null)
-        return;
+            return;
         int begin = MaGiong.indexOf("(");
         int end = MaGiong.indexOf(")");
         MaGiong = MaGiong.substring(begin+1, end);
@@ -3115,6 +3142,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private void cmbx_GiongVatNuoi_pn_QLKhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbx_GiongVatNuoi_pn_QLKhoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_QLKhoActionPerformed
+
+    private void cmbx_LoaiVatNuoi_pn_QLKhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_QLKhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbx_LoaiVatNuoi_pn_QLKhoActionPerformed
     
     private int MaxDay(int Month, int Year){
         switch (Month){
