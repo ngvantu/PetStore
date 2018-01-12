@@ -114,4 +114,15 @@ public class BKhachHang extends Bussiness {
             +" CMND like '%"+s+"%'";
         return super.searchAll(SQL);
     }
+    
+    public String getTenKhachHang(String MaKH) throws SQLException{
+        SQL = "TimKhachHangbyMaKH "+MaKH;
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+            String TenKH = "";
+            TenKH = rs.getString("HOTEN");
+            return TenKH;
+        }
+        return "";
+    }
 }

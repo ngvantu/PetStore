@@ -950,7 +950,7 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane_KhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         getContentPane().add(jpn_QuanLyKhachHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, -1, 670));
@@ -1389,6 +1389,11 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setGridColor(new java.awt.Color(0, 102, 102));
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setInheritsPopupMenu(true);
         JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setRowHeight(20);
+        JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JNhanVienBanHang_XemHoaDon_tb_BangHoaDonMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(JNhanVienBanHang_XemHoaDon_tb_BangHoaDon);
         if (JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getColumnModel().getColumnCount() > 0) {
             JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getColumnModel().getColumn(0).setMinWidth(90);
@@ -1407,37 +1412,37 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setForeground(new java.awt.Color(255, 255, 255));
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "STT", "Loại sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng"
+                "STT", "Tên hàng", "Số lượng", "Đơn giá"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1450,16 +1455,6 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setPreferredSize(new java.awt.Dimension(300, 480));
         JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setRowHeight(20);
         jScrollPane1.setViewportView(JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon);
-        if (JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumnCount() > 0) {
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(0).setMinWidth(40);
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(0).setMaxWidth(40);
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(1).setMinWidth(80);
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(1).setMaxWidth(80);
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(3).setMinWidth(80);
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(3).setMaxWidth(80);
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(4).setMinWidth(70);
-            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getColumnModel().getColumn(4).setMaxWidth(70);
-        }
 
         jpn_QuanLyHoaDon.add(jScrollPane1);
         jScrollPane1.setBounds(560, 220, 490, 320);
@@ -1664,7 +1659,34 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_QuanLySanPhamKhoMouseClicked
 
     private void JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
-        // TODO add your handling code here:
+
+     
+        String NgayBD = "", NgayKT = "";
+        NgayKT = NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getDate());
+        BHoaDon hoadon = new BHoaDon();
+        ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+        try {
+            arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
+        } catch (SQLException ex) {
+            Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int i;
+        for(i = 0; i<arrList.size();i++){
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKM, i, 4);
+
+        }
+        for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
+        }
+        
     }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
 
     private void jNhanVienBanHang_XemHoaDon_TongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemHoaDon_TongActionPerformed
@@ -2171,6 +2193,50 @@ public class jFNhanVienBanHang extends javax.swing.JFrame {
             table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 4);
         }
     }//GEN-LAST:event_jBTN_TimKiemMouseClicked
+
+    private void JNhanVienBanHang_XemHoaDon_tb_BangHoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_tb_BangHoaDonMouseClicked
+        int choose = JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getSelectedRow();
+        String MaHD = JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getValueAt(choose, 0).toString();
+        String MaNV = JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getValueAt(choose, 1).toString();
+        String MaKH = JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getValueAt(choose, 3).toString();
+        BNhanVien nv = new BNhanVien();
+        CNhanVien cnv = null;
+        try {
+            cnv = nv.getNhanVien(MaNV);
+        } catch (SQLException ex) {
+            Logger.getLogger(jFNhanVienBanHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JNhanVienBanHang_XemHoaDon_lb_kqTenNhanVien.setText(cnv.getHoTen());
+        BKhachHang kh = new BKhachHang();
+        try {
+            JNhanVienBanHang_XemHoaDon_lb_kqTenKhachHang.setText(kh.getTenKhachHang(MaKH));
+        } catch (SQLException ex) {
+            Logger.getLogger(jFNhanVienBanHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        BHoaDon hoadon = new BHoaDon();
+        ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+        int Tien = 0;
+        try {
+            arrList = hoadon.XuatChiTietHoaDon(MaHD);
+        } catch (SQLException ex) {
+            Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int i;
+        for(i = 0; i<arrList.size();i++){
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt(i+1, i, 0);
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt(arrList.get(i).Ten, i, 1);
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt(arrList.get(i).SoLuong, i, 2);
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt(arrList.get(i).Gia, i, 3);
+            Tien = Tien + Integer.parseInt(arrList.get(i).Gia)*Integer.parseInt(arrList.get(i).SoLuong);
+        }
+        for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.getRowCount();i++){
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt("", i, 0);
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt("", i, 1);
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt("", i, 2);
+            JNhanVienBanHang_XemHoaDon_tb_BangChiTietHoaDon.setValueAt("", i, 3);
+        }
+        jNhanVienBanHang_XemHoaDon_Tong.setText(Integer.toString(Tien));
+    }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_tb_BangHoaDonMouseClicked
 
     void ResetPanelThemKhachHang(){
         jTF_QuanLyKhachHang_ThemKhachHang_HoTen.setText("");

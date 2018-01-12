@@ -21,6 +21,9 @@ public class BHoaDon extends Bussiness {
     public String MaKH;
     public String Tong;
     public String MaKM;
+    public String Ten;
+    public String SoLuong;
+    public String Gia;
     public BHoaDon() {
         DB = new Data();
         Table = "HOADON";
@@ -104,4 +107,20 @@ public class BHoaDon extends Bussiness {
         }
         return arrList;
     }
+     
+     public ArrayList<BHoaDon> XuatChiTietHoaDon(String MaHD) throws SQLException{
+        ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+         SQL = "XemChiTietHoaDon '" + MaHD+"'";
+        ResultSet rs = DB.getData(SQL);
+        while (rs.next()){
+            BHoaDon temp = new BHoaDon();
+            temp.Ten=(rs.getString("TEN"));
+            temp.SoLuong = (rs.getString("SOLUONG"));
+            temp.Gia = (rs.getString("DONGIA"));
+            arrList.add(temp);
+        }
+        return arrList;
+    }
 }
+
+
