@@ -2583,8 +2583,8 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Th&#xea;n gi&#x1ed1;ng v&#x1ead;t nu&#xf4;i">
-                    <Property name="tabTitle" type="java.lang.String" value="Th&#xea;n gi&#x1ed1;ng v&#x1ead;t nu&#xf4;i"/>
+                  <JTabbedPaneConstraints tabName="Th&#xea;m gi&#x1ed1;ng v&#x1ead;t nu&#xf4;i">
+                    <Property name="tabTitle" type="java.lang.String" value="Th&#xea;m gi&#x1ed1;ng v&#x1ead;t nu&#xf4;i"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>

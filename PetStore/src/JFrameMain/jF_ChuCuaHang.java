@@ -96,7 +96,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        //bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("localhost:1433;databaseName=QuanLyCuaHangThuCungPU").createEntityManager();
         nhanvienQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT n FROM Nhanvien n");
@@ -352,8 +352,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_MANV_ThongTinNhanVien.setName(""); // NOI18N
         jTF_MANV_ThongTinNhanVien.setSelectionColor(new java.awt.Color(255, 51, 153));
 
-        //org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        //bindingGroup.addBinding(binding);
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
 
         jTF_MANV_ThongTinNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1436,7 +1436,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jP_XoaSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP2);
         btn_XacNhan_pn_ThemSP_pn_QLSP2.setBounds(410, 120, 130, 33);
 
-        jTabbedPane4.addTab("Thên giống vật nuôi", jP_XoaSanPham_QLSP);
+        jTabbedPane4.addTab("Thêm giống vật nuôi", jP_XoaSanPham_QLSP);
 
         jPanel10.setBackground(new java.awt.Color(0, 64, 80));
         jPanel10.setLayout(null);
@@ -1574,7 +1574,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel40.setText("QUẢN LÝ LOẠI SẢN PHẨM");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jpn_QuanLyLoaiSanPham.add(jLabel40);
-        jLabel40.setBounds(30, 20, 630, 60);
+        jLabel40.setBounds(30, 20, 630, 72);
 
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
@@ -1840,7 +1840,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        //bindingGroup.bind();
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -3381,6 +3381,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP3;
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP4;
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP5;
-    //private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
