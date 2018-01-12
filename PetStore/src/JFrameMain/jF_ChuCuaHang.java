@@ -2161,10 +2161,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private void btn_QuanLyKhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyKhoMouseClicked
         SetAllPanelDissapear();
         jpn_QuanLyKho.setVisible(true);
-//        SetColorAllButton(Color.btn_Default);
-//        btn_QuanLyKho.setBackground(Color.btn_When_Click);
-//        SetFalseAllButton();
-//        bQuanLyKho = true;
+        SetColorAllButton(Color.btn_Default);
+        btn_QuanLyKho.setBackground(Color.btn_When_Click);
+        SetFalseAllButton();
+        bQuanLyKho = true;
 //        SetAllPanelDissapear();
 //        jpn_QuanLyThuChi.setVisible(true);
         cmbx_LoaiVatNuoi_pn_QLKho.removeAllItems();
@@ -2188,12 +2188,12 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_QuanLyKhoMouseClicked
 
     private void btn_QuanLyThuChiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_QuanLyThuChiMouseClicked
-          SetAllPanelDissapear();
-          jpn_QuanLyThuChi.setVisible(true);
-//        SetColorAllButton(Color.btn_Default);
-//        btn_QuanLyThuChi.setBackground(Color.btn_When_Click);
-//        SetFalseAllButton();
-//        bQuanLyThuChi = true;
+        SetAllPanelDissapear();
+        jpn_QuanLyThuChi.setVisible(true);
+        SetColorAllButton(Color.btn_Default);
+        btn_QuanLyThuChi.setBackground(Color.btn_When_Click);
+        SetFalseAllButton();
+        bQuanLyThuChi = true;
 //        SetAllPanelDissapear();
 //        jpn_QuanLyKho.setVisible(true);
     }//GEN-LAST:event_btn_QuanLyThuChiMouseClicked
@@ -3037,195 +3037,79 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private void JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
         int Loai = jComboBox2.getSelectedIndex();
         int Tien = 0;
+        String NgayBD = "", NgayKT = "";
         if(Loai==1){
-            String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getMonth()+1)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getDate());
-            String NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getDate());
-            BHoaDon hoadon = new BHoaDon();
-            ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
-            try {
-                arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int i;
-            for(i = 0; i<arrList.size();i++){
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKM, i, 4);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).Tong, i, 5);
-                Tien = Tien + Integer.parseInt(arrList.get(i).Tong);
-            }
-            for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
-            }
-            
-            BSanPham sanpham = new BSanPham();
-            ArrayList<BSanPham> arrListSP = null;
-            try {
-                arrListSP = sanpham.GetDanhSachSanPhamDaBan(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int j;
-            for(j = 0; j<arrListSP.size();j++){
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).TenSP, j, 0);
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).SL, j, 1);
-            }
-            for(j=j;j<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();j++){
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 0);
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 1);
-            }
-            
-            BGiong giong = new BGiong();
-            ArrayList<BGiong> arrListGiong = null;
-            try {
-                arrListGiong = giong.GetDanhSachThuCungDaBan(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int k;
-            for(k = 0; k<arrListGiong.size();k++){
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).TenGiong, k, 0);
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).SL, k, 1);
-            }
-            for(k=k;k<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();k++){
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 0);
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 1);
-            }
+            NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getMonth()+1)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getDate());
+            NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getDate());
         }
         else if(Loai==2){
-            String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getMonth()+1)+"-01";
-            String NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1)+"-"+Integer.toString(this.MaxDay(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1, JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900));
-            BHoaDon hoadon = new BHoaDon();
-            ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
-            try {
-                arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int i;
-            for(i = 0; i<arrList.size();i++){
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKM, i, 4);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).Tong, i, 5);
-                Tien = Tien + Integer.parseInt(arrList.get(i).Tong);
-            }
-            for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
-            }
-            
-            BSanPham sanpham = new BSanPham();
-            ArrayList<BSanPham> arrListSP = null;
-            try {
-                arrListSP = sanpham.GetDanhSachSanPhamDaBan(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int j;
-            for(j = 0; j<arrListSP.size();j++){
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).TenSP, j, 0);
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).SL, j, 1);
-            }
-            for(j=j;j<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();j++){
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 0);
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 1);
-            }
-            
-            BGiong giong = new BGiong();
-            ArrayList<BGiong> arrListGiong = null;
-            try {
-                arrListGiong = giong.GetDanhSachThuCungDaBan(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int k;
-            for(k = 0; k<arrListGiong.size();k++){
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).TenGiong, k, 0);
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).SL, k, 1);
-            }
-            for(k=k;k<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();k++){
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 0);
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 1);
-            }
+            NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getMonth()+1)+"-01";
+            NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1)+"-"+Integer.toString(this.MaxDay(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getMonth()+1, JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900));           
         }
         else if(Loai == 3){
-            String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-01-01";
-            String NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-12-31";
-            BHoaDon hoadon = new BHoaDon();
-            ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
-            try {
-                arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int i;
-            for(i = 0; i<arrList.size();i++){
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKM, i, 4);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).Tong, i, 5);
-                Tien = Tien + Integer.parseInt(arrList.get(i).Tong);
-            }
-            for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
-                JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
-            }
-            
-            BSanPham sanpham = new BSanPham();
-            ArrayList<BSanPham> arrListSP = null;
-            try {
-                arrListSP = sanpham.GetDanhSachSanPhamDaBan(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int j;
-            for(j = 0; j<arrListSP.size();j++){
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).TenSP, j, 0);
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).SL, j, 1);
-            }
-            for(j=j;j<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();j++){
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 0);
-                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 1);
-            }
-            
-            BGiong giong = new BGiong();
-            ArrayList<BGiong> arrListGiong = null;
-            try {
-                arrListGiong = giong.GetDanhSachThuCungDaBan(NgayBD, NgayKT);
-            } catch (SQLException ex) {
-                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            int k;
-            for(k = 0; k<arrListGiong.size();k++){
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).TenGiong, k, 0);
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).SL, k, 1);
-            }
-            for(k=k;k<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();k++){
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 0);
-                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 1);
-            }
+            NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-01-01";
+            NgayKT = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time.getDate().getYear()+1900)+"-12-31";           
         }
+        
+        BHoaDon hoadon = new BHoaDon();
+        ArrayList<BHoaDon> arrList = new ArrayList<BHoaDon>();
+        try {
+            arrList = hoadon.XuatHoaDonTheoNgayThangNam(NgayBD, NgayKT);
+        } catch (SQLException ex) {
+            Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int i;
+        for(i = 0; i<arrList.size();i++){
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MAHD, i, 0);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NguoiLapHD, i, 1);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).NgayLap, i, 2);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKH, i, 3);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).MaKM, i, 4);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt(arrList.get(i).Tong, i, 5);
+            Tien = Tien + Integer.parseInt(arrList.get(i).Tong);
+        }
+        for(i=i;i<JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.getRowCount();i++){
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 0);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 1);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 2);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
+            JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
+        }
+            
+        BSanPham sanpham = new BSanPham();
+        ArrayList<BSanPham> arrListSP = null;
+        try {
+            arrListSP = sanpham.GetDanhSachSanPhamDaBan(NgayBD, NgayKT);
+        } catch (SQLException ex) {
+            Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int j;
+        for(j = 0; j<arrListSP.size();j++){
+            table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).TenSP, j, 0);
+            table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).SL, j, 1);
+        }
+        for(j=j;j<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();j++){
+            table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 0);
+            table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 1);
+        }
+            
+        BGiong giong = new BGiong();
+        ArrayList<BGiong> arrListGiong = null;
+        try {
+            arrListGiong = giong.GetDanhSachThuCungDaBan(NgayBD, NgayKT);
+        } catch (SQLException ex) {
+            Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int k;
+        for(k = 0; k<arrListGiong.size();k++){
+            table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).TenGiong, k, 0);
+            table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).SL, k, 1);
+        }
+        for(k=k;k<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();k++){
+            table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 0);
+            table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 1);
+        }    
         jNhanVienBanHang_XemHoaDon_Tong.setText(Integer.toString(Tien));
     }//GEN-LAST:event_JNhanVienBanHang_XemHoaDon_btn_TimKiemActionPerformed
 
