@@ -20,6 +20,7 @@ public class BHoaDon extends Bussiness {
     public String NgayLap;
     public String MaKH;
     public String Tong;
+    public String MaKM;
     public BHoaDon() {
         DB = new Data();
         Table = "HOADON";
@@ -94,8 +95,9 @@ public class BHoaDon extends Bussiness {
         while (rs.next()){
             BHoaDon temp = new BHoaDon();
             temp.MAHD=(rs.getString("MAHD"));
-            temp.NgayLap=Integer.toString((rs.getDate("NGAYLAP")).getYear()+1900)+"-"+Integer.toString((rs.getDate("NGAYLAP")).getMonth()+1)+"-"+Integer.toString((rs.getDate("NGAYLAP")).getDay());
-      
+            temp.NgayLap=Integer.toString((rs.getDate("NGAYLAP")).getDate())+"-"+Integer.toString((rs.getDate("NGAYLAP")).getMonth()+1)+"-"+Integer.toString((rs.getDate("NGAYLAP")).getYear()+1900);
+            temp.MaKM = (rs.getString("MAKM"));
+            temp.MaKH = (rs.getString("MAKH"));
             temp.NguoiLapHD=(rs.getString("NGUOILAPHD"));
             temp.Tong = (rs.getString("TONG"));
             arrList.add(temp);
