@@ -1366,20 +1366,13 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).MaThuCung, i, 2);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
         }
-        while(table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getValueAt(i, 0) != ""){
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
-            i++;
-        }
-        int sum = i +100;
-        for(i = i;i<sum;i++){
+        for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
         }
+        
     }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_ThemSP_pn_QLSPItemStateChanged
 
     private void cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPItemStateChanged
@@ -1440,20 +1433,13 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).MaThuCung, i, 2);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
         }
-        while(table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getValueAt(i, 0) != ""){
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
-            i++;
-        }
-        int sum = i +100;
-        for(i = i;i<sum;i++){
+        for(i = i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
         }
+        
     }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_SuaSP_pn_QLSPItemStateChanged
 
     private void cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSPItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSPItemStateChanged
@@ -1513,15 +1499,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).MaThuCung, i, 2);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
         }
-        while(table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getValueAt(i, 0) != ""){
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
-            i++;
-        }
-        int sum = i +100;
-        for(i = i;i<sum;i++){
+        for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
@@ -1664,16 +1642,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
         }
-        while(table_BangSP_pn_BangSP_pn_QLSP.getValueAt(i, 0)!=""){
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
-            i++;
-        }
-        int sum = i+100;
-        for(i = i; i < sum; i++){
+        for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
@@ -1713,16 +1682,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
         }
-        while(table_BangSP_pn_BangSP_pn_QLSP.getValueAt(i, 0)!=""){
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
-            i++;
-        }
-        int sum = i+100;
-        for(i = i; i < sum; i++){
+        for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
@@ -1758,16 +1718,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
         }
-        while(table_BangSP_pn_BangSP_pn_QLSP.getValueAt(i, 0)!=""){
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
-            table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
-            i++;
-        }
-        int sum = i+100;
-        for(i = i; i < sum; i++){
+        for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
             table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
@@ -1828,16 +1779,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).DonGia, i, 3);
             table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).SL, i, 4);
         }
-        while(table_BangSP_pn_BangSP_pn_QLKho.getValueAt(i, 0)!=""){
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 0);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 1);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 2);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 3);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 4);
-            i++;
-        }
-        int sum = i+100;
-        for(i = i; i < sum; i++){
+        for(i=i;i<table_BangSP_pn_BangSP_pn_QLKho.getRowCount();i++){
             table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 0);
             table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 1);
             table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 2);
@@ -1851,7 +1793,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_QLKhoActionPerformed
 
     private void cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged
-        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.removeAll();
+
         BThuCung dsThuCung = new BThuCung();
         Object giong = cmbx_GiongVatNuoi_pn_QLKho.getSelectedItem();
        
@@ -1883,15 +1825,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrList.get(i).MaThuCung, i, 2);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrList.get(i).DonGia, i, 3);
         }
-        while(table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.getValueAt(i, 0) != ""){
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 0);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 1);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 2);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 3);
-            i++;
-        }
-        int sum = i +100;
-        for(i = i;i<sum;i++){
+        for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.getRowCount();i++){
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 0);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 1);
             table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 2);
