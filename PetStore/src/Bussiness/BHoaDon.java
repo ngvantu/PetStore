@@ -39,7 +39,7 @@ public class BHoaDon extends Bussiness {
         return super.updateBySQLString(SQL);
     }
     public boolean insertByProperties(String MAHD,String NGAYLAP, String NGUOILAPHD, String MAKH, String MAKM){
-        SQL="INSERT INTO "+Table+" values('"+MAHD+"','"+NGAYLAP+"','"+NGUOILAPHD+"','"+MAKH+"','"+MAKM+"')";
+        SQL="INSERT INTO "+Table+" values('"+MAHD+"','"+NGUOILAPHD+"','"+NGAYLAP+"','"+MAKH+"','"+MAKM+"')";
         return super.insertBySQLString(SQL);
     }
     
@@ -120,6 +120,19 @@ public class BHoaDon extends Bussiness {
             arrList.add(temp);
         }
         return arrList;
+    }
+     
+     public String newMaHD() throws SQLException{
+        SQL = "newMaHD";
+        ResultSet rs = DB.getData(SQL);
+        while (rs.next()){
+            if (rs.getInt("MAHD") < 10)
+                return "00" + rs.getString("MAHD");
+            if (rs.getInt("MAHD") < 100)
+                return "0" + rs.getString("MAHD");
+            return rs.getString("MAHD");
+        }
+        return "001";
     }
 }
 

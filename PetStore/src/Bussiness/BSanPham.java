@@ -19,7 +19,7 @@ public class BSanPham extends Bussiness {
     public String TenSP;
     public int DonGia;
     public int SL;
-    
+    public int stt;
     public BSanPham() {
         DB = new Data();
         Table = "SANPHAM";

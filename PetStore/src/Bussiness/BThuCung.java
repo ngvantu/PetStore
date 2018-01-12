@@ -18,7 +18,8 @@ public class BThuCung extends Bussiness {
     public String MaGiong;
     public String MaThuCung;
     public int DonGia;
-    
+    public int SoLuong;
+    public int stt;
     public BThuCung() {
         DB = new Data();
         Table = "THUCUNG";
