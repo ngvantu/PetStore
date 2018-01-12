@@ -205,17 +205,17 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jLb_Error_SoCMND1 = new javax.swing.JLabel();
         jpn_QuanLyKho = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jpn_QuanLyKho_BangVatNuoi = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho = new javax.swing.JTable();
         jpn_QuanLyKho_BangSanPham = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
+        jScrollPane11 = new javax.swing.JScrollPane();
         table_BangSP_pn_BangSP_pn_QLKho = new javax.swing.JTable();
         cmbx_LoaiSP_pn_QLKho = new javax.swing.JComboBox<>();
         cmbx_LoaiVatNuoi_pn_QLKho = new javax.swing.JComboBox<>();
         cmbx_GiongVatNuoi_pn_QLKho = new javax.swing.JComboBox<>();
-        jLabel42 = new javax.swing.JLabel();
         jpn_QuanLyLoaiSanPham = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jpn_ThemSanPham_QLSP = new javax.swing.JPanel();
@@ -1030,6 +1030,14 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
         jpn_QuanLyKho.setLayout(null);
 
+        jLabel42.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel42.setText("QUẢN LÝ KHO");
+        jLabel42.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jpn_QuanLyKho.add(jLabel42);
+        jLabel42.setBounds(30, 0, 1040, 100);
+
         jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane3.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
 
@@ -1135,10 +1143,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         });
         table_BangSP_pn_BangSP_pn_QLKho.setGridColor(new java.awt.Color(255, 255, 255));
         table_BangSP_pn_BangSP_pn_QLKho.setRowHeight(20);
-        jScrollPane6.setViewportView(table_BangSP_pn_BangSP_pn_QLKho);
+        jScrollPane11.setViewportView(table_BangSP_pn_BangSP_pn_QLKho);
 
-        jpn_QuanLyKho_BangSanPham.add(jScrollPane6);
-        jScrollPane6.setBounds(0, 0, 1005, 360);
+        jpn_QuanLyKho_BangSanPham.add(jScrollPane11);
+        jScrollPane11.setBounds(0, 0, 1005, 360);
 
         jTabbedPane3.addTab("Bảng sản phẩm", jpn_QuanLyKho_BangSanPham);
 
@@ -1185,14 +1193,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         });
         jpn_QuanLyKho.add(cmbx_GiongVatNuoi_pn_QLKho);
         cmbx_GiongVatNuoi_pn_QLKho.setBounds(270, 140, 190, 30);
-
-        jLabel42.setFont(new java.awt.Font("Roboto Thin", 0, 50)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel42.setText("QUẢN LÝ KHO");
-        jLabel42.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jpn_QuanLyKho.add(jLabel42);
-        jLabel42.setBounds(30, 0, 1040, 100);
 
         jpn_QuanLyLoaiSanPham.setBackground(new java.awt.Color(0, 64, 80));
         jpn_QuanLyLoaiSanPham.setPreferredSize(new java.awt.Dimension(1070, 720));
@@ -1583,7 +1583,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel40.setText("QUẢN LÝ LOẠI SẢN PHẨM");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jpn_QuanLyLoaiSanPham.add(jLabel40);
-        jLabel40.setBounds(30, 20, 630, 72);
+        jLabel40.setBounds(30, 20, 630, 60);
 
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
@@ -2907,129 +2907,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTabbedPane4MouseMoved
 
-    private void cmbx_LoaiSP_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiSP_pn_QLKhoItemStateChanged
-
-        BSanPham dsSanPham = new BSanPham();
-        Object loai = cmbx_LoaiSP_pn_QLKho.getSelectedItem();
-
-        if(loai == null || dsSanPham == null)
-        return;
-        String MaLoai = loai.toString();
-        if(MaLoai == "Loài vật nuôi" || dsSanPham == null)
-        return;
-        int begin = MaLoai.indexOf("(");
-        int end = MaLoai.indexOf(")");
-        MaLoai = MaLoai.substring(begin+1, end);
-
-        ArrayList<BSanPham> arrList = null;
-        try {
-            arrList = dsSanPham.GetDanhSachSanPham(MaLoai);
-        } catch (SQLException ex) {
-            Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        int i;
-        for(i=0;i<arrList.size();i++){
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(MaLoai, i, 0);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).MaSP, i, 1);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).TenSP, i, 2);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).DonGia, i, 3);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).SL, i, 4);
-        }
-        while(table_BangSP_pn_BangSP_pn_QLKho.getValueAt(i, 0)!=""){
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 0);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 1);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 2);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 3);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 4);
-            i++;
-        }
-        int sum = i+100;
-        for(i = i; i < sum; i++){
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 0);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 1);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 2);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 3);
-            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 4);
-        }
-    }//GEN-LAST:event_cmbx_LoaiSP_pn_QLKhoItemStateChanged
-
-    private void cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged
-        cmbx_GiongVatNuoi_pn_QLKho.removeAllItems();
-        cmbx_GiongVatNuoi_pn_QLKho.addItem((String)"Giống vật nuôi");
-        cmbx_GiongVatNuoi_pn_QLKho.setSelectedIndex(0);
-        Object loai = cmbx_LoaiVatNuoi_pn_QLKho.getSelectedItem();
-        if(loai == null)
-        return;
-        String MaLoai = loai.toString();
-        if(MaLoai == "Loài vật nuôi")
-        return;
-        int begin = MaLoai.indexOf("(");
-        int end = MaLoai.indexOf(")");
-        MaLoai = MaLoai.substring(begin+1, end);
-        BGiong dsGiong = new BGiong();
-        ArrayList<BGiong> arrlist = new ArrayList<BGiong>();
-        try {
-            arrlist = dsGiong.GetDanhSachGiongVatNuoi(MaLoai);
-        } catch (SQLException ex) {
-            Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        for(int i = 0; i < arrlist.size(); i++)
-        cmbx_GiongVatNuoi_pn_QLKho.addItem((String)arrlist.get(i).TenGiong + " (" + arrlist.get(i).MaGiong + ")");
-    }//GEN-LAST:event_cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged
-
-    private void cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged
-        table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.removeAll();
-        BThuCung dsThuCung = new BThuCung();
-        Object giong = cmbx_GiongVatNuoi_pn_QLKho.getSelectedItem();
-
-        Object loai = cmbx_LoaiVatNuoi_pn_QLKho.getSelectedItem();
-
-        if(giong == null || loai == null || dsThuCung == null)
-        return;
-        String MaGiong = giong.toString();
-        String MaLoai = loai.toString();
-        if(MaGiong == "Giống vật nuôi" || MaLoai == "Loài vật nuôi" || dsThuCung == null)
-        return;
-        int begin = MaGiong.indexOf("(");
-        int end = MaGiong.indexOf(")");
-        MaGiong = MaGiong.substring(begin+1, end);
-        begin = MaLoai.indexOf("(");
-        end = MaLoai.indexOf(")");
-        MaLoai = MaLoai.substring(begin+1, end);
-
-        ArrayList<BThuCung> arrList = null;
-        try {
-            arrList = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
-        } catch (SQLException ex) {
-            Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        int i;
-        for(i=0;i<arrList.size();i++){
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(MaLoai, i, 0);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(MaGiong, i, 1);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrList.get(i).MaThuCung, i, 2);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrList.get(i).DonGia, i, 3);
-        }
-        while(table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.getValueAt(i, 0) != ""){
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 0);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 1);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 2);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 3);
-            i++;
-        }
-        int sum = i +100;
-        for(i = i;i<sum;i++){
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 0);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 1);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 2);
-            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 3);
-        }
-    }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged
-
-    private void cmbx_GiongVatNuoi_pn_QLKhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbx_GiongVatNuoi_pn_QLKhoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_QLKhoActionPerformed
-
     private void jNhanVienBanHang_XemHoaDon_TongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNhanVienBanHang_XemHoaDon_TongActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jNhanVienBanHang_XemHoaDon_TongActionPerformed
@@ -3120,6 +2997,112 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private void btn_XacNhan_pn_ThemSP_pn_QLSP2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_btn_XacNhan_pn_ThemSP_pn_QLSP2ItemStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_XacNhan_pn_ThemSP_pn_QLSP2ItemStateChanged
+
+    private void cmbx_LoaiSP_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiSP_pn_QLKhoItemStateChanged
+
+        BSanPham dsSanPham = new BSanPham();
+        Object loai = cmbx_LoaiSP_pn_QLKho.getSelectedItem();
+
+        if(loai == null || dsSanPham == null)
+        return;
+        String MaLoai = loai.toString();
+        if(MaLoai == "Loài vật nuôi" || dsSanPham == null)
+        return;
+        int begin = MaLoai.indexOf("(");
+        int end = MaLoai.indexOf(")");
+        MaLoai = MaLoai.substring(begin+1, end);
+
+        ArrayList<BSanPham> arrList = null;
+        try {
+            arrList = dsSanPham.GetDanhSachSanPham(MaLoai);
+        } catch (SQLException ex) {
+            Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int i;
+        for(i=0;i<arrList.size();i++){
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(MaLoai, i, 0);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).MaSP, i, 1);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).TenSP, i, 2);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).DonGia, i, 3);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt(arrList.get(i).SL, i, 4);
+        }
+        for(i=i;i<table_BangSP_pn_BangSP_pn_QLKho.getRowCount();i++){
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 0);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 1);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 2);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 3);
+            table_BangSP_pn_BangSP_pn_QLKho.setValueAt("", i, 4);
+        }
+    }//GEN-LAST:event_cmbx_LoaiSP_pn_QLKhoItemStateChanged
+
+    private void cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged
+        cmbx_GiongVatNuoi_pn_QLKho.removeAllItems();
+        cmbx_GiongVatNuoi_pn_QLKho.addItem((String)"Giống vật nuôi");
+        cmbx_GiongVatNuoi_pn_QLKho.setSelectedIndex(0);
+        Object loai = cmbx_LoaiVatNuoi_pn_QLKho.getSelectedItem();
+        if(loai == null)
+        return;
+        String MaLoai = loai.toString();
+        if(MaLoai == "Loài vật nuôi")
+        return;
+        int begin = MaLoai.indexOf("(");
+        int end = MaLoai.indexOf(")");
+        MaLoai = MaLoai.substring(begin+1, end);
+        BGiong dsGiong = new BGiong();
+        ArrayList<BGiong> arrlist = new ArrayList<BGiong>();
+        try {
+            arrlist = dsGiong.GetDanhSachGiongVatNuoi(MaLoai);
+        } catch (SQLException ex) {
+            Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        for(int i = 0; i < arrlist.size(); i++)
+        cmbx_GiongVatNuoi_pn_QLKho.addItem((String)arrlist.get(i).TenGiong + " (" + arrlist.get(i).MaGiong + ")");
+    }//GEN-LAST:event_cmbx_LoaiVatNuoi_pn_QLKhoItemStateChanged
+
+    private void cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged
+
+        BThuCung dsThuCung = new BThuCung();
+        Object giong = cmbx_GiongVatNuoi_pn_QLKho.getSelectedItem();
+
+        Object loai = cmbx_LoaiVatNuoi_pn_QLKho.getSelectedItem();
+
+        if(giong == null || loai == null || dsThuCung == null)
+        return;
+        String MaGiong = giong.toString();
+        String MaLoai = loai.toString();
+        if(MaGiong == "Giống vật nuôi" || MaLoai == "Loài vật nuôi" || dsThuCung == null)
+        return;
+        int begin = MaGiong.indexOf("(");
+        int end = MaGiong.indexOf(")");
+        MaGiong = MaGiong.substring(begin+1, end);
+        begin = MaLoai.indexOf("(");
+        end = MaLoai.indexOf(")");
+        MaLoai = MaLoai.substring(begin+1, end);
+
+        ArrayList<BThuCung> arrList = null;
+        try {
+            arrList = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
+        } catch (SQLException ex) {
+            Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int i;
+        for(i=0;i<arrList.size();i++){
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(MaLoai, i, 0);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(MaGiong, i, 1);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrList.get(i).MaThuCung, i, 2);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt(arrList.get(i).DonGia, i, 3);
+        }
+        for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.getRowCount();i++){
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 0);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 1);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 2);
+            table_BangVatNuoi_pn_BangVatNuoi_pn_QLKho.setValueAt("", i, 3);
+        }
+    }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_QLKhoItemStateChanged
+
+    private void cmbx_GiongVatNuoi_pn_QLKhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbx_GiongVatNuoi_pn_QLKhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbx_GiongVatNuoi_pn_QLKhoActionPerformed
     
     private int MaxDay(int Month, int Year){
         switch (Month){
@@ -3473,10 +3456,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
