@@ -138,6 +138,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         btn_XacNhan_pn_ThemSP_pn_QLSP = new javax.swing.JButton();
         jSeparator9 = new javax.swing.JSeparator();
         cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1 = new javax.swing.JComboBox<>();
+        jLb_Error_HoTen1 = new javax.swing.JLabel();
         jpn_SuaSanPham_QLSP = new javax.swing.JPanel();
         cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP = new javax.swing.JComboBox<>();
         tf_TenSP_pn_SuaSP_pn_QLSP = new javax.swing.JTextField();
@@ -150,6 +151,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jSeparator12 = new javax.swing.JSeparator();
         cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP1 = new javax.swing.JComboBox<>();
         jSpinner1 = new javax.swing.JSpinner();
+        jLb_Error_HoTen2 = new javax.swing.JLabel();
         jP_XoaSanPham_QLSP = new javax.swing.JPanel();
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP = new javax.swing.JComboBox<>();
         cmbx_GiongVatNuoi_pn_XoaSP_pn_QLSP = new javax.swing.JComboBox<>();
@@ -158,6 +160,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_MaVatNuoi_pn_XoaSP_pn_QLSP = new javax.swing.JTextField();
         jSeparator11 = new javax.swing.JSeparator();
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP1 = new javax.swing.JComboBox<>();
+        jLb_Error_HoTen3 = new javax.swing.JLabel();
         jpn_QuanLyKho = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         cmbx_LoaiVatNuoi_pn_QLKho = new javax.swing.JComboBox<>();
@@ -764,6 +767,10 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jpn_ThemSanPham_QLSP.add(cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1);
         cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1.setBounds(30, 80, 190, 30);
 
+        jLb_Error_HoTen1.setForeground(new java.awt.Color(255, 153, 102));
+        jpn_ThemSanPham_QLSP.add(jLb_Error_HoTen1);
+        jLb_Error_HoTen1.setBounds(600, 150, 270, 30);
+
         jTabbedPane4.addTab("Thêm sản phẩm", jpn_ThemSanPham_QLSP);
 
         jpn_SuaSanPham_QLSP.setBackground(new java.awt.Color(0, 64, 80));
@@ -906,6 +913,10 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jpn_SuaSanPham_QLSP.add(jSpinner1);
         jSpinner1.setBounds(840, 80, 130, 30);
 
+        jLb_Error_HoTen2.setForeground(new java.awt.Color(255, 153, 102));
+        jpn_SuaSanPham_QLSP.add(jLb_Error_HoTen2);
+        jLb_Error_HoTen2.setBounds(600, 150, 270, 30);
+
         jTabbedPane4.addTab("Sửa sản phẩm", jpn_SuaSanPham_QLSP);
 
         jP_XoaSanPham_QLSP.setBackground(new java.awt.Color(0, 64, 80));
@@ -997,6 +1008,10 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         });
         jP_XoaSanPham_QLSP.add(cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP1);
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP1.setBounds(30, 80, 190, 30);
+
+        jLb_Error_HoTen3.setForeground(new java.awt.Color(255, 153, 102));
+        jP_XoaSanPham_QLSP.add(jLb_Error_HoTen3);
+        jLb_Error_HoTen3.setBounds(600, 150, 270, 30);
 
         jTabbedPane4.addTab("Xóa sản phẩm", jP_XoaSanPham_QLSP);
 
@@ -1648,7 +1663,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 flag[1]=1;
         }
         if(flag[0]==1&&flag[1]==1){
-            JOptionPane.showMessageDialog(null, "Xóa dữ liệu Thú cưng và Sản phẩm thành công .");
+            jLb_Error_HoTen3.setText("Xóa dữ liệu Thú cưng và Sản phẩm thành công .");
             BSanPham dsSanPham = new BSanPham();
             String LoaiVatNuoi = loaivatnuoi.toString();
             int begin = LoaiVatNuoi.indexOf("(");
@@ -1707,7 +1722,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else if(flag[0]==1){
-            JOptionPane.showMessageDialog(null, "Xóa dữ liệu Thú cưng thành công.");
+            jLb_Error_HoTen3.setText("Xóa dữ liệu Thú cưng thành công.");
             BThuCung dsThuCung = new BThuCung();
             String MaLoai = loai.toString();
             int begin = MaLoai.indexOf("(");
@@ -1739,7 +1754,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else if(flag[1]==1){
-            JOptionPane.showMessageDialog(null, "Xóa dữ liệu Sản phẩm thành công.");
+            jLb_Error_HoTen3.setText("Xóa dữ liệu Sản phẩm thành công.");
             BSanPham dsSanPham = new BSanPham();
             String LoaiVatNuoi = loaivatnuoi.toString();
             int begin = LoaiVatNuoi.indexOf("(");
@@ -1768,7 +1783,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else
-            JOptionPane.showMessageDialog(null, "Xóa dữ liệu thất bại.");
+            jLb_Error_HoTen3.setText("Xóa dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_XoaSP_pn_QLSPMouseClicked
 
     private void btn_XacNhan_pn_ThemSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_XacNhan_pn_ThemSP_pn_QLSPMouseClicked
@@ -1805,7 +1820,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 flag[1]=1;
         }
         if(flag[0]==1&&flag[1]==1){
-            JOptionPane.showMessageDialog(null, "Thên dữ liệu Thú cưng và Sản phẩm thành công .");
+            jLb_Error_HoTen1.setText("Thên dữ liệu Thú cưng và Sản phẩm thành công .");
             BSanPham dsSanPham = new BSanPham();
             String LoaiVatNuoi = loaivatnuoi.toString();
             int begin = LoaiVatNuoi.indexOf("(");
@@ -1864,7 +1879,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else if(flag[0]==1){
-            JOptionPane.showMessageDialog(null, "Thên dữ liệu Thú cưng thành công.");
+            jLb_Error_HoTen1.setText("Thên dữ liệu Thú cưng thành công.");
             BThuCung dsThuCung = new BThuCung();
             String MaLoai = loai.toString();
             int begin = MaLoai.indexOf("(");
@@ -1896,7 +1911,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else if(flag[1]==1){
-            JOptionPane.showMessageDialog(null, "Thên dữ liệu Sản phẩm thành công.");
+            jLb_Error_HoTen1.setText("Thên dữ liệu Sản phẩm thành công.");
             BSanPham dsSanPham = new BSanPham();
             String LoaiVatNuoi = loaivatnuoi.toString();
             int begin = LoaiVatNuoi.indexOf("(");
@@ -1925,7 +1940,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else
-            JOptionPane.showMessageDialog(null, "Thêm dữ liệu thất bại.");
+            jLb_Error_HoTen1.setText("Thêm dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_ThemSP_pn_QLSPMouseClicked
 
     private void cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSP1ItemStateChanged
@@ -2076,7 +2091,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
                 flag[1]=1;
         }
         if(flag[0]==1&&flag[1]==1){
-            JOptionPane.showMessageDialog(null, "Sửa dữ liệu Thú cưng và Sản phẩm thành công .");
+            jLb_Error_HoTen2.setText("Sửa dữ liệu Thú cưng và Sản phẩm thành công .");
             BSanPham dsSanPham = new BSanPham();
             String LoaiVatNuoi = loaivatnuoi.toString();
             int begin = LoaiVatNuoi.indexOf("(");
@@ -2135,7 +2150,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else if(flag[0]==1){
-            JOptionPane.showMessageDialog(null, "Sửa dữ liệu Thú cưng thành công.");
+            jLb_Error_HoTen2.setText("Sửa dữ liệu Thú cưng thành công.");
             BThuCung dsThuCung = new BThuCung();
             String MaLoai = loai.toString();
             int begin = MaLoai.indexOf("(");
@@ -2167,7 +2182,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else if(flag[1]==1){
-            JOptionPane.showMessageDialog(null, "Sửa dữ liệu Sản phẩm thành công.");
+            jLb_Error_HoTen2.setText("Sửa dữ liệu Sản phẩm thành công.");
             BSanPham dsSanPham = new BSanPham();
             String LoaiVatNuoi = loaivatnuoi.toString();
             int begin = LoaiVatNuoi.indexOf("(");
@@ -2196,7 +2211,7 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             }
         }
         else
-            JOptionPane.showMessageDialog(null, "Sửa dữ liệu thất bại.");
+            jLb_Error_HoTen2.setText("Sửa dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_SuaSP_pn_QLSPMouseClicked
 
     private void btn_ThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ThoatActionPerformed
@@ -2598,6 +2613,9 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLb_Error_HoTen;
+    private javax.swing.JLabel jLb_Error_HoTen1;
+    private javax.swing.JLabel jLb_Error_HoTen2;
+    private javax.swing.JLabel jLb_Error_HoTen3;
     private javax.swing.JLabel jLb_Error_SDT;
     private javax.swing.JLabel jLb_Error_SoCMND;
     private javax.swing.JLabel jLb_Status;
