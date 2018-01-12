@@ -21,7 +21,9 @@ public class CNhanVien {
         b.updateByProperties(this);
     }
     
-
+    public void InsertNew(){
+        b.Insert(this);
+    }
     
     public CNhanVien(String maNV, String hoTen, String gioiTinh, Date ngaySinh, String diaChi, String sdt, String chucVu, int luong, String cmnd) {
         this.maNV = maNV;

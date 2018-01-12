@@ -78,6 +78,126 @@ public class BNhanVien extends Bussiness{
         return arr;
     }
     
+    public ArrayList<CNhanVienMoRong> getAllNhanVienMoRongByHoTen(String s){
+        ArrayList<CNhanVienMoRong> arr = new ArrayList();
+        SQL = "TimKiemNhanVienTheoHoTen "+" N'"+s+"'";
+        ResultSet rs = DB.getData(SQL);
+        try {
+            //ResultSetMetaData metaData = rs.getMetaData();
+            //int columns = metaData.getColumnCount();
+            while(rs.next()){
+                CNhanVienMoRong temp = new CNhanVienMoRong();
+                temp.setHoTen(rs.getNString("HOTEN"));
+                temp.setMaNV(rs.getString("MANV"));
+                temp.setGioiTinh(rs.getNString("GIOITINH"));
+                temp.setNgaySinh(rs.getDate("NGAYSINH"));
+                temp.setDiaChi(rs.getNString("DIACHI"));
+                temp.setSdt(rs.getString("SDT"));
+                temp.setChucVu(rs.getString("CHUCVU"));
+                temp.setLuong(rs.getInt("LUONG"));
+                temp.setCmnd(rs.getString("CMND"));
+                temp.setTenTK(rs.getString("TENTK"));
+                temp.setMatKhau(rs.getString("MATKHAU"));
+                arr.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BNhanVien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+    }
+    public ArrayList<CNhanVienMoRong> getAllNhanVienMoRongByMANV(String s){
+        ArrayList<CNhanVienMoRong> arr = new ArrayList();
+        SQL = "TimKiemNhanVienTheoMaNV "+" N'"+s+"'";
+        ResultSet rs = DB.getData(SQL);
+        try {
+            //ResultSetMetaData metaData = rs.getMetaData();
+            //int columns = metaData.getColumnCount();
+            while(rs.next()){
+                CNhanVienMoRong temp = new CNhanVienMoRong();
+                temp.setHoTen(rs.getNString("HOTEN"));
+                temp.setMaNV(rs.getString("MANV"));
+                temp.setGioiTinh(rs.getNString("GIOITINH"));
+                temp.setNgaySinh(rs.getDate("NGAYSINH"));
+                temp.setDiaChi(rs.getNString("DIACHI"));
+                temp.setSdt(rs.getString("SDT"));
+                temp.setChucVu(rs.getString("CHUCVU"));
+                temp.setLuong(rs.getInt("LUONG"));
+                temp.setCmnd(rs.getString("CMND"));
+                temp.setTenTK(rs.getString("TENTK"));
+                temp.setMatKhau(rs.getString("MATKHAU"));
+                arr.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BNhanVien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+    }
+    
+    public ArrayList<CNhanVienMoRong> getAllNhanVienMoRongByCMND(String s){
+        ArrayList<CNhanVienMoRong> arr = new ArrayList();
+        SQL = "TimKiemNhanVienTheoCMND "+" N'"+s+"'";
+        ResultSet rs = DB.getData(SQL);
+        try {
+            //ResultSetMetaData metaData = rs.getMetaData();
+            //int columns = metaData.getColumnCount();
+            while(rs.next()){
+                CNhanVienMoRong temp = new CNhanVienMoRong();
+                temp.setHoTen(rs.getNString("HOTEN"));
+                temp.setMaNV(rs.getString("MANV"));
+                temp.setGioiTinh(rs.getNString("GIOITINH"));
+                temp.setNgaySinh(rs.getDate("NGAYSINH"));
+                temp.setDiaChi(rs.getNString("DIACHI"));
+                temp.setSdt(rs.getString("SDT"));
+                temp.setChucVu(rs.getString("CHUCVU"));
+                temp.setLuong(rs.getInt("LUONG"));
+                temp.setCmnd(rs.getString("CMND"));
+                temp.setTenTK(rs.getString("TENTK"));
+                temp.setMatKhau(rs.getString("MATKHAU"));
+                arr.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BNhanVien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+    }
+    
+    public ArrayList<CNhanVienMoRong> getAllNhanVienMoRongByTenTk (String s){
+        ArrayList<CNhanVienMoRong> arr = new ArrayList();
+        SQL = "TimKiemNhanVienTheoTenTK "+"'"+s+"'";
+        ResultSet rs = DB.getData(SQL);
+        try {
+            //ResultSetMetaData metaData = rs.getMetaData();
+            //int columns = metaData.getColumnCount();
+            while(rs.next()){
+                CNhanVienMoRong temp = new CNhanVienMoRong();
+                temp.setHoTen(rs.getNString("HOTEN"));
+                temp.setMaNV(rs.getString("MANV"));
+                temp.setGioiTinh(rs.getNString("GIOITINH"));
+                temp.setNgaySinh(rs.getDate("NGAYSINH"));
+                temp.setDiaChi(rs.getNString("DIACHI"));
+                temp.setSdt(rs.getString("SDT"));
+                temp.setChucVu(rs.getString("CHUCVU"));
+                temp.setLuong(rs.getInt("LUONG"));
+                temp.setCmnd(rs.getString("CMND"));
+                temp.setTenTK(rs.getString("TENTK"));
+                temp.setMatKhau(rs.getString("MATKHAU"));
+                arr.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BNhanVien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+    }
+    
+    public boolean Insert(CNhanVien c){
+        String dateString;
+        SimpleDateFormat sdfr = new SimpleDateFormat("MM/dd/yyyy");
+        dateString = sdfr.format( c.getNgaySinh() );
+        SQL = String.format("insertNhanVien '%s', N'%s', N'%s', '%s', N'%s', '%s', '%s','%s','%s' ",c.getMaNV(),
+                c.getHoTen(), c.getGioiTinh(), dateString,c.getDiaChi(),c.getSdt(),c.getChucVu(),
+                Integer.toString(c.getLuong()), c.getCmnd());
+        return super.updateBySQLString(SQL);
+    }
     
     public boolean updateByProperties(CNhanVien c){
         String dateString;

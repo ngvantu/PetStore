@@ -106,13 +106,13 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_QuanLyNhanVien = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jpn_Table = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPane_NhanVien = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        jTF_ThongTinTimKiem = new javax.swing.JTextField();
+        JBtn_TimKiem_NhanVien = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jCB_TimKiem_NHANVIEN = new javax.swing.JComboBox<>();
         jpn_ThongTinNhanVien = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -163,12 +163,20 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_Luong_ThemNhanVien = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jTF_TenTk_ThemNhanVien = new javax.swing.JTextField();
+        jPF_MatKhau_ThemNhanVien = new javax.swing.JPasswordField();
+        jTF_TenTK_ThemNhanVien = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jCB_ChucVu_ThemNhanVien = new javax.swing.JComboBox<>();
+        jLb_Status_ThemNhanVien = new javax.swing.JLabel();
+        jLb_MANV_ThemNhanVien = new javax.swing.JLabel();
+        jLb_HoTen_ThemNhanVien = new javax.swing.JLabel();
+        jLb_DiaChi_ThemNhanVien = new javax.swing.JLabel();
+        jLb_SDT_ThemNhanVien = new javax.swing.JLabel();
+        jLb_TenTK_ThemNhanVien = new javax.swing.JLabel();
+        jLb_MatKhau_ThemNhanVien = new javax.swing.JLabel();
+        jLb_CMND_ThemNhanVien = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -311,27 +319,38 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_Table.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jpn_QuanLyNhanVien.add(jpn_Table, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 150, -1));
 
+        jTabbedPane_NhanVien.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane_NhanVienStateChanged(evt);
+            }
+        });
+
         jPanel6.setLayout(null);
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTF_ThongTinTimKiem.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField5MouseClicked(evt);
+                jTF_ThongTinTimKiemMouseClicked(evt);
             }
         });
-        jPanel4.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 140, 30));
-        jTextField5.getAccessibleContext().setAccessibleName("");
+        jPanel4.add(jTF_ThongTinTimKiem, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 140, 30));
+        jTF_ThongTinTimKiem.getAccessibleContext().setAccessibleName("");
 
-        jButton3.setText("Tìm kiếm");
-        jButton3.setBorder(null);
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 70, 30));
+        JBtn_TimKiem_NhanVien.setText("Tìm kiếm");
+        JBtn_TimKiem_NhanVien.setBorder(null);
+        JBtn_TimKiem_NhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JBtn_TimKiem_NhanVienMouseClicked(evt);
+            }
+        });
+        jPanel4.add(JBtn_TimKiem_NhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 70, 30));
 
         jLabel18.setText("Tìm kiếm nhân viên theo");
         jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mã NV", "Chức Vụ", "Họ Tên", "Số CMND", " " }));
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 100, -1));
+        jCB_TimKiem_NHANVIEN.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mã NV", "Họ Tên", "Số CMND", " " }));
+        jPanel4.add(jCB_TimKiem_NHANVIEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 100, -1));
 
         jPanel6.add(jPanel4);
         jPanel4.setBounds(10, 10, 210, 100);
@@ -595,7 +614,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jPanel6.add(jScrollPane1);
         jScrollPane1.setBounds(10, 120, 210, 320);
 
-        jTabbedPane1.addTab("Thông Tin Nhân Viên", new javax.swing.ImageIcon(getClass().getResource("/Image/Cat Profile_25px.png")), jPanel6); // NOI18N
+        jTabbedPane_NhanVien.addTab("Thông Tin Nhân Viên", new javax.swing.ImageIcon(getClass().getResource("/Image/Cat Profile_25px.png")), jPanel6); // NOI18N
 
         jPanel5.setBackground(new java.awt.Color(0, 120, 120));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 240, 240)));
@@ -615,7 +634,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
 
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Số Điện Thoại");
-        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 119, 30));
+        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 119, 30));
 
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("Địa Chỉ");
@@ -662,7 +681,12 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                 jTF_SDT_ThemNhanVienMouseClicked(evt);
             }
         });
-        jPanel5.add(jTF_SDT_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 190, 30));
+        jTF_SDT_ThemNhanVien.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF_SDT_ThemNhanVienKeyTyped(evt);
+            }
+        });
+        jPanel5.add(jTF_SDT_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 190, 30));
 
         jCB_GioiTinh_ThemNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ", "null" }));
         jPanel5.add(jCB_GioiTinh_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 100, 30));
@@ -678,6 +702,11 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                 jTF_SOCMND_ThemNhanVienMouseClicked(evt);
             }
         });
+        jTF_SOCMND_ThemNhanVien.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF_SOCMND_ThemNhanVienKeyTyped(evt);
+            }
+        });
         jPanel5.add(jTF_SOCMND_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 290, 130, 30));
 
         btn_XacNhan_ThemNhanVien.setBackground(new java.awt.Color(0, 120, 215));
@@ -688,9 +717,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         btn_XacNhan_ThemNhanVien.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btn_XacNhan_ThemNhanVien.setFocusable(false);
         btn_XacNhan_ThemNhanVien.setName(""); // NOI18N
-        btn_XacNhan_ThemNhanVien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_XacNhan_ThemNhanVienActionPerformed(evt);
+        btn_XacNhan_ThemNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_XacNhan_ThemNhanVienMouseClicked(evt);
             }
         });
         jPanel5.add(btn_XacNhan_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 400, 90, 30));
@@ -715,6 +744,11 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                 jTF_Luong_ThemNhanVienMouseClicked(evt);
             }
         });
+        jTF_Luong_ThemNhanVien.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTF_Luong_ThemNhanVienKeyTyped(evt);
+            }
+        });
         jPanel5.add(jTF_Luong_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 230, 130, 30));
 
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
@@ -725,27 +759,27 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel38.setText("Mật Khẩu");
         jPanel5.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 60, 30));
 
-        jPasswordField2.setText("jPasswordField1");
-        jPasswordField2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPF_MatKhau_ThemNhanVien.setText("jPasswordField1");
+        jPF_MatKhau_ThemNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPasswordField2MouseClicked(evt);
+                jPF_MatKhau_ThemNhanVienMouseClicked(evt);
             }
         });
-        jPanel5.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, 130, 30));
+        jPanel5.add(jPF_MatKhau_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, 130, 30));
 
-        jTF_TenTk_ThemNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTF_TenTk_ThemNhanVien.setBorder(null);
-        jTF_TenTk_ThemNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTF_TenTK_ThemNhanVien.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jTF_TenTK_ThemNhanVien.setBorder(null);
+        jTF_TenTK_ThemNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTF_TenTk_ThemNhanVienMouseClicked(evt);
+                jTF_TenTK_ThemNhanVienMouseClicked(evt);
             }
         });
-        jTF_TenTk_ThemNhanVien.addActionListener(new java.awt.event.ActionListener() {
+        jTF_TenTK_ThemNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTF_TenTk_ThemNhanVienActionPerformed(evt);
+                jTF_TenTK_ThemNhanVienActionPerformed(evt);
             }
         });
-        jPanel5.add(jTF_TenTk_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 130, 30));
+        jPanel5.add(jTF_TenTK_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 130, 30));
 
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setText("Số CMND");
@@ -753,10 +787,34 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
 
         jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel5.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 20, 310));
-        jPanel5.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, 250, 10));
+        jPanel5.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 250, 10));
 
-        jCB_ChucVu_ThemNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CHCH", "NVBH", "NVKH" }));
+        jCB_ChucVu_ThemNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NVBH", "NVKH" }));
         jPanel5.add(jCB_ChucVu_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 170, 130, 30));
+
+        jLb_Status_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_Status_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 360, 250, 30));
+
+        jLb_MANV_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_MANV_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 190, 30));
+
+        jLb_HoTen_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_HoTen_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 190, 30));
+
+        jLb_DiaChi_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_DiaChi_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 190, 30));
+
+        jLb_SDT_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_SDT_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 190, 30));
+
+        jLb_TenTK_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_TenTK_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, 190, 30));
+
+        jLb_MatKhau_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_MatKhau_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 140, 190, 30));
+
+        jLb_CMND_ThemNhanVien.setForeground(new java.awt.Color(255, 153, 102));
+        jPanel5.add(jLb_CMND_ThemNhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 190, 30));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -775,10 +833,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Thêm Nhân Viên", new javax.swing.ImageIcon(getClass().getResource("/Image/Cat Profile_25px.png")), jPanel7); // NOI18N
+        jTabbedPane_NhanVien.addTab("Thêm Nhân Viên", new javax.swing.ImageIcon(getClass().getResource("/Image/Cat Profile_25px.png")), jPanel7); // NOI18N
 
-        jpn_QuanLyNhanVien.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 1020, 480));
-        jTabbedPane1.getAccessibleContext().setAccessibleName("1");
+        jpn_QuanLyNhanVien.add(jTabbedPane_NhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 1020, 480));
+        jTabbedPane_NhanVien.getAccessibleContext().setAccessibleName("1");
 
         jpn_QuanLyNhanVien.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 102, 540, 10));
 
@@ -1012,11 +1070,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_DiaChi_pn_ThongTinCaNhan.setText("Củ Chi, Việt Nam");
         jTF_DiaChi_pn_ThongTinCaNhan.setBorder(null);
         jTF_DiaChi_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTF_DiaChi_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTF_DiaChi_pn_ThongTinCaNhanMouseClicked(evt);
-            }
-        });
         jpn_ThongTinCaNhan.add(jTF_DiaChi_pn_ThongTinCaNhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 374, 30));
 
         jCB_GioiTinh_pn_ThongTinCaNhan.setBackground(new java.awt.Color(0, 120, 120));
@@ -1036,9 +1089,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_Hoten_pn_ThongTinCaNhan.setText("Võ Anh Tuấn");
         jTF_Hoten_pn_ThongTinCaNhan.setBorder(null);
         jTF_Hoten_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTF_Hoten_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTF_Hoten_pn_ThongTinCaNhanMouseClicked(evt);
+        jTF_Hoten_pn_ThongTinCaNhan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF_Hoten_pn_ThongTinCaNhanActionPerformed(evt);
             }
         });
         jpn_ThongTinCaNhan.add(jTF_Hoten_pn_ThongTinCaNhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 200, 30));
@@ -1049,11 +1102,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_DienThoai_pn_ThongTinCaNhan.setText("001672038391");
         jTF_DienThoai_pn_ThongTinCaNhan.setBorder(null);
         jTF_DienThoai_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTF_DienThoai_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTF_DienThoai_pn_ThongTinCaNhanMouseClicked(evt);
-            }
-        });
         jTF_DienThoai_pn_ThongTinCaNhan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF_DienThoai_pn_ThongTinCaNhanKeyTyped(evt);
@@ -1113,11 +1161,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_SoCMND_pn_ThongTinCaNhan.setText("001672038391");
         jTF_SoCMND_pn_ThongTinCaNhan.setBorder(null);
         jTF_SoCMND_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTF_SoCMND_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTF_SoCMND_pn_ThongTinCaNhanMouseClicked(evt);
-            }
-        });
         jTF_SoCMND_pn_ThongTinCaNhan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF_SoCMND_pn_ThongTinCaNhanKeyTyped(evt);
@@ -1847,7 +1890,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTabbedPane2.addTab("Bảng giống vật nuôi", jPanel9);
 
         jpn_QuanLyLoaiSanPham.add(jTabbedPane2);
-        jTabbedPane2.setBounds(30, 380, 1010, 310);
+        jTabbedPane2.setBounds(30, 340, 1010, 310);
 
         jpn_QuanLyThuChi.setBackground(new java.awt.Color(0, 64, 80));
         jpn_QuanLyThuChi.setPreferredSize(new java.awt.Dimension(1070, 720));
@@ -2409,43 +2452,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTB_ThongTinMouseClicked
 
-    private void btn_XacNhan_ThemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XacNhan_ThemNhanVienActionPerformed
-        String MaNV = jTF_MANV_ThemNhanVien.getText();
-        String HoTen = jTF_HoTen_ThemNhanVien.getText();
-        String GioiTinh = jCB_GioiTinh_ThemNhanVien.getItemAt(jCB_GioiTinh_ThemNhanVien.getSelectedIndex()).toString();
-        String NgaySinh = Integer.toString(jDC_NgaySinh_ThemNhanVien.getDate().getYear()+1900)+"-"+Integer.toString(jDC_NgaySinh_ThemNhanVien.getDate().getMonth()+1)+"-"+Integer.toString(jDC_NgaySinh_ThemNhanVien.getDate().getDate());
-        String DiaChi = jTF_DiaChi_ThemNhanVien.getText();
-        String SDT = jTF_SDT_ThemNhanVien.getText();
-        String TenTK = jTF_TenTk_ThemNhanVien.getText();
-        String MatKhau = jPasswordField2.getText();
-        String ChucVu = jCB_ChucVu_ThemNhanVien.getItemAt(jCB_ChucVu_ThemNhanVien.getSelectedIndex()).toString();
-        String Luong = jTF_Luong_ThemNhanVien.getText();
-        String CMND = jTF_SOCMND_ThemNhanVien.getText();
-        if("".equals(MaNV)||"".equals(HoTen)||"".equals(GioiTinh)||"".equals(NgaySinh)||"".equals(DiaChi)||"".equals(SDT)||"".equals(TenTK)||"".equals(MatKhau)||"".equals(ChucVu)||"".equals(Luong)||"".equals(CMND)){
-            JOptionPane.showMessageDialog(this, "Nhập đủ thông tin trước khi thêm nhân viên mới.");
-            return;
-        }
-        int flag1 = 0;
-        int flag2 = 0;
-        BNhanVien nhanvien = new BNhanVien();
-        if(nhanvien.insertByProperties(MaNV, HoTen, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, Luong, CMND))
-            flag1 = 1;
-        BTaiKhoan taikhoan = new BTaiKhoan();
-        if(taikhoan.insertByProperties(MaNV, TenTK, MatKhau))
-            flag2 = 1;
-        if(flag1==1&&flag2==1)
-            JOptionPane.showMessageDialog(this, "Đã thêm thành công thông tin nhân viên và tài khoản");
-        else if(flag1==1)
-            JOptionPane.showMessageDialog(this, "Đã thêm thành công thông tin nhân viên nhưng tạo tài khoan thất bại");
-        else if(flag2==1)
-            JOptionPane.showMessageDialog(this, "Đã thêm thành công tài khoản nhưng tạo thông tin nhân viên thất bại");
-        else
-            JOptionPane.showMessageDialog(this, "Không thể tạo thông tin nhân viên và tài khoản");
-    }//GEN-LAST:event_btn_XacNhan_ThemNhanVienActionPerformed
-
-    private void jTF_TenTk_ThemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_TenTk_ThemNhanVienActionPerformed
+    private void jTF_TenTK_ThemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_TenTK_ThemNhanVienActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTF_TenTk_ThemNhanVienActionPerformed
+    }//GEN-LAST:event_jTF_TenTK_ThemNhanVienActionPerformed
 
     private void jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked
         jLb_Status.setText("");
@@ -3293,6 +3302,111 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbx_LoaiVatNuoi_pn_QLKhoActionPerformed
 
+    private void JBtn_TimKiem_NhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JBtn_TimKiem_NhanVienMouseClicked
+        String s = "%" +  jTF_ThongTinTimKiem.getText()+ "%";
+        String key = jCB_TimKiem_NHANVIEN.getSelectedItem().toString() ;
+        UpdateTableThongTinNhanVien(key,s);
+    }//GEN-LAST:event_JBtn_TimKiem_NhanVienMouseClicked
+
+    private void btn_XacNhan_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_XacNhan_ThemNhanVienMouseClicked
+        SetAllLableInThemNhanVienEmpty();
+        boolean flag = true;
+        BNhanVien bnv = new BNhanVien();
+        ArrayList<CNhanVienMoRong> cnv = bnv.getAllNhanVienMoRongByMANV(jTF_MANV_ThemNhanVien.getText());
+        if(cnv.size()>0){
+            flag = false;
+            jLb_MANV_ThemNhanVien.setText("*Mã NV đã tồn tại");
+        }
+        if(jTF_HoTen_ThemNhanVien.getText().equals("")){
+            flag = false;
+            jLb_HoTen_ThemNhanVien.setText("*Tên nhân viên không được để trống");
+        }
+        else if(CRule.checkHoTen(jTF_HoTen_ThemNhanVien.getText())==false){
+            flag = false;
+            jLb_HoTen_ThemNhanVien.setText("*Tên nhân viên không chứa ký tự đặt biệt");
+        }
+        if(jTF_DiaChi_ThemNhanVien.getText().equals("")){
+            flag = false;
+            jLb_DiaChi_ThemNhanVien.setText("*Tên nhân viên không được để trống");
+        }
+        if(CRule.checkSDT(jTF_SDT_ThemNhanVien.getText())==false){
+            flag = false;
+            jLb_SDT_ThemNhanVien.setText("*Số điện thoại không hợp lệ");
+        }
+        if(jTF_SOCMND_ThemNhanVien.getText().equals("")){
+            flag= false;
+            jLb_CMND_ThemNhanVien.setText("*CMND không được để trống");
+        }
+        cnv.clear();
+        String tenTk = jTF_TenTK_ThemNhanVien.getText();
+        cnv = bnv.getAllNhanVienMoRongByTenTk(tenTk);
+        if(cnv.size()>0){
+            flag= false;
+            jLb_TenTK_ThemNhanVien.setText("*Tên TK đã tồn tại");
+        }
+        if(jPF_MatKhau_ThemNhanVien.getText().length()==0){
+            flag= false;
+            jLb_MatKhau_ThemNhanVien.setText("*Mật khẩu không được trống");
+        }
+        // Nếu Xác Nhận Thông Tin Thành Công
+        if(flag){
+            CNhanVien nv = new CNhanVien();
+            nv.setMaNV(jTF_MANV_ThemNhanVien.getText());
+            nv.setHoTen(jTF_HoTen_ThemNhanVien.getText());
+            nv.setGioiTinh(jCB_GioiTinh_ThemNhanVien.getSelectedItem().toString());
+            java.util.Date utilDate = jDC_NgaySinh_ThemNhanVien.getDate();
+            java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+            nv.setNgaySinh(sqlDate);
+            nv.setDiaChi(jTF_DiaChi_ThemNhanVien.getText());
+            nv.setSdt(jTF_SDT_ThemNhanVien.getText());
+            nv.setChucVu(jCB_ChucVu_ThemNhanVien.getSelectedItem().toString());
+            nv.setLuong(Integer.parseInt(jTF_Luong_ThemNhanVien.getText()));
+            nv.setCmnd(jTF_SOCMND_ThemNhanVien.getText());
+            nv.InsertNew();
+            BTaiKhoan btk = new BTaiKhoan();
+            btk.insertByProperties(jTF_TenTK_ThemNhanVien.getText(), jPF_MatKhau_ThemNhanVien.getText()
+                    , jCB_ChucVu_ThemNhanVien.getSelectedItem().toString());
+            jLb_Status_ThemNhanVien.setText("Cập nhật thành công");
+        }
+        
+        // Cập nhật lại class và gửi thông tin thay đổi về database
+    }//GEN-LAST:event_btn_XacNhan_ThemNhanVienMouseClicked
+
+    private void jTF_Luong_ThemNhanVienKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF_Luong_ThemNhanVienKeyTyped
+       char vchar = evt.getKeyChar();
+       if(!(Character.isDigit(vchar))|| vchar == KeyEvent.VK_BACKSPACE || vchar == KeyEvent.VK_DELETE){
+           evt.consume();
+       }
+    }//GEN-LAST:event_jTF_Luong_ThemNhanVienKeyTyped
+
+    private void jTabbedPane_NhanVienStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane_NhanVienStateChanged
+        int index = jTabbedPane_NhanVien.getSelectedIndex();
+        if(index == 1){
+            ResetPnThemNhanVien();
+        }
+        else if(index == 0){
+            UpdateTableThongTinNhanVien();
+        }
+    }//GEN-LAST:event_jTabbedPane_NhanVienStateChanged
+
+    private void jTF_Hoten_pn_ThongTinCaNhanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_Hoten_pn_ThongTinCaNhanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF_Hoten_pn_ThongTinCaNhanActionPerformed
+
+    private void jTF_SOCMND_ThemNhanVienKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF_SOCMND_ThemNhanVienKeyTyped
+        char vchar = evt.getKeyChar();
+       if(!(Character.isDigit(vchar))|| vchar == KeyEvent.VK_BACKSPACE || vchar == KeyEvent.VK_DELETE){
+           evt.consume();
+       }
+    }//GEN-LAST:event_jTF_SOCMND_ThemNhanVienKeyTyped
+
+    private void jTF_SDT_ThemNhanVienKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTF_SDT_ThemNhanVienKeyTyped
+       char vchar = evt.getKeyChar();
+       if(!(Character.isDigit(vchar))|| vchar == KeyEvent.VK_BACKSPACE || vchar == KeyEvent.VK_DELETE){
+           evt.consume();
+       }
+    }//GEN-LAST:event_jTF_SDT_ThemNhanVienKeyTyped
+
     private void tf_MaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_MaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked
         tf_MaVatNuoi_pn_ThemSP_pn_QLSP.selectAll();
     }//GEN-LAST:event_tf_MaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked
@@ -3325,37 +3439,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         tf_MaVatNuoi_pn_XoaSP_pn_QLSP5.selectAll();
     }//GEN-LAST:event_tf_MaVatNuoi_pn_XoaSP_pn_QLSP5MouseClicked
 
-    private void jTF_MANV_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_MANV_ThemNhanVienMouseClicked
-        jTF_MANV_ThemNhanVien.selectAll();
-    }//GEN-LAST:event_jTF_MANV_ThemNhanVienMouseClicked
-
-    private void jTF_HoTen_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_HoTen_ThemNhanVienMouseClicked
-        jTF_HoTen_ThemNhanVien.selectAll();
-    }//GEN-LAST:event_jTF_HoTen_ThemNhanVienMouseClicked
-
-    private void jTF_DiaChi_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_DiaChi_ThemNhanVienMouseClicked
-        jTF_DiaChi_ThemNhanVien.selectAll();
-    }//GEN-LAST:event_jTF_DiaChi_ThemNhanVienMouseClicked
-
-    private void jTF_SDT_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_SDT_ThemNhanVienMouseClicked
-        jTF_SDT_ThemNhanVien.selectAll();
-    }//GEN-LAST:event_jTF_SDT_ThemNhanVienMouseClicked
-
-    private void jTF_TenTk_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_TenTk_ThemNhanVienMouseClicked
-        jTF_TenTk_ThemNhanVien.selectAll();
-    }//GEN-LAST:event_jTF_TenTk_ThemNhanVienMouseClicked
-
-    private void jPasswordField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField2MouseClicked
-        jPasswordField2.selectAll();
-    }//GEN-LAST:event_jPasswordField2MouseClicked
-
-    private void jTF_Luong_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Luong_ThemNhanVienMouseClicked
-        jTF_Luong_ThemNhanVien.selectAll();
-    }//GEN-LAST:event_jTF_Luong_ThemNhanVienMouseClicked
-
-    private void jTF_SOCMND_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_SOCMND_ThemNhanVienMouseClicked
-        jTF_SOCMND_ThemNhanVien.selectAll();
-    }//GEN-LAST:event_jTF_SOCMND_ThemNhanVienMouseClicked
+    private void jTF_ThongTinTimKiemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_ThongTinTimKiemMouseClicked
+        jTF_ThongTinTimKiem.selectAll();
+    }//GEN-LAST:event_jTF_ThongTinTimKiemMouseClicked
 
     private void jTF_MANV_ThongTinNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_MANV_ThongTinNhanVienMouseClicked
         jTF_MANV_ThongTinNhanVien.selectAll();
@@ -3389,25 +3475,61 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_SOCMND_QuanLyNhanVien.selectAll();
     }//GEN-LAST:event_jTF_SOCMND_QuanLyNhanVienMouseClicked
 
-    private void jTextField5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MouseClicked
-        jTextField5.selectAll();
-    }//GEN-LAST:event_jTextField5MouseClicked
+    private void jTF_MANV_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_MANV_ThemNhanVienMouseClicked
+        jTF_MANV_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jTF_MANV_ThemNhanVienMouseClicked
 
-    private void jTF_Hoten_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Hoten_pn_ThongTinCaNhanMouseClicked
-        jTF_Hoten_pn_ThongTinCaNhan.selectAll();
-    }//GEN-LAST:event_jTF_Hoten_pn_ThongTinCaNhanMouseClicked
+    private void jTF_HoTen_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_HoTen_ThemNhanVienMouseClicked
+        jTF_HoTen_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jTF_HoTen_ThemNhanVienMouseClicked
 
-    private void jTF_DiaChi_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_DiaChi_pn_ThongTinCaNhanMouseClicked
-        jTF_DiaChi_pn_ThongTinCaNhan.selectAll();
-    }//GEN-LAST:event_jTF_DiaChi_pn_ThongTinCaNhanMouseClicked
+    private void jTF_DiaChi_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_DiaChi_ThemNhanVienMouseClicked
+        jTF_DiaChi_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jTF_DiaChi_ThemNhanVienMouseClicked
 
-    private void jTF_DienThoai_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_DienThoai_pn_ThongTinCaNhanMouseClicked
-        jTF_DienThoai_pn_ThongTinCaNhan.selectAll();
-    }//GEN-LAST:event_jTF_DienThoai_pn_ThongTinCaNhanMouseClicked
+    private void jTF_SDT_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_SDT_ThemNhanVienMouseClicked
+        jTF_SDT_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jTF_SDT_ThemNhanVienMouseClicked
 
-    private void jTF_SoCMND_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_SoCMND_pn_ThongTinCaNhanMouseClicked
-        jTF_SoCMND_pn_ThongTinCaNhan.selectAll();
-    }//GEN-LAST:event_jTF_SoCMND_pn_ThongTinCaNhanMouseClicked
+    private void jTF_TenTK_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_TenTK_ThemNhanVienMouseClicked
+        jTF_TenTK_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jTF_TenTK_ThemNhanVienMouseClicked
+
+    private void jPF_MatKhau_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPF_MatKhau_ThemNhanVienMouseClicked
+        jPF_MatKhau_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jPF_MatKhau_ThemNhanVienMouseClicked
+
+    private void jTF_Luong_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Luong_ThemNhanVienMouseClicked
+        jTF_Luong_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jTF_Luong_ThemNhanVienMouseClicked
+
+    private void jTF_SOCMND_ThemNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_SOCMND_ThemNhanVienMouseClicked
+        jTF_SOCMND_ThemNhanVien.selectAll();
+    }//GEN-LAST:event_jTF_SOCMND_ThemNhanVienMouseClicked
+    void ResetPnThemNhanVien(){
+        jPF_MatKhau_ThemNhanVien.setText("");
+        jDC_NgaySinh_ThemNhanVien.setDate(new Date(-1));
+        jCB_ChucVu_ThemNhanVien.setSelectedItem("NVBH");
+        jTF_SOCMND_ThemNhanVien.setText("");
+        jTF_MANV_ThemNhanVien.setText("");
+        jTF_HoTen_ThemNhanVien.setText("");
+        jTF_DiaChi_ThemNhanVien.setText("");
+        jTF_SDT_ThemNhanVien.setText("");
+        jTF_TenTK_ThemNhanVien.setText("");
+        jTF_SOCMND_ThemNhanVien.setText("");
+        SetAllLableInThemNhanVienEmpty();
+    }
+    
+    void SetAllLableInThemNhanVienEmpty(){
+        jLb_CMND_ThemNhanVien.setText("");
+        jLb_MANV_ThemNhanVien.setText("");
+        jLb_HoTen_ThemNhanVien.setText("");
+        jLb_DiaChi_ThemNhanVien.setText("");
+        jLb_SDT_ThemNhanVien.setText("");
+        jLb_TenTK_ThemNhanVien.setText("");
+        jLb_CMND_ThemNhanVien.setText("");
+        jLb_Status_ThemNhanVien.setText("");
+    }
     
     private int MaxDay(int Month, int Year){
         switch (Month){
@@ -3572,6 +3694,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         BNhanVien nv = new BNhanVien();
         ArrayList<CNhanVienMoRong> cnv = nv.getAllNhanVienMoRong();
         
+        
         for(int i  =  0 ; i < cnv.size() ; i++){
             Object[] rowData = new Object[11];
             rowData[0] = cnv.get(i).getMaNV();
@@ -3589,6 +3712,52 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         }
         jTB_ThongTin.setModel(tableModel);
     }
+    
+    
+    void UpdateTableThongTinNhanVien(String key, String s){
+        jTB_ThongTin.clearSelection();
+        DefaultTableModel tableModel = (DefaultTableModel) jTB_ThongTin.getModel();
+        
+        BNhanVien nv = new BNhanVien();
+        ArrayList<CNhanVienMoRong> cnv;
+        if(key.equals("Mã NV")){ 
+            cnv = nv.getAllNhanVienMoRongByMANV(s);
+        }
+        else if(key.equals("Họ Tên")){
+            cnv = nv.getAllNhanVienMoRongByHoTen(s);
+        }
+        else if(key.equals("Số CMND")){
+            cnv = nv.getAllNhanVienMoRongByCMND(s);
+        }
+        else{
+            cnv = nv.getAllNhanVienMoRong();
+        }
+        if(cnv.size()==0){
+            tableModel.setRowCount(0);
+            jTB_ThongTin.setModel(tableModel);
+        }
+        else
+        {
+            tableModel.getDataVector().removeAllElements();
+            for(int i  =  0 ; i < cnv.size() ; i++){
+                Object[] rowData = new Object[11];
+                rowData[0] = cnv.get(i).getMaNV();
+                rowData[1] = cnv.get(i).getHoTen();
+                rowData[2] = cnv.get(i).getGioiTinh();
+                rowData[3] = cnv.get(i).getNgaySinh();
+                rowData[4] = cnv.get(i).getDiaChi();
+                rowData[5] = cnv.get(i).getSdt();
+                rowData[6] = cnv.get(i).getChucVu();
+                rowData[7] = cnv.get(i).getLuong();
+                rowData[8] = cnv.get(i).getCmnd();
+                rowData[9] = cnv.get(i).getTenTK();
+                rowData[10] = cnv.get(i).getMatKhau();
+                tableModel.addRow(rowData);
+            }
+            jTB_ThongTin.setModel(tableModel);
+        }
+    }
+    
     
     void ExitProgram(){
         int output = JOptionPane.showConfirmDialog(this,"Bạn có thật sự muốn thoát không ?","Thông báo",JOptionPane.YES_NO_OPTION);
@@ -3656,6 +3825,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JBtn_TimKiem_NhanVien;
     private javax.swing.JButton JNhanVienBanHang_XemHoaDon_btn_TimKiem;
     private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_BangHoaDon;
     private javax.swing.JLabel JNhanVienBanHang_XemHoaDon_lb_BangHoaDon2;
@@ -3692,13 +3862,12 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.persistence.EntityManager entityManager;
     private javax.swing.JButton jBtn_ChinhSua_pn_ThongTinCaNhan;
     private javax.swing.JButton jBtn_XacNhan_pn_ThongTinCaNhan;
-    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jCB_ChucVu_ThemNhanVien;
     private javax.swing.JComboBox<String> jCB_ChucVu_ThongTinNhanVien;
     private javax.swing.JComboBox<String> jCB_GioiTinh_ThemNhanVien;
     private javax.swing.JComboBox<String> jCB_GioiTinh_ThongTinNhanVien;
     private javax.swing.JComboBox<String> jCB_GioiTinh_pn_ThongTinCaNhan;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jCB_TimKiem_NHANVIEN;
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_QuanLyNhanVien;
     private com.toedter.calendar.JDateChooser jDC_NgaySinh_ThemNhanVien;
@@ -3738,11 +3907,20 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLb_CMND_ThemNhanVien;
+    private javax.swing.JLabel jLb_DiaChi_ThemNhanVien;
     private javax.swing.JLabel jLb_Error_HoTen;
     private javax.swing.JLabel jLb_Error_SDT;
     private javax.swing.JLabel jLb_Error_SoCMND;
+    private javax.swing.JLabel jLb_HoTen_ThemNhanVien;
+    private javax.swing.JLabel jLb_MANV_ThemNhanVien;
+    private javax.swing.JLabel jLb_MatKhau_ThemNhanVien;
+    private javax.swing.JLabel jLb_SDT_ThemNhanVien;
     private javax.swing.JLabel jLb_Status;
+    private javax.swing.JLabel jLb_Status_ThemNhanVien;
+    private javax.swing.JLabel jLb_TenTK_ThemNhanVien;
     private javax.swing.JTextField jNhanVienBanHang_XemHoaDon_Tong;
+    private javax.swing.JPasswordField jPF_MatKhau_ThemNhanVien;
     private javax.swing.JPanel jP_XoaSanPham_QLSP;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -3758,7 +3936,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -3800,14 +3977,14 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JTextField jTF_SOCMND_QuanLyNhanVien;
     private javax.swing.JTextField jTF_SOCMND_ThemNhanVien;
     private javax.swing.JTextField jTF_SoCMND_pn_ThongTinCaNhan;
-    private javax.swing.JTextField jTF_TenTk_ThemNhanVien;
+    private javax.swing.JTextField jTF_TenTK_ThemNhanVien;
     private javax.swing.JTextField jTF_TenTk_ThongTinNhanVien;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTF_ThongTinTimKiem;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTabbedPane jTabbedPane_NhanVien;
     private javax.swing.JLabel jlb_Name;
     private javax.swing.JPanel jpn_QuanLyKho;
     private javax.swing.JPanel jpn_QuanLyKho_BangSanPham;
