@@ -96,7 +96,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        //bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("localhost:1433;databaseName=QuanLyCuaHangThuCungPU").createEntityManager();
         nhanvienQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT n FROM Nhanvien n");
@@ -203,7 +203,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_SoCMND_pn_ThongTinCaNhan = new javax.swing.JTextField();
         jLb_Status = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jLb_Error_SoCMND1 = new javax.swing.JLabel();
+        jLb_Error_SoCMND = new javax.swing.JLabel();
         jpn_QuanLyKho = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -361,8 +361,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jTF_MANV_ThongTinNhanVien.setName(""); // NOI18N
         jTF_MANV_ThongTinNhanVien.setSelectionColor(new java.awt.Color(255, 51, 153));
 
-        //org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        //bindingGroup.addBinding(binding);
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTB_ThongTin, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.MANV}"), jTF_MANV_ThongTinNhanVien, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
 
         jTF_MANV_ThongTinNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -457,7 +457,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
 
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Tên Tài Khoản");
-        jpn_ThongTinNhanVien.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 70, 30));
+        jpn_ThongTinNhanVien.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 100, 30));
 
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Mật Khẩu");
@@ -1023,8 +1023,8 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jpn_ThongTinCaNhan.add(jLb_Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 200, 30));
         jpn_ThongTinCaNhan.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, -1));
 
-        jLb_Error_SoCMND1.setForeground(new java.awt.Color(255, 153, 102));
-        jpn_ThongTinCaNhan.add(jLb_Error_SoCMND1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
+        jLb_Error_SoCMND.setForeground(new java.awt.Color(255, 153, 102));
+        jpn_ThongTinCaNhan.add(jLb_Error_SoCMND, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 200, 30));
 
         jpn_QuanLyKho.setBackground(new java.awt.Color(0, 64, 80));
         jpn_QuanLyKho.setPreferredSize(new java.awt.Dimension(1070, 720));
@@ -1253,7 +1253,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_ThemSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP);
-        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP.setBounds(410, 120, 130, 41);
 
         jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
         jpn_ThemSanPham_QLSP.add(jSeparator9);
@@ -1289,7 +1289,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_SuaSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP1);
-        btn_XacNhan_pn_ThemSP_pn_QLSP1.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP1.setBounds(410, 120, 130, 41);
 
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP1.setBackground(new java.awt.Color(0, 60, 60));
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1362,7 +1362,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_XacNhan_pn_ThemSP_pn_QLSP3);
-        btn_XacNhan_pn_ThemSP_pn_QLSP3.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP3.setBounds(410, 120, 130, 41);
 
         jTabbedPane4.addTab("Xóa loài vật nuôi", jPanel1);
         jPanel1.getAccessibleContext().setAccessibleName("Sửa giống vật nuôi");
@@ -1443,7 +1443,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jP_XoaSanPham_QLSP.add(btn_XacNhan_pn_ThemSP_pn_QLSP2);
-        btn_XacNhan_pn_ThemSP_pn_QLSP2.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP2.setBounds(410, 120, 130, 41);
 
         jTabbedPane4.addTab("Thêm giống vật nuôi", jP_XoaSanPham_QLSP);
 
@@ -1499,7 +1499,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel10.add(btn_XacNhan_pn_ThemSP_pn_QLSP4);
-        btn_XacNhan_pn_ThemSP_pn_QLSP4.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP4.setBounds(410, 120, 130, 41);
 
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP2.setBackground(new java.awt.Color(0, 60, 60));
         cmbx_LoaiVatNuoi_pn_XoaSP_pn_QLSP2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1570,7 +1570,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jPanel11.add(btn_XacNhan_pn_ThemSP_pn_QLSP5);
-        btn_XacNhan_pn_ThemSP_pn_QLSP5.setBounds(410, 120, 130, 33);
+        btn_XacNhan_pn_ThemSP_pn_QLSP5.setBounds(410, 120, 130, 41);
 
         jTabbedPane4.addTab("Xóa giống vật nuôi", jPanel11);
 
@@ -1583,7 +1583,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         jLabel40.setText("QUẢN LÝ LOẠI SẢN PHẨM");
         jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jpn_QuanLyLoaiSanPham.add(jLabel40);
-        jLabel40.setBounds(30, 20, 630, 60);
+        jLabel40.setBounds(30, 20, 630, 67);
 
         jTabbedPane2.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane2.setFont(new java.awt.Font("Roboto Lt", 0, 20)); // NOI18N
@@ -1718,7 +1718,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             }
         });
         jpn_QuanLyThuChi.add(jNhanVienBanHang_XemHoaDon_Tong);
-        jNhanVienBanHang_XemHoaDon_Tong.setBounds(850, 560, 180, 31);
+        jNhanVienBanHang_XemHoaDon_Tong.setBounds(850, 560, 180, 33);
 
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JNhanVienBanHang_XemHoaDon_lb_BangHoaDon.setForeground(new java.awt.Color(255, 255, 255));
@@ -2007,7 +2007,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             .addComponent(jpn_QuanLyThuChi, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        //bindingGroup.bind();
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2297,6 +2297,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jTF_TenTk_ThemNhanVienActionPerformed
 
     private void jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_ChinhSua_pn_ThongTinCaNhanMouseClicked
+        jLb_Status.setText("");
         is_ChinhSua_ThongTinCaNhan = true;
         jBtn_ChinhSua_pn_ThongTinCaNhan.setEnabled(false);
         ThongTinCaNhan_SetAllTextFieldEnable();
@@ -2305,6 +2306,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
 
     private void jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtn_XacNhan_pn_ThongTinCaNhanMouseClicked
         boolean flag = true;
+        if(jTF_Hoten_pn_ThongTinCaNhan.getText().equals("")){
+            flag = false;
+            jLb_Error_HoTen.setText("*Tên đăng nhập không được để trống");
+        }
         if(CRule.checkHoTen(jTF_Hoten_pn_ThongTinCaNhan.getText())==false){
             flag = false;
             jLb_Error_HoTen.setText("*Tên đăng nhập không chứa ký tự đặc biệt");
@@ -2312,6 +2317,10 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
         if(CRule.checkSDT(jTF_DienThoai_pn_ThongTinCaNhan.getText())==false){
             flag = false;
             jLb_Error_SDT.setText("*Số điện thoại không hợp lệ");
+        }
+        if(jTF_SoCMND_pn_ThongTinCaNhan.getText().equals("")){
+            flag = false;
+            jLb_Error_SoCMND.setText("*Số CMND không được để trống");
         }
         // Nếu Xác Nhận Thông Tin Thành Công
         if(flag){
@@ -2322,6 +2331,9 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
             myacc.Update();
             jlb_Name.setText("Chào "+ myacc.getHoTen());
             jLb_Status.setText("Cập nhật thành công");
+            jLb_Error_HoTen.setText("");
+            jLb_Error_SDT.setText("");
+            jLb_Error_SoCMND.setText("");
         }
         
         // Cập nhật lại class và gửi thông tin thay đổi về database
@@ -3435,7 +3447,7 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLb_Error_HoTen;
     private javax.swing.JLabel jLb_Error_SDT;
-    private javax.swing.JLabel jLb_Error_SoCMND1;
+    private javax.swing.JLabel jLb_Error_SoCMND;
     private javax.swing.JLabel jLb_Status;
     private javax.swing.JTextField jNhanVienBanHang_XemHoaDon_Tong;
     private javax.swing.JPanel jP_XoaSanPham_QLSP;
@@ -3534,6 +3546,6 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP3;
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP4;
     private javax.swing.JTextField tf_MaVatNuoi_pn_XoaSP_pn_QLSP5;
-    //private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

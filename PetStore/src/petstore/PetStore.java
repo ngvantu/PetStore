@@ -24,9 +24,9 @@ public class PetStore {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Thread(new Runnable() {
-                public void run() {
-                    jFLogin l = new jFLogin();
+        new Thread(new Runnable(){
+                public void run(){
+                    jFLogin login = new jFLogin();
                 }
             }
         ).start();
