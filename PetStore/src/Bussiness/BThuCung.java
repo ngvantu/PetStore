@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class BThuCung extends Bussiness {
     public String MaThuCung;
     public int DonGia;
-    
+
     public BThuCung() {
         DB = new Data();
         Table = "THUCUNG";
@@ -55,5 +55,5 @@ public class BThuCung extends Bussiness {
         return super.updateBySQLString(SQL);
     }
     
-
+    
 }

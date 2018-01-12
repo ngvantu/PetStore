@@ -81,4 +81,17 @@ public class BSanPham extends Bussiness {
         SQL = "xoa_san_pham " + MASP;
         return super.updateBySQLString(SQL);
     }
+    
+    public ArrayList<BSanPham> GetDanhSachSanPhamDaBan(String NgayBD, String NgayKT) throws SQLException{
+        ArrayList<BSanPham> arrList = new ArrayList<BSanPham>();
+        SQL = "XuatDanhSachSanPhamDaBan " + "'" + NgayBD + "', '" + NgayKT + "'";
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+           BSanPham SanPham = new BSanPham();
+           SanPham.TenSP = rs.getString("TENSP");
+           SanPham.SL = rs.getInt("SOLUONG");
+           arrList.add(SanPham);
+        }
+        return arrList;
+    }
 }

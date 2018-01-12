@@ -3065,6 +3065,40 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                 JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
                 JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
             }
+            
+            BSanPham sanpham = new BSanPham();
+            ArrayList<BSanPham> arrListSP = null;
+            try {
+                arrListSP = sanpham.GetDanhSachSanPhamDaBan(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int j;
+            for(j = 0; j<arrListSP.size();j++){
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).TenSP, j, 0);
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).SL, j, 1);
+            }
+            for(j=j;j<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();j++){
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 0);
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 1);
+            }
+            
+            BGiong giong = new BGiong();
+            ArrayList<BGiong> arrListGiong = null;
+            try {
+                arrListGiong = giong.GetDanhSachThuCungDaBan(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int k;
+            for(k = 0; k<arrListGiong.size();k++){
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).TenGiong, k, 0);
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).SL, k, 1);
+            }
+            for(k=k;k<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();k++){
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 0);
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 1);
+            }
         }
         else if(Loai==2){
             String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-"+Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getMonth()+1)+"-01";
@@ -3094,6 +3128,40 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                 JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
                 JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
             }
+            
+            BSanPham sanpham = new BSanPham();
+            ArrayList<BSanPham> arrListSP = null;
+            try {
+                arrListSP = sanpham.GetDanhSachSanPhamDaBan(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int j;
+            for(j = 0; j<arrListSP.size();j++){
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).TenSP, j, 0);
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).SL, j, 1);
+            }
+            for(j=j;j<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();j++){
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 0);
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 1);
+            }
+            
+            BGiong giong = new BGiong();
+            ArrayList<BGiong> arrListGiong = null;
+            try {
+                arrListGiong = giong.GetDanhSachThuCungDaBan(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int k;
+            for(k = 0; k<arrListGiong.size();k++){
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).TenGiong, k, 0);
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).SL, k, 1);
+            }
+            for(k=k;k<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();k++){
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 0);
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 1);
+            }
         }
         else if(Loai == 3){
             String NgayBD = Integer.toString(JNhanVienBanHang_XemHoaDon_time_Time1.getDate().getYear()+1900)+"-01-01";
@@ -3122,6 +3190,40 @@ public class jF_ChuCuaHang extends javax.swing.JFrame {
                 JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 3);
                 JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 4);
                 JNhanVienBanHang_XemHoaDon_tb_BangHoaDon.setValueAt("", i, 5);
+            }
+            
+            BSanPham sanpham = new BSanPham();
+            ArrayList<BSanPham> arrListSP = null;
+            try {
+                arrListSP = sanpham.GetDanhSachSanPhamDaBan(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int j;
+            for(j = 0; j<arrListSP.size();j++){
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).TenSP, j, 0);
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListSP.get(j).SL, j, 1);
+            }
+            for(j=j;j<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();j++){
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 0);
+                table_BangLoai_pn_BangVatNuoi_pn_QLSP1.setValueAt("", j, 1);
+            }
+            
+            BGiong giong = new BGiong();
+            ArrayList<BGiong> arrListGiong = null;
+            try {
+                arrListGiong = giong.GetDanhSachThuCungDaBan(NgayBD, NgayKT);
+            } catch (SQLException ex) {
+                Logger.getLogger(jF_ChuCuaHang.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int k;
+            for(k = 0; k<arrListGiong.size();k++){
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).TenGiong, k, 0);
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt(arrListGiong.get(k).SL, k, 1);
+            }
+            for(k=k;k<table_BangLoai_pn_BangVatNuoi_pn_QLSP1.getRowCount();k++){
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 0);
+                table_BangGiong_pn_BangVatNuoi_pn_QLSP1.setValueAt("", k, 1);
             }
         }
         jNhanVienBanHang_XemHoaDon_Tong.setText(Integer.toString(Tien));

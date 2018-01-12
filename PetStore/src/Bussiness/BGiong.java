@@ -20,6 +20,7 @@ public class BGiong extends Bussiness{
     public String TenGiong;
     public String MaGiong;
     public String MoTa;
+    public int SL;
     public BGiong() {
         DB = new Data();
         Table = "GIONG";
@@ -50,5 +51,18 @@ public class BGiong extends Bussiness{
     public boolean insertByProperties(String MALOAI, String MAGIONG, String TENGIONG, String MOTA){
         SQL="INSERT INTO "+Table+" values('"+MAGIONG+"','"+MALOAI+"',N'"+TENGIONG+"',N'"+MOTA+"')";
         return super.insertBySQLString(SQL);
+    }
+    
+    public ArrayList<BGiong> GetDanhSachThuCungDaBan(String NgayBD, String NgayKT) throws SQLException{
+        ArrayList<BGiong> arrList = new ArrayList<BGiong>();
+        SQL = "XuatDanhSachThuCungDaBan " + "'" + NgayBD + "', '" + NgayKT + "'";
+        ResultSet rs = DB.getData(SQL);
+        while(rs.next()){
+           BGiong SanPham = new BGiong();
+           SanPham.TenGiong = rs.getString("TENGIONG");
+           SanPham.SL = rs.getInt("SOLUONG");
+           arrList.add(SanPham);
+        }
+        return arrList;
     }
 }
