@@ -171,7 +171,6 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         cmbx_LoaiVatNuoi_pn_QLKho = new javax.swing.JComboBox<>();
         cmbx_GiongVatNuoi_pn_QLKho = new javax.swing.JComboBox<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
         setIconImages(null);
         setLocationByPlatform(true);
@@ -373,6 +372,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jTF_DiaChi_pn_ThongTinCaNhan.setText("Củ Chi, Việt Nam");
         jTF_DiaChi_pn_ThongTinCaNhan.setBorder(null);
         jTF_DiaChi_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTF_DiaChi_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_DiaChi_pn_ThongTinCaNhanMouseClicked(evt);
+            }
+        });
         jpn_ThongTinCaNhan.add(jTF_DiaChi_pn_ThongTinCaNhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 374, 30));
 
         jCB_GioiTinh_pn_ThongTinCaNhan.setBackground(new java.awt.Color(0, 120, 120));
@@ -392,6 +396,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jTF_Hoten_pn_ThongTinCaNhan.setText("Võ Anh Tuấn");
         jTF_Hoten_pn_ThongTinCaNhan.setBorder(null);
         jTF_Hoten_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTF_Hoten_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_Hoten_pn_ThongTinCaNhanMouseClicked(evt);
+            }
+        });
         jpn_ThongTinCaNhan.add(jTF_Hoten_pn_ThongTinCaNhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 200, 30));
 
         jTF_DienThoai_pn_ThongTinCaNhan.setBackground(new java.awt.Color(0, 120, 120));
@@ -400,6 +409,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jTF_DienThoai_pn_ThongTinCaNhan.setText("001672038391");
         jTF_DienThoai_pn_ThongTinCaNhan.setBorder(null);
         jTF_DienThoai_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTF_DienThoai_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_DienThoai_pn_ThongTinCaNhanMouseClicked(evt);
+            }
+        });
         jTF_DienThoai_pn_ThongTinCaNhan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF_DienThoai_pn_ThongTinCaNhanKeyTyped(evt);
@@ -454,6 +468,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         jTF_SoCMND_pn_ThongTinCaNhan.setText("001672038391");
         jTF_SoCMND_pn_ThongTinCaNhan.setBorder(null);
         jTF_SoCMND_pn_ThongTinCaNhan.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTF_SoCMND_pn_ThongTinCaNhan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_SoCMND_pn_ThongTinCaNhanMouseClicked(evt);
+            }
+        });
         jTF_SoCMND_pn_ThongTinCaNhan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTF_SoCMND_pn_ThongTinCaNhanKeyTyped(evt);
@@ -640,6 +659,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setText("Đơn giá");
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_GiaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jpn_ThemSanPham_QLSP.add(tf_GiaVatNuoi_pn_ThemSP_pn_QLSP);
         tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.setBounds(780, 30, 190, 30);
 
@@ -647,6 +671,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_GiaSP_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_GiaSP_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_GiaSP_pn_ThemSP_pn_QLSP.setText("Đơn giá");
+        tf_GiaSP_pn_ThemSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_GiaSP_pn_ThemSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         tf_GiaSP_pn_ThemSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_GiaSP_pn_ThemSP_pn_QLSPActionPerformed(evt);
@@ -659,6 +688,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setText("Mã vật nuôi");
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_MaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jpn_ThemSanPham_QLSP.add(tf_MaVatNuoi_pn_ThemSP_pn_QLSP);
         tf_MaVatNuoi_pn_ThemSP_pn_QLSP.setBounds(520, 30, 190, 30);
 
@@ -666,6 +700,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_MaSP_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_MaSP_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_MaSP_pn_ThemSP_pn_QLSP.setText("Mã sản phẩm");
+        tf_MaSP_pn_ThemSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_MaSP_pn_ThemSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jpn_ThemSanPham_QLSP.add(tf_MaSP_pn_ThemSP_pn_QLSP);
         tf_MaSP_pn_ThemSP_pn_QLSP.setBounds(270, 80, 190, 30);
 
@@ -673,6 +712,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_TenSP_pn_ThemSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_TenSP_pn_ThemSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_TenSP_pn_ThemSP_pn_QLSP.setText("Tên sản phẩm");
+        tf_TenSP_pn_ThemSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_TenSP_pn_ThemSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         tf_TenSP_pn_ThemSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_TenSP_pn_ThemSP_pn_QLSPActionPerformed(evt);
@@ -741,6 +785,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_TenSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_TenSP_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_TenSP_pn_SuaSP_pn_QLSP.setText("Tên sản phẩm");
+        tf_TenSP_pn_SuaSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_TenSP_pn_SuaSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         tf_TenSP_pn_SuaSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_TenSP_pn_SuaSP_pn_QLSPActionPerformed(evt);
@@ -753,6 +802,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setText("Đơn giá");
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_GiaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jpn_SuaSanPham_QLSP.add(tf_GiaVatNuoi_pn_SuaSP_pn_QLSP);
         tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.setBounds(630, 30, 150, 30);
 
@@ -760,6 +814,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_GiaSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_GiaSP_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_GiaSP_pn_SuaSP_pn_QLSP.setText("Đơn giá");
+        tf_GiaSP_pn_SuaSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_GiaSP_pn_SuaSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         tf_GiaSP_pn_SuaSP_pn_QLSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_GiaSP_pn_SuaSP_pn_QLSPActionPerformed(evt);
@@ -802,6 +861,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_MaSP_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_MaSP_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_MaSP_pn_SuaSP_pn_QLSP.setText("Mã sản phẩm");
+        tf_MaSP_pn_SuaSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_MaSP_pn_SuaSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jpn_SuaSanPham_QLSP.add(tf_MaSP_pn_SuaSP_pn_QLSP);
         tf_MaSP_pn_SuaSP_pn_QLSP.setBounds(230, 80, 150, 30);
 
@@ -809,6 +873,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setText("Mã vật nuôi");
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_MaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jpn_SuaSanPham_QLSP.add(tf_MaVatNuoi_pn_SuaSP_pn_QLSP);
         tf_MaVatNuoi_pn_SuaSP_pn_QLSP.setBounds(430, 30, 150, 30);
 
@@ -829,6 +898,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         cmbx_LoaiVatNuoi_pn_SuaSP_pn_QLSP1.setBounds(30, 80, 150, 30);
 
         jSpinner1.setMaximumSize(new java.awt.Dimension(0, 65534));
+        jSpinner1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jSpinner1MouseClicked(evt);
+            }
+        });
         jpn_SuaSanPham_QLSP.add(jSpinner1);
         jSpinner1.setBounds(840, 80, 130, 30);
 
@@ -886,6 +960,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_MaSP_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_MaSP_pn_XoaSP_pn_QLSP.setText("Mã sản phẩm");
         tf_MaSP_pn_XoaSP_pn_QLSP.setToolTipText("");
+        tf_MaSP_pn_XoaSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_MaSP_pn_XoaSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jP_XoaSanPham_QLSP.add(tf_MaSP_pn_XoaSP_pn_QLSP);
         tf_MaSP_pn_XoaSP_pn_QLSP.setBounds(270, 80, 190, 30);
 
@@ -894,6 +973,11 @@ public class jFNhanVienKho extends javax.swing.JFrame {
         tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setForeground(new java.awt.Color(255, 255, 255));
         tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setText("Mã vật nuôi");
         tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setToolTipText("");
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_MaVatNuoi_pn_XoaSP_pn_QLSPMouseClicked(evt);
+            }
+        });
         jP_XoaSanPham_QLSP.add(tf_MaVatNuoi_pn_XoaSP_pn_QLSP);
         tf_MaVatNuoi_pn_XoaSP_pn_QLSP.setBounds(520, 30, 190, 30);
 
@@ -2230,6 +2314,74 @@ public class jFNhanVienKho extends javax.swing.JFrame {
     private void cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbx_LoaiVatNuoi_pn_ThemSP_pn_QLSPActionPerformed
+
+    private void jTF_Hoten_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Hoten_pn_ThongTinCaNhanMouseClicked
+        jTF_Hoten_pn_ThongTinCaNhan.selectAll();
+    }//GEN-LAST:event_jTF_Hoten_pn_ThongTinCaNhanMouseClicked
+
+    private void jTF_DiaChi_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_DiaChi_pn_ThongTinCaNhanMouseClicked
+        jTF_DiaChi_pn_ThongTinCaNhan.selectAll();
+    }//GEN-LAST:event_jTF_DiaChi_pn_ThongTinCaNhanMouseClicked
+
+    private void jTF_DienThoai_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_DienThoai_pn_ThongTinCaNhanMouseClicked
+        jTF_DienThoai_pn_ThongTinCaNhan.selectAll();
+    }//GEN-LAST:event_jTF_DienThoai_pn_ThongTinCaNhanMouseClicked
+
+    private void jTF_SoCMND_pn_ThongTinCaNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_SoCMND_pn_ThongTinCaNhanMouseClicked
+        jTF_SoCMND_pn_ThongTinCaNhan.selectAll();
+    }//GEN-LAST:event_jTF_SoCMND_pn_ThongTinCaNhanMouseClicked
+
+    private void tf_MaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_MaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked
+        tf_MaVatNuoi_pn_ThemSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_MaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked
+
+    private void tf_GiaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_GiaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked
+        tf_GiaVatNuoi_pn_ThemSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_GiaVatNuoi_pn_ThemSP_pn_QLSPMouseClicked
+
+    private void tf_GiaSP_pn_ThemSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_GiaSP_pn_ThemSP_pn_QLSPMouseClicked
+        tf_GiaSP_pn_ThemSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_GiaSP_pn_ThemSP_pn_QLSPMouseClicked
+
+    private void tf_TenSP_pn_ThemSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_TenSP_pn_ThemSP_pn_QLSPMouseClicked
+        tf_TenSP_pn_ThemSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_TenSP_pn_ThemSP_pn_QLSPMouseClicked
+
+    private void tf_MaSP_pn_ThemSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_MaSP_pn_ThemSP_pn_QLSPMouseClicked
+        tf_MaSP_pn_ThemSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_MaSP_pn_ThemSP_pn_QLSPMouseClicked
+
+    private void tf_MaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_MaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked
+        tf_MaVatNuoi_pn_SuaSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_MaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked
+
+    private void tf_GiaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_GiaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked
+        tf_GiaVatNuoi_pn_SuaSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_GiaVatNuoi_pn_SuaSP_pn_QLSPMouseClicked
+
+    private void tf_MaSP_pn_SuaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_MaSP_pn_SuaSP_pn_QLSPMouseClicked
+        tf_MaSP_pn_SuaSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_MaSP_pn_SuaSP_pn_QLSPMouseClicked
+
+    private void tf_TenSP_pn_SuaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_TenSP_pn_SuaSP_pn_QLSPMouseClicked
+        tf_TenSP_pn_SuaSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_TenSP_pn_SuaSP_pn_QLSPMouseClicked
+
+    private void tf_GiaSP_pn_SuaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_GiaSP_pn_SuaSP_pn_QLSPMouseClicked
+        tf_GiaSP_pn_SuaSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_GiaSP_pn_SuaSP_pn_QLSPMouseClicked
+
+    private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSpinner1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner1MouseClicked
+
+    private void tf_MaVatNuoi_pn_XoaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_MaVatNuoi_pn_XoaSP_pn_QLSPMouseClicked
+        tf_MaVatNuoi_pn_XoaSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_MaVatNuoi_pn_XoaSP_pn_QLSPMouseClicked
+
+    private void tf_MaSP_pn_XoaSP_pn_QLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_MaSP_pn_XoaSP_pn_QLSPMouseClicked
+        tf_MaSP_pn_XoaSP_pn_QLSP.selectAll();
+    }//GEN-LAST:event_tf_MaSP_pn_XoaSP_pn_QLSPMouseClicked
     
     void UpdatePnThongTinCaNhan(){
         jTF_Hoten_pn_ThongTinCaNhan.setText(myacc.getHoTen());
