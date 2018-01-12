@@ -1561,12 +1561,126 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             if(sp.deleteByID(masanpham))
                 flag[1]=1;
         }
-        if(flag[0]==1&&flag[1]==1)
+        if(flag[0]==1&&flag[1]==1){
             JOptionPane.showMessageDialog(null, "Xóa dữ liệu Thú cưng và Sản phẩm thành công .");
-        else if(flag[0]==1)
+            BSanPham dsSanPham = new BSanPham();
+            String LoaiVatNuoi = loaivatnuoi.toString();
+            int begin = LoaiVatNuoi.indexOf("(");
+            int end = LoaiVatNuoi.indexOf(")");
+            LoaiVatNuoi = LoaiVatNuoi.substring(begin+1, end);
+            ArrayList<BSanPham> arrList = null;
+            try {
+                arrList = dsSanPham.GetDanhSachSanPham(LoaiVatNuoi);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(LoaiVatNuoi, i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).MaSP, i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).TenSP, i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
+            }
+            for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
+            }
+            
+            BThuCung dsThuCung = new BThuCung();
+            String MaLoai = loai.toString();
+            begin = MaLoai.indexOf("(");
+            end = MaLoai.indexOf(")");
+            MaLoai = MaLoai.substring(begin+1, end);
+            String MaGiong = giong.toString();
+            begin = MaGiong.indexOf("(");
+            end = MaGiong.indexOf(")");
+            MaGiong = MaGiong.substring(begin+1, end);
+        
+            ArrayList<BThuCung> arrList1 = null;
+            try {
+                arrList1 = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            for(i=0;i<arrList1.size();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaLoai, i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaGiong, i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList1.get(i).MaThuCung, i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList1.get(i).DonGia, i, 3);
+            }
+            for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
+            }
+        }
+        else if(flag[0]==1){
             JOptionPane.showMessageDialog(null, "Xóa dữ liệu Thú cưng thành công.");
-        else if(flag[1]==1)
+            BThuCung dsThuCung = new BThuCung();
+            String MaLoai = loai.toString();
+            int begin = MaLoai.indexOf("(");
+            int end = MaLoai.indexOf(")");
+            MaLoai = MaLoai.substring(begin+1, end);
+            String MaGiong = giong.toString();
+            begin = MaGiong.indexOf("(");
+            end = MaGiong.indexOf(")");
+            MaGiong = MaGiong.substring(begin+1, end);
+        
+            ArrayList<BThuCung> arrList = null;
+            try {
+                arrList = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaLoai, i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaGiong, i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).MaThuCung, i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+            }
+            for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
+            }
+        }
+        else if(flag[1]==1){
             JOptionPane.showMessageDialog(null, "Xóa dữ liệu Sản phẩm thành công.");
+            BSanPham dsSanPham = new BSanPham();
+            String LoaiVatNuoi = loaivatnuoi.toString();
+            int begin = LoaiVatNuoi.indexOf("(");
+            int end = LoaiVatNuoi.indexOf(")");
+            LoaiVatNuoi = LoaiVatNuoi.substring(begin+1, end);
+            ArrayList<BSanPham> arrList = null;
+            try {
+                arrList = dsSanPham.GetDanhSachSanPham(LoaiVatNuoi);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(LoaiVatNuoi, i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).MaSP, i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).TenSP, i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
+            }
+            for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
+            }
+        }
         else
             JOptionPane.showMessageDialog(null, "Xóa dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_XoaSP_pn_QLSPMouseClicked
@@ -1604,12 +1718,126 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             if(sp.insertByProperties(masanpham, LoaiVatNuoi, tensanpham, dongiasanpham))
                 flag[1]=1;
         }
-        if(flag[0]==1&&flag[1]==1)
+        if(flag[0]==1&&flag[1]==1){
             JOptionPane.showMessageDialog(null, "Thên dữ liệu Thú cưng và Sản phẩm thành công .");
-        else if(flag[0]==1)
+            BSanPham dsSanPham = new BSanPham();
+            String LoaiVatNuoi = loaivatnuoi.toString();
+            int begin = LoaiVatNuoi.indexOf("(");
+            int end = LoaiVatNuoi.indexOf(")");
+            LoaiVatNuoi = LoaiVatNuoi.substring(begin+1, end);
+            ArrayList<BSanPham> arrList = null;
+            try {
+                arrList = dsSanPham.GetDanhSachSanPham(LoaiVatNuoi);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(LoaiVatNuoi, i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).MaSP, i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).TenSP, i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
+            }
+            for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
+            }
+            
+            BThuCung dsThuCung = new BThuCung();
+            String MaLoai = loai.toString();
+            begin = MaLoai.indexOf("(");
+            end = MaLoai.indexOf(")");
+            MaLoai = MaLoai.substring(begin+1, end);
+            String MaGiong = giong.toString();
+            begin = MaGiong.indexOf("(");
+            end = MaGiong.indexOf(")");
+            MaGiong = MaGiong.substring(begin+1, end);
+        
+            ArrayList<BThuCung> arrList1 = null;
+            try {
+                arrList1 = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            for(i=0;i<arrList1.size();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaLoai, i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaGiong, i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList1.get(i).MaThuCung, i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList1.get(i).DonGia, i, 3);
+            }
+            for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
+            }
+        }
+        else if(flag[0]==1){
             JOptionPane.showMessageDialog(null, "Thên dữ liệu Thú cưng thành công.");
-        else if(flag[1]==1)
+            BThuCung dsThuCung = new BThuCung();
+            String MaLoai = loai.toString();
+            int begin = MaLoai.indexOf("(");
+            int end = MaLoai.indexOf(")");
+            MaLoai = MaLoai.substring(begin+1, end);
+            String MaGiong = giong.toString();
+            begin = MaGiong.indexOf("(");
+            end = MaGiong.indexOf(")");
+            MaGiong = MaGiong.substring(begin+1, end);
+        
+            ArrayList<BThuCung> arrList = null;
+            try {
+                arrList = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaLoai, i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaGiong, i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).MaThuCung, i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+            }
+            for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
+            }
+        }
+        else if(flag[1]==1){
             JOptionPane.showMessageDialog(null, "Thên dữ liệu Sản phẩm thành công.");
+            BSanPham dsSanPham = new BSanPham();
+            String LoaiVatNuoi = loaivatnuoi.toString();
+            int begin = LoaiVatNuoi.indexOf("(");
+            int end = LoaiVatNuoi.indexOf(")");
+            LoaiVatNuoi = LoaiVatNuoi.substring(begin+1, end);
+            ArrayList<BSanPham> arrList = null;
+            try {
+                arrList = dsSanPham.GetDanhSachSanPham(LoaiVatNuoi);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(LoaiVatNuoi, i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).MaSP, i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).TenSP, i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
+            }
+            for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
+            }
+        }
         else
             JOptionPane.showMessageDialog(null, "Thêm dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_ThemSP_pn_QLSPMouseClicked
@@ -1867,12 +2095,126 @@ public class jFNhanVienKho extends javax.swing.JFrame {
             if(sp.updateByProperties(masanpham, LoaiVatNuoi, tensanpham, dongiasanpham)&&sp.updateAmountSanPham(masanpham, them))
                 flag[1]=1;
         }
-        if(flag[0]==1&&flag[1]==1)
+        if(flag[0]==1&&flag[1]==1){
             JOptionPane.showMessageDialog(null, "Sửa dữ liệu Thú cưng và Sản phẩm thành công .");
-        else if(flag[0]==1)
+            BSanPham dsSanPham = new BSanPham();
+            String LoaiVatNuoi = loaivatnuoi.toString();
+            int begin = LoaiVatNuoi.indexOf("(");
+            int end = LoaiVatNuoi.indexOf(")");
+            LoaiVatNuoi = LoaiVatNuoi.substring(begin+1, end);
+            ArrayList<BSanPham> arrList = null;
+            try {
+                arrList = dsSanPham.GetDanhSachSanPham(LoaiVatNuoi);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(LoaiVatNuoi, i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).MaSP, i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).TenSP, i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
+            }
+            for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
+            }
+            
+            BThuCung dsThuCung = new BThuCung();
+            String MaLoai = loai.toString();
+            begin = MaLoai.indexOf("(");
+            end = MaLoai.indexOf(")");
+            MaLoai = MaLoai.substring(begin+1, end);
+            String MaGiong = giong.toString();
+            begin = MaGiong.indexOf("(");
+            end = MaGiong.indexOf(")");
+            MaGiong = MaGiong.substring(begin+1, end);
+        
+            ArrayList<BThuCung> arrList1 = null;
+            try {
+                arrList1 = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            for(i=0;i<arrList1.size();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaLoai, i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaGiong, i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList1.get(i).MaThuCung, i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList1.get(i).DonGia, i, 3);
+            }
+            for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
+            }
+        }
+        else if(flag[0]==1){
             JOptionPane.showMessageDialog(null, "Sửa dữ liệu Thú cưng thành công.");
-        else if(flag[1]==1)
+            BThuCung dsThuCung = new BThuCung();
+            String MaLoai = loai.toString();
+            int begin = MaLoai.indexOf("(");
+            int end = MaLoai.indexOf(")");
+            MaLoai = MaLoai.substring(begin+1, end);
+            String MaGiong = giong.toString();
+            begin = MaGiong.indexOf("(");
+            end = MaGiong.indexOf(")");
+            MaGiong = MaGiong.substring(begin+1, end);
+        
+            ArrayList<BThuCung> arrList = null;
+            try {
+                arrList = dsThuCung.GetDanhSachLoaiThuCung(MaGiong);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaLoai, i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(MaGiong, i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).MaThuCung, i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+            }
+            for(i=i;i<table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.getRowCount();i++){
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 0);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 1);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 2);
+                table_BangVatNuoi_pn_BangVatNuoi_pn_QLSP.setValueAt("", i, 3);
+            }
+        }
+        else if(flag[1]==1){
             JOptionPane.showMessageDialog(null, "Sửa dữ liệu Sản phẩm thành công.");
+            BSanPham dsSanPham = new BSanPham();
+            String LoaiVatNuoi = loaivatnuoi.toString();
+            int begin = LoaiVatNuoi.indexOf("(");
+            int end = LoaiVatNuoi.indexOf(")");
+            LoaiVatNuoi = LoaiVatNuoi.substring(begin+1, end);
+            ArrayList<BSanPham> arrList = null;
+            try {
+                arrList = dsSanPham.GetDanhSachSanPham(LoaiVatNuoi);
+            } catch (SQLException ex) {
+                Logger.getLogger(jFNhanVienKho.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int i;
+            for(i=0;i<arrList.size();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(LoaiVatNuoi, i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).MaSP, i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).TenSP, i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).DonGia, i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt(arrList.get(i).SL, i, 4);
+            }
+            for(i=i;i<table_BangSP_pn_BangSP_pn_QLSP.getRowCount();i++){
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 0);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 1);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 2);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 3);
+                table_BangSP_pn_BangSP_pn_QLSP.setValueAt("", i, 4);
+            }
+        }
         else
             JOptionPane.showMessageDialog(null, "Sửa dữ liệu thất bại.");
     }//GEN-LAST:event_btn_XacNhan_pn_SuaSP_pn_QLSPMouseClicked
